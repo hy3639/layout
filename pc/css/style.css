@@ -20,52 +20,52 @@
 	right:0;
 	width:100%;
 	max-width:1280px; 
-	height:50px; 
-	background-color:gold;  
+	height:78px; 
+	background-color:#009591;  
 	z-index: 10;
 }
 .container {
 	min-height:850px;
-	padding-top:50px;
+	padding-top:78px;
 }
 .lnb {
 	position:fixed;
 	left:0; 
-	top:50px; 
+	top:78px; 
 	bottom:0;
-	width:80px;
+	width:88px;
 	background-color:aliceblue; 
 	z-index:10
 }
 .contents {
 	position:relative;
-	width:1200px; 
-	min-height:calc(100vh - 50px);
-	margin-left:80px;	
-	padding:50px 0 30px; 
+	width:1192px; 
+	min-height:calc(100vh - 165px);
+	margin-left:88px;	
+	padding:57px 0 36px; 
 }
 .title {
 	position:fixed;
-	left:80px; 
-	top:50px; 
-	width:calc(100% - 80px);
-	max-width:1200px;  
-	background-color:blanchedalmond;
+	left:88px; 
+	top:78px; 
+	width:calc(100% - 88px);
+	max-width:1192px;  
+	background-color:#f9f9fb;
 	z-index: 10
 }
 .tit-area {
 	display:flex; 
 	justify-content: space-between;
 	align-items:center; 
-	height:50px;
+	height:57px;
 }
 .footer {
 	position:absolute;
 	left:0;
 	bottom:0; 
-	width:1200px; 
-	height:30px; 
-	background-color:gold; 
+	width:1192px; 
+	height:36px; 
+	background-color:#e6e6e6; 
 	text-align:center
 }
 
@@ -631,7 +631,7 @@ div.formSingle {display: none;}
 /* on */
 .tab-lst .tab-item.on .btn,
 .tab-lst .tab-item.on .btn > .txt {transition:all .2s;}
-.tab-lst .tab-item.on {z-index:10;}
+.tab-lst .tab-item.on {z-index:5;}
 .tab-lst .tab-item.on .btn {
 	color:#000;
 }
@@ -856,7 +856,7 @@ html.popOpen {overflow:hidden;}
 .content.flex {
 	display:flex;
 	align-items: stretch;
-	min-height: calc(100vh - 130px);
+	min-height: calc(100vh - 171px);
 }
 
 .content.flex .box {
@@ -868,7 +868,7 @@ html.popOpen {overflow:hidden;}
 	position: absolute;
     left: 0;
     top: 80px;
-    bottom:91px;
+    bottom:146px;
     width: 100%;}
 .content .bottom {
 	position:absolute; 
@@ -896,6 +896,12 @@ html.popOpen {overflow:hidden;}
 	background:#fff;
 	display:flex; 
 	align-items: stretch;
+}
+.chat-box .reHeight {
+	min-height:116px;
+	border-top:1px solid #e9eaf6;
+	border-bottom:1px solid #e9eaf6
+
 }
 .chat-box .scroll-area {
 	overflow-y:hidden; 
