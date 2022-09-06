@@ -9,13 +9,13 @@
 </head>
 
 <body>
-<div class="wrapper">
+<div class="wrapper main-chat">
 	<div class="header">
 		<a href="#">헤더</a>
 		<button type="button" class="btn-mid bg-green btnPop" title="Popup01">alert</button>
 	</div> 
 	<div class="container">
-		<div class="lnb">
+		<!-- <div class="lnb">
 			<ul>
 				<li>메뉴</li>
 				<li>메뉴</li>
@@ -23,10 +23,10 @@
 				<li>메뉴</li>
 			</ul>
 
-		</div>
+		</div> -->
 		<div class="title">
 			<div class="tit-area">
-				<h2>화면명</h2>
+				<h2>대인상담</h2>
 				<button type="button" class="btn-input btn-mid bg-green" data="안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요">버튼</button>
 			</div>
 		
@@ -36,41 +36,90 @@
 				<div class="box chat-area">
 					<div class="top">
 						<h3 class="tit">1:1상담</h3>
+					</div>
+					<div class="center">
 						<div class="search-area">
 							<div class="search-box">
-								<input type="text" placeholder="검색어를 입력해 주세요.">
+								<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">
 								<a href="#" class="btn-search">검색</a>
 							</div>
 						</div>
-					</div>
-					<div class="center">
 						<div class="chat-wrap">
 							<div class="chat-cont scroll-area2">
-								<p>안녕1<br>안녕<br>안녕<br>
-									안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>
-									안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>안녕2<br>
-									안녕<br>끝
-									
-								</p>
+								<div class="date"><span>2022년 8월 31일</span></div>
+								<div class="system-msg">
+									<p>
+										<span class="tit">[시스템 메시지]</span>
+										<span class="f-red">업무유형+상담종류</span> 상담을 요청하고,<br>
+										본인인증 완료한 <span class="f-red">‘당행’</span>or <span class="f-red">‘신규’</span> 손님입니다.<br>
+										손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.<br>
+									</p>
+								</div>
+								<div class="chat-item-list">
+									<div class="chat-item right">
+										<div class="chat-name">
+											<span class="category">지점명+업무유형명</span>
+											<span class="name">김하나 (9812345)</span>
+										</div>
+										<div class="chat-txt">
+											<p class="txt">안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?</p>
+											<span class="time">오후 12:28</span>
+										</div>
+									</div>
+									<div class="chat-item left">
+										<div class="chat-name">											
+											<span class="name">홍길동 (재외동포 재산반출)</span>
+										</div>
+										<div class="chat-txt">
+											<p class="txt">네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.</p>
+											<span class="time">오후 12:28</span>
+										</div>
+									</div>
+									<div class="chat-item right">
+										<div class="chat-name">
+											<span class="category">지점명+업무유형명</span>
+											<span class="name">김하나 (9812345)</span>
+										</div>
+										<div class="chat-txt">
+											<p class="txt">
+												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+											</p>
+											<span class="time">오후 12:28</span>
+										</div>
+									</div>
+									<div class="chat-item left">
+										<div class="chat-name">											
+											<span class="name">홍길동 (재외동포 재산반출)</span>
+										</div>
+										<div class="chat-txt">
+											<p class="txt">
+												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+											</p>
+											<span class="time">오후 12:28</span>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="chat-box">								
 								<textarea class="reHeight scroll-area2"></textarea>					
-								<button type="button" class="btn-border" style="height: 100%;
-								color: #000;border: 1px solid #ddd;border-left: 0;">전송</button>
+								<button type="button" class="btn-border btn-send">전송</button>
 							</div>
 						</div>
-						
 					</div>
 					<div class="bottom">
-						<div class="btn-area">
-							<button type="button" class="btn-lg bg-green">상담 종료</button>
+						<div class="button-area">
+							<button type="button" class="btn-border btn-chat-close">상담종료</button>
 						</div>
-						<p style="height:30px;width:100%; background-color:#fad8db; color:#cc3a4a; text-align:center; font-size:12px">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
+						<p style="height:30px;width:100%; background-color:#fad8db; color:#cc3a4a; text-align:center; font-size:12px; line-height:30px">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
 					</div>
 				</div>
-				<div class="box">
+				<div class="box chat-list-area">
 					<div class="top">
-						<h3 class="tit">1:1상담</h3>
+						<h3 class="tit">상담 목록</h3>
 						<button type="button">도움말</button>
 					</div>
 					<div class="tab-wrap">
@@ -82,24 +131,149 @@
 								<button class="btn"><span class="txt">즐겨찾기</span></button>
 							</div>							
 						</div>
-						<div class="tab-conts">						
+						
+						<div class="tab-conts">	
+							<div class="search-area">
+								<div class="search-box">
+									<input type="text" placeholder="고객명+고객번호 검색 (Enter시 검색)">
+									<a href="#" class="btn-search">검색</a>
+								</div>
+								<div class="button-area">
+									<button type="button" class="btn-detail btn-border bd-gray">상세</button>
+									<button type="button" class="btn-order btn-border bd-gray">정렬</button>
+								</div>
+							</div>					
 							<div class="tab-cont on">
 								<ul class="chat-list scroll-area2">
-									<li class="ui-state-default">item1 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item2 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default fixed">item3 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item4 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item5 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item6 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item7 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item8 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item9 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item10 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item11 <button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item12<button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item13<button type="button" class="btn-chat-fixed">고정</button></li>
-									<li class="ui-state-default">item14 <button type="button" class="btn-chat-fixed">고정</button></li>
-								  </ul>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
+										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
+										<div class="list-info">
+											<span>재외동포 재산반출</span>
+											<span>홍길동(123456789)</span>
+											<span>5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag">대기중</span>
+											<span>(1/10)</span>
+										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed"><span>대화고정</span></button>
+											<span class="count-noti">2</span>
+										</div>
+									</li>
+								</ul>
 							</div>						
 							<div class="tab-cont">
 								서브2
@@ -108,7 +282,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="box">3</div>
+				<div class="box chat-util">3</div>
 			</div>
 			<div class="footer">
 				footer
@@ -142,49 +316,49 @@
 		
 		
 
-	sortableChat();
-	function sortableChat(){
-		$('.chat-list').sortable({
-			axis: "y",
-			containment: "parent",
-			cursor: "move",
-			tolerance: "pointer",
-			items: 'li:not(.fixed)',
-			cancel: ".fixed",
-			start: function(){
-				$('.fixed', this).each(function(){
-					var $this = $(this);
-					$this.data('pos', $this.index());
-				});
-			},
-			change: function(){
-				$sortable = $(this);
-				$statics = $('.fixed', this).detach();
-				$helper = $('<li></li>').prependTo(this);
-				$statics.each(function(){
-					var $this = $(this);
-					var target = $this.data('pos');
+	// sortableChat();
+	// function sortableChat(){
+	// 	$('.chat-list').sortable({
+	// 		axis: "y",
+	// 		containment: "parent",
+	// 		cursor: "move",
+	// 		tolerance: "pointer",
+	// 		items: 'li:not(.fixed)',
+	// 		cancel: ".fixed",
+	// 		start: function(){
+	// 			$('.fixed', this).each(function(){
+	// 				var $this = $(this);
+	// 				$this.data('pos', $this.index());
+	// 			});
+	// 		},
+	// 		change: function(){
+	// 			$sortable = $(this);
+	// 			$statics = $('.fixed', this).detach();
+	// 			$helper = $('<li></li>').prependTo(this);
+	// 			$statics.each(function(){
+	// 				var $this = $(this);
+	// 				var target = $this.data('pos');
 					
-					$this.insertAfter($('li', $sortable).eq(target));
-				});
-				$helper.remove();
-			}
-		});
-	}
+	// 				$this.insertAfter($('li', $sortable).eq(target));
+	// 			});
+	// 			$helper.remove();
+	// 		}
+	// 	});
+	// }
 		
-	$('.btn-chat-fixed').each(function(){
-		$(this).click(function(){
-			$selectChat = $(this).closest('li');
-			if($selectChat.hasClass('fixed')){
-				$selectChat.removeClass('fixed');
+	// $('.btn-chat-fixed').each(function(){
+	// 	$(this).click(function(){
+	// 		$selectChat = $(this).closest('li');
+	// 		if($selectChat.hasClass('fixed')){
+	// 			$selectChat.removeClass('fixed');
 				
-			}else{
-				$selectChat.addClass('fixed');
-			}			
-			sortableChat();
+	// 		}else{
+	// 			$selectChat.addClass('fixed');
+	// 		}			
+	// 		sortableChat();
 			
-		});
-	});
+	// 	});
+	// });
 	
 		
 		reHeight();		
