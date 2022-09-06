@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">		
+<style>
+	.wrapper {padding:20px}
+	.wrapper h1 {background-color:bisque}
+	.wrapper section.group {border-bottom:1px solid #ddd; padding-bottom:30px}
+	.wrapper section.group > h2{font-size:20px;border-left:4px solid gold;padding-left:10px; margin:15px 0 30px}
+	.group > .cont {margin-bottom:30px}
+	.group .sub-cont {margin-top:20px}
+	.group .sub-cont .tit {font-weight:bold; font-size:14px}
+	/* .sub-cont .select-box,
+	.input-text {margin-bottom: 10px;} */
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="container">
+		<div class="cont-wrap">
+			<h1>레이어팝업 가이드</h1>
+	
+			<section class="group">
+				<h2 class="tit">alert</h2>
+				<ul>
+					<li>1. 버튼에 btnPop클래스 추가 및 title값 추가</li>
+					<li>2. layer-popup div 에 버튼과 같은 title값 추가</li>
+					<li>3. 팝업 크기별로 popup에 클래스추가 (xs/sm/mid/lg/xl) - 정의되지 않은 크기는 임의로 너비 추가</li>
+					<li>4. 팝업닫기버튼에 class="btn-close popClose" 공통</li>
+					<li>5. 팝업이 이중으로 노출될 때 부모팝업이 닫히지 않아야 할경우 부모팝업에 noneClose 클래스 추가,자식팝업에 scroll 클래스 추가</li>	
+				</ul>
+				<div class="cont">
+					<div class="sub-cont">
+						
+						<div class="cont">
+							<div class="button-area margin center">
+								<button type="button" class="btn-mid bg-green btnPop" title="Popup01">alert</button>
+								<a href="#" class="btn-border btn-mid bg-green btnPop" title="Popup04">타이틀 있는 팝업</a>
+								<button type="button" class="btn-mid bg-green btnPop" title="Popup02">이중노출 예시</button>								
+							</div>
+							
+
+							<!-- alert -->
+							<div class="layer-popup" title="Popup01">
+								<div class="popup sm">
+									<div class="popup-header">			
+										<button class="btn-close popClose">팝업닫기</button>	
+									</div>
+									<div class="popup-cont">
+										<p class="guide-txt center">일치하는 회원정보가 없습니다.</p>				
+									</div>
+									<div class="button-area center">			
+										<button type="button" class="btn-mid bg-pink popClose">확인</button>			
+									</div>
+								</div>
+							</div>
+
+							<!-- 타이틀이 있는 팝업 -->
+							<div class="layer-popup sms-confirm" title="Popup04">
+								<div class="popup sm">
+									<div class="popup-header">	
+										<p class="title">인증 번호 입력</p>	
+										<button class="btn-close popClose">팝업닫기</button>	
+									</div>
+									<div class="popup-cont">
+										
+										<label class="tit" for="txt1">발송된 인증번호를 입력 하세요.</label>
+										<div class="input-btn">
+											<div class="input-text"><input type="text" id="txt1" style="width: 176px;"></div>
+											<button type="button" class="btn-border btn-mid bd-pink btnPop" title="Popup03">확인</button>		
+											<button type="button" class="btn-border btn-mid bg-white">재발송</button>												
+										</div>
+										<p class="guide-txt f-pink">인증 성공!</p>
+										<!-- <p class="guide-txt f-pink">인증 실패. 인증 번호를 확인하시기 바랍니다</p> -->
+									</div>
+									<div class="button-area  margin center">				
+										<button type="button" class="btn-mid bg-pink popClose">닫기</button>			
+									</div>
+								</div>
+							</div>
+
+							
+							<!-- 이중노출 예시 -->
+							<div class="layer-popup noneClose" title="Popup02">
+								<div class="popup sm">
+									<div class="popup-header">	
+										<p class="title">폴더 관리</p>	
+										<button class="btn-close popClose">팝업닫기</button>	
+									</div>
+									<div class="popup-cont">
+										<div class="scroll-board-list scroll-area" style="height:130px;">
+											<table class="height32">
+												<caption>폴더 리스트</caption>
+												<colgroup>
+													<col style="width:13%;">						
+													<col>																
+												</colgroup>							
+												<tbody>	
+													<tr>
+														<td class="bd-none"><input type="checkbox" class="styled" checked></td>
+														<td class="left">폴더1</td>
+													</tr>
+													<tr>
+														<td class="bd-none"><input type="checkbox" class="styled"></td>
+														<td class="left">폴더2</td>
+													</tr>
+													<tr>
+														<td class="bd-none"><input type="checkbox" class="styled"></td>
+														<td class="left">폴더3</td>
+													</tr>
+													<tr>
+														<td class="bd-none"><input type="checkbox" class="styled"></td>
+														<td class="left">폴더4</td>
+													</tr>
+													<tr>
+														<td class="bd-none"><input type="checkbox" class="styled"></td>
+														<td class="left">폴더5</td>
+													</tr>
+													<tr>
+														<td class="bd-none"><input type="checkbox" class="styled"></td>
+														<td class="left">폴더6</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<button type="button" class="btn-add btnPop" title="Popup03"><span>폴더 만들기</span></button>	
+										<p class="guide-txt2 f-pink">하나만 선택해 주십시오.</p>			
+									</div>
+									<div class="button-area  margin center">
+										<button type="button" class="btn-border btn-mid bg-white">수정</button>			
+										<button type="button" class="btn-border btn-mid bg-white">삭제</button>				
+									</div>
+								</div>
+							</div>							
+							<div class="layer-popup scroll" title="Popup03">
+								<div class="popup sm">
+									<div class="popup-header">
+										<p class="title">폴더 관리</p>
+										<button class="btn-close popClose">팝업닫기</button>	
+									</div>
+									<div class="popup-cont">
+										<ul class="form-list block">
+											<li>
+												<label for="FolderModify">폴더 이름 수정</label>
+												<div class="input-text">
+													<input type="text" id="FolderModify" style="width:100%">
+												</div>
+											</li>
+										</ul>				
+									</div>
+									<div class="button-area center margin">
+										<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+										<button type="button" class="btn-mid bg-pink">수정</button>			
+									</div>
+								</div>
+							</div>
+							<!--// 이중노출 예시 -->
+						</div>
+					</div>		
+			</section>
+		</div>
+	</div>
+	
+</div>
+
+
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body>
+</html>
