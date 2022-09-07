@@ -45,7 +45,7 @@
 							</div>
 						</div>
 						<div class="chat-wrap">
-							<div class="chat-cont scroll-area2">
+							<div class="chat-cont scroll-area">
 								<div class="date"><span>2022년 8월 31일</span></div>
 								<div class="system-msg">
 									<p>
@@ -105,14 +105,14 @@
 								</div>
 							</div>
 							<div class="chat-box">								
-								<textarea class="reHeight scroll-area2"></textarea>					
-								<button type="button" class="btn-border btn-send">전송</button>
+								<textarea class="reHeight scroll-area"></textarea>					
+								<button type="button" class="btn-round-square btn-send">전송</button>
 							</div>
 						</div>
 					</div>
 					<div class="bottom">
-						<div class="button-area">
-							<button type="button" class="btn-border btn-chat-close">상담종료</button>
+						<div class="btn-area">
+							<button type="button" class="btn-round-square btn-chat-close">상담종료</button>
 						</div>
 						<p style="height:30px;width:100%; background-color:#fad8db; color:#cc3a4a; text-align:center; font-size:12px; line-height:30px">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
 					</div>
@@ -138,13 +138,13 @@
 									<input type="text" placeholder="고객명+고객번호 검색 (Enter시 검색)">
 									<a href="#" class="btn-search">검색</a>
 								</div>
-								<div class="button-area">
-									<button type="button" class="btn-detail btn-border bd-gray">상세</button>
-									<button type="button" class="btn-order btn-border bd-gray">정렬</button>
+								<div class="btn-area">
+									<button type="button" class="btn-detail">상세</button>
+									<button type="button" class="btn-order"><span class="hide">정렬</span></button>
 								</div>
 							</div>					
 							<div class="tab-cont on">
-								<ul class="chat-list scroll-area2">
+								<ul class="chat-list scroll-area">
 									<li style="height:84px;border-bottom:1px solid #ddd; display:flex;">
 										<button type="button" class="btn-like"><span>즐겨찾기</span></button>
 										<div class="list-info">
@@ -300,7 +300,7 @@
 		<div class="popup-cont">
 			<p class="guide-txt align-center">일치하는 회원정보가 없습니다.</p>				
 		</div>
-		<div class="button-area  align-center">			
+		<div class="btn-area  align-center">			
 			<button type="button" class="btn-mid bg-green popClose">확인</button>			
 		</div>
 	</div>
@@ -308,7 +308,7 @@
 
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
-<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script> -->
 <script src="../../js/common.js"></script>
 <script>
 	$(function(){
@@ -361,7 +361,7 @@
 	// });
 	
 		
-		reHeight();		
+				
 		$('.btn-input').click(function(){
 			var txt = $(this).attr('data');			
 			$('.chat-box textarea').append(txt);
@@ -373,57 +373,7 @@
 	
 	});
 
-// 	function reHeight(){
-// 		$('.reHeight').each(function(){
-// 			autoHeight();
-// 			$(this).on('keydown keyup', function(){
-// 				autoHeight();
-// 			});
 
-// 			function autoHeight(){
-// 				$('.chat-box textarea').each(function(){
-// 					var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
-// 					var chatH = $('.chat-wrap').outerHeight();
-// 					var chatInputH = $('.chat-box').find('textarea').outerHeight();
-// 					var calcH  = chatH - chatInputH;
-
-	
-					
-// 					$(this).css('height', 'auto').height(this.scrollHeight);			
-// 					chatCont.css('height', calcH );
-
-// 				});
-// 			}
-			
-//     });
-// }
-
-function reHeight(){
-		$('.reHeight').each(function(){
-        autoHeight();
-        $(this).on('keydown keyup', function(){
-            autoHeight();
-        });
-
-        function autoHeight(){
-			$('.chat-box textarea').each(function(){
-                var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
-				var chatH = $('.chat-wrap').outerHeight();
-				var chatInputH = $('.chat-box').find('textarea').outerHeight();
-				var calcH  = chatH - chatInputH;
-
-				if(chatInputH > 399){
-					$(this).css('overflow-y', 'auto');
-				}else{
-					$(this).css('overflow-y', 'hidden');
-				}
-				$(this).css('height', 'auto').height(this.scrollHeight);
-				chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
-
-			});
-        }
-    });
-}
 
 
 

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	reHeight();
 	//contHeight();
 /*======= 공통 (레이아웃) ======= */
 
@@ -96,68 +97,7 @@ $(window).on('load', function(){
     });
 
 /*=======// 레이어팝업 ======= */
-/*======= 디자인스크롤 ======= */
-/* 일반 스크롤 */
-	$(".scroll-area").mCustomScrollbar({
-		mouseWheelPixels : 50, 
-		scrollInertia:0,
-	});
-	$(".scroll-area").resizable();
 
-
-
-	/* textarea 스크롤 */
-	var textareaLineHeight=parseInt($(".textarea-wrapper textarea").css("line-height"));
-				
-	$(".textarea-wrapper").mCustomScrollbar({
-		 scrollInertia:0,
-		 mouseWheelPixels : 50,
-		// theme:"dark-3",
-		advanced:{autoScrollOnFocus:false},
-		mouseWheel:{disableOver:["select","option","keygen","datalist",""]},
-		keyboard:{enable:false},
-		snapAmount:textareaLineHeight
-	});
-				
-
-	var textarea=$(".textarea-wrapper textarea"),textareaWrapper=$(".textarea-wrapper"),textareaClone=$(".textarea-wrapper .textarea-clone");
-	
-	textarea.bind("keyup keydown",function(e){
-		var $this=$(this),textareaContent=$this.val(),clength=textareaContent.length,cursorPosition=textarea.getCursorPosition();
-		textareaContent="<span>"+textareaContent.substr(0,cursorPosition)+"</span>"+textareaContent.substr(cursorPosition,textareaContent.length);
-		textareaContent=textareaContent.replace(/\n/g,"<br />");
-		textareaClone.html(textareaContent);
-		$this.css("height",textareaClone.height());
-		var textareaCloneSpan=textareaClone.children("span"),textareaCloneSpanOffset=0,
-			viewLimitBottom=(parseInt(textareaClone.css("min-height")))-textareaCloneSpanOffset,viewLimitTop=textareaCloneSpanOffset,
-			viewRatio=Math.round(textareaCloneSpan.height()+textareaWrapper.find(".mCSB_container").position().top);
-		if(viewRatio>viewLimitBottom || viewRatio<viewLimitTop){
-			if((textareaCloneSpan.height()-textareaCloneSpanOffset)>0){
-				textareaWrapper.mCustomScrollbar("scrollTo",textareaCloneSpan.height()-textareaCloneSpanOffset-textareaLineHeight);
-			}else{
-				textareaWrapper.mCustomScrollbar("scrollTo","top");
-			}
-		}
-	});
-	
-	$.fn.getCursorPosition=function(){
-		var el=$(this).get(0),pos=0;
-		if("selectionStart" in el){
-			pos=el.selectionStart;
-		}else if("selection" in document){
-			el.focus();
-			var sel=document.selection.createRange(),selLength=document.selection.createRange().text.length;
-			sel.moveStart("character",-el.value.length);
-			pos=sel.text.length-selLength;
-		}
-		return pos;
-		
-	}
-
-
-	
-	
-/*=======// 디자인스크롤 ======= */
 
 
 });
@@ -171,6 +111,8 @@ $(window).resize(function(){
 $(window).scroll(function(){
 	
 });
+
+
 
 /* 라디오,체크박스*/
 function rdoCheck(){
@@ -219,6 +161,35 @@ function popClose(){
     }, spd);	
 
 }
+
+//1:1상담 컨텐츠 높이 변경
+function reHeight(){
+	$('.reHeight').each(function(){
+	autoHeight();
+	$(this).on('keydown keyup', function(){
+		autoHeight();
+	});
+
+	function autoHeight(){
+		$('.chat-box textarea').each(function(){
+			var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
+			var chatH = $('.chat-wrap').outerHeight();
+			var chatInputH = $('.chat-box').find('textarea').outerHeight();
+			var calcH  = chatH - chatInputH;
+
+			if(chatInputH > 399){
+				$(this).css('overflow-y', 'auto');
+			}else{
+				$(this).css('overflow-y', 'hidden');
+			}
+			$(this).css('height', 'auto').height(this.scrollHeight);
+			chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
+
+		});
+	}
+});
+}
+
 
 //컨텐츠 높이 최소값 지정
 // function contHeight(){
