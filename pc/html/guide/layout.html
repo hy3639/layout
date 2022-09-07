@@ -120,16 +120,16 @@
 				<div class="box chat-list-area">
 					<div class="top">
 						<h3 class="tit">상담 목록</h3>
-						<button type="button">도움말</button>
+						<button type="button" class="btn-qustion"><span class="blind">도움말</span></button>
 					</div>
 					<div class="tab-wrap">
-						<div class="tab-lst depth1">
-							<div class="tab-item on">
-								<button class="btn"><span class="txt">상담목록</span></button>
-							</div>
-							<div class="tab-item">
-								<button class="btn"><span class="txt">즐겨찾기</span></button>
-							</div>							
+						<div class="tab-lst">
+							<button type="button" class="tab-item on">
+								<span class="txt">상담목록</span>
+							</button>
+							<button type="button" class="tab-item">
+								<span class="txt">즐겨찾기</span>
+							</button>							
 						</div>
 						
 						<div class="tab-conts">	
@@ -140,7 +140,7 @@
 								</div>
 								<div class="btn-area">
 									<button type="button" class="btn-detail">상세</button>
-									<button type="button" class="btn-order"><span class="hide">정렬</span></button>
+									<button type="button" class="btn-order"><span class="blind">정렬</span></button>
 								</div>
 							</div>					
 							<div class="tab-cont on">
@@ -282,7 +282,76 @@
 						</div>
 					</div>
 				</div>
-				<div class="box chat-util">3</div>
+				<div class="box chat-util">
+					<div class="top">
+						<h3 class="tit">손님정보</h3>						
+					</div>
+					<div class="bottom">
+						<div class="flex-area both">
+							<p class="tit">기본정보</p>
+							<a href="#" class="btn-round btn-sm bg-green">상세</a>
+						</div>						
+						<div class="board-write sm">
+							<table>
+								<caption>뷰</caption>
+								<colgroup>
+									<col style="width:20%;">
+									<col>
+									<col style="width:20%;">
+									<col style="width:20%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">손님명</th>
+										<td>홍길동</td>
+										<th scope="row">고객번호</th>
+										<td>123456789</td>
+									</tr>
+									<tr>
+										<th scope="row">연락처</th>
+										<td>010-****-****</td>
+										<th scope="row">손님등급</th>
+										<td>Hana VIP</td>
+									</tr>
+									<tr>
+										<th scope="row">주거래</th>
+										<td>****</td>
+										<th scope="row">신규고객여부</th>
+										<td>N</td>
+									</tr>
+									<tr>
+										<th scope="row">주/실거래점</th>
+										<td colspan="3">을지로본점</td>
+									</tr>
+									<tr>
+										<th scope="row">전담직원</th>
+										<td colspan="3">김하나(123456)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="flex-area">
+							<p class="tit">최근접촉이력</p>						
+						</div>						
+						<div class="board-write sm">
+							<ul>
+								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+							</ul>
+						</div>
+					</div>
+					<div class="top">
+						<h3 class="tit">업무 편의 기능</h3>						
+					</div>
+					<div class="bottom">
+						<ul>
+							<li>텍스트</li>
+							<li>텍스트</li>
+							<li>텍스트</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<div class="footer">
 				footer

@@ -1,29 +1,18 @@
 $(document).ready(function(){
 	reHeight();
-	//contHeight();
-/*======= 공통 (레이아웃) ======= */
 
 
-
-
-
-/*=======// 공통 (레이아웃) ======= */
-
-/*======= 탭 ======= */
 /* 탭영역 */
-$(document).on('click', '.tab-item .btn', function(){
-	var idx = $(this).closest('.tab-item').index();	
-	if(!$(this).closest('.tab-item').hasClass('on')){
-		$(this).closest('.tab-item').addClass('on').siblings('.tab-item').removeClass('on');
-		$(this).closest('.tab-lst').next('.tab-conts').children('.tab-cont').hide().removeClass('on').eq(idx).fadeIn(200).addClass('on');
+$(document).on('click', '.tab-item', function(){
+	var tabItem = $(this);
+	var idx = $(this).index();	
+	var tabConts = $(this).closest('.tab-lst').next('.tab-conts');
+	if(!tabItem.hasClass('on')){
+		tabItem.addClass('on').siblings('.tab-item').removeClass('on');
+		tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).fadeIn(200).addClass('on');
 	}
 });
 
-
-/*=======// 탭 ======= */
-
-
-/*======= 달력 ======= */
 
 /* datepicker */
 $('.cal').each(function(){
@@ -46,9 +35,7 @@ $('.cal').each(function(){
 		$('img.ui-datepicker-trigger').attr('src' , '../../../images/icon/icon_20_date.png');
 	}
 });
-/*=======// 달력 ======= */
 
-	
 });
 
 
@@ -56,8 +43,7 @@ $(window).on('load', function(){
 	rdoCheck(); // 라디오,체크박스
 
 
-	/*======= 레이어팝업 ======= */
-
+/*======= 레이어팝업 ======= */
 	$(document).on('click', '.btnPop', function(){
         layerPop();
         $(this).addClass('on');
@@ -83,17 +69,14 @@ $(window).on('load', function(){
 	 	$(this).closest('.layer-popup').removeClass('open').scrollTop(0).fadeOut(300, function(){
 		$('.btnPop.on').focus().removeClass('on');
 		$(this).closest('.layer-popup').find('.dimmed').remove();
-	});	
+		});	
 
-	//팝업이 하나일경우만 body스크롤 제거
-	if(!$(this).closest('.layer-popup').hasClass('scroll')){
-		setTimeout(function(){
-			$('html').removeClass('popOpen');
-		}, 300);
-	}
-
-
-	
+		//팝업이 하나일경우만 body스크롤 제거
+		if(!$(this).closest('.layer-popup').hasClass('scroll')){
+			setTimeout(function(){
+				$('html').removeClass('popOpen');
+			}, 300);
+		}	
     });
 
 /*=======// 레이어팝업 ======= */
@@ -103,9 +86,8 @@ $(window).on('load', function(){
 });
 
 $(window).resize(function(){	
-	layerPop(); //레이어팝업	
-	//contHeight();
-
+	layerPop();	
+	
 });
 
 $(window).scroll(function(){
@@ -189,19 +171,3 @@ function reHeight(){
 	}
 });
 }
-
-
-//컨텐츠 높이 최소값 지정
-// function contHeight(){
-	
-// 	var winH = $( window ).outerHeight();
-// 		//console.log(winH);
-// 		if(winH < 850){
-// 			$('.content.flex').css('height', 850);
-			
-			
-// 		}else{
-// 			$('.content.flex').css('height', 'auto');
-			
-// 		}
-// }

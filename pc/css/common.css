@@ -110,6 +110,14 @@ textarea::-moz-placeholder{color:#9ba9a8;font-weight:300}
 textarea::placeholder {color:#9ba9a8;font-weight:300}
 
 .hide {display:none;}
+.blind{
+	position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
 
 /* [role=button] {cursor:pointer;}
 [role=button]:focus,
@@ -164,9 +172,8 @@ table caption {display:none;}
 
   }
   .scroll-area::-webkit-scrollbar-track {
-	background-color: #fff;
+	background-color: #f3f4f5;
 
-	opacity:0;
   }
   /* .scroll-area::-webkit-scrollbar-corner {
 	background-color: green;
