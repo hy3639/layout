@@ -101,7 +101,7 @@
 .left {text-align: left !important;} */
 
 .flex-area {display:flex;}
-.flex-area.both {justify-content: space-between;}
+.flex-area.both {justify-content: space-between; align-items: center;}
 
 
 /*인라인/블록*/
@@ -1099,13 +1099,72 @@ html.popOpen {overflow:hidden;}
 .chat-list-area .tab-lst {padding:4px 20px 15px 20px}
 .chat-list {height:calc(100vh - 331px)}
 .chat-list li {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
+	height:84px;
 	padding:10px 20px; 
+	border-top:1px solid #e7e9ee;
 }
 .chat-list li:first-child {border-top:0}
-.chat-list li.fixed {background-color:gold}
-.btn-chat-fixed {color:#000}
+.btn-like {
+	width: 18px;
+    height: 18px;
+	background: url(../images/icon/icon_like_off.png) no-repeat center center;
+}
+.btn-like.on {	background: url(../images/icon/icon_like_on.png) no-repeat center center;}
+.chat-list .list-info {display:flex; flex-direction: column;width:130px;}
+.chat-list .list-info .name {font-size:14px;color:#666}
+.chat-list .list-info .tit,
+.chat-list .list-info .date {
+	font-size:12px; 
+	color:#999; 
+	font-weight:300;
 
+
+}
+.chat-list .category {display:flex; width:90px}
+.chat-list .category .count {color:#21b9bf;font-weight:300;font-size:12px;padding-left:10px}
+.flag {
+	height:20px;
+	padding: 0 8px;
+	background-color:#fff;
+	font-size:12px;
+	text-align: center;
+	/* line-height:18px; */
+	border-radius:4px
+}
+.flag.type1 {
+	border:1px solid #21b9bf;
+	color:#21b9bf
+}
+.flag.type2 {
+	border:1px solid #d3425e;
+	color:#d3425e
+}
+
+/* .chat-list li.fixed {background-color:gold}
+.btn-chat-fixed {color:#000} */
+.fix-noti {position:relative}
+.btn-fixed {
+	position:absolute;
+	
+	top:-25px;
+	width: 18px;
+    height: 18px;
+	background: url(../images/icon/icon_pin_off.png) no-repeat center;
+}
+.btn-fixed.on {	background: url(../images/icon/icon_pin_on.png) no-repeat center;}
+.fix-noti .count-noti {
+	height:20px;
+	padding:0 5px;
+	background-color:#e53a4c;
+	color:#fff;
+	line-height: 20px;
+	font-weight: 500;
+	border-radius: 50%;
+}
 
 .chat-util {
 	flex:1;
