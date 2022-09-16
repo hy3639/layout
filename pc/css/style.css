@@ -490,7 +490,7 @@ input[type=checkbox][class^=styled] {
 	text-align:left;
 }
 .board-write td {
-	/* padding: 7px 15px;   */
+	padding: 7px 15px;  
 	background-color:#fff;
 }
 
@@ -1167,11 +1167,31 @@ html.popOpen {overflow:hidden;}
 }
 
 .chat-util {
-	flex:1;
+	width:483px;
+	overflow: hidden;
 	
 }
 .chat-util .bottom{padding:0 20px;}
 
+.history-list {
+	overflow-y: auto;
+	height: 72px;
+	padding:8px 10px;
+	background-color:#fff;
+	/* border:1px solid #e7e9ee; */
+}
+.history-list li {line-height:20px}
+
+.send-list {height:265px;}
+.send-list li {
+	display:flex; 
+	justify-content: space-between;
+	align-items: center;
+	height:43px;
+}
+.send-list li .btn-like {width:18px}
+.send-list li .category {width:45px}
+.send-list li .cont {max-width:70%}
 
 @media (max-height: 849px) {
 	.contents{

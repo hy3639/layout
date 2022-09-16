@@ -2,39 +2,39 @@ $(document).ready(function(){
 	reHeight();
 
 
-/* 탭영역 */
-$(document).on('click', '.tab-item', function(){
-	var tabItem = $(this);
-	var idx = $(this).index();	
-	var tabConts = $(this).closest('.tab-lst').next('.tab-conts');
-	if(!tabItem.hasClass('on')){
-		tabItem.addClass('on').siblings('.tab-item').removeClass('on');
-		tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).fadeIn(200).addClass('on');
-	}
-});
-
-
-/* datepicker */
-$('.cal').each(function(){
-	$(this).find('input').datepicker({
-		dateFormat: "yy-mm-dd", 		  
-		showOn: "both",
-		buttonImage: "../../images/icon/icon_20_date.png", 
-		buttonImageOnly: true, 
-		changeMonth: false, 
-		changeYear: false, 
-		minDate: '-100y',
-		nextText: '다음 달', 
-		prevText: '이전 달', 
-		numberOfMonths:1, 		 
-		dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
-		showOtherMonths:true,
+	/* 탭영역 */
+	$(document).on('click', '.tab-item', function(){
+		var tabItem = $(this);
+		var idx = $(this).index();	
+		var tabConts = $(this).closest('.tab-lst').next('.tab-conts');
+		if(!tabItem.hasClass('on')){
+			tabItem.addClass('on').siblings('.tab-item').removeClass('on');
+			tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).show().addClass('on');
+		}
 	});
-	 //경로 변경시
-	if($(this).closest('.calendar-area').hasClass('src')){	
-		$('img.ui-datepicker-trigger').attr('src' , '../../../images/icon/icon_20_date.png');
-	}
-});
+
+
+	/* datepicker */
+	$('.cal').each(function(){
+		$(this).find('input').datepicker({
+			dateFormat: "yy-mm-dd", 		  
+			showOn: "both",
+			buttonImage: "../../images/icon/icon_20_date.png", 
+			buttonImageOnly: true, 
+			changeMonth: false, 
+			changeYear: false, 
+			minDate: '-100y',
+			nextText: '다음 달', 
+			prevText: '이전 달', 
+			numberOfMonths:1, 		 
+			dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+			showOtherMonths:true,
+		});
+		//경로 변경시
+		if($(this).closest('.calendar-area').hasClass('src')){	
+			$('img.ui-datepicker-trigger').attr('src' , '../../../images/icon/icon_20_date.png');
+		}
+	});
 
 });
 
@@ -43,7 +43,7 @@ $(window).on('load', function(){
 	rdoCheck(); // 라디오,체크박스
 
 
-/*======= 레이어팝업 ======= */
+	/*======= 레이어팝업 ======= */
 	$(document).on('click', '.btnPop', function(){
         layerPop();
         $(this).addClass('on');
@@ -79,7 +79,7 @@ $(window).on('load', function(){
 		}	
     });
 
-/*=======// 레이어팝업 ======= */
+	/*=======// 레이어팝업 ======= */
 
 
 
@@ -96,7 +96,7 @@ $(window).scroll(function(){
 
 
 
-/* 라디오,체크박스*/
+// 라디오,체크박스
 function rdoCheck(){
     $('input[type=radio].styled, input[type=checkbox].styled').each(function(){
         if(!$(this).parent().hasClass('chkbox')){
@@ -108,7 +108,7 @@ function rdoCheck(){
 }
 
 
-// 레이어팝업 설정
+// 레이어팝업 위치설정
 function layerPop(){
     $('.btnPop, .layer-popup').each(function(){ 
        var tit = $(this).attr('title');
@@ -130,19 +130,6 @@ function layerPop(){
     });
 }
 
-// 레이어팝업 닫기
-function popClose(){
-   var spd = '300';
-    $('.layer-popup').each(function(){
-        $(this).removeClass('open').fadeOut(spd, function(){
-            $('.btnPop.on').focus().removeClass('on');            
-        });
-    });
-    setTimeout(function(){
-        $('html').removeClass('popOpen');
-    }, spd);	
-
-}
 
 //1:1상담 컨텐츠 높이 변경
 function reHeight(){
