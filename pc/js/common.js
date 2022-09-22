@@ -1,18 +1,43 @@
 $(document).ready(function(){
 	reHeight();
+	sortable();
+
+	/*gnb*/
+	$('.btn-gnb').click(function(){
+		var gnbList = $(this).next('.gnb-list');
+		if($(this).hasClass('on')){
+			$(this).removeClass('on');
+			gnbList.slideUp('300');
+		}else{
+			$(this).addClass('on');
+			gnbList.slideDown('slow');
+		}
+	
+	});
+
+	/* 상담 on/off */
+	$('.btn-toggle-area button').click(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+	});
+
+	/* 공통 토글 버튼 */
+	$('.btn-toggle').click(function(){
+		$(this).toggleClass('on');
+	});
 
 
 	/* 탭영역 */
 	$(document).on('click', '.tab-item', function(){
+		var tabName = $(this).parent('div').attr('class');
 		var tabItem = $(this);
 		var idx = $(this).index();	
-		var tabConts = $(this).closest('.tab-lst').next('.tab-conts');
+		console.log(tabName);
+		var tabConts = $(this).closest('.'+tabName).next('.tab-conts');
 		if(!tabItem.hasClass('on')){
 			tabItem.addClass('on').siblings('.tab-item').removeClass('on');
 			tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).show().addClass('on');
 		}
 	});
-
 
 	/* datepicker */
 	$('.cal').each(function(){
@@ -134,27 +159,32 @@ function layerPop(){
 //1:1상담 컨텐츠 높이 변경
 function reHeight(){
 	$('.reHeight').each(function(){
-	autoHeight();
-	$(this).on('keydown keyup', function(){
 		autoHeight();
-	});
-
-	function autoHeight(){
-		$('.chat-box textarea').each(function(){
-			var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
-			var chatH = $('.chat-wrap').outerHeight();
-			var chatInputH = $('.chat-box').find('textarea').outerHeight();
-			var calcH  = chatH - chatInputH;
-
-			if(chatInputH > 399){
-				$(this).css('overflow-y', 'auto');
-			}else{
-				$(this).css('overflow-y', 'hidden');
-			}
-			$(this).css('height', 'auto').height(this.scrollHeight);
-			chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
-
+		$(this).on('keydown keyup', function(){
+			autoHeight();
 		});
-	}
-});
+
+		function autoHeight(){
+			$('.chat-box textarea').each(function(){
+				var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
+				var chatH = $('.chat-wrap').outerHeight();
+				var chatInputH = $('.chat-box').find('textarea').outerHeight();
+				var calcH  = chatH - chatInputH;
+
+				if(chatInputH > 399){
+					$(this).css('overflow-y', 'auto');
+				}else{
+					$(this).css('overflow-y', 'hidden');
+				}
+				$(this).css('height', 'auto').height(this.scrollHeight);
+				chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
+
+			});
+		}
+	});
+}
+
+//sortable
+function sortable(){
+	$('.sortable').sortable();
 }

@@ -4,364 +4,55 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>하나은행 K포탈</title>
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">	
-
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 
 <body>
 <div class="wrapper main-chat">
 	<div class="header">
-		<a href="#">헤더</a>
-		<button type="button" class="btn-mid bg-green btnPop" title="Popup01">alert</button>
-	</div> 
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../../images/layout/header_logo.png" alt="K포탈 로고">
+			</a>
+			<div class="btn-toggle-area">
+				<button type="button" class="btn-msg">상담 ON</button>
+				<button type="button" class="btn-msg on">상담 OFF</button>
+			</div>
+			<span class="waiting">대기 : <em>00명</em></span>
+		</div>
+		<div class="right-area">
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout">로그아웃</button>
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<ul class="depth1">
+					<li><a href="#">대인상담</a></li>
+					<li>Admin
+						<ul class="depth2">
+							<li><a href="#">채팅설정</a></li>
+							<li><a href="#">채널조회</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">메뉴권한관리</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
 	<div class="container">
-		<!-- <div class="lnb">
-			<ul>
-				<li>메뉴</li>
-				<li>메뉴</li>
-				<li>메뉴</li>
-				<li>메뉴</li>
-			</ul>
-
-		</div> -->
-		<div class="title">
+		<div class="fixed-title">
 			<div class="tit-area">
 				<h2>대인상담</h2>
-				<button type="button" class="btn-input btn-mid bg-green" data="안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요">버튼</button>
 			</div>
-		
 		</div>
 		<div class="contents">
 			<div class="content flex">
-				<div class="box chat-area">
-					<div class="top">
-						<h3 class="tit">1:1상담</h3>
-					</div>
-					<div class="center">
-						<div class="search-area">
-							<div class="search-box">
-								<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">
-								<a href="#" class="btn-search">검색</a>
-							</div>
-						</div>
-						<div class="chat-wrap">
-							<div class="chat-cont scroll-area">
-								<div class="date"><span>2022년 8월 31일</span></div>
-								<div class="system-msg">
-									<p>
-										<span class="tit">[시스템 메시지]</span>
-										<span class="f-red">업무유형+상담종류</span> 상담을 요청하고,<br>
-										본인인증 완료한 <span class="f-red">‘당행’</span>or <span class="f-red">‘신규’</span> 손님입니다.<br>
-										손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.<br>
-									</p>
-								</div>
-								<div class="chat-item-list">
-									<div class="chat-item right">
-										<div class="chat-name">
-											<span class="category">지점명+업무유형명</span>
-											<span class="name">김하나 (9812345)</span>
-										</div>
-										<div class="chat-txt">
-											<p class="txt">안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?</p>
-											<span class="time">오후 12:28</span>
-										</div>
-									</div>
-									<div class="chat-item left">
-										<div class="chat-name">											
-											<span class="name">홍길동 (재외동포 재산반출)</span>
-										</div>
-										<div class="chat-txt">
-											<p class="txt">네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.</p>
-											<span class="time">오후 12:28</span>
-										</div>
-									</div>
-									<div class="chat-item right">
-										<div class="chat-name">
-											<span class="category">지점명+업무유형명</span>
-											<span class="name">김하나 (9812345)</span>
-										</div>
-										<div class="chat-txt">
-											<p class="txt">
-												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
-												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
-												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
-											</p>
-											<span class="time">오후 12:28</span>
-										</div>
-									</div>
-									<div class="chat-item left">
-										<div class="chat-name">											
-											<span class="name">홍길동 (재외동포 재산반출)</span>
-										</div>
-										<div class="chat-txt">
-											<p class="txt">
-												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
-												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
-												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
-											</p>
-											<span class="time">오후 12:28</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="chat-box">								
-								<textarea class="reHeight scroll-area"></textarea>					
-								<button type="button" class="btn-round-square btn-send">전송</button>
-							</div>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="btn-area">
-							<button type="button" class="btn-round-square btn-chat-close">상담종료</button>
-						</div>
-						<p style="height:30px;width:100%; background-color:#fad8db; color:#cc3a4a; text-align:center; font-size:12px; line-height:30px">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
-					</div>
-				</div>
-				<div class="box chat-list-area">
-					<div class="top">
-						<h3 class="tit">상담 목록</h3>
-						<button type="button" class="btn-qustion"><span class="blind">도움말</span></button>
-					</div>
-					<div class="tab-wrap">
-						<div class="tab-lst">
-							<button type="button" class="tab-item on">
-								<span class="txt">상담목록</span>
-							</button>
-							<button type="button" class="tab-item">
-								<span class="txt">즐겨찾기</span>
-							</button>							
-						</div>
-						
-						<div class="tab-conts">	
-							<div class="search-area">
-								<div class="search-box">
-									<input type="text" placeholder="고객명+고객번호 검색 (Enter시 검색)">
-									<a href="#" class="btn-search">검색</a>
-								</div>
-								<div class="btn-area">
-									<button type="button" class="btn-detail">상세</button>
-									<button type="button" class="btn-order"><span class="blind">정렬</span></button>
-								</div>
-							</div>					
-							<div class="tab-cont on">
-								<ul class="chat-list scroll-area">
-									<li>
-										<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-										<div class="list-info">
-											<span class="tit">재외동포 재산반출</span>
-											<span class="name">홍길동(123456789)</span>
-											<span class="date">5월 9일(월) 오전 10:28</span>
-										</div>
-										<div class="category">
-											<span class="flag type1">대기중</span>
-											<span class="count">(1/10)</span>
-										</div>
-										<div class="fix-noti">
-											<button type="button" class="btn-fixed on"><span class="blind">대화고정</span></button>
-											<span class="count-noti">2</span>
-										</div>
-									</li>
-									<li>
-										<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-										<div class="list-info">
-											<span class="tit">재외동포 재산반출</span>
-											<span class="name">홍홍길동(123456789)</span>
-											<span class="date">5월 9일(월) 오전 10:28</span>
-										</div>
-										<div class="category">
-											<span class="flag type2">대화중</span>											
-										</div>
-										<div class="fix-noti">
-											<button type="button" class="btn-fixed on"><span class="blind">대화고정</span></button>
-											<span class="count-noti">2</span>
-										</div>
-									</li>
-								</ul>
-							</div>						
-							<div class="tab-cont">
-								<ul class="chat-list scroll-area sortable">
-									<li>
-										<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-										<div class="list-info">
-											<span class="tit">재외동포 재산반출</span>
-											<span class="name">홍길동(123456789)</span>
-											<span class="date">5월 9일(월) 오전 10:28</span>
-										</div>
-										<div class="category">
-											<span class="flag type1">대기중</span>
-											<span class="count">(1/10)</span>
-										</div>
-										<div class="fix-noti">
-											<button type="button" class="btn-fixed on"><span class="blind">대화고정</span></button>
-											<span class="count-noti">2</span>
-										</div>
-									</li>
-									<li>
-										<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-										<div class="list-info">
-											<span class="tit">재외동포 재산반출</span>
-											<span class="name">홍홍길동(123456789)</span>
-											<span class="date">5월 9일(월) 오전 10:28</span>
-										</div>
-										<div class="category">
-											<span class="flag type2">대화중</span>											
-										</div>
-										<div class="fix-noti">
-											<button type="button" class="btn-fixed on"><span class="blind">대화고정</span></button>
-											<span class="count-noti">2</span>
-										</div>
-									</li>
-								</ul>
-							</div>
+				<div class="box">
 
-						</div>
-					</div>
-				</div>
-				<div class="box chat-util">
-					<div class="top">
-						<h3 class="tit">손님정보</h3>						
-					</div>
-					<div class="bottom">
-						<div class="flex-area both">
-							<p class="tit">기본정보</p>
-							<a href="#" class="btn-round btn-sm bg-green">상세</a>
-						</div>						
-						<div class="board-write sm">
-							<table>
-								<caption>뷰</caption>
-								<colgroup>
-									<col style="width:20%;">
-									<col>
-									<col style="width:20%;">
-									<col style="width:20%">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">손님명</th>
-										<td>홍길동</td>
-										<th scope="row">고객번호</th>
-										<td>123456789</td>
-									</tr>
-									<tr>
-										<th scope="row">연락처</th>
-										<td>010-****-****</td>
-										<th scope="row">손님등급</th>
-										<td>Hana VIP</td>
-									</tr>
-									<tr>
-										<th scope="row">주거래</th>
-										<td>****</td>
-										<th scope="row">신규고객여부</th>
-										<td>N</td>
-									</tr>
-									<tr>
-										<th scope="row">주/실거래점</th>
-										<td colspan="3">을지로본점</td>
-									</tr>
-									<tr>
-										<th scope="row">전담직원</th>
-										<td colspan="3">김하나(123456)</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="flex-area">
-							<p class="tit">최근접촉이력</p>						
-						</div>						
-						<div class="board-write sm">
-							<ul class="history-list scroll-area">
-								<li class="ellipsis">22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-							</ul>
-						</div>
-					</div>
-					<div class="top">
-						<h3 class="tit">업무 편의 기능</h3>						
-					</div>
-					<div class="bottom">
-						<ul class="send-list scroll-area sortable">						
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">시작</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">기타</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-							<li>
-								<button type="button" class="btn-like on"><span class="blind">즐겨찾기</span></button>
-								<span class="category">끝</span>
-								<span class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-								<a href="#" class="btn-border btn-sm">선택</a>
-							</li>
-						</ul>
-					</div>
 				</div>
 			</div>
 			<div class="footer">
-				footer
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
 			</div>
 		</div>
 	</div>
@@ -384,52 +75,7 @@
 
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
-<!-- <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script> -->
 <script src="../../js/common.js"></script>
-<script>
-	$(function(){
-
-		
-		
-
-	sortableChat();
-	function sortableChat(){
-		$('.sortable').sortable();
-	}
-		
-	// $('.btn-chat-fixed').each(function(){
-	// 	$(this).click(function(){
-	// 		$selectChat = $(this).closest('li');
-	// 		if($selectChat.hasClass('fixed')){
-	// 			$selectChat.removeClass('fixed');
-				
-	// 		}else{
-	// 			$selectChat.addClass('fixed');
-	// 		}			
-	// 		sortableChat();
-			
-	// 	});
-	// });
-	
-		
-				
-		$('.btn-input').click(function(){
-			var txt = $(this).attr('data');			
-			$('.chat-box textarea').append(txt);
-
-			var e = jQuery.Event("keydown");					
-			$(".chat-box textarea").trigger(e);
-			
-		});
-	
-	});
-
-
-
-
-
-
-</script>
 
 </body>
 </html>
