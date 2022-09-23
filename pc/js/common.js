@@ -46,14 +46,15 @@ $(document).ready(function(){
 			showOn: "both",
 			buttonImage: "../../images/icon/icon_20_date.png", 
 			buttonImageOnly: true, 
-			changeMonth: false, 
-			changeYear: false, 
+			changeMonth: true,
+			changeYear: true,
 			minDate: '-100y',
 			nextText: '다음 달', 
 			prevText: '이전 달', 
 			numberOfMonths:1, 		 
-			dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
-			showOtherMonths:true,
+			showMonthAfterYear: true , 
+			dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+			monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],					
 		});
 		//경로 변경시
 		if($(this).closest('.calendar-area').hasClass('src')){	
