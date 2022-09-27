@@ -91,7 +91,7 @@
 											<span class="name">홍길동 (재외동포 재산반출)</span>
 										</div>
 										<div class="chat-txt">
-											<p class="txt">네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.</p>											
+											<p class="txt">네 서울 강남구 압구정동 현대<mark>아파트</mark> 105동 1207호 입니다네 서울 강남구 압구정동 현대<mark>아파트</mark> 105동 1207호 입니다네 서울 강남구 압구정동 현대<mark>아파트</mark> 105동 1207호 입니다.</p>											
 										</div>
 									</div>
 									<div class="chat-item left">										
@@ -147,12 +147,29 @@
 										</div>
 									</div>
 								</div>
+								<div class="system-msg">
+									<p>
+										<span class="tit">[시스템 메시지]</span>
+										상담이 종료 되었습니다.<br>
+										직원 활동을 등록하세요.
+									</p>
+									<a href="#" class="btn-border btn-sm">활동 등록하기</a>
+								</div>								
 							</div>
 							<div class="chat-box">								
-								<textarea class="reHeight scroll-area"></textarea>					
-								<button type="button" class="btn-round-square btn-send">전송</button>
+								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)" disabled></textarea>					
+								<button type="button" class="btn-round-square btn-send" disabled>전송</button>
 							</div>
 						</div>
+						<!-- <div class="search-navi">
+							<button type="button" class="btn-close">검색닫기</button>
+							<div>
+								<button type="button" class="btn-prev">이전</button>
+								<button type="button" class="btn-next">다음</button>
+							</div>
+						</div> -->
+						<!-- 결과가 없을경우 노출 -->
+						<!-- <p class="no-data">검색 결과가 없습니다.</p> -->
 					</div>
 					<div class="bottom">
 						<div class="btn-area">
@@ -192,7 +209,7 @@
 							</div>					
 							<div class="tab-cont on">
 								<ul class="chat-list scroll-area">
-									<li>
+									<li class="fix"> <!-- 하위 btn-fixed버튼이 on일경우 fix클래스추가 (상단 li 3개까지만 top값 적용)-->
 										<div class="btn-area"><button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button></div>										
 										<div class="list-info">
 											<span class="tit">재외동포 재산반출</span>
@@ -224,7 +241,7 @@
 											<span class="txt-stat">업무외 시간 진입</span>
 										</div>
 										<div class="fix-noti">
-											<button type="button" class="btn-fixed btn-toggle"><span class="blind">대화고정</span></button>											
+											<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>											
 										</div>
 									</li>
 									<li>
@@ -241,7 +258,7 @@
 											<span class="txt-count">[2/10]</span>
 										</div>
 										<div class="fix-noti">
-											<button type="button" class="btn-fixed btn-toggle"><span class="blind">대화고정</span></button>
+											<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>
 											<span class="count-noti">2</span>
 										</div>
 									</li>									
@@ -334,6 +351,8 @@
 										</div>
 									</li>
 								</ul>
+								<!-- 결과가 없을경우 노출 -->
+								<!-- <p class="no-data">검색 결과가 없습니다.</p> -->								
 							</div>						
 							<div class="tab-cont">
 								<ul class="chat-list scroll-area sortable">
@@ -536,12 +555,12 @@
 						</div>						
 						<div class="board-write sm">
 							<ul class="history-list scroll-area">
-								<li class="ellipsis">22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
-								<li>22-7-26 JIRA  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li class="ellipsis">22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
 							</ul>
 						</div>
 					</div>

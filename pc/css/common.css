@@ -110,6 +110,7 @@ textarea::-webkit-input-placeholder {color:#9ba9a8;font-weight:300}
 textarea::-moz-placeholder{color:#9ba9a8;font-weight:300}
 textarea::placeholder {color:#9ba9a8;font-weight:300}
 
+
 .hide {display:none;}
 .blind{
 	position: absolute;

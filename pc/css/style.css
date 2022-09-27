@@ -600,6 +600,7 @@ input[type=checkbox][class^=styled] {
 .board-write td {
 	padding: 7px 15px;  
 	background-color:#fff;
+	word-break: break-all;
 }
 
 .board-write.sm th,
@@ -757,7 +758,7 @@ input[type=checkbox][class^=styled] {
 .tab-lst .tab-item.on,
 .tab-lst .tab-item.on > .txt {transition:all .2s;}
 .tab-lst .tab-item.on {z-index:5;}
-.tab-cont {display:none;}
+.tab-cont {position:relative; display:none;}
 .tab-cont.on {display:block;}
 
 .tab-lst2 {
@@ -893,7 +894,7 @@ html.popOpen {overflow:hidden;}
 	min-height:54px;
 	position:relative;
 	padding:13px 30px;
-	background-color:#414550;
+	/* background-color:#414550; */
 
 }
 .layer-popup .popup-header .title {
@@ -945,6 +946,17 @@ html.popOpen {overflow:hidden;}
 }
 
 
+.no-data {
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	padding:10px 20px;
+	text-align:center;
+	color:#fff;
+	border-radius: 20px;
+	background-color:rgba(0,0,0,.8);
+}
 /* ==========================================
 	서브컨텐츠
 ========================================== */
@@ -972,6 +984,7 @@ html.popOpen {overflow:hidden;}
 	font-weight:500
 }
 .main-chat .chat-area {width:480px}
+.main-chat .chat-area .no-data {top: calc(50% - 56px);}
 .main-chat .chat-area .top {justify-content: flex-start;}
 .main-chat .chat-area .top .customer-name {
 	padding-left:10px;
@@ -1021,7 +1034,8 @@ html.popOpen {overflow:hidden;}
 	height: 100%;
 	padding-top:47px;
 }
-.chat-cont {	
+.chat-cont {
+	position:relative;
 	background-color:#c9dcec;
 	flex:1; 
 	/*overflow-y: hidden;*/
@@ -1040,7 +1054,7 @@ html.popOpen {overflow:hidden;}
 	display:inline-block;
 	position:relative;
 	height:21px;
-	line-height:21px;
+	line-height:19px;
 	padding: 0 15px;
 	font-size:12px;
 	color:#465e6f; 
@@ -1051,12 +1065,14 @@ html.popOpen {overflow:hidden;}
 }
 .chat-cont .system-msg {text-align:center}
 .chat-cont .system-msg p {
+	display:block;
 	font-size:12px;
 	color:#666;
 	font-weight:300;
 	line-height:15px;
 }
 .chat-cont .system-msg p > .tit {display:block;font-weight:400}
+.chat-cont .system-msg .btn-border {margin-top:5px}
 .chat-cont .chat-item-list {
 	display:flex;
 	flex-direction: column;
@@ -1066,6 +1082,7 @@ html.popOpen {overflow:hidden;}
 	display:flex;
 	flex-direction: column;
 }
+.chat-cont .chat-item mark {background-color:#f8eb58}
 .chat-cont .chat-item + .chat-item {margin-top:20px}
 .chat-cont .chat-item.right {align-items: flex-end;}
 .chat-cont .chat-item.right + .chat-item.right,
@@ -1107,6 +1124,13 @@ html.popOpen {overflow:hidden;}
 	background-color:#f8eb58;
 	color:#000;
 	border-color:#f8eb58;
+}
+.chat-cont .chat-item-list + .system-msg {margin-top:15px}
+.search-navi{
+	position:absolute;	
+	width:480px;
+	bottom:135px;
+	background-color:rgba(56, 71, 122, .5);
 }
 .chat-box {
 	overflow:hidden;
@@ -1205,6 +1229,10 @@ html.popOpen {overflow:hidden;}
 	border-bottom:1px solid #e7e9ee;
 	background-color:#fff;
 }
+.chat-list li.fix:nth-child(-n+3){position:sticky; z-index:5}
+.chat-list li.fix:nth-child(1) {top:0;}
+.chat-list li.fix:nth-child(2) {top:82px;}
+.chat-list li.fix:nth-child(3) {top:165px;}
 .chat-list li:first-child {border-top:0}
 .chat-list li.now {background-color:#c9dcec}
 .chat-list li > .btn-area {
@@ -1380,5 +1408,9 @@ html.popOpen {overflow:hidden;}
 	}
 	.send-list {
 		height:270px;
+	}
+	.search-navi {
+		
+
 	}
 }
