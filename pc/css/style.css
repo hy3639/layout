@@ -192,6 +192,8 @@
 	width:1280px; 
 	padding:57px 0 36px; 
 }
+.no-fixed-tit .contents {padding-top:0}
+.no-fixed-tit .content {min-height:calc(100vh - 114px);}
 .fixed-title {
 	position:fixed;
 	left:0; 
@@ -272,13 +274,14 @@
 	text-align:center;	
 	border-radius: 20px;
 }
-.btn-round.bg-green {background-color:#21b9bf; color:#fff}
-.btn-round.bg-gray {background-color:#f5f6f8; color:#21b9bf}
+.bg-green {background-color:#21b9bf; color:#fff}
+.bg-navy {background-color:#455896; color:#fff;}
+.bg-gray {background-color:#f5f6f8; color:#21b9bf}
 
  /* border버튼 */
 .btn-border{
 	display:inline-block;	
-	padding:0 8px;
+	padding:0 15px;
 	border:1px solid #e9ebef;
 	background-color:#fff;
 	color:#222a3b;	
@@ -286,7 +289,7 @@
 	border-radius: 20px;
 	vertical-align: top;
 }
-
+.btn-border.btn-sm {padding:0 8px;}
 .btn-round-square {
 	display:inline-block;
     height: 33px;
@@ -302,6 +305,20 @@
 	height:22px;
 	line-height:20px;
 	font-size:12px;
+	font-weight:300;
+}
+.btn-mid {
+	/* min-width:48px;  */
+	height:42px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:300;
+}
+.btn-lg {
+	/* min-width:48px;  */
+	height:48px;
+	line-height:46px;
+	font-size:14px;
 	font-weight:300;
 }
  /* 아이콘 버튼 */
@@ -861,7 +878,15 @@ input[type=checkbox][class^=styled] {
 	레이어팝업
 ============== */
 html.popOpen {overflow:hidden;}
-.dimmed {position:fixed;left:0;right:0; top:0; bottom:0;background-color:rgba(0,0,0,.6); width:1280px;}
+.dimmed {
+	position:fixed;
+	left:0;
+	right:0; 
+	top:0; 
+	bottom:0;
+	background-color:rgba(0,0,0,.6); 
+	width:1280px;
+}
 .layer-popup {
     display:none;
     overflow:auto;
@@ -871,29 +896,30 @@ html.popOpen {overflow:hidden;}
     bottom:0;
     left:0;
     z-index:150;
-    padding:50px 50px 0;    
+    /* padding:50px 50px 0;     */
 	z-index:200;
 	width:1280px;
 }
 .layer-popup .popup {
     position:relative;
-    width:450px;
-    margin:0 auto 50px;
+    /* width:450px; */
+    margin:0 auto;
 	padding-bottom:30px;
     box-sizing:border-box;
     background-color:#fff;
+	border-radius:20px;
 }
-.layer-popup .popup.xs {width:280px;}
-.layer-popup .popup.sm {width:360px;}
-.layer-popup .popup.sm .btn-area > .btn-mid {min-width:104px}
+/* .layer-popup .popup.xs {width:280px;} */
+.layer-popup .popup.sm {width:400px;}
+/* .layer-popup .popup.sm .btn-area > .btn-mid {min-width:104px} */
 .layer-popup .popup.mid {width:430px;}
 .layer-popup .popup.lg {width:560px;}
 .layer-popup .popup.xl {width:680px;}
 
 .layer-popup .popup-header {
-	min-height:54px;
+	min-height:58px;
 	position:relative;
-	padding:13px 30px;
+	padding:13px 20px;
 	/* background-color:#414550; */
 
 }
@@ -908,10 +934,10 @@ html.popOpen {overflow:hidden;}
 .layer-popup .btn-close {
     position:absolute;
     top:50%;
-    right:16px;
+    right:20px;
     width:25px;
     height:25px;
-	margin-top:-12px;
+	margin-top:-13px;
     border:0;
     background-color:transparent;
     font-size:0;
@@ -928,7 +954,7 @@ html.popOpen {overflow:hidden;}
     left:50%;
     width:25px;
     height:1px;
-    background-color:#ddd;
+    background-color:#475a97;
 }
 .layer-popup .btn-close:before {
     transform:translate(-50%,-50%) rotate(45deg);
@@ -936,7 +962,25 @@ html.popOpen {overflow:hidden;}
 .layer-popup .btn-close:after {
     transform:translate(-50%,-50%) rotate(135deg);
 }
-.layer-popup .popup-cont {padding:30px 30px 10px 30px;}
+.layer-popup .popup-cont {padding:10px 20px 30px 20px;}
+.layer-popup .popup-cont .guide-txt {
+	font-size:18px;
+	color:#000;
+	font-weight: 300;
+}
+.layer-popup .popup-cont .sub-txt {
+	display:block;
+	font-size: 16px;
+	color:#757575;
+	font-weight: 300;
+}
+.layer-popup .popup-cont .guide-txt + .sub-txt {padding-top:5px}
+.layer-popup .popup .btn-area {
+	display:flex;
+	padding:0 30px;
+}
+.layer-popup .popup.sm .btn-area button {flex:1}
+.layer-popup .popup.sm .btn-area button + button {margin-left: 10px;}
 
 /* 팝업오픈 */
 .layer-popup .popup {opacity:0;}
@@ -960,6 +1004,9 @@ html.popOpen {overflow:hidden;}
 /* ==========================================
 	서브컨텐츠
 ========================================== */
+/* 에러페이지 */
+.error-area {}
+
 /* 상담관리 > 개인상담 */
 .content.flex {
 	display:flex;

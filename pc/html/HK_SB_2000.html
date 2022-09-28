@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나은행 K포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper no-fixed-tit">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="K포탈 로고">
+			</a>
+			<div class="btn-toggle-area">
+				<button type="button" class="btn-msg">상담 ON</button>
+				<button type="button" class="btn-msg on">상담 OFF</button>
+			</div>
+			<span class="waiting">대기 : <em>00명</em></span>
+		</div>
+		<div class="right-area">
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout">로그아웃</button>
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<ul class="depth1">
+					<li><a href="#">대인상담</a></li>
+					<li>Admin
+						<ul class="depth2">
+							<li><a href="#">채팅설정</a></li>
+							<li><a href="#">채널조회</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">메뉴권한관리</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	<div class="container">		
+		<div class="contents">
+			<div class="content">
+				<div class="error-area">
+					<p class="tit">
+						서비스 이용에 불편을 드려 죄송합니다<br>
+						요청하신 페이지를 찾을 수 없습니다.
+					</p>
+					<span class="sub-txt">
+						방문 하시려는 페이지의 주소가 잘못되었거나,
+						페이지의 주소가 변경 혹은 삭제 되어 요청하신 페이지를 찾을 수 없습니다
+					</span>
+					<span class="sub-txt">
+						입력하신 주소가 정확한지 다시 한번 확인해 주시기 바랍니다.
+						로그인 화면으로 이동 하시겠습니까?
+					</span>
+				</div>
+			</div>
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div class="layer-popup" title="Popup01">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt align-center">일치하는 회원정보가 없습니다.</p>				
+		</div>
+		<div class="btn-area  align-center">			
+			<button type="button" class="btn-mid bg-green popClose">확인</button>			
+		</div>
+	</div>
+</div>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+</html>
