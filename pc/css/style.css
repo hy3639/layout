@@ -190,10 +190,19 @@
 .contents {
 	position:relative;
 	width:1280px; 
+	min-height: calc(100vh - 171px); /*fixed-title이 있는경우*/
 	padding:57px 0 36px; 
 }
+.content.flex {
+	display:flex;
+	align-items: stretch;	
+}
+.content.flex.center {justify-content: center;}
+
+/*fixed-title이 없는경우*/
 .no-fixed-tit .contents {padding-top:0}
 .no-fixed-tit .content {min-height:calc(100vh - 114px);}
+
 .fixed-title {
 	position:fixed;
 	left:0; 
@@ -318,8 +327,9 @@
 	/* min-width:48px;  */
 	height:48px;
 	line-height:46px;
-	font-size:14px;
+	font-size:16px;
 	font-weight:300;
+	border-radius: 25px;
 }
  /* 아이콘 버튼 */
  .btn-qustion {
@@ -919,14 +929,14 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup-header {
 	min-height:58px;
 	position:relative;
-	padding:13px 20px;
+	padding:15px 20px;
 	/* background-color:#414550; */
 
 }
 .layer-popup .popup-header .title {
 	display:inline-block;
 	font-size: 18px;
-	color:#fff;
+	color:#000;
 	font-weight: 500;
 }
 .layer-popup .popup-header .title + .tooltip-area {margin-left:5px;}
@@ -1005,15 +1015,32 @@ html.popOpen {overflow:hidden;}
 	서브컨텐츠
 ========================================== */
 /* 에러페이지 */
-.error-area {}
+.error-area {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.error-area .tit {
+	padding:130px 0 40px;
+	background: url(../images/icon/icon_error.png) no-repeat center top;
+	font-size:20px;
+	color:#2f4359;
+	font-weight: 500;
+	line-height:32px;
+}
+.error-area .sub-txt {
+	font-size:16px;
+	color:#757575;
+	font-weight: 300;
+	line-height: 24px;
+}
+.error-area .sub-txt + .sub-txt {margin-top:30px}
+.error-area .btn-area {margin-top:50px}
+.error-area .btn-area button {min-width:200px}
 
 /* 상담관리 > 개인상담 */
-.content.flex {
-	display:flex;
-	align-items: stretch;
-	min-height: calc(100vh - 171px);
-}
-
 .content.flex .box {
 	/* flex:1;  */
 	position:relative
