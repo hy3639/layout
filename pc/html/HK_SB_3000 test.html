@@ -5,6 +5,50 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>하나은행 K포탈</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<style>
+		.chat-box textarea, .chat-box .textarea-clone{
+		width: 300px;
+		padding: 0 10px;
+		line-height:25px;
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+	}
+	
+	.chat-box textarea{
+		height:160px; 
+		resize:none; 
+		overflow:hidden; 
+		outline:none;
+		margin: 0;
+		border:none;
+		background:transparent;
+		box-shadow: none;
+	}
+	
+	.chat-box .textarea-wrapper{
+		flex:1;
+		height:182px; 
+		overflow:hidden;
+		/* background-color: #bbb;
+		background-color: rgba(255,255,255,0.6);
+		-moz-box-shadow: inset -1px -1px 1px rgba(255,255,255,0.6), inset 3px 3px 20px rgba(0,0,0,0.5);
+		-webkit-box-shadow: inset -1px -1px 1px rgba(255,255,255,0.6), inset 3px 3px 20px rgba(0,0,0,0.5);
+		box-shadow: inset -1px -1px 1px rgba(255,255,255,0.6), inset 3px 3px 20px rgba(0,0,0,0.5);
+		-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; */
+	}
+	
+	.chat-box .textarea-clone{
+		position:absolute; 
+		top:-9999px; 
+		left:-9999px; 
+		visibility:hidden; 
+		min-height: 160px; 
+		word-wrap: break-word;
+		white-space: pre-wrap;
+	}
+	
+	.chat-box .textarea-wrapper .mCSB_scrollTools{ margin: 10px 5px; }
+	
+	</style>
 </head>
 
 <body>
@@ -156,8 +200,14 @@
 									<a href="#" class="btn-border btn-sm">활동 등록하기</a>
 								</div>								
 							</div>
-							<div class="chat-box">								
-								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>					
+							<div class="chat-box">
+								<div class="textarea-wrapper">
+									<textarea class="" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>
+									<!-- add an extra .textarea-clone div -->
+									<div class="textarea-clone"></div>
+								</div>
+								
+													
 								<button type="button" class="btn-round-square btn-send">전송</button>
 							</div>
 						</div>
@@ -785,7 +835,58 @@
 
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../js/common.js"></script>
-
+<script>
+	(function($){
+		$(window).on("load",function(){
+			
+			var textareaLineHeight=parseInt($(".textarea-wrapper textarea").css("line-height"));
+			
+			$(".textarea-wrapper").mCustomScrollbar({
+				scrollInertia:0,
+				theme:"dark-3",
+				advanced:{autoScrollOnFocus:false},
+				mouseWheel:{disableOver:["select","option","keygen","datalist",""]},
+				keyboard:{enable:false},
+				snapAmount:textareaLineHeight
+			});
+			
+			var textarea=$(".textarea-wrapper textarea"),textareaWrapper=$(".textarea-wrapper"),textareaClone=$(".textarea-wrapper .textarea-clone");
+			
+			textarea.bind("keyup keydown",function(e){
+				var $this=$(this),textareaContent=$this.val(),clength=textareaContent.length,cursorPosition=textarea.getCursorPosition();
+				textareaContent="<span>"+textareaContent.substr(0,cursorPosition)+"</span>"+textareaContent.substr(cursorPosition,textareaContent.length);
+				textareaContent=textareaContent.replace(/\n/g,"<br />");
+				textareaClone.html(textareaContent+"<br />");
+				$this.css("height",textareaClone.height());
+				var textareaCloneSpan=textareaClone.children("span"),textareaCloneSpanOffset=0,
+					viewLimitBottom=(parseInt(textareaClone.css("min-height")))-textareaCloneSpanOffset,viewLimitTop=textareaCloneSpanOffset,
+					viewRatio=Math.round(textareaCloneSpan.height()+textareaWrapper.find(".mCSB_container").position().top);
+				if(viewRatio>viewLimitBottom || viewRatio<viewLimitTop){
+					if((textareaCloneSpan.height()-textareaCloneSpanOffset)>0){
+						textareaWrapper.mCustomScrollbar("scrollTo",textareaCloneSpan.height()-textareaCloneSpanOffset-textareaLineHeight);
+					}else{
+						textareaWrapper.mCustomScrollbar("scrollTo","top");
+					}
+				}
+			});
+			
+			$.fn.getCursorPosition=function(){
+				var el=$(this).get(0),pos=0;
+				if("selectionStart" in el){
+					pos=el.selectionStart;
+				}else if("selection" in document){
+					el.focus();
+					var sel=document.selection.createRange(),selLength=document.selection.createRange().text.length;
+					sel.moveStart("character",-el.value.length);
+					pos=sel.text.length-selLength;
+				}
+				return pos;
+			}
+			
+		});
+	})(jQuery);
+</script>
 </body>
 </html>
