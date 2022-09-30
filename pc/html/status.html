@@ -473,8 +473,11 @@
         </ul>
     </div>
     <!-- //list_header -->
-    <div id="total"></div>
-    <ul id="result" class="result"></ul>
+    <div id="total">
+        <p> 전체: <span class="total"></span> 중 <strong class="complate"></strong> 완료, <strong class="percentage"><span class="percent"></span>%</strong></p>
+    </div>
+    <div id="result" class="result">
+    </div>
     <!-- wrap -->
     <div id="wrap">
         <h2 class="title">K포탈</h2>
@@ -567,7 +570,7 @@
     </div>
     <!-- //wrap -->
 
-<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/jquery-1.11.1.min.js?ver=1"></script>
 <!-- <script src="http://code.jquery.com/jquery-latest.js"></script>  -->
 
 <script>
@@ -601,28 +604,35 @@
             }
         });
 
-        // const category = []
-        // let resultTotal = 0
-        // let resultComplate = 0
-        // let resultPercent = 0
-        // $('.title').each((i, v) => {
-        //     const el = $(v)
-        //     const obj = {
-        //         name: $(v).text(),
-        //         count: $(v).next('.cont').find('tr').length -1,
-        //         complate: $(v).next('.cont').find('.comp').length
-        //     }
-        //     category.push(obj)
-        // })
-        // category.forEach((v) => {
+        const category = []
+        let resultTotal = 0
+        let resultComplate = 0
+        let resultPercent = 0
+        $('.title').each(function(i, v){
+            const el = $(v)
+            const obj = {
+                name: $(v).text(),
+                count: $(v).next('.cont').find('tr').length -1,
+                complate: $(v).next('.cont').find('.comp').length
+            }
+            category.push(obj)
+        })
+        // category.forEach(function (v) {
         //     const percentage = v.complate === 0 ? 0 : v.complate / v.count
         //     $(`<li> ${v.name}: <span>${v.count}</span> 중 <strong class="complate">${v.complate}</strong> 완료, <strong class="percentage">${Math.round(percentage * 100)}%</strong></li>`).appendTo('#result')
         //     resultTotal += v.count
         //     resultComplate += v.complate
         // })
         // resultPercent = resultComplate === 0 ? 0 : resultComplate / resultTotal * 100
-        // $(`<p>전체 <span class="total-count">${resultTotal}</span>중 <span class="total-complate">${resultComplate}</span> 완료, <span class="percent">${Math.round(resultPercent)}%</span></p>`).appendTo('#total')  \
+        // $(`<p>전체 <span class="total-count">${resultTotal}</span>중 <span class="total-complate">${resultComplate}</span> 완료, <span class="percent">${Math.round(resultPercent)}%</span></p>`).appendTo('#total') 
+        var total = $('.cont tbody > tr').length;
+        var finish = $('tbody tr td.comp').length;
+        var percent = finish / total * 100;
+        $('.total').text(total);
+        $('.complate').text(finish);
+        $('.percent').text(percent);
     });
+
 </script>
 </body>
 
