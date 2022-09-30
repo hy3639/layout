@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>하나은행 K포탈 구축 Publishing List</title>
     <style type="text/css">
     * {
@@ -525,32 +525,6 @@
                         <td class="date"></td>
                         <td></td>
                     </tr>
-                    <tr class="guide">
-                        <td>layout</td>
-                        <td>layout</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>가이드</td>
-                        <td class="url"><a href="../guide/guide.html" target="_blank"></a></td>
-                        <td class="state comp"><i class="icon"></i></td>
-                        <td class="date"></td>
-                        <td></td>
-                    </tr>
-                    <tr class="guide">
-                        <td>layout</td>
-                        <td>layout</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>팝업스타일</td>
-                        <td class="url"><a href="../guide/layerPop.html" target="_blank"></a></td>
-                        <td class="state comp"><i class="icon"></i></td>
-                        <td class="date"></td>
-                        <td></td>
-                    </tr>
                     <tr>
                         <td>HK_SB_2OOO</td>
                         <td>에러페이지</td>
@@ -596,8 +570,8 @@
     </div>
     <!-- //wrap -->
 
-<!-- <script src="../js/jquery-1.11.1.min.js"></script> -->
-<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-1.11.1.min.js?ver=1"></script>
+<!-- <script src="http://code.jquery.com/jquery-latest.js"></script>  -->
 
 <script>
     $(function () {
@@ -654,10 +628,9 @@
         var total = $('.cont tbody > tr').length;
         var finish = $('tbody tr td.comp').length;
         var percent = finish / total * 100;
-         
         $('.total').text(total);
         $('.complate').text(finish);
-        $('.percent').text(Math.ceil(percent));
+        $('.percent').text(percent);
     });
 
 </script>

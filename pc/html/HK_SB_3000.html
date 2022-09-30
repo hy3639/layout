@@ -66,8 +66,8 @@
 									<p>
 										<span class="tit">[시스템 메시지]</span>
 										<span class="f-red">업무유형+상담종류</span> 상담을 요청하고,<br>
-										본인인증 완료한 <span class="f-red">‘당행’</span>or <span class="f-red">‘신규’</span> 손님입니다.<br>
-										손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.<br>
+										본인인증 완료한<span class="f-red">‘당행’</span>or <span class="f-red">‘신규’</span>손님입니다.<br>
+										손님과 상담 시 금융소비자보호법 등관련 법률을 준수하여 상담하시기 바랍니다.<br>
 									</p>
 								</div>
 								<div class="chat-item-list">
@@ -161,15 +161,15 @@
 								<button type="button" class="btn-round-square btn-send">전송</button>
 							</div>
 						</div>
-						<!-- <div class="search-navi">
+						<div class="search-navi">
 							<button type="button" class="btn-close">검색닫기</button>
 							<div>
 								<button type="button" class="btn-prev">이전</button>
 								<button type="button" class="btn-next">다음</button>
 							</div>
-						</div> -->
+						</div>
 						<!-- 결과가 없을경우 노출 -->
-						<!-- <p class="no-data">검색 결과가 없습니다.</p> -->
+						<p class="no-data">검색 결과가 없습니다.</p>
 					</div>
 					<div class="bottom">
 						<div class="btn-area">
@@ -203,8 +203,118 @@
 									<a href="#" class="btn-search">검색</a>
 								</div>
 								<div class="btn-area">
-									<button type="button" class="btn-round bg-gray btn-detail">상세</button>
-									<button type="button" class="btn-round btn-order"><span class="blind">정렬</span></button>
+									<div class="tooltip-area">
+										<button type="button" class="btn-round bg-gray btn-detail btn-layer">상세</button>
+										<div class="tooltip-layer">
+											<button type="button" class="btn-close">툴팁닫기</button>
+											<div class="layer-cont">
+												<div class="tit-area flex-area both">
+													<p>상세검색</p>
+													<div class="btn-area">
+														<button type="button" class="btn-round bg-navy">검색</button>
+														<button type="button" class="btn-round bg-gray">초기화</button>
+													</div>
+												</div>
+												<div class="cont-area">
+													<div class="board-write sm">
+														<table>
+															<caption>뷰</caption>
+															<colgroup>
+																<col style="width:85px">																
+																<col>									
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th scope="row">대화 일자</th>
+																	<td>
+																		<div class="calendar-area">
+																			<div class="input-text cal">
+																				<input type="text" name="from">	
+																			</div>
+																			~
+																			<div class="input-text cal">
+																				<input type="text" name="from">	
+																			</div>
+																		</div>
+																	</td>																	
+																</tr>
+																<tr>
+																	<th scope="row">휴대폰번호</th>
+																	<td>
+																		<div class="input-text">
+																			<input type="number">
+																		</div>
+																		<p class="form-guide">숫자만 가능/ 10~11자리 입력</p>
+																	</td>																	
+																</tr>
+																<tr>
+																	<th scope="row">고객명</th>
+																	<td>
+																		<div class="input-text">
+																			<input type="text">
+																		</div>
+																		<p class="form-guide">한글,영문 가능/ 자릿수 제한 없음</p>
+																	</td>																	
+																</tr>
+																<tr>
+																	<th scope="row">고객번호</th>
+																	<td>
+																		<div class="input-text">
+																			<input type="number">
+																		</div>
+																		<p class="form-guide">숫자만 가능/ 9자리 입력</p>
+																	</td>																	
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tooltip-area">
+										<button type="button" class="btn-round btn-order btn-layer on"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
+										<div class="tooltip-layer w450 left">
+											<button type="button" class="btn-close">툴팁닫기</button>
+											<div class="layer-cont">
+												<div class="tit-area">
+													<p>대화상태</p>
+												</div>
+												<div class="cont-area">
+													<ul class="check-list">
+														<li><input type="checkbox" id="chk1"><label class="flag type1" for="chk1">전체</label></li>
+														<li><input type="checkbox" id="chk2" checked><label class="flag type2" for="chk2">대기중</label></li>
+														<li><input type="checkbox" id="chk3"><label class="flag type3" for="chk3">상담중</label></li>
+														<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
+														<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
+													</ul>
+												</div>
+												<div class="tit-area">
+													<p>업무 유형</p>
+												</div>
+												<div class="cont-area">
+													<ul class="check-list">
+														<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
+														<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
+														<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
+														<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
+														<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
+														<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
+														<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
+														<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
+														<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
+														<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
+														<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
+														<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>													
+													</ul>
+												</div>
+											</div>
+										</div>	
+									</div>
+									
+									<div>
+
+									</div>
 								</div>
 							</div>					
 							<div class="tab-cont on">
@@ -599,73 +709,73 @@
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">여신</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">전자금융</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">외환</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">카드</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">끝</span>
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 									</ul>
@@ -674,12 +784,12 @@
 									<ul class="send-list scroll-area sortable">						
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>										
 									</ul>
@@ -688,12 +798,12 @@
 									<ul class="send-list scroll-area sortable">						
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>										
 									</ul>
@@ -702,12 +812,12 @@
 									<ul class="send-list scroll-area sortable">						
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>										
 									</ul>
@@ -716,12 +826,12 @@
 									<ul class="send-list scroll-area sortable">						
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>										
 									</ul>
@@ -730,12 +840,12 @@
 									<ul class="send-list scroll-area sortable">						
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>										
 									</ul>
@@ -744,12 +854,12 @@
 									<ul class="send-list scroll-area sortable">						
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
 											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
-											<a href="#" class="cont ellipsis"> 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송  손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>										
 									</ul>

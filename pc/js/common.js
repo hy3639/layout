@@ -39,12 +39,20 @@ $(document).ready(function(){
 		}
 	});
 
+	/* 클릭형 툴팁 */
+	$(document).on('click', '.btn-layer', function(){		
+		$(this).closest('.tooltip-area').find('.tooltip-layer').show();	
+	});
+	$(document).on('click', '.tooltip-layer .btn-close', function(){		
+		$(this).closest('.tooltip-layer').hide();
+	})
+
 	/* datepicker */
 	$('.cal').each(function(){
 		$(this).find('input').datepicker({
 			dateFormat: "yy-mm-dd", 		  
 			showOn: "both",
-			buttonImage: "../../images/icon/icon_20_date.png", 
+			buttonImage: "../images/icon/icon_20_date.png", 
 			buttonImageOnly: true, 
 			changeMonth: true,
 			changeYear: true,
@@ -58,9 +66,10 @@ $(document).ready(function(){
 		});
 		//경로 변경시
 		if($(this).closest('.calendar-area').hasClass('src')){	
-			$('img.ui-datepicker-trigger').attr('src' , '../../../images/icon/icon_20_date.png');
+			$('img.ui-datepicker-trigger').attr('src' , '../../images/icon/icon_20_date.png');
 		}
 	});
+
 
 });
 
@@ -189,3 +198,4 @@ function reHeight(){
 function sortable(){
 	$('.sortable').sortable();
 }
+

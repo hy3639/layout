@@ -68,6 +68,7 @@ blockquote, q{quotes:none}
 blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
 input,select,textarea,button{border-radius:0;vertical-align:middle}
 input::-ms-clear{display:none}
+select::-ms-expand {display:none}
 button{border:0 none;background-color:transparent;cursor:pointer}
 html {font-size:62.5%;}
 body{background:#fff;direction:ltr;-webkit-text-size-adjust:none; word-break: keep-all;}

@@ -191,7 +191,8 @@
 .contents {
 	position:relative;
 	width:1280px; 
-	min-height: calc(100vh - 171px); /*fixed-title이 있는경우*/
+	/* min-height: calc(100vh - 171px);  */
+	min-height: calc(100vh - 78px); /*fixed-title이 있는경우*/
 	padding:57px 0 36px; 
 }
 .content.flex {
@@ -213,7 +214,7 @@
 	background-color:#dde5ff;
 	z-index: 10
 }
-.tit-area {
+.fixed-title .tit-area {
 	display:flex; 
 	justify-content: space-between;
 	align-items:center; 
@@ -221,7 +222,7 @@
 	line-height:57px;
 	padding:0 20px;	
 }
-.tit-area h2 {
+.fixed-title .tit-area h2 {
 	color:#465e6f;
 	font-weight:700;
 }
@@ -286,7 +287,7 @@
 }
 .bg-green {background-color:#21b9bf; color:#fff}
 .bg-navy {background-color:#455896; color:#fff;}
-.bg-gray {background-color:#f5f6f8; color:#21b9bf}
+.bg-gray {background-color:#f5f6f8; color:#455896}
 
  /* border버튼 */
 .btn-border{
@@ -523,9 +524,6 @@ input[type=checkbox][class^=styled] {
 .input-text.wide input {width: 100%;}
 
 /*검색영역*/
- .search-area {
-	text-align:center;
-}
  .search-area .search-box {position:relative;}
  .search-area .search-box input {
 	width:100%;
@@ -826,6 +824,7 @@ input[type=checkbox][class^=styled] {
 /* ==============
 	datepicker
 ============== */
+
 .input-text.cal {position:relative; display:inline-block;}
 .input-text.cal input {
 	width:140px;
@@ -872,8 +871,7 @@ input[type=checkbox][class^=styled] {
 	line-height: 35px;
 }
 .ui-datepicker-calendar thead th {height: 33px;}
-.ui-datepicker-calendar thead span {
-	
+.ui-datepicker-calendar thead span {	
 	font-size:12px;
 	color:#adb6bf;
 	text-decoration: underline;
@@ -885,6 +883,7 @@ input[type=checkbox][class^=styled] {
 .ui-datepicker-current-day a {color:#fff}
 .ui-datepicker-calendar tbody tr td:first-child a {color:#e22267}
 
+.calendar-area {display:flex; justify-content: space-between; align-items: center5;}
 /* ==============
 	레이어팝업
 ============== */
@@ -999,19 +998,84 @@ html.popOpen {overflow:hidden;}
     opacity:1;
     transition:transform .3s, opacity .3s;
 }
+/* ==============
+	툴팁
+============== */
+.tooltip-area {display: inline-block;position:relative;}
+.tooltip-layer {
+	display:none;
+	position:absolute;
+	top: 28px;
+	left:0;
+	width:400px;
+	padding:55px 20px 30px 20px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  	border: solid 1px #e7e9ee;
+	background-color:#fff;
+	/* font-size:13px;
+	font-weight:400; */
+	z-index:500;
+	border-radius: 10px;
+}
 
+.layer-cont .tit-area p {
+	color:#000;
+	font-weight:300;
+}
+.layer-cont  .cont-area {
+	margin-top:15px;
+}
+.layer-cont  .cont-area + .tit-area {margin-top:25px}
+
+.tooltip-layer .btn-close {
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:16px;
+    height:16px;
+    border:0;
+    background-color:transparent;
+    font-size:0;
+    text-indent:-99999px;
+    line-height:0;
+    cursor:pointer;
+}
+.tooltip-layer .btn-close:before,
+.tooltip-layer .btn-close:after {
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:16px;
+    height:1px;
+    background-color:#475a97;
+	opacity: .9;
+}
+.tooltip-layer .btn-close:before {
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+.tooltip-layer .btn-close:after {
+    transform:translate(-50%,-50%) rotate(135deg);
+}
+
+ 
 
 .no-data {
 	position:absolute;
 	left:50%;
 	top:50%;
 	transform: translate(-50%, -50%);
-	padding:10px 20px;
+	width:200px;
+	height:40px;
+	line-height:40px;
+	padding:0 20px;
 	text-align:center;
+	font-size:16px;
 	color:#fff;
 	border-radius: 20px;
-	background-color:rgba(0,0,0,.8);
+	background-color:rgba(0,0,0,.7);
 }
+
 /* ==========================================
 	서브컨텐츠
 ========================================== */
@@ -1159,7 +1223,7 @@ html.popOpen {overflow:hidden;}
 	display:flex;
 	flex-direction: column;
 }
-.chat-cont .chat-item mark {background-color:#f8eb58}
+.chat-cont .chat-item mark {background-color:#000; color:#fff;}
 .chat-cont .chat-item + .chat-item {margin-top:20px}
 .chat-cont .chat-item.right {align-items: flex-end;}
 .chat-cont .chat-item.right + .chat-item.right,
@@ -1207,7 +1271,7 @@ html.popOpen {overflow:hidden;}
 	position:absolute;	
 	width:480px;
 	bottom:135px;
-	background-color:rgba(56, 71, 122, .5);
+	background-color:rgba(0, 0, 0, .5);
 }
 .chat-box {
 	overflow:hidden;
@@ -1259,7 +1323,7 @@ html.popOpen {overflow:hidden;}
 	width:384px;
 	border-left:2px solid #e7e9ee;
 	border-right:2px solid #e7e9ee;
-	overflow:hidden;
+	/* overflow:hidden; */
 }
 .chat-list-area .top .flex-area .btn-border {
 	margin:1px 0 0 10px;
@@ -1272,26 +1336,59 @@ html.popOpen {overflow:hidden;}
     border-bottom: 1px solid #dadce4;
 }
 .chat-list-area .search-area .search-box {width:calc(100% - 110px)}
-.chat-list-area .search-area input {height:43px; line-height:43px; border:0}
+.chat-list-area .search-area .search-box input {height:43px; line-height:43px; border:0}
 .chat-list-area .search-area .btn-area {
 	display:flex;
 	align-items: center;
 	justify-content: flex-start;
 	width:110px;
 }
-.chat-list-area .search-area .btn-area > button {
+.chat-list-area .search-area .tooltip-area > button {
 	width:42px;
 	height:22px; 
 	padding:0
 }
-.chat-list-area .search-area .btn-area > .btn-detail {	
+.chat-list-area .search-area .btn-area .btn-detail {	
 	margin-right:4px;
 	color:#455896;
 }
-.chat-list-area .search-area .btn-area > .btn-order {
+.chat-list-area .search-area .btn-area .btn-order {
 	height:22px;
     background: #f5f6f8 url(../images/icon/icon_order.png) no-repeat center center;
 }
+.chat-list-area .search-area .btn-area .btn-order.on {
+	background: #455896 url(../images/icon/icon_order_on.png) no-repeat center center;
+	color:#fff;
+}
+.check-list {
+	display:flex;
+	flex-wrap: wrap;
+	/* margin-left:-5px; */
+	margin-top:-5px;
+}
+.check-list li {margin:5px 5px 0 0;}
+.check-list li.block {width:100%}
+.check-list .chkbox {opacity: 0;}
+.check-list input[type="checkbox"] {
+	opacity: 0;
+	appearance: none;
+	position: absolute;
+    /* left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0 */
+}
+.check-list input[type="checkbox"]:checked + label {color:#fff;}
+.check-list input[type="checkbox"]:checked + .type1{background-color:#423cbd}
+.check-list input[type="checkbox"]:checked + .type2{background-color:#d3425e}
+.check-list input[type="checkbox"]:checked + .type3{background-color:#21b9bf}
+.check-list input[type="checkbox"]:checked + .type4{background-color:#a35aef}
+.check-list input[type="checkbox"]:checked + .type5{background-color:#999}
+.check-list input[type="checkbox"]:checked + .type6{background-color:#344783}
+
 .chat-list-area .tab-lst {padding:9px 20px 20px 20px}
 .chat-list {height:calc(100vh - 331px)}
 .chat-list li {
@@ -1306,7 +1403,7 @@ html.popOpen {overflow:hidden;}
 	border-bottom:1px solid #e7e9ee;
 	background-color:#fff;
 }
-.chat-list li.fix:nth-child(-n+3){position:fixed; z-index:5}
+.chat-list li.fix:nth-child(-n+3){position:sticky; z-index:5}
 .chat-list li.fix:nth-child(1) {top:0;}
 .chat-list li.fix:nth-child(2) {top:82px;}
 .chat-list li.fix:nth-child(3) {top:165px;}
@@ -1379,6 +1476,10 @@ html.popOpen {overflow:hidden;}
 	border:1px solid #999;
 	color:#999
 }
+.flag.type6 {
+	border:1px solid #344783;
+	color:#344783;
+}
 .fix-noti {
 	position: relative;
     width: 26px;
@@ -1446,7 +1547,7 @@ html.popOpen {overflow:hidden;}
 }
 .send-list li {
 	display:flex; 
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items: center;
 	height:43px;
 	padding:0 20px 0 10px;
@@ -1457,7 +1558,7 @@ html.popOpen {overflow:hidden;}
 }
 .send-list li .btn-like {width:18px}
 .send-list li .category {
-	width:50px; 
+	width:55px; 
 	text-align:center; 
 	color:#666; 
 	font-weight: 500;
@@ -1471,7 +1572,6 @@ html.popOpen {overflow:hidden;}
 }
 .chat-util .bottom .tab-conts .tab-cont:first-child .send-list li .cont {
 	max-width:66%; 
-	padding-left:0
 }
 
 @media (max-height: 849px) {
