@@ -1323,7 +1323,7 @@ html.popOpen {overflow:hidden;}
 	width:384px;
 	border-left:2px solid #e7e9ee;
 	border-right:2px solid #e7e9ee;
-	/* overflow:hidden; */
+	overflow:hidden;
 }
 .chat-list-area .top .flex-area .btn-border {
 	margin:1px 0 0 10px;
@@ -1404,7 +1404,7 @@ html.popOpen {overflow:hidden;}
 	background-color:#fff;
 }
 .chat-list li.fix:nth-child(-n+3){position:sticky; z-index:5}
-.chat-list li.fix:nth-child(1) {top:0;}
+.chat-list li.fix:nth-child(1) {top:-1px;}
 .chat-list li.fix:nth-child(2) {top:82px;}
 .chat-list li.fix:nth-child(3) {top:165px;}
 .chat-list li:first-child {border-top:0}
@@ -1587,8 +1587,5 @@ html.popOpen {overflow:hidden;}
 	.send-list {
 		height:270px;
 	}
-	.search-navi {
-		
-
-	}
+	
 }
