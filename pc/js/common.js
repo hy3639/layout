@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	reHeight();
 	sortable();
+	layerPop();
 
 	/*gnb*/
 	$('.btn-gnb').click(function(){
@@ -41,10 +42,13 @@ $(document).ready(function(){
 
 	/* 클릭형 툴팁 */
 	$(document).on('click', '.btn-layer', function(){		
+		$('.tooltip-layer').hide();		
 		$(this).closest('.tooltip-area').find('.tooltip-layer').show();	
+		
 	});
 	$(document).on('click', '.tooltip-layer .btn-close', function(){		
 		$(this).closest('.tooltip-layer').hide();
+		// $(this).closest('.tooltip-layer').find('.btn-layer').removeClass('on');
 	})
 
 	/* datepicker */

@@ -54,7 +54,7 @@
 										<p class="guide-txt">로그아웃 하시겠습니까?</p>
 										<span class="sub-txt">상담 여부 '상담OFF'로 자동 변경 됩니다.</span>				
 									</div>
-									<div class="btn-area">
+									<div class="btn-area"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
 										<button type="button" class="btn-round btn-mid bg-navy">예</button>	
 										<button type="button" class="btn-border btn-mid popClose">아니오</button>			
 									</div>
@@ -62,21 +62,50 @@
 							</div>
 
 							<!-- 타이틀이 있는 팝업 -->
-							<div class="layer-popup sms-confirm" title="Popup04">
-								<div class="popup sm">
-									<div class="popup-header">	
-										<p class="title">인증 번호 입력</p>	
+							<div class="layer-popup" title="Popup04">
+								<div class="popup lg">
+									<div class="popup-header">			
 										<button class="btn-close popClose">팝업닫기</button>	
 									</div>
-									<div class="popup-cont align-center">
-										<p class="guide-txt ">로그아웃 하시겠습니까?</p>
-										<span class="sub-txt">상담 여부 '상담OFF'로 자동 변경 됩니다.</span>				
-									</div>
-									<div class="btn-area">										
-										<button type="button" class="btn-round bg-navy btn-mid popClose">아니오</button>			
+									<div class="layer-cont popup-cont">
+										<div class="tit-area flex-area both">
+											<p>간편 발송 상세</p>
+											<div class="btn-area">
+												<button type="button" class="btn-round btn-sm bg-navy">선택</button>
+												<button type="button" class="btn-round btn-sm bg-gray">취소</button>
+											</div>
+										</div>
+										<div class="cont-area">
+											<div class="board-write sm">
+												<table>
+													<caption>간편 발송 상세</caption>
+													<colgroup>
+														<col style="width:20%;">						
+														<col>									
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row" class="center">제목</th>
+															<td>간편 발송 Title Text 출력</td>
+														</tr>
+														<tr>
+															<th scope="row" class="center">상세</th>
+															<td>
+																<div class="text-area">
+																	문구 경우 간편 발송 Contents Text 출력
+																	<br>or
+																	<br>링크 경우 '링크'문구 출력 (실제 링크 정보는 미 출력)
+																	문구 경우 간편 발송 Contents Text 출력										
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
+							</div>				
 
 							
 							<!-- 이중노출 예시 -->

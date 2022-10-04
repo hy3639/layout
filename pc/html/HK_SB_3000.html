@@ -161,15 +161,19 @@
 								<button type="button" class="btn-round-square btn-send">전송</button>
 							</div>
 						</div>
+						<!-- 검색 네비게이션 -->
 						<div class="search-navi">
-							<button type="button" class="btn-close">검색닫기</button>
-							<div>
-								<button type="button" class="btn-prev">이전</button>
-								<button type="button" class="btn-next">다음</button>
+							<button type="button" class="btn-close"><span>닫기</span></button>
+							<div class="btn-arrow">
+								<button type="button" class="btn-prev" disabled><span class="blind">이전</span></button>
+								<button type="button" class="btn-next"><span class="blind">다음</span></button>
 							</div>
 						</div>
+						<!--// 검색 네비게이션 -->
+
 						<!-- 결과가 없을경우 노출 -->
 						<p class="no-data">검색 결과가 없습니다.</p>
+						<!--// 결과가 없을경우 노출 -->
 					</div>
 					<div class="bottom">
 						<div class="btn-area">
@@ -184,7 +188,7 @@
 							<h3 class="tit">상담 목록</h3>
 							<a href="#" class="btn-border btn-sm">초기화</a>
 						</div>						
-						<button type="button" class="btn-qustion"><span class="blind">도움말</span></button>
+						<button type="button" class="btn-qustion btnPop" title="Popup02"><span class="blind">도움말</span></button>
 					</div>
 					<div class="tab-wrap">
 						<div class="tab-lst">
@@ -204,19 +208,19 @@
 								</div>
 								<div class="btn-area">
 									<div class="tooltip-area">
-										<button type="button" class="btn-round bg-gray btn-detail btn-layer">상세</button>
-										<div class="tooltip-layer">
+										<button type="button" class="btn-round bg-gray btn-detail btn-layer">상세</button> <!-- 상세 검색내용이 있을경우 on 클래스 추가-->
+										<div class="tooltip-layer w467">
 											<button type="button" class="btn-close">툴팁닫기</button>
-											<div class="layer-cont">
+											<div class="layer-cont ">
 												<div class="tit-area flex-area both">
 													<p>상세검색</p>
 													<div class="btn-area">
-														<button type="button" class="btn-round bg-navy">검색</button>
-														<button type="button" class="btn-round bg-gray">초기화</button>
+														<button type="button" class="btn-round btn-sm bg-navy">검색</button>
+														<button type="button" class="btn-round btn-sm bg-gray">초기화</button>
 													</div>
 												</div>
 												<div class="cont-area">
-													<div class="board-write sm">
+													<div class="board-write2">
 														<table>
 															<caption>뷰</caption>
 															<colgroup>
@@ -227,21 +231,21 @@
 																<tr>
 																	<th scope="row">대화 일자</th>
 																	<td>
-																		<div class="calendar-area">
-																			<div class="input-text cal">
+																		<div class="calendar-area left">
+																			<div class="input-text cal w120">
 																				<input type="text" name="from">	
 																			</div>
-																			~
-																			<div class="input-text cal">
-																				<input type="text" name="from">	
+																			<span class="divide">~</span>
+																			<div class="input-text cal w120">
+																				<input type="text" name="to">	
 																			</div>
 																		</div>
 																	</td>																	
 																</tr>
 																<tr>
 																	<th scope="row">휴대폰번호</th>
-																	<td>
-																		<div class="input-text">
+																	<td class="flex-area">
+																		<div class="input-text w148">
 																			<input type="number">
 																		</div>
 																		<p class="form-guide">숫자만 가능/ 10~11자리 입력</p>
@@ -249,8 +253,8 @@
 																</tr>
 																<tr>
 																	<th scope="row">고객명</th>
-																	<td>
-																		<div class="input-text">
+																	<td class="flex-area">
+																		<div class="input-text w148">
 																			<input type="text">
 																		</div>
 																		<p class="form-guide">한글,영문 가능/ 자릿수 제한 없음</p>
@@ -258,8 +262,8 @@
 																</tr>
 																<tr>
 																	<th scope="row">고객번호</th>
-																	<td>
-																		<div class="input-text">
+																	<td class="flex-area">
+																		<div class="input-text w148">
 																			<input type="number">
 																		</div>
 																		<p class="form-guide">숫자만 가능/ 9자리 입력</p>
@@ -462,7 +466,13 @@
 									</li>
 								</ul>
 								<!-- 결과가 없을경우 노출 -->
-								<!-- <p class="no-data">검색 결과가 없습니다.</p> -->								
+								<!-- <p class="no-data">검색 결과가 없습니다.</p> -->	
+								
+								<!-- 순서저장하기 -->
+								<div class="btn-area fixed">
+									<button type="button" class="btn-round bg-navy btn-mid">저장하기</button>	
+								</div>
+								<!--// 순서저장하기 -->
 							</div>						
 							<div class="tab-cont">
 								<ul class="chat-list scroll-area sortable">
@@ -709,7 +719,7 @@
 										<li>
 											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 											<span class="category">기타</span>
-											<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
+											<a href="#" class="cont ellipsis btnPop" title="Popup03">상품 링크 발송기타</a>
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 										<li>
@@ -779,6 +789,11 @@
 											<a href="#" class="btn-border btn-sm">선택</a>
 										</li>
 									</ul>
+									<!-- 순서저장하기 -->
+									<div class="btn-area fixed">
+										<button type="button" class="btn-round bg-navy btn-mid">저장하기</button>	
+									</div>
+									<!--// 순서저장하기 -->
 								</div>						
 								<div class="tab-cont">
 									<ul class="send-list scroll-area sortable">						
@@ -893,6 +908,182 @@
 	</div>
 </div>
 
+<div class="layer-popup" title="Popup02">
+	<div class="popup lg">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="layer-cont popup-cont">
+			<div class="tit-area flex-area">
+				<p>도움말</p>				
+			</div>
+			<div class="cont-area">
+				<div class="board-list">
+					<table>
+						<caption>도움말</caption>
+						<colgroup>
+							<col style="width:100px;">
+							<col>
+							<col style="width:200px;">							
+							
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">상태</th>
+								<th scope="col">설명</th>
+								<th scope="col">상담 목록 출력</th>	
+							</tr>
+						</thead>
+						<tbody>							
+							<tr>
+								<td rowspan="2">대기중</td>
+								<td class="left">
+									<ul class="list-style1">
+										<li>상담 ON 상태로 손님 진입한 경우</li>
+									</ul>
+								</td>									
+								<td>대기중<br>(대기 순번 수/총 대기 수)</td>	
+							</tr>
+							<tr>
+								<td class="left">
+									<ul class="list-style1">
+										<li>'부재중'으로 표시된 손님이 익일 근무시간 내 먼저 대화를 다시 시도한 경우</li>
+									</ul>
+								</td>									
+								<td>대기중<br>(마지막 대기 순번+1/총 대기 수)</td>	
+							</tr>
+							<tr>
+								<td>Now</td>
+								<td class="left">
+									<ul class="list-style1">
+										<li>직원이 메시지를 전송할 경우</li>
+									</ul>
+								</td>									
+								<td>Now</td>	
+							</tr>
+							<tr>
+								<td rowspan="3">상담중</td>
+								<td class="left">
+									<ul class="list-style1">
+										<li>직원이 대기중 상담 방 답변 후 다른 상담 방 선택하여 답변한 경우</li>
+									</ul>
+								</td>									
+								<td>상담중<br>(기존 대기중 번호/총 대기 수)</td>	
+							</tr>
+							<tr>								
+								<td class="left">
+									<ul class="list-style1">
+										<li>직원이 부재중(상담 OFF시 진입) 방 답변 후 다른 상담 방 선택하여 답변한 경우</li>
+									</ul>
+								</td>									
+								<td>상담중<br>(상담OFF시 진입)</td>	
+							</tr>
+							<tr>								
+								<td class="left">
+									<ul class="list-style1">
+										<li>직원이 부재중(근무시간 외 진입) 방 답변 후 다른 상담 방 선택하여 답변한 경우</li>
+									</ul>
+								</td>									
+								<td>상담중<br>(업무외 시간 진입)</td>	
+							</tr>
+							<tr>
+								<td rowspan="2">부재중</td>
+								<td class="left">
+									<ul class="list-style1">
+										<li>상담 OFF 상태로 손님 진입한 경우</li>
+									</ul>
+								</td>									
+								<td>부재중<br>(상담OFF시 진입)</td>	
+							</tr>
+							<tr>
+								<td class="left">
+									<ul class="list-style1">
+										<li>근무시간 외 손님이 진입한 경우</li>
+									</ul>
+								</td>									
+								<td>부재중<br>(업무외 시간 진입)</td>	
+							</tr>
+							<tr>	
+								<td rowspan="3">상담종료</td>							
+								<td class="left">
+									<ul class="list-style1">
+										<li>직원이 '상담종료'버튼 선택하여 정상 종료한 경우</li>
+										<li>손님이 먼저 대화방 나가기 하여 정상 종료한 경우</li>
+										<li>손님이 하나의 채널(영업점)에서 복수로 상담을 하려고 하는 경우, 이전의 상담은 자동으로 종료</li>
+									</ul>
+								</td>									
+								<td>상담종료</td>	
+							</tr>
+							<tr>								
+								<td class="left">
+									<ul class="list-style1">
+										<li>시스템(배치)에 의해 자동 종료 처리한 경우</li>
+									</ul>
+								</td>									
+								<td>상담종료<br>(시스템 자동종료)</td>	
+							</tr>
+							<tr>								
+								<td class="left">
+									<ul class="list-style1">
+										<li>직원이 답변하기 이전에 손님이 먼저 대화방 나가기 하여 종료한 경우</li>
+										<li>직원이 답변하기 이전에 일정시간 동안 대ㅗ하가 없어 시스템에 의해 자동 종료된 경우</li>
+									</ul>
+								</td>									
+								<td>상담종료<br>(상담 없이 종료)</td>	
+							</tr>			
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="layer-popup" title="Popup03">
+	<div class="popup lg">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="layer-cont popup-cont">
+			<div class="tit-area flex-area both">
+				<p>간편 발송 상세</p>
+				<div class="btn-area">
+					<button type="button" class="btn-round btn-sm bg-navy">선택</button>
+					<button type="button" class="btn-round btn-sm bg-gray">취소</button>
+				</div>
+			</div>
+			<div class="cont-area">
+				<div class="board-write sm">
+					<table>
+						<caption>간편 발송 상세</caption>
+						<colgroup>
+							<col style="width:20%;">						
+							<col>									
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="center">제목</th>
+								<td>간편 발송 Title Text 출력</td>
+							</tr>
+							<tr>
+								<th scope="row" class="center">상세</th>
+								<td>
+									<div class="text-area">
+										문구 경우 간편 발송 Contents Text 출력
+										<br>or
+										<br>링크 경우 '링크'문구 출력 (실제 링크 정보는 미 출력)
+										문구 경우 간편 발송 Contents Text 출력										
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/common.js"></script>
