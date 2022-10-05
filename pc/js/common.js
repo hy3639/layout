@@ -52,26 +52,44 @@ $(document).ready(function(){
 	})
 
 	/* datepicker */
-	$('.cal').each(function(){
-		$(this).find('input').datepicker({
-			dateFormat: "yy-mm-dd", 		  
+	// $('.cal').each(function(){
+	// 	$(this).find('input').datepicker({
+	// 		dateFormat: "yy-mm-dd", 		  
+	// 		showOn: "both",
+	// 		buttonImage: "../images/icon/icon_20_date.png", 
+	// 		buttonImageOnly: true, 
+	// 		changeMonth: true,
+	// 		changeYear: true,
+	// 		minDate: '-100y',
+	// 		nextText: '다음 달', 
+	// 		prevText: '이전 달', 
+	// 		numberOfMonths:1, 		 
+	// 		showMonthAfterYear: true , 
+	// 		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+	// 		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],					
+	// 	});
+	
+	// 	if($(this).closest('.calendar-area').hasClass('src')){	
+	// 		$('img.ui-datepicker-trigger').attr('src' , '../../images/icon/icon_20_date.png');
+	// 	}
+	// });
+
+	// $( ".multi-cal" ).datepicker();
+
+	$('.multi-cal').each(function(){
+		$(this).datepicker({
+			dateFormat: "yy-mm-dd", 
 			showOn: "both",
-			buttonImage: "../images/icon/icon_20_date.png", 
-			buttonImageOnly: true, 
 			changeMonth: true,
-			changeYear: true,
+			changeYear: true,		
 			minDate: '-100y',
 			nextText: '다음 달', 
 			prevText: '이전 달', 
 			numberOfMonths:1, 		 
-			showMonthAfterYear: true , 
+			showMonthAfterYear: true ,   
 			dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
 			monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],					
 		});
-		//경로 변경시
-		if($(this).closest('.calendar-area').hasClass('src')){	
-			$('img.ui-datepicker-trigger').attr('src' , '../../images/icon/icon_20_date.png');
-		}
 	});
 
 
@@ -97,7 +115,7 @@ $(window).on('load', function(){
         var name = $(this).attr('layer-name');
         $('.layer-popup[layer-name=' + name + ']').fadeIn(100, function(){
            // $(this).find('.firstTab').focus();
-            $(this).addClass('open').closest('.layer-popup').prepend('<div class="dimmed">');;
+            $(this).addClass('open').closest('.layer-popup').prepend('<div class="dimmed">');
 			layerPop();
         });
 		
@@ -115,6 +133,7 @@ $(window).on('load', function(){
 			setTimeout(function(){
 				$('html').removeClass('popOpen');
 			}, 300);
+
 		}	
     });
 

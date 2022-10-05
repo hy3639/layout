@@ -677,8 +677,8 @@ input[type=checkbox][class^=styled] {
 	border-bottom:1px solid #dbdbdb;
 }
 
-.board-write2 th,
-.board-write2 td {
+.board-write2 > table > tbody > tr > th,
+.board-write2 > table > tbody > tr > td {
 	/* height:36px; */
 	padding:5px 12px;
 	font-weight:300;
@@ -690,8 +690,8 @@ input[type=checkbox][class^=styled] {
 .board-write2 tr:first-child th,
 .board-write2 tr:first-child td { padding-top:15px}
 .board-write2 tr:last-child th,
-.board-write2 tr:last-child td { padding-bottom:15px}
-.board-write2 th {
+.board-write2 tr:last-child td { padding-bottom:15px} 
+.board-write2 > table > tbody > tr > th {
 
 	border-right:1px solid #e1e0ea;
 	background-color:#f5f7ff;	
@@ -699,8 +699,7 @@ input[type=checkbox][class^=styled] {
 	font-weight:300;
 	text-align:left;
 }
-.board-write2 td {
-
+.board-write2 > table > tbody >  td {
 	background-color:#fff;
 	word-break: break-all;
 }
@@ -912,8 +911,9 @@ input[type=checkbox][class^=styled] {
 
 .ui-datepicker {
 	display: none;
-	width:240px; 	
-	padding:0 12px 30px 12px;
+	width:240px;
+	height:280px;	
+	padding:0 12px 12px 12px;
 	background-color:#fff;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 	border: solid 1px #dbdbdb;
@@ -971,6 +971,26 @@ input[type=checkbox][class^=styled] {
 .calendar-area {display:flex; justify-content: space-between; align-items: center;}
 .calendar-area.left {justify-content: flex-start;}
 .calendar-area .divide {padding:0 10px}
+
+.multi-cal-area {
+	
+	position:relative;
+}
+.multi-cal-area .multi-cal-layer {
+	
+	display:none;
+	background-color:#fff;
+	position:absolute;
+	left:13px;
+	top:45px;
+}
+.multi-cal + .multi-cal .ui-datepicker {border-left:0}
+.multi-cal-layer .ui-datepicker-header {position:relative;}
+.multi-cal-layer th, 
+.multi-cal-layer td {padding-top:0 !important}
+
+.multi-cal-layer th, .multi-cal-layer td {padding-bottom:0 !important}
+
 /* ==============
 	레이어팝업
 ============== */
@@ -1197,7 +1217,7 @@ html.popOpen {overflow:hidden;}
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	height: calc(100vh - 114px);
+	height: 100vh;
 }
 .error-area .tit {
 	padding:130px 0 40px;
