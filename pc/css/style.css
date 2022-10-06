@@ -885,6 +885,35 @@ input[type=checkbox][class^=styled] {
 	font-weight:500;	
 } 
 
+.tab-lst3 {
+	display:flex;
+	position:relative;		
+	justify-content: flex-start;
+}
+
+.tab-lst3 .tab-item {
+	height:42px;
+	box-sizing:border-box;
+	font-weight:500;
+	text-align:center;
+	outline:0;
+}
+
+
+.tab-lst3 .tab-item > .txt {
+	display:block;
+	position:relative;	
+	line-height:42px;
+	font-size:13px;
+	color:#bec7e3;
+	font-weight:300;
+	border-radius: 20px;
+}
+.tab-lst3 .tab-item.on > .txt {	
+	color:#fff;
+	font-weight:500;	
+} 
+
 
 /* ==============
 	datepicker
@@ -1823,6 +1852,11 @@ html.popOpen {overflow:hidden;}
 }
 /* .chat-util .tab-cont .btn-area.fixed {bottom:70px;}  */
 .chat-util .tab-cont .btn-area.fixed .btn-round {width:100px}
+
+/* admin */
+
+
+
 
 @media (max-height: 849px) {
 	.contents{

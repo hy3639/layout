@@ -204,6 +204,8 @@ function layerPop(){
         }else{
             $(this).css({'padding-top':pdT});
         }
+		console.log(mgB);
+		console.log(pdT);
     });
 }
 
@@ -212,22 +214,30 @@ function layerPop(){
 function reHeight(){
 	$('.reHeight').each(function(){
 		autoHeight();
-		$(this).on('keydown keyup', function(){
+		$(this).on('propertychange change keyup paste input', function(){
+			var currentVal = $(this).val();			
+			if(currentVal == oldVal) {
+				return;
+			}		
+			var oldVal = currentVal;
 			autoHeight();
 		});
 
 		function autoHeight(){
 			$('.chat-box textarea').each(function(){
 				var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
+				
 				var chatH = $('.chat-wrap').outerHeight();
 				var chatInputH = $('.chat-box').find('textarea').outerHeight();
+				var chatBoxH =  $('.chat-box').outerHeight();
 				var calcH  = chatH - chatInputH;
-
+				console.log(chatBoxH);
 				if(chatInputH > 399){
 					$(this).css('overflow-y', 'auto');
 				}else{
 					$(this).css('overflow-y', 'hidden');
 				}
+				$('.search-navi').css('bottom',chatBoxH);
 				$(this).css('height', 'auto').height(this.scrollHeight);
 				chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
 
