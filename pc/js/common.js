@@ -27,18 +27,21 @@ $(document).ready(function(){
 	});
 
 
-	/* 탭영역 */
+	/* 탭영역 */	
 	$(document).on('click', '.tab-item', function(){
-		var tabName = $(this).parent('div').attr('class');
-		var tabItem = $(this);
-		var idx = $(this).index();	
-		console.log(tabName);
-		var tabConts = $(this).closest('.'+tabName).next('.tab-conts');
-		if(!tabItem.hasClass('on')){
-			tabItem.addClass('on').siblings('.tab-item').removeClass('on');
-			tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).show().addClass('on');
+		if(!$(this).parent('div').hasClass('noneTab')){
+			var tabName = $(this).parent('div').attr('class');
+			var tabItem = $(this);
+			var idx = $(this).index();					
+			var tabConts = $(this).closest('.'+tabName).next('.tab-conts');
+			if(!tabItem.hasClass('on')){
+				tabItem.addClass('on').siblings('.tab-item').removeClass('on');
+				tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).show().addClass('on');
+			}
 		}
+	
 	});
+
 
 	/* 클릭형 툴팁 */
 	$(document).on('click', '.btn-layer', function(){		
@@ -204,8 +207,6 @@ function layerPop(){
         }else{
             $(this).css({'padding-top':pdT});
         }
-		console.log(mgB);
-		console.log(pdT);
     });
 }
 
@@ -215,7 +216,7 @@ function reHeight(){
 	$('.reHeight').each(function(){
 		autoHeight();
 		$(this).on('propertychange change keyup paste input', function(){
-			var currentVal = $(this).val();			
+			var currentVal = $(this).val();
 			if(currentVal == oldVal) {
 				return;
 			}		
