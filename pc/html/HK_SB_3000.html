@@ -233,16 +233,20 @@
 																	<td class="multi-cal-area">
 																		<div class="calendar-area left">
 																			<div class="input-text w120">
-																				<input type="text" name="from">	
+																				<input type="text" id="from" name="from" readonly>	
 																			</div>
 																			<span class="divide">~</span>
 																			<div class="input-text w120">
-																				<input type="text" name="to">	
+																				<input type="text"  id="to" name="to" readonly>	
 																			</div>
+																			<button type="button" class="btn-cal"><span class="blind">달력</span></button>
 																		</div>
 																		<div class="multi-cal-layer">
-																			<div class="multi-cal"></div>
-																			<div class="multi-cal"></div>
+																			<div class="from"></div>
+																			<div class="to"></div>
+																			<div class="btn-area">
+																				<button type="button" class="btn-cal-close"><span>닫기</span></button>
+																			</div>
 																		</div>
 																	</td>	
 																</tr>

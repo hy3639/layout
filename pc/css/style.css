@@ -598,15 +598,12 @@ input[type=checkbox][class^=styled] {
 .board-list table {
 	width:100%;
 }
-
-
 .board-list table thead th {
 	height:36px;
 	border-bottom:1px solid #dbdbdb;
 	background-color:#f5f6f8;
 	font-size:13px;
 	color:#000;
-
 }
 .board-list table tbody th {
 	border-top:1px solid #f2f2f2;
@@ -627,18 +624,11 @@ input[type=checkbox][class^=styled] {
 }
 .board-list thead th:first-child,
 .board-list table td:first-child:not(.left) {border-left:1px solid #dbdbdb}
-/* .board-list table td:first-child{border-left:1px solid #f2f2f2;}  */
 .board-list table tbody td {border-top: 1px solid #f2f2f2;}
-/* .board-list table td p.tit {
-	max-width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;  
-} */
+
 
 /* 뷰 */
 .board-write {border:1px solid #dbdbdb;}
-
 .board-write th,
 .board-write td {
 	height:48px;
@@ -656,13 +646,11 @@ input[type=checkbox][class^=styled] {
 	font-weight:500;
 	text-align:left;
 }
-
 .board-write td {
 	padding: 7px 15px;  
 	background-color:#fff;
 	word-break: break-all;
 }
-
 .board-write.sm th,
 .board-write.sm td {
 	height:40px;
@@ -903,10 +891,6 @@ input[type=checkbox][class^=styled] {
 ============== */
 
 .input-text.cal {position:relative; display:inline-block;padding-right:30px}
-.input-text.cal input {
-	/* width:140px;
-	 */
-}
 .input-text.cal input + img {position:absolute; top:50%; right:0; margin-top:-10px;}
 
 .ui-datepicker {
@@ -914,9 +898,9 @@ input[type=checkbox][class^=styled] {
 	width:240px;
 	height:280px;	
 	padding:0 12px 12px 12px;
-	background-color:#fff;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+	background-color:#fff;	
 	border: solid 1px #dbdbdb;
+	border-bottom:0;
 }
 
 .ui-datepicker-header .ui-corner-all {
@@ -963,28 +947,81 @@ input[type=checkbox][class^=styled] {
 }
 .ui-datepicker-calendar tbody td {text-align:center; height:30px; line-height: 30px;}
 .ui-datepicker-calendar tbody td .ui-state-default {font-size:14px; font-weight:400}
-.ui-datepicker-today {background-color: #ecedef;}
-.ui-datepicker-current-day {background-color:#009591; } 
+.ui-datepicker-today {background-color: transparent;}
+.ui-datepicker-current-day {background-color:#455896; } 
 .ui-datepicker-current-day a {color:#fff}
-.ui-datepicker-calendar tbody tr td:first-child a {color:#e22267}
-
+/* .ui-datepicker-calendar tbody tr td:first-child a {color:#e22267} */
+.ui-datepicker-current-day.ui-datepicker-today {background-color:transparent}
+.ui-datepicker-current-day.ui-datepicker-today a {color:#000}
 .calendar-area {display:flex; justify-content: space-between; align-items: center;}
 .calendar-area.left {justify-content: flex-start;}
 .calendar-area .divide {padding:0 10px}
-
-.multi-cal-area {
-	
+.calendar-area .btn-cal {
+	width:26px;
+	height:26px;
+	background: url(../images/icon/icon_20_date.png) no-repeat right center;
+	margin-left:5px
+}
+.multi-cal-area {	
 	position:relative;
+	overflow: visible;
+	/* width: 495px; */
+	
 }
 .multi-cal-area .multi-cal-layer {
-	
 	display:none;
 	background-color:#fff;
 	position:absolute;
-	left:13px;
+	left:12px;
 	top:45px;
+	width:480px;
+	padding-bottom:43px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 }
-.multi-cal + .multi-cal .ui-datepicker {border-left:0}
+.multi-cal-area .multi-cal-layer.on {display:flex;}
+.multi-cal-area .multi-cal-layer .btn-area{	
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	width:480px;
+	text-align: right;
+	padding: 8px 15px;
+	border:solid 1px #dbdbdb;
+	background-color:#fff;
+}
+.multi-cal-area .multi-cal-layer .btn-cal-close {
+	position: relative;
+    height: 26px;
+    line-height: 24px;
+    padding: 0 12px 0 28px;
+    border: 1px solid #475a97;
+    border-radius: 15px;
+}
+.multi-cal-area .multi-cal-layer .btn-cal-close span {
+	color:#475a97; 
+	font-size:12px; 
+	line-height: 22px;
+	vertical-align: top;
+}
+
+ .multi-cal-area .multi-cal-layer .btn-cal-close span:before,
+ .multi-cal-area .multi-cal-layer .btn-cal-close span:after {
+    content:'';
+    position:absolute;
+    top:50%;
+    left:12px;
+    width:12px;
+    height:1px;
+    background-color:#475a97;
+}
+.multi-cal-area .multi-cal-layer .btn-cal-close span:before {
+    transform:translateY(-50%) rotate(45deg);
+}
+.multi-cal-area .multi-cal-layer .btn-cal-close span:after {
+    transform:translateY(-50%) rotate(135deg);
+}
+.multi-cal-layer div + div .ui-datepicker {border-left:0}
 .multi-cal-layer .ui-datepicker-header {position:relative;}
 .multi-cal-layer th, 
 .multi-cal-layer td {padding-top:0 !important}
@@ -1037,8 +1074,6 @@ html.popOpen {overflow:hidden;}
 	min-height:58px;
 	position:relative;
 	padding:15px 20px;
-	/* background-color:#414550; */
-
 }
 .layer-popup .popup-header .title {
 	display:inline-block;
@@ -1217,7 +1252,7 @@ html.popOpen {overflow:hidden;}
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	height: 100vh;
+	height: calc(100vh - 114px);
 }
 .error-area .tit {
 	padding:130px 0 40px;
@@ -1332,9 +1367,7 @@ html.popOpen {overflow:hidden;}
 	padding:5px 20px 30px 20px;
 
 }
-/* .chat-cont::-webkit-scrollbar-track {
-	background-color: #c9dcec;
-  } */
+
 .chat-cont .date {
 	position:relative;
 	padding:15px 0;
@@ -1458,8 +1491,11 @@ html.popOpen {overflow:hidden;}
     transform:translateY(-50%) rotate(135deg);
 }
 .search-navi  .btn-arrow button + button {margin-left:10px}
-.search-navi  .btn-arrow button:disabled {opacity: .3;   cursor: not-allowed;
-	pointer-events: none;}
+.search-navi  .btn-arrow button:disabled {
+	opacity: .3;   
+	cursor: not-allowed;
+	pointer-events: none;
+}
 .search-navi  .btn-arrow .btn-next,
 .search-navi  .btn-arrow .btn-prev { 
 	width:30px;
@@ -1608,10 +1644,7 @@ html.popOpen {overflow:hidden;}
 .chat-list li.fix:nth-child(3) {top:165px;}
 .chat-list li:first-child {border-top:0}
 .chat-list li.now {background-color:#c9dcec}
-.chat-list li > .btn-area {
-	/* width:30px;
-	padding-right:10px; */
-}
+
 .btn-like {
 	width: 18px;
     height: 18px;

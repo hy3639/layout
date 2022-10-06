@@ -52,45 +52,64 @@ $(document).ready(function(){
 	})
 
 	/* datepicker */
-	// $('.cal').each(function(){
-	// 	$(this).find('input').datepicker({
-	// 		dateFormat: "yy-mm-dd", 		  
-	// 		showOn: "both",
-	// 		buttonImage: "../images/icon/icon_20_date.png", 
-	// 		buttonImageOnly: true, 
-	// 		changeMonth: true,
-	// 		changeYear: true,
-	// 		minDate: '-100y',
-	// 		nextText: '다음 달', 
-	// 		prevText: '이전 달', 
-	// 		numberOfMonths:1, 		 
-	// 		showMonthAfterYear: true , 
-	// 		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
-	// 		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],					
-	// 	});
+	var dateFormat = "yy-mm-dd",
+	from = $(".from").datepicker({		
+		dateFormat: "yy-mm-dd", 	
+		changeMonth: true,
+		changeYear: true,		
+		minDate: '-100y',
+		nextText: '다음 달', 
+		prevText: '이전 달', 
+		numberOfMonths:1, 		 
+		showMonthAfterYear: true ,   
+		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+
+	onSelect: function (dateText) {
+		$('#from').val(this.value);		
+	}
+
+	})
+	.on("change", function () {
+	to.datepicker("option", "minDate", getDate(this));
+	}),
+	to = $(".to").datepicker({		
+		dateFormat: "yy-mm-dd", 	
+		changeMonth: true,
+		changeYear: true,		
+		minDate: '-100y',
+		nextText: '다음 달', 
+		prevText: '이전 달', 
+		numberOfMonths:1, 		 
+		showMonthAfterYear: true ,   
+		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
 	
-	// 	if($(this).closest('.calendar-area').hasClass('src')){	
-	// 		$('img.ui-datepicker-trigger').attr('src' , '../../images/icon/icon_20_date.png');
-	// 	}
-	// });
-
-	// $( ".multi-cal" ).datepicker();
-
-	$('.multi-cal').each(function(){
-		$(this).datepicker({
-			dateFormat: "yy-mm-dd", 
-			showOn: "both",
-			changeMonth: true,
-			changeYear: true,		
-			minDate: '-100y',
-			nextText: '다음 달', 
-			prevText: '이전 달', 
-			numberOfMonths:1, 		 
-			showMonthAfterYear: true ,   
-			dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
-			monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],					
-		});
+	onSelect: function (dateText) {
+		$('#to').val(this.value);		
+	}
+	})
+	.on("change", function () {
+		from.datepicker("option", "maxDate", getDate(this));
 	});
+
+	function getDate(element) {
+	  var date;
+	  try {
+		date = $.datepicker.parseDate(dateFormat, element.value);
+	  } catch (error) {
+		date = null;
+	  }
+	  return date;
+	}
+
+	$('.btn-cal').click(function(){
+		$(this).closest('.multi-cal-area').find('.multi-cal-layer').addClass('on');
+	});
+	$('.btn-cal-close').click(function(){
+		$(this).closest('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
+	});
+	
 
 
 });
