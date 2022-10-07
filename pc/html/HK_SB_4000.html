@@ -30,7 +30,7 @@
 					<li>Admin
 						<ul class="depth2">
 							<li><a href="#">채팅설정</a></li>
-							<li><a href="#">채널조회</a></li>
+							<li><a href="#">채널관리</a></li>
 							<li><a href="#">상담내역</a></li>
 							<li><a href="#">메뉴권한관리</a></li>
 						</ul>
@@ -53,195 +53,235 @@
 					<a href="#" class="tab-item"><span class="txt">자동 응답 메세지</span></a>
 					<a href="#" class="tab-item"><span class="txt">간편 발송 설정</span></a>										
 				</div>
-				<p class="admin-tit">간편 발송 설정</p>
-				<div class="tab-wrap">
-					<div class="tab-lst4">
-						<button type="button" class="tab-item on"><span class="txt">여신</span></button>
-						<button type="button" class="tab-item"><span class="txt">수신</span></button>
-						<button type="button" class="tab-item"><span class="txt">외환</span></button>
-						<button type="button" class="tab-item"><span class="txt">전자금융</span></button>
-						<button type="button" class="tab-item"><span class="txt">카드</span></button>
-						<button type="button" class="tab-item"><span class="txt">기타</span></button>										
+				<div class="section">
+					<p class="admin-tit">웰컴 메시지 정보</p>
+					<div class="board-write3">
+						<table>
+							<caption>웰컴 메시지</caption>
+							<colgroup>
+								<col style="width:16%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">웰컴 메시지</th>
+									<td class="left">
+										메시지 출력<br>
+										메시지 출력<br>
+										메시지 출력
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-					<div class="tab-conts">						
-						<div class="tab-cont on">
-							<div class="search-area">
-								<div class="section">
-									<label>지점명</label>
-									<span class="select-box">
-										<select class="styled w160">
-											<option value="">선택하세요</option>										
-										</select>
-									</span>									
-								</div>
-								<div class="section">
-									<label for="input1">검색어</label>
-									<span class="select-box">
-										<select class="styled w160">
-											<option value="">선택하세요</option>										
-										</select>
-									</span>
-									<div class="input-text">
-										<input type="text" id="input1" class="w782" placeholder="검색어를 입력해주세요.(Enter시 검색 가능)">
-									</div>
-									<button type="button" class="btn-round btn-mid2 bg-gray btn-search">검색</button>
-									<button type="button" class="btn-round btn-mid2 bg-gray">초기화</button>		
-								</div>
-							</div>
-							<div class="board-list2">
-								<table>
-									<caption>리스트</caption>
-									<colgroup>
-										<col style="width:6%;">									
-										<col style="width:6%;">
-										<col style="width:6%;">										
-										<col style="width:15%;">
-										<col>
-										<col style="width:10%;">
-										<col style="width:10%;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">번호</th>
-											<th scope="col">구분</th>
-											<th scope="col">종류</th>
-											<th scope="col">제목</th>										
-											<th scope="col">내용</th>
-											<th scope="col">최종 수정자</th>
-											<th scope="col">최종 수정일</th>
-										</tr>
-									</thead>
-									<tbody>							
-										<tr>
-											<td>10</td>
-											<td>여신</td>									
-											<td>문구</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">
-												간편발송 내용<br>
-												간편발송 내용<br>
-												간편발송 내용<br>
-												간편발송 내용
-											</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>9</td>
-											<td>여신</td>									
-											<td>링크</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">mybranch.hanabank.com/loan/28309</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>8</td>
-											<td>여신</td>									
-											<td>문구</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">간편발송 내용</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>7</td>
-											<td>여신</td>									
-											<td>링크</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">mybranch.hanabank.com/loan/28309</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td>여신</td>									
-											<td>문구</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">간편발송 내용</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>여신</td>									
-											<td>링크</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">mybranch.hanabank.com/loan/28309</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>여신</td>									
-											<td>문구</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">간편발송 내용</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>여신</td>									
-											<td>링크</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">mybranch.hanabank.com/loan/28309</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>여신</td>									
-											<td>문구</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">간편발송 내용</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>여신</td>									
-											<td>링크</td>		
-											<td class="left">간편발송 제목</td>						
-											<td class="left">mybranch.hanabank.com/loan/28309</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="pagenation">
-								<a href="#" class="btn-first page">처음</a>
-								<a href="#" class="btn-prev page">이전</a>
-								<span class="page now">1</span>
-								<a href="#" class="page">2</a>
-								<a href="#" class="page">3</a>
-								<a href="#" class="page">4</a>
-								<a href="#" class="page">5</a>
-								<a href="#" class="page">6</a>
-								<a href="#" class="page">7</a>
-								<a href="#" class="page">8</a>
-								<a href="#" class="page">9</a>
-								<a href="#" class="page">10</a>
-								<a href="#" class="btn-next page">다음</a>
-								<a href="#" class="btn-last page">마지막</a>
-							</div>
-						</div>						
-						<div class="tab-cont">
-							서브2
-						</div>
-						<div class="tab-cont">
-							서브3
-						</div>
-						<div class="tab-cont">
-							서브4
-						</div>
-						<div class="tab-cont">
-							서브5
-						</div>
-						<div class="tab-cont">
-							서브6
-						</div>						
+				</div>
+				<div class="section">
+					<p class="admin-tit">업무 유형 별 상담 종류 정보</p>
+					<div class="board-write3">
+						<table>
+							<caption>업무 유형 별 상담 종류</caption>
+							<colgroup>
+								<col style="width:16%">
+								<col >
+								<col >
+								<col >
+								<col >
+								<col >
+								<col >							
+							</colgroup>
+							<tbody>
+								<tr class="thead">
+									<th scope="row" rowspan="14">업무 유형 별 상담 종류</th>
+									<th>업무유형</th>
+									<th>업무유형코드</th>
+									<th colspan="4">상담종류</th>
+								</tr>
+								<tr>							
+									<td>전(월)세 대출</td>
+									<td>업무유형코드</td>
+									<td>1.신규</td>
+									<td>2.만기/연장</td>
+									<td>3.타행대환</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>부동산담보 대출</td>
+									<td>업무유형코드</td>
+									<td>1.신규</td>
+									<td>2.만기/연장</td>
+									<td>3.타행대환</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>신용 대출</td>
+									<td>업무유형코드</td>
+									<td>1.신규</td>
+									<td>2.만기/연장</td>
+									<td>3.타행대환</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>오토금융</td>
+									<td>업무유형코드</td>
+									<td>1.신규</td>
+									<td>2.만기/연장</td>
+									<td>3.타행대환</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>개인사업자 대출</td>
+									<td>업무유형코드</td>
+									<td>1.신규</td>
+									<td>2.만기/연장</td>
+									<td>3.타행대환</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>기업 대출</td>
+									<td>업무유형코드</td>
+									<td>1.신규</td>
+									<td>2.만기/연장</td>
+									<td>3.타행대환</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>목돈 굴리기</td>
+									<td>업무유형코드</td>
+									<td>1.신규자금</td>
+									<td>2.만기/연장</td>
+									<td>3.상품변경</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>목돈 모으기</td>
+									<td>업무유형코드</td>
+									<td>1.신규자금</td>
+									<td>2.만기/해약</td>
+									<td>3.상품변경</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>퇴직연금 IRP</td>
+									<td>업무유형코드</td>
+									<td>1.신규자금</td>
+									<td>2.만기/해약</td>
+									<td>3.상품변경</td>
+									<td>4.기타 이벤트 등</td>
+								</tr>
+								<tr>							
+									<td>유학 등 기타자금</td>
+									<td>업무유형코드</td>
+									<td>1.해외송금</td>
+									<td>2.외화예금</td>
+									<td>3.기타 이벤트 등</td>
+									<td></td>
+								</tr>
+								<tr>							
+									<td>재외동포 재산반출</td>
+									<td>업무유형코드</td>
+									<td>1.해외송금</td>
+									<td>2.외화예금</td>
+									<td>3.기타 이벤트 등</td>
+									<td></td>
+								</tr>
+								<tr>							
+									<td>해외부동산</td>
+									<td>업무유형코드</td>
+									<td>1.해외송금</td>
+									<td>2.외화예금</td>
+									<td>3.기타 이벤트 등</td>
+									<td></td>
+								</tr>
+								<tr>							
+									<td>기업성 해외자금</td>
+									<td>업무유형코드</td>
+									<td>1.해외송금</td>
+									<td>2.외화예금</td>
+									<td>3.기타 이벤트 등</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="section">
+					<p class="admin-tit">본인 인증 메시지 정보</p>
+					<div class="board-write3 multi">
+						<table>
+							<caption>본인 인증 메시지</caption>
+							<colgroup>
+								<col style="width:10%;">
+								<col style="width:6%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" colspan="2">본인 인증 메시지</th>
+									<td class="left">
+										메시지 출력<br>
+										메시지 출력<br>
+										메시지 출력
+									</td>
+								</tr>
+								<tr class="multi-row">
+									<th scope="row" rowspan="3" class="row">본인 인증 버튼</th>
+									<th scope="row">구분</th>
+									<td class="left">링크</td>
+								</tr>
+								<tr>									
+									<th scope="row">버튼명</th>
+									<td class="left">본인 인증하기</td>
+								</tr>
+								<tr>									
+									<th scope="row">링크</th>
+									<td class="left">http://hanabank.com</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="section">
+					<p class="admin-tit">본인 인증 완료 메시지 정보</p>
+					<div class="board-write3">
+						<table>
+							<caption>본인 인증 완료 메시지</caption>
+							<colgroup>
+								<col style="width:16%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">본인 인증 완료 메시지</th>
+									<td class="left">
+										메시지 출력<br>
+										메시지 출력<br>
+										메시지 출력
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="section">
+					<p class="admin-tit">상담 중 중복 본인 인증 메시지 정보</p>
+					<div class="board-write3">
+						<table>
+							<caption>상담 중 중복 본인 인증 메시지</caption>
+							<colgroup>
+								<col style="width:16%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">상담 중 중복 본인 인증 메시지</th>
+									<td class="left">
+										메시지 출력<br>
+										메시지 출력<br>
+										메시지 출력
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
