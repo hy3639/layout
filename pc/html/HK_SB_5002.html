@@ -42,7 +42,11 @@
 	<div class="container">
 		<div class="fixed-title">
 			<div class="tit-area">
-				<h2>채널 정보 상세</h2>
+				<h2>채널 정보 수정</h2>
+				<div class="btn-area">
+					<button type="button" class="btn-round btn-mid2 bg-navy">저장</button>
+					<button type="button" class="btn-border btn-mid2">목록</button>
+				</div>
 			</div>
 		</div>
 		<div class="contents admin-area">
@@ -70,17 +74,17 @@
 									<td class="left">하나은행 영업1부 하나톡</td>
 								</tr>
 								<tr>
-									<th>지점 관리자명[행번]</th>
+									<th><label class="essential">지점 관리자명[행번]</label></th>
 									<td class="left">
 										<span class="select-box">
-											<select class="styled">
+											<select class="styled w300">
 												<option value="">홍길동(1234567)</option>												
 											</select>
 										</span>
 									</td>
-									<th>지점 대표 이메일</th>
+									<th><label class="essential">지점 대표 이메일</label></th>
 									<td class="left">
-										<div class="input-text">
+										<div class="input-text w300">
 											<input type="text" value="지점 대표 메일 ID@hanafn.com">
 										</div>
 									</td>
@@ -97,26 +101,26 @@
 				</div>
 				<div class="section">
 					<p class="admin-tit">지점 담당자 설정 변경</p>
-					<div class="board-list2 multi">
+					<div class="board-list2 multi scroll">
 						<table>
 							<caption>리스트</caption>
 							<colgroup>
-								<col style="width:6%;">
-								<col style="width:15%;">	
-								<col style="width:12%;">	
-								<col >
-								<col >
-								<col >
-								<col >
-								<col >
-								<col >							
-								<col >
-								<col >
-								<col >
-								<col >
-								<col >
-								<col >
-								<col >							
+								<col style="width:75px">
+								<col style="width:180px">	
+								<col style="width:140px">	
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">							
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">
+								<col style="width:65px">														
 							</colgroup>
 							<thead>
 								<tr>
@@ -145,7 +149,7 @@
 								<tr>
 									<td></td>
 									<td>
-										<ul class="flex-area center">
+										<ul class="form-list">
 											<li><label for="chk1"><input type="radio" name="Rdo1" class="styled" id="chk1" checked>사용</label></li>
 											<li><label for="chk2"><input type="radio" name="Rdo1" class="styled" id="chk2">사용안함</label></li>
 										</ul>
@@ -168,9 +172,9 @@
 								<tr>
 									<td></td>
 									<td>
-										<ul class="flex-area center">
-											<li><label for="chk3"><input type="radio" name="Rdo1" class="styled" id="chk3" checked>사용</label></li>
-											<li><label for="chk4"><input type="radio" name="Rdo1" class="styled" id="chk4">사용안함</label></li>
+										<ul class="form-list">
+											<li><label for="chk3"><input type="radio" name="Rdo2" class="styled" id="chk3" checked>사용</label></li>
+											<li><label for="chk4"><input type="radio" name="Rdo2" class="styled" id="chk4">사용안함</label></li>
 										</ul>
 									</td>
 									<td>홍길동[1234567]</td>
@@ -192,15 +196,15 @@
 								<tr>
 									<td><button type="button" class="btn-row plus">추가</button></td>
 									<td>
-										<ul class="flex-area center">
-											<li><label for="chk5"><input type="radio" name="Rdo2" class="styled" id="chk5" checked>사용</label></li>
-											<li><label for="chk6"><input type="radio" name="Rdo2" class="styled" id="chk6">사용안함</label></li>
+										<ul class="form-list">
+											<li><label for="chk5"><input type="radio" name="Rdo3" class="styled" id="chk5" checked>사용</label></li>
+											<li><label for="chk6"><input type="radio" name="Rdo3" class="styled" id="chk6">사용안함</label></li>
 										</ul>
 									</td>
 									<td>
-										<span class="select-box">
+										<span class="select-box wide">
 											<select class="styled">
-												<option value="">홍길동(1234567)</option>												
+												<option value="">직원명[행번]</option>										
 											</select>
 										</span>
 									</td>
@@ -219,31 +223,34 @@
 									<td><input type="checkbox" class="styled"></td>	
 								</tr>
 								<tr>
-									<td><button type="button" class="btn-row minus">삭제</button></td>
 									<td>
-										<ul class="flex-area center">
-											<li><label for="chk7"><input type="radio" name="Rdo2" class="styled" id="chk7" checked>사용</label></li>
-											<li><label for="chk8"><input type="radio" name="Rdo2" class="styled" id="chk8">사용안함</label></li>
+										<button type="button" class="btn-row plus">추가</button>
+										<button type="button" class="btn-row minus">삭제</button>
+									</td>
+									<td>
+										<ul class="form-list">
+											<li><label for="chk7"><input type="radio" name="Rdo4" class="styled" id="chk7" checked>사용</label></li>
+											<li><label for="chk8"><input type="radio" name="Rdo4" class="styled" id="chk8">사용안함</label></li>
 										</ul>
 									</td>
 									<td>
-										<span class="select-box">
+										<span class="select-box wide">
 											<select class="styled">
-												<option value="">홍길동(1234567)</option>												
+												<option value="">직원명[행번]</option>												
 											</select>
 										</span>
 									</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled" checked></td>
 									<td><input type="checkbox" class="styled"></td>
 									<td><input type="checkbox" class="styled"></td>
 									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled" checked></td>									
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>									
 									<td><input type="checkbox" class="styled"></td>
 									<td><input type="checkbox" class="styled"></td>	
 								</tr>

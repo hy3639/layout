@@ -159,6 +159,7 @@ select {
 	transition:all .1s;
 	-webkit-appearance:none; 
 }
+
 /* select:focus {
 	border-color:#3b8ff7;
 	transition:all .2s ease-in;

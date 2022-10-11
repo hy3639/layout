@@ -54,7 +54,38 @@ $(document).ready(function(){
 		// $(this).closest('.tooltip-layer').find('.btn-layer').removeClass('on');
 	})
 
-	/* datepicker */
+
+	/* 1:1상담내역 검색 show/hide */
+	$('.history .search-area > button').click(function(){
+		var item = $(this).attr('title');
+		var target = $(this).parent('.search-area').next('.search-layer');
+		target.find('.'+item).css('display','flex');
+	});
+	$('.history .search-layer > div').each(function(){
+		$(this).find('.btn-close').click(function(){
+			$(this).closest('div').hide();
+		});
+	});
+
+	/* datepicker - 단일검색 */
+	$( ".single" ).datepicker({
+		showOn: "button",
+		buttonImage: "../images/icon/icon_20_date.png",
+		buttonImageOnly: true,
+		dateFormat: "yy-mm-dd", 	
+		changeMonth: true,
+		changeYear: true,		
+		minDate: '-100y',
+		nextText: '다음 달', 
+		prevText: '이전 달', 
+		numberOfMonths:1, 		 
+		showMonthAfterYear: true ,   
+		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	  });
+
+
+	/* datepicker - 기간검색 */
 	var dateFormat = "yy-mm-dd",
 	from = $(".from").datepicker({		
 		dateFormat: "yy-mm-dd", 	
@@ -231,8 +262,7 @@ function reHeight(){
 				var chatH = $('.chat-wrap').outerHeight();
 				var chatInputH = $('.chat-box').find('textarea').outerHeight();
 				var chatBoxH =  $('.chat-box').outerHeight();
-				var calcH  = chatH - chatInputH;
-				console.log(chatBoxH);
+				var calcH  = chatH - chatInputH;				
 				if(chatInputH > 399){
 					$(this).css('overflow-y', 'auto');
 				}else{

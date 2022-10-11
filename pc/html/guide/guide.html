@@ -11,10 +11,12 @@
 		.wrapper section.group {border-bottom:1px solid #666; padding:0 20px 30px 20px}
 		.wrapper section.group > h2{font-size:20px;border-left:4px solid gold;padding-left:10px; margin:15px 0 30px}
 		.group > .cont {margin-bottom:30px}
+	
 		.group .sub-cont {margin-top:20px}
+		.sub-cont .cont + .cont {margin-top:20px} 
 		.group .sub-cont .tit {font-weight:bold; font-size:14px}
 		.container {padding-top:0}
-	
+		
 	</style>
 </head>
 
@@ -72,6 +74,29 @@
 							<a href="#" class="btn-border btn-sm">선택</a>
 						</div>
 					</div>
+					<!-- <div class="sub-cont">
+						<p class="tit">mid (height:42px)</p>
+						<div class="cont">
+							<a href="#" class="btn-round btn-mid bg-green">상세</a>							
+							<a href="#" class="btn-border btn-mid">선택</a>
+						</div>
+					</div> -->
+					<div class="sub-cont">
+						<p class="tit">mid2 (height:36px)</p>
+						<div class="cont">
+							<a href="#" class="btn-round btn-mid2 bg-navy">상세</a>	
+							<a href="#" class="btn-round btn-mid2 bg-gray">초기화</a>							
+							<a href="#" class="btn-border btn-mid2">선택</a>
+						</div>
+					</div>
+					<!-- <div class="sub-cont">
+						<p class="tit">large (height:48px)</p>
+						<div class="cont">
+							<a href="#" class="btn-round btn-lg bg-navy">상세</a>	
+							<a href="#" class="btn-round btn-lg bg-gray">초기화</a>							
+							<a href="#" class="btn-border btn-lg">선택</a>
+						</div>
+					</div> -->
 				</div>
 			</section>
 			<section class="group">
@@ -202,20 +227,164 @@
 											<td>홍길동</td>
 											<td>2017.12.24</td>
 										</tr>
-										<!-- <tr>
-											<td><input type="checkbox" class="styled" checked></td>
-											<td>219</td>
-											<td></td>									
-											<td class="subject"><a href="#" class="link"><span class="tit"></a></td>								
-											<td><button type="button" class="btn-user">관리자</button></td>
-											<td>2017.12.24</td>
-											<td>999</td>
-											<td>200</td>
-										</tr> -->
 									</tbody>
 								</table>
 							</div>
 						</div>
+						<div class="cont">
+							<div class="board-list2">
+								<table>
+									<caption>리스트</caption>
+									<colgroup>
+										<col style="width:6%;">									
+										<col style="width:12%;">
+										<col>
+										<col style="width:8%;">										
+										<col style="width:8%;">
+										<col style="width:10%;">							
+										<col style="width:8%;">
+										<col style="width:10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">번호</th>
+											<th scope="col">지점명</th>
+											<th scope="col">지점 대표 채널명</th>
+											<th scope="col">지점 관리자명</th>
+											<th scope="col">상태</th>										
+											<th scope="col">지점 대표 채널 개설일</th>
+											<th scope="col">최종 수정자</th>
+											<th scope="col">최종 수정일</th>
+										</tr>
+									</thead>
+									<tbody>							
+										<tr>
+											<td>10</td>
+											<td><a href="#" class="link">지점명</a></td>									
+											<td class="left"><a href="#" class="link">지점 대표 채널명 </a></td>		
+											<td>홍길동</td>						
+											<td>개설완료</td>
+											<td>2022-10-07</td>
+											<td>홍길동</td>
+											<td>2022-10-07</td>
+										</tr>
+					
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="board-list2 multi">
+								<table>
+									<caption>리스트</caption>
+									<colgroup>
+										<col style="width:20%;">	
+										<col style="width:15%;">	
+										<col>							
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="2">상태</th>
+											<th scope="col" rowspan="2">대기시간</th>
+											<th scope="col">발송시점</th>
+										</tr>
+										<tr>								
+											<th scope="col">메시지</th>
+										</tr>
+									</thead>
+									<tbody>							
+										<tr class="multi-row">
+											<td rowspan="2">상담지연(손님 없음)</td>
+											<td rowspan="2">00분</td>
+											<td class="left">대화중인 손님이 없는 상태에 일정 시간 직원이 답변을 못 할 경우</td>	
+										</tr>
+										<tr>
+											<td class="left">
+												메시지 출력<br>
+												메시지 출력
+											</td>
+										</tr>
+										<tr class="multi-row">
+											<td rowspan="2">상담지연(손님 있음)</td>
+											<td rowspan="2">00분</td>
+											<td class="left">대화중인 손님이 없는 상태에 일정 시간 직원이 답변을 못 할 경우</td>	
+										</tr>
+										<tr>
+											<td class="left">
+												메시지 출력<br>
+												메시지 출력
+											</td>
+										</tr>					
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="board-list2 multi scroll">
+								<table>
+									<caption>리스트</caption>
+									<colgroup>
+										<col style="width:180px">	
+										<col style="width:124px">	
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">							
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">
+										<col style="width:72px">														
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="2">사용여부<br>(인사이동/퇴사 시<br>사용한함 설정 필요)</th>
+											<th scope="col" rowspan="2">지점 담당자</th>
+											<th scope="col" colspan="13">업무유형</th>
+										</tr>
+										<tr>								
+											<th scope="col">전(월)세 대출</th>
+											<th scope="col">부동산 담보대출</th>
+											<th scope="col">신용대출</th>
+											<th scope="col">오토금융</th>
+											<th scope="col">개인사업자 대출</th>
+											<th scope="col">기업대출</th>
+											<th scope="col">목돈 굴리기</th>
+											<th scope="col">목돈 모으기</th>
+											<th scope="col">퇴직연금 IRP</th>
+											<th scope="col">유학 등 기타자금</th>
+											<th scope="col">재외동포 재산반출</th>
+											<th scope="col">해외부동산 투자</th>
+											<th scope="col">기업성 해외자금</th>
+										</tr>
+									</thead>
+									<tbody>							
+										<tr>
+											<td>사용</td>
+											<td>홍길동[1234567]</td>
+											<td><span class="check">check</span></td>
+											<td><span class="check">check</span></td>
+											<td></td>
+											<td><span class="check">check</span></td>
+											<td><span class="check">check</span></td>
+											<td></td>
+											<td></td>
+											<td><span class="check">check</span></td>
+											<td><span class="check">check</span></td>
+											<td><span class="check">check</span></td>
+											<td><span class="check">check</span></td>
+											<td></td>
+											<td><span class="check">check</span></td>	
+										</tr>								
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
 					</div>
 					<div class="sub-cont">
 						<p class="tit">뷰</p>
@@ -232,6 +401,108 @@
 											<th scope="row">웰컴 메시지</th>
 											<td>메시지 출력</td>
 										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="board-write3">
+								<table>
+									<caption>업무 유형 별 상담 종류</caption>
+									<colgroup>
+										<col style="width:16%">
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>							
+									</colgroup>
+									<tbody>
+										<tr class="thead">
+											<th scope="row" rowspan="14">업무 유형 별 상담 종류</th>
+											<th>업무유형</th>
+											<th>업무유형코드</th>
+											<th colspan="4">상담종류</th>
+										</tr>
+										<tr>							
+											<td>전(월)세 대출</td>
+											<td>업무유형코드</td>
+											<td>1.신규</td>
+											<td>2.만기/연장</td>
+											<td>3.타행대환</td>
+											<td>4.기타 이벤트 등</td>
+										</tr>
+										<tr>							
+											<td>부동산담보 대출</td>
+											<td>업무유형코드</td>
+											<td>1.신규</td>
+											<td>2.만기/연장</td>
+											<td>3.타행대환</td>
+											<td>4.기타 이벤트 등</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="board-write3 multi">
+								<table>
+									<caption>본인 인증 메시지</caption>
+									<colgroup>
+										<col style="width:10%;">
+										<col style="width:6%;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row" colspan="2">본인 인증 메시지</th>
+											<td class="left">
+												메시지 출력<br>
+												메시지 출력<br>
+												메시지 출력
+											</td>
+										</tr>
+										<tr class="multi-row">
+											<th scope="row" rowspan="3" class="row">본인 인증 버튼</th>
+											<th scope="row">구분</th>
+											<td class="left">링크</td>
+										</tr>
+										<tr>									
+											<th scope="row">버튼명</th>
+											<td class="left">본인 인증하기</td>
+										</tr>
+										<tr>									
+											<th scope="row">링크</th>
+											<td class="left">http://hanabank.com</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="board-write3 multi type2">
+								<table>
+									<caption>지점 대표 채널 정보</caption>
+									<colgroup>
+										<col style="width:16%;">
+										<col>
+										<col style="width:16%;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>지점명</th>
+											<td class="left">지점명</td>
+											<th>지점 대표 채널명</th>
+											<td class="left">지점 대표 채널명</td>
+										</tr>
+										<tr>
+											<th>지점 관리자명[행번]</th>
+											<td class="left">홍길동[1234567]</td>
+											<th>지점 대표 이메일</th>
+											<td class="left">지점대표메일ID@hanafn.com</td>
+										</tr>										
 									</tbody>
 								</table>
 							</div>
@@ -335,6 +606,49 @@
 								</div>
 							</div>
 						</div>
+						<div class="cont">
+							<div class="tab-wrap">
+								<div class="tab-lst3">
+									<button type="button" class="tab-item on">
+										<span class="txt">간편발송</span>
+									</button>
+									<button type="button" class="tab-item">
+										<span class="txt">간편발송</span>
+									</button>													
+								</div>
+		
+								<div class="tab-conts">						
+									<div class="tab-cont on">
+										서브1
+									</div>						
+									<div class="tab-cont">
+										서브2
+									</div>									
+								</div>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="tab-wrap">
+								<div class="tab-lst4 noneTab"> <!-- 탭스타일만 적용할경우 nonTab 클래스 추가-->
+									<button type="button" class="tab-item on">
+										<span class="txt">간편발송</span>
+									</button>
+									<button type="button" class="tab-item">
+										<span class="txt">간편발송</span>
+									</button>													
+								</div>
+		
+								<div class="tab-conts">						
+									<div class="tab-cont on">
+										서브1
+									</div>						
+									<div class="tab-cont">
+										서브2
+									</div>									
+								</div>
+							</div>
+						</div>
+						
 					</div>		
 				</div>	
 			</section>

@@ -39,8 +39,9 @@
 						<div class="cont">
 							<div class="button-area margin center">
 								<button type="button" class="btn-mid btn-round bg-green btnPop" title="Popup01">alert</button>
+								<button type="button" class="btn-mid btn-round bg-green btnPop" title="Popup02">alert 버튼1개일경우</button>
 								<a href="#" class="btn-mid btn-border btnPop" title="Popup04">타이틀 있는 팝업</a>
-								<button type="button" class="btn-mid btn-round bg-navy btnPop" title="Popup02">이중노출 예시</button>								
+														
 							</div>
 							
 
@@ -57,6 +58,21 @@
 									<div class="btn-area"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
 										<button type="button" class="btn-round btn-mid bg-navy">예</button>	
 										<button type="button" class="btn-border btn-mid popClose">아니오</button>			
+									</div>
+								</div>
+							</div>
+
+							<!-- alert -->
+							<div class="layer-popup" title="Popup02">
+								<div class="popup sm">
+									<div class="popup-header">			
+										<button class="btn-close popClose">팝업닫기</button>	
+									</div>
+									<div class="popup-cont align-center">									
+										<span class="sub-txt">상담 문구에 당행에서 금지하는 금칙어가 존재합니다.<br>금칙어에 해당하는 대화 변경 후 다시 전송해 주세요.</span>				
+									</div>
+									<div class="btn-area single"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
+										<button type="button" class="btn-round btn-mid bg-navy">확인</button>										
 									</div>
 								</div>
 							</div>
@@ -107,82 +123,7 @@
 								</div>
 							</div>				
 
-							
-							<!-- 이중노출 예시 -->
-							<div class="layer-popup noneClose" title="Popup02">
-								<div class="popup sm">
-									<div class="popup-header">	
-										<p class="title">폴더 관리</p>	
-										<button class="btn-close popClose">팝업닫기</button>	
-									</div>
-									<div class="popup-cont">
-										<div class="scroll-board-list scroll-area" style="height:130px;">
-											<table class="height32">
-												<caption>폴더 리스트</caption>
-												<colgroup>
-													<col style="width:13%;">						
-													<col>																
-												</colgroup>							
-												<tbody>	
-													<tr>
-														<td class="bd-none"><input type="checkbox" class="styled" checked></td>
-														<td class="left">폴더1</td>
-													</tr>
-													<tr>
-														<td class="bd-none"><input type="checkbox" class="styled"></td>
-														<td class="left">폴더2</td>
-													</tr>
-													<tr>
-														<td class="bd-none"><input type="checkbox" class="styled"></td>
-														<td class="left">폴더3</td>
-													</tr>
-													<tr>
-														<td class="bd-none"><input type="checkbox" class="styled"></td>
-														<td class="left">폴더4</td>
-													</tr>
-													<tr>
-														<td class="bd-none"><input type="checkbox" class="styled"></td>
-														<td class="left">폴더5</td>
-													</tr>
-													<tr>
-														<td class="bd-none"><input type="checkbox" class="styled"></td>
-														<td class="left">폴더6</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-										<button type="button" class="btn-add btnPop" title="Popup03"><span>폴더 만들기</span></button>	
-										<p class="guide-txt2 f-pink">하나만 선택해 주십시오.</p>			
-									</div>
-									<div class="button-area  margin center">
-										<button type="button" class="btn-border btn-mid bg-white">수정</button>			
-										<button type="button" class="btn-border btn-mid bg-white">삭제</button>				
-									</div>
-								</div>
-							</div>							
-							<div class="layer-popup scroll" title="Popup03">
-								<div class="popup sm">
-									<div class="popup-header">
-										<p class="title">폴더 관리</p>
-										<button class="btn-close popClose">팝업닫기</button>	
-									</div>
-									<div class="popup-cont">
-										<ul class="form-list block">
-											<li>
-												<label for="FolderModify">폴더 이름 수정</label>
-												<div class="input-text">
-													<input type="text" id="FolderModify" style="width:100%">
-												</div>
-											</li>
-										</ul>				
-									</div>
-									<div class="button-area center margin">
-										<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-										<button type="button" class="btn-mid bg-pink">수정</button>			
-									</div>
-								</div>
-							</div>
-							<!--// 이중노출 예시 -->
+						
 						</div>
 					</div>	
 				</div>	
