@@ -68,7 +68,7 @@ $(document).ready(function(){
 	});
 
 	/* datepicker - 단일검색 */
-	$( ".single" ).datepicker({
+	$( ".single-calendar .single" ).datepicker({
 		showOn: "button",
 		buttonImage: "../images/icon/icon_20_date.png",
 		buttonImageOnly: true,

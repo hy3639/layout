@@ -243,6 +243,44 @@
 	font-weight:300;
 	line-height:36px;
 }
+
+/* 로딩바 */
+.loading-wrap {
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	width:1280px;
+	height: 100vh;
+	z-index: 100;
+}
+.loading {
+    display: flex;
+	flex-direction: column-reverse;
+    justify-content: center;
+	align-items: center;
+	height: 100%;
+	/* background-color: rgba(0, 0, 0, .5); */
+
+}
+.loading > p {font-size:16px;padding-top:15px}
+.loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid #fff;
+    border-top-color: #455896;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 /* ==============
 	공통
 ============== */
@@ -1371,7 +1409,7 @@ html.popOpen {overflow:hidden;}
 }
 
 .layer-cont.popup-cont .cont-area {
-	max-height:90vh;
+	max-height:80vh;
 	overflow-y:auto;
 }
 
@@ -2113,7 +2151,7 @@ html.popOpen {overflow:hidden;}
 
 
 
-.layer-popup .history .chat-cont {height:618px}
+.layer-popup .history .chat-cont {height:calc(80vh - 124px)}
 .layer-popup .history .top-area {
 	position:relative;
 	padding:20px;
