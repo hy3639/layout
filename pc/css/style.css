@@ -792,7 +792,11 @@ input[type=checkbox][class^=styled] {
 }
 
 /* 뷰 */
-.board-write {border:1px solid #dbdbdb;}
+.board-write {
+	border:1px solid #dbdbdb;
+	border-top:0;
+	border-left:0;
+}
 .board-write th,
 .board-write td {
 	height:48px;
@@ -802,11 +806,15 @@ input[type=checkbox][class^=styled] {
 	font-size: 13px;
 }
 
-.board-write tr:first-child th,
-.board-write tr:first-child td {border-top:0;} 
+/* .board-write tr:first-child th,
+.board-write tr:first-child td {border-top:0;}  */
+/* .board-write tr:last-child th,
+.board-write tr:last-child td {	border-bottom:1px solid #dbdbdb;} */
 .board-write th {
 	padding:15px 20px;
 	background-color:#f5f6f8;	
+	border-left:1px solid #dbdbdb;
+	border-right:1px solid #dbdbdb;
 	font-weight:500;
 	text-align:left;
 }
@@ -821,6 +829,7 @@ input[type=checkbox][class^=styled] {
 	padding:0 0 0  12px;
 	font-weight:300;
 }
+
 .board-write th.center {text-align:center; padding-left:0}
 .board-write td .text-area {min-height:200px}
 
