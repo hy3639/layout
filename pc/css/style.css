@@ -876,7 +876,6 @@ input[type=checkbox][class^=styled] {
 }
 
 .board-write3 {}
-
 .board-write3 th,
 .board-write3 td {
 	height:48px;	
@@ -1338,7 +1337,7 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup {
     position:relative;
     /* width:450px; */
-    margin:0 auto;
+    margin:0 auto 50px;
 	padding-bottom:30px;
     box-sizing:border-box;
     background-color:#fff;

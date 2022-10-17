@@ -193,7 +193,6 @@ $(window).on('load', function(){
 	/*=======// 레이어팝업 ======= */
 
 
-
 });
 
 $(window).resize(function(){	
@@ -227,7 +226,7 @@ function layerPop(){
     });
 
     $('.layer-popup').each(function(){
-		var hei = $('.wrapper').outerHeight();		
+		var hei = $(window).height();		
         var popH = $(this).find('.popup').outerHeight();
         var pdT = (hei - popH) / 2;
         var mgB = $(this).find('.popup').css('margin-bottom');
