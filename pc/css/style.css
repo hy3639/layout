@@ -2060,6 +2060,8 @@ html.popOpen {overflow:hidden;}
 	overflow-y: auto;
 	height: 72px;
 	padding:8px 10px;
+	border-top:1px solid #dbdbdb;
+	border-left:1px solid #dbdbdb;
 	background-color:#fff;	
 }
 .history-list li {
