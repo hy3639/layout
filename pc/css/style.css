@@ -2122,6 +2122,7 @@ html.popOpen {overflow:hidden;}
 	font-size:12px;
 	line-height:18px;
 	font-weight:300;
+	word-break: break-all;
 }
 .send-box .btn-area {margin-top:16px}
 .send-box .btn-area .btn-round {
