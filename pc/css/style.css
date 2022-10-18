@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import 'common.css'; 
-@import 'jquery.mCustomScrollbar.css'; 
 
 /* ==============
 	레이아웃
@@ -2184,7 +2183,7 @@ html.popOpen {overflow:hidden;}
 
 
 
-.layer-popup .history .chat-cont {height:calc(70vh - 124px)}
+.layer-popup .history .chat-cont {height:calc(70vh - 124px);min-height:500px;}
 .layer-popup .history .top-area {
 	position:relative;
 	padding:20px;
