@@ -159,12 +159,7 @@ $(window).on('load', function(){
         $(this).addClass('on');
         $('html').addClass('popOpen');
 
-		//닫히지 않아야할경우 분기
-		if(!$(this).closest('.layer-popup').hasClass('noneClose')){
-			$(this).closest('.layer-popup').fadeOut(300, function(){
-				$(this).removeClass('open');
-			});
-		}        
+		     
         var name = $(this).attr('layer-name');
         $('.layer-popup[layer-name=' + name + ']').fadeIn(100, function(){
            // $(this).find('.firstTab').focus();
@@ -180,14 +175,7 @@ $(window).on('load', function(){
 		$('.btnPop.on').focus().removeClass('on');
 		$(this).closest('.layer-popup').find('.dimmed').remove();
 		});	
-
-		//팝업이 하나일경우만 body스크롤 제거
-		if(!$(this).closest('.layer-popup').hasClass('scroll')){
-			setTimeout(function(){
-				$('html').removeClass('popOpen');
-			}, 300);
-
-		}	
+		
     });
 
 	/*=======// 레이어팝업 ======= */
