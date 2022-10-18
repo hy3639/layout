@@ -22,7 +22,7 @@
 		</div>
 		<div class="right-area">
 			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
-			<button type="button" class="btn-logout btnPop" title="Popup01">로그아웃</button>
+			<button type="button" class="btn-logout">로그아웃</button>
 			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
 			<div class="gnb-list">
 				<ul class="depth1">
@@ -109,7 +109,7 @@
 											<td>10</td>
 											<td>여신</td>									
 											<td>문구</td>		
-											<td class="left"><a href="#" class="link">간편발송 제목</a></td>	
+											<td class="left"><a href="#" class="link btnPop" title="Popup01">간편발송 제목</a></td>	
 											<td>홍길동</td>
 											<td>2017-12-24</td>
 										</tr>
@@ -919,6 +919,103 @@
 		</div>
 	</div>
 	
+</div>
+
+<div class="layer-popup" title="Popup01">
+	<div class="popup lg">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="layer-cont popup-cont">
+			<div class="tit-area flex-area both">
+				<p>간편 발송 상세</p>
+				<div class="btn-area">
+					<button type="button" class="btn-round btn-sm bg-gray">확인</button>
+				</div>
+			</div>
+			<div class="cont-area">
+				<div class="board-write sm">
+					<table>
+						<caption>간편 발송 상세</caption>
+						<colgroup>
+							<col style="width:20%;">
+							<col style="width:15%;">
+							<col style="width:15%;">
+							<col style="width:20%;">						
+							<col>									
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="center">제목</th>
+								<td colspan="4">간편 발송 Title Text 출력</td>
+							</tr>
+							<tr>
+								<th scope="row" class="center">구분</th>
+								<td colspan="2">여신</td>
+								<th scope="row" class="center">종류</th>
+								<td>문구</td>
+							</tr>
+							<tr>
+								<th scope="row" class="center">내용</th>
+								<td colspan="4">
+									<div class="text-area">
+										문구 경우 간편 발송 Contents Text 출력																	
+									</div>
+								</td>
+							</tr>
+							<!-- 링크발송일 경우 추가 -->
+							<tr>
+								<th rowspan="2" class="center">링크1</th>
+								<th class="center">버튼명</th>
+								<td colspan="3">버튼명 출력</td>
+							</tr>
+							<tr>								
+								<th class="center">링크</th>
+								<td colspan="3">https://kebhana.com/</td>
+							</tr>
+							<tr>
+								<th rowspan="2" class="center">링크2</th>
+								<th class="center">버튼명</th>
+								<td colspan="3">버튼명 출력</td>
+							</tr>
+							<tr>								
+								<th class="center">링크</th>
+								<td colspan="3">https://kebhana.com/</td>
+							</tr>
+							<tr>
+								<th rowspan="2" class="center">링크3</th>
+								<th class="center">버튼명</th>
+								<td colspan="3">버튼명 출력</td>
+							</tr>
+							<tr>								
+								<th class="center">링크</th>
+								<td colspan="3">https://kebhana.com/</td>
+							</tr>
+							<tr>
+								<th rowspan="2" class="center">링크4</th>
+								<th class="center">버튼명</th>
+								<td colspan="3">버튼명 출력</td>
+							</tr>
+							<tr>								
+								<th class="center">링크</th>
+								<td colspan="3">https://kebhana.com/</td>
+							</tr>
+							<tr>
+								<th rowspan="2" class="center">링크5</th>
+								<th class="center">버튼명</th>
+								<td colspan="3">버튼명 출력</td>
+							</tr>
+							<tr>								
+								<th class="center">링크</th>
+								<td colspan="3">https://kebhana.com/</td>
+							</tr>
+							<!--// 링크발송일 경우 추가 -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script src="../js/jquery-3.4.1.min.js"></script>
