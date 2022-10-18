@@ -1685,14 +1685,14 @@ html.popOpen {overflow:hidden;}
 	flex-direction: column;
 }
 .chat-cont .chat-item mark {background-color:#000; color:#fff;}
-.chat-cont .chat-item + .chat-item {margin-top:20px}
+.chat-cont .chat-item + .chat-item {margin-top:8px}
 .chat-cont .chat-item.right {align-items: flex-end;}
-.chat-cont .chat-item.right + .chat-item.right,
-.chat-cont .chat-item.left + .chat-item.left {margin-top:8px;}
+/* .chat-cont .chat-item.right + .chat-item.right,
+.chat-cont .chat-item.left + .chat-item.left {margin-top:8px;} */
 .chat-cont .chat-item.right .chat-name {text-align:right;}
 .chat-cont .chat-item.right .chat-txt {flex-flow: row-reverse;}
 .chat-cont .chat-item.left {align-items: flex-start;}
-.chat-cont .chat-item .chat-name {padding-bottom:5px;line-height:15px;}
+.chat-cont .chat-item .chat-name {padding:12px 0 5px;line-height:15px;}
 .chat-cont .chat-item .chat-name > span {
 	display:block;
 	font-size:12px;
@@ -1728,6 +1728,7 @@ html.popOpen {overflow:hidden;}
 	border-color:#f8eb58;
 }
 .chat-cont .chat-item-list + .system-msg {margin:15px 0}
+.chat-cont .chat-item-list .chat-item:first-child .chat-name {padding-top:0}
 .search-navi{
 	display:flex;
 	justify-content: space-between;
@@ -2109,13 +2110,13 @@ html.popOpen {overflow:hidden;}
 .chat-util .tab-cont .btn-area.fixed .btn-round {width:100px}
 
 .send-bg {background-color:#c9dcec;padding:20px}
+.send-bg .send-box {margin:0 auto;}
 .send-box {
 	width:240px;
 	max-width:80%;
 	padding:12px 10px 8px 10px;
 	background-color:#f8eb58;
-	border-radius:15px;
-	margin:0 auto;
+	border-radius:15px;	
 }
 .send-box p {
 	font-size:12px;
