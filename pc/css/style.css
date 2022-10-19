@@ -22,9 +22,10 @@
 	max-width:1280px; 
 	height:78px; 
 	padding-left:20px;
-	background-color:#455896;  
+	background-color:#55555a;  
 	z-index:20;
 }
+.header.on {background-color:#455896}
 .header .logo {height: 24px;}
 .header > div {
 	display:flex;
@@ -55,6 +56,7 @@
 	font-weight:500;
 	transition: all .3s;
 }
+.header .btn-toggle-area .btn-msg:last-child.on {background-color:#e7e9ee}
 .header .waiting {
 	position:relative;
 	padding-left:20px;

@@ -18,6 +18,13 @@ $(document).ready(function(){
 
 	/* 상담 on/off */
 	$('.btn-toggle-area button').click(function(){
+		var idx = $(this).index();
+		var header = $(this).closest('.header');
+		if(idx == 0) {
+			header.addClass('on');
+		}else{
+			header.removeClass('on');
+		}
 		$(this).addClass('on').siblings().removeClass('on');
 	});
 
