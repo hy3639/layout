@@ -327,6 +327,8 @@
 .w668 {width:668px !important;}
 .w782 {width:782px !important;}
 
+/*font-weight*/
+.bold {font-weight: 700 !important;}
 
 /* 버튼 */
 .btn-round {
@@ -479,6 +481,13 @@ a.btn-mid2 {line-height:36px}
 	left:0;
 	top:0;
 	color:#666
+}
+
+.list-style.num {counter-reset:list-number;}
+.list-style.num li{counter-increment:list-number;line-height:20px;}
+.list-style.num li:before {
+	content:counter(list-number)'.';
+	margin-right:3px;
 }
 
 /* ==============
@@ -703,6 +712,7 @@ input[type=checkbox][class^=styled] {
 }
 
 /* 리스트 테이블 */
+table td.no-data {padding:50px 0 !important}
 .board-list {
 	border:1px solid #dbdbdb;
 	border-left:0;
@@ -1506,8 +1516,8 @@ html.popOpen {overflow:hidden;}
 }
 
  
-
-.no-data {
+.main-chat .no-data,
+.chat-area .no-data {
 	position:absolute;
 	left:50%;
 	top:50%;

@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	reHeight();
 	sortable();
-	layerPop();
+	//layerPop();
+	draggable(); //멀티팝업 드레그
 
 	/*gnb*/
 	$('.btn-gnb').click(function(){
@@ -276,3 +277,7 @@ function sortable(){
 	$('.sortable').sortable();
 }
 
+//draggable
+function draggable(){
+	$('.draggable').draggable();
+}
