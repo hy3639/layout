@@ -1268,6 +1268,7 @@ table td.no-data {padding:50px 0 !important}
 	width:480px;
 	padding-bottom:43px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+	z-index:50;
 }
 .multi-cal-area .multi-cal-layer.on {display:flex;}
 .multi-cal-area .multi-cal-layer .btn-area{	
