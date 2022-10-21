@@ -167,7 +167,6 @@ $(window).on('load', function(){
         $(this).addClass('on');
         $('html').addClass('popOpen');
 
-		     
         var name = $(this).attr('layer-name');
         $('.layer-popup[layer-name=' + name + ']').fadeIn(100, function(){
            // $(this).find('.firstTab').focus();
@@ -183,8 +182,7 @@ $(window).on('load', function(){
 		$('.btnPop.on').focus().removeClass('on');
 		$(this).closest('.layer-popup').find('.dimmed').remove();
 		$('html').removeClass('popOpen');
-		});	
-		
+		});			
     });
 
 	/*=======// 레이어팝업 ======= */
