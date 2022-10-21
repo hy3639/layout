@@ -182,6 +182,7 @@ $(window).on('load', function(){
 	 	$(this).closest('.layer-popup').removeClass('open').scrollTop(0).fadeOut(300, function(){
 		$('.btnPop.on').focus().removeClass('on');
 		$(this).closest('.layer-popup').find('.dimmed').remove();
+		$('html').removeClass('popOpen');
 		});	
 		
     });
