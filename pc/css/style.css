@@ -1374,7 +1374,7 @@ html.popOpen {overflow:hidden;}
 	line-height:34px;
 }
 .layer-cont.popup-cont .cont-area {
-	max-height:655px;
+	/* max-height:655px; */
 	overflow-y:auto;
 }
 .layer-cont  .cont-area .board-write.sm td {padding:12px}

@@ -13,7 +13,6 @@
 	url('font/noto-sans-demilight.woff2') format('woff2'),
 	url('font/noto-sans-demilight.woff') format('woff')
 	
-	
 }
 
 @font-face {
@@ -47,17 +46,6 @@
 	url('font/noto-sans-bold.woff2') format('woff2'),
 	url('font/noto-sans-bold.woff') format('woff')
 }
-/* @font-face {
-	font-family:noto;
-	font-style:normal;
-	font-weight:900;
-	src: url('font/noto-sans-black.eot');
-	src: local(''),
-	url('font/noto-sans-black.eot?#iefix') format('embedded-opentype'),
-	url('font/noto-sans-black.woff2') format('woff2'),
-	url('font/noto-sans-black.woff') format('woff')
-} */
-
 /* ==============================================
 	리셋
 ============================================== */
@@ -110,8 +98,6 @@ textarea:-ms-input-placeholder {color:#9ba9a8;font-weight:300}
 textarea::-webkit-input-placeholder {color:#9ba9a8;font-weight:300}
 textarea::-moz-placeholder{color:#9ba9a8;font-weight:300}
 textarea::placeholder {color:#9ba9a8;font-weight:300}
-
-
 .hide {display:none;}
 .blind{
 	position: absolute;
@@ -138,12 +124,6 @@ input[type=password] {
 	box-sizing:border-box;
 	outline:0;
 }
-/* input[type=text]:focus,
-input[type=number]:focus,
-input[type=tel]:focus,
-input[type=password]:focus {
-	border-color:blue;
-} */
 
 input[type=radio],
 input[type=checkbox] {vertical-align:middle;}
@@ -159,12 +139,6 @@ select {
 	transition:all .1s;
 	-webkit-appearance:none; 
 }
-
-/* select:focus {
-	border-color:#3b8ff7;
-	transition:all .2s ease-in;
-} */
-
 table caption {display:none;}
 
 /* css 스크롤스타일 */
