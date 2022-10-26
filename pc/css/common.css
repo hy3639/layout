@@ -64,6 +64,7 @@ body,th,td,input,select,textarea,button {color:#000;font-size:13px;font-family:n
 a{color:#000;text-decoration:none}
 a:hover{text-decoration:none;}
 a:active{background-color:transparent;}
+*:focus {outline:none}
 address,caption,cite,code,dfn,em,var{font-style:normal;/*font-weight:300;*/}
 strong {font-weight:700;}
 table {table-layout:fixed;border-collapse:collapse;width:100%;border-spacing:0;border:0;}
