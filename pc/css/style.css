@@ -1374,9 +1374,10 @@ html.popOpen {overflow:hidden;}
 	line-height:34px;
 }
 .layer-cont.popup-cont .cont-area {
-	/* max-height:655px; */
+	 max-height:650px; 
 	overflow-y:auto;
 }
+.layer-cont.popup-cont .cont-area.history {max-height:685px;}
 .layer-cont  .cont-area .board-write.sm td {padding:12px}
 .layer-popup .popup-cont .guide-txt {
 	font-size:18px;
