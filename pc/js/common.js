@@ -144,6 +144,8 @@ $(document).ready(function(){
 	  }
 	  return date;
 	}
+	//오늘날짜 선택 초기화
+	$('.ui-datepicker-today').find('a').removeClass('ui-state-active');
 
 	$('.btn-cal').click(function(){
 		$(this).closest('.multi-cal-area').find('.multi-cal-layer').addClass('on');
@@ -152,7 +154,6 @@ $(document).ready(function(){
 		$(this).closest('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
 	});
 	
-
 
 });
 
