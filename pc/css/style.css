@@ -1166,14 +1166,16 @@ table td.no-data {padding:50px 0 !important}
 	line-height: 30px;
 }
 .ui-datepicker-calendar tbody td .ui-state-default {
+	display: inline-block;
+	width:100%;
+	height:100%;
 	font-size:14px; 
 	font-weight:400
 }
-.ui-datepicker-today {background-color: transparent;}
-.ui-datepicker-current-day {background-color:#455896; } 
-.ui-datepicker-current-day a {color:#fff}
-.ui-datepicker-current-day.ui-datepicker-today {background-color:transparent}
-.ui-datepicker-current-day.ui-datepicker-today a {color:#000}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+	background-color:#455896; 
+	color:#fff;
+}
 
 .calendar-area {
 	display:flex; 
