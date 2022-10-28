@@ -2131,7 +2131,7 @@ html.popOpen {overflow:hidden;}
 .admin-area .search-area .btn-search:hover {background: #e7e9eb url(../images/icon/ico_srch2.png) no-repeat 20px center;}
 
 .layer-popup .history .chat-cont {
-	height:calc(70vh - 124px);
+	height:500px;
 	min-height:500px;
 }
 .layer-popup .history .top-area {
