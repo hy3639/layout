@@ -1871,7 +1871,7 @@ html.popOpen {overflow:hidden;}
 .chat-list li.fix:nth-child(2) {top:82px;}
 .chat-list li.fix:nth-child(3) {top:165px;}
 .chat-list li:first-child {border-top:0}
-.chat-list li.now {background-color:#c9dcec}
+.chat-list li.select {background-color:#c9dcec}
 
 .btn-like {
 	width: 18px;
@@ -1926,7 +1926,10 @@ html.popOpen {overflow:hidden;}
 }
 .flag.type3 {
 	border:1px solid #21b9bf;
-	color:#21b9bf
+	background-color:#21b9bf;
+	color:#fff;
+	font-weight:500;
+
 }
 .flag.type4 {
 	border:1px solid #a35aef;
