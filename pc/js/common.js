@@ -3,6 +3,7 @@ $(document).ready(function(){
 	sortable();
 	//layerPop();
 	draggable(); //멀티팝업 드레그
+	setDate();
 
 	/*gnb*/
 	$('.btn-gnb').click(function(){
@@ -18,16 +19,16 @@ $(document).ready(function(){
 	});
 
 	/* 상담 on/off */
-	$('.btn-toggle-area button').click(function(){
-		var idx = $(this).index();
-		var header = $(this).closest('.header');
-		if(idx == 0) {
-			header.addClass('on');
-		}else{
-			header.removeClass('on');
-		}
-		$(this).addClass('on').siblings().removeClass('on');
-	});
+	// $('.btn-toggle-area button').click(function(){
+	// 	var idx = $(this).index();
+	// 	var header = $(this).closest('.header');
+	// 	if(idx == 0) {
+	// 		header.addClass('on');
+	// 	}else{
+	// 		header.removeClass('on');
+	// 	}
+	// 	$(this).addClass('on').siblings().removeClass('on');
+	// });
 
 	/* 공통 토글 버튼 */
 	$('.btn-toggle').click(function(){
@@ -109,11 +110,11 @@ $(document).ready(function(){
 
 	onSelect: function (dateText) {
 		$('#from').val(this.value);		
-	}
+	},
 
 	})
 	.on("change", function () {
-	to.datepicker("option", "minDate", getDate(this));
+		to.datepicker("option", "minDate", getDate(this));
 	}),
 	to = $(".to").datepicker({		
 		dateFormat: "yy-mm-dd", 	
@@ -126,7 +127,6 @@ $(document).ready(function(){
 		showMonthAfterYear: true ,   
 		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
 		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-	
 	onSelect: function (dateText) {
 		$('#to').val(this.value);		
 	}
@@ -144,8 +144,8 @@ $(document).ready(function(){
 	  }
 	  return date;
 	}
-	//오늘날짜 선택 초기화
-	$('.ui-datepicker-today').find('a').removeClass('ui-state-active');
+	setDate(); // 초기값 설정
+ 
 
 	$('.btn-cal').click(function(){
 		$(this).closest('.multi-cal-area').find('.multi-cal-layer').addClass('on');
@@ -280,4 +280,16 @@ function sortable(){
 //draggable
 function draggable(){
 	$('.draggable').draggable();
+}
+
+	// 초기값 설정
+function setDate(){
+	$('.from').datepicker('setDate', '-1M'); 
+	$('.to').datepicker('setDate', 'today'); 		
+	fromDate = $(".from").val();
+	toDate = $(".to").val();
+	
+	$('.calendar-area #from').val(fromDate); 
+	$('.calendar-area #to').val(toDate); 
+
 }

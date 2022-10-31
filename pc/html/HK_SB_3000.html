@@ -266,7 +266,7 @@
 													<p>상세검색</p>
 													<div class="btn-area">
 														<button type="button" class="btn-round btn-sm bg-navy">검색</button>
-														<button type="button" class="btn-round btn-sm bg-gray">초기화</button>
+														<button type="button" class="btn-round btn-sm bg-gray btn-reset">초기화</button>
 													</div>
 												</div>
 												<div class="cont-area">
@@ -1194,6 +1194,12 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/common.js"></script>
+<script>
+
+	$('.btn-reset').click(function(){
+		setDate();
+	});
+</script>
 
 </body>
 </html>
