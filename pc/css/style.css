@@ -138,7 +138,7 @@
 	right:0;
     top: 78px;
 	width:282px;
-    padding: 60px 40px;
+    padding: 0 40px 60px 40px;
     background-color: #344783;
 	z-index:30;
 }
@@ -149,7 +149,7 @@
 	color:#fff;
 	font-weight: 300;
 }
-.gnb-list .depth1 > li + li {margin-top:65px}
+.gnb-list .depth1 > li {margin-top:60px}
 .gnb-list .depth1 > li:before {
 	content: '';
 	display:block;
@@ -1681,6 +1681,7 @@ html.popOpen {overflow:hidden;}
 	font-weight: 300;
 	line-height:18px;
 	border-radius:8px;
+	word-wrap:break-word;
 }
 .chat-cont .chat-item.right .chat-txt .txt {
 	background-color:#f8eb58;
