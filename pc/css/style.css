@@ -230,7 +230,7 @@
 .fixed-title .tit-area .btn-area > button {vertical-align: inherit;}
 .fixed-title .tit-area .btn-area > button + button {margin-left:6px}
 .footer {
-	position:absolute;
+	position:fixed;
 	left:0;
 	bottom:0; 
 	width:1280px; 
