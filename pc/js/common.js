@@ -286,7 +286,7 @@ function draggable(){
 	$('.draggable').draggable();
 }
 
-	// 초기값 설정
+// 초기값 설정
 function setDate(){
 	$('.from').datepicker('setDate', '-1M'); 
 	$('.to').datepicker('setDate', 'today'); 		

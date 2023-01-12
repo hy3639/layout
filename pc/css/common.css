@@ -3,11 +3,11 @@
 /* ==============================================
 	폰트
 ============================================== */
-@font-face {
+/* @font-face {
 	font-family:noto;
 	font-style:normal;
 	font-weight:300;
-	src: url('font/noto-sans-demilight.eot');
+	src: url('font/Light.eot');
 	src: local(''),
 	url('font/noto-sans-demilight.eot?#iefix') format('embedded-opentype'),
 	url('font/noto-sans-demilight.woff2') format('woff2'),
@@ -45,7 +45,43 @@
 	url('font/noto-sans-bold.eot?#iefix') format('embedded-opentype'),
 	url('font/noto-sans-bold.woff2') format('woff2'),
 	url('font/noto-sans-bold.woff') format('woff')
-}
+} */
+
+
+ @font-face {
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 300;
+	src: url(font/NotoSansKR-Light.woff2) format('woff2'),
+		 url(font/NotoSansKR-Light.woff) format('woff'),
+		 url(font/NotoSansKR-Light.otf) format('opentype');
+ }
+ @font-face {
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 400;
+	src: url(font/NotoSansKR-Regular.woff2) format('woff2'),
+		 url(font/NotoSansKR-Regular.woff) format('woff'),
+		 url(font/NotoSansKR-Regular.otf) format('opentype');
+ }
+ @font-face {
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 500;
+	src: url(font/NotoSansKR-Medium.woff2) format('woff2'),
+		 url(font/NotoSansKR-Medium.woff) format('woff'),
+		 url(font/NotoSansKR-Medium.otf) format('opentype');
+ }
+ @font-face {
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 700;
+	src: url(font/NotoSansKR-Bold.woff2) format('woff2'),
+		 url(font/NotoSansKR-Bold.woff) format('woff'),
+		 url(font/NotoSansKR-Bold.otf) format('opentype');
+ }
+
+
 /* ==============================================
 	리셋
 ============================================== */
