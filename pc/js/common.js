@@ -19,16 +19,16 @@ $(document).ready(function(){
 	});
 
 	/* 상담 on/off */
-	// $('.btn-toggle-area button').click(function(){
-	// 	var idx = $(this).index();
-	// 	var header = $(this).closest('.header');
-	// 	if(idx == 0) {
-	// 		header.addClass('on');
-	// 	}else{
-	// 		header.removeClass('on');
-	// 	}
-	// 	$(this).addClass('on').siblings().removeClass('on');
-	// });
+	$('.btn-toggle-area button').click(function(){
+		var header = $(this).closest('.header');
+		if($(this).hasClass('on')){
+			$(this).removeClass('on').text('상담OFF');
+			header.removeClass('on');
+		}else{
+			$(this).addClass('on').text('상담ON');
+			header.addClass('on');
+		}
+	});
 
 	/* 공통 토글 버튼 */
 	$('.btn-toggle').click(function(){
@@ -37,6 +37,7 @@ $(document).ready(function(){
 
 
 	/* 탭영역 */	
+	
 	$(document).on('click', '.tab-item', function(){
 		if(!$(this).parent('div').hasClass('noneTab')){
 			var tabName = $(this).parent('div').attr('class');
@@ -193,6 +194,27 @@ $(window).on('load', function(){
 	/*=======// 레이어팝업 ======= */
 
 
+	$(document).on('click', '.btnPopFixed', function(){
+		layerPopFixed();
+		$(this).addClass('on');
+
+		var name = $(this).attr('layer-name');
+        $('.layer-popup-fixed[layer-name=' + name + ']').fadeIn(100, function(){          
+            $(this).addClass('open').closest('.layer-popup');
+			layerPopFixed();
+        });
+	});
+
+		/* 팝업닫기 */
+		$(document).on('click', '.popClose', function(){      
+			$(this).closest('.layer-popup-fixed').removeClass('open').scrollTop(0).fadeOut(300, function(){
+			   $('.btnPopFixed.on').focus().removeClass('on');
+			  $(this).closest('.layer-popup-fixed').css('inset', '');
+			//  layerPopFixed();
+		   });			
+	   });
+
+
 });
 
 $(window).resize(function(){	
@@ -240,11 +262,28 @@ function layerPop(){
     });
 }
 
+function layerPopFixed(){
+    $('.btnPopFixed, .layer-popup-fixed').each(function(){ 
+       var tit = $(this).attr('title');
+        $(this).attr('layer-name', tit).removeAttr('title');
+    });
+
+
+    $('.layer-popup-fixed').each(function(){
+		var parentName = $(this).attr('layer-name');
+		var posLeft = $('.main-chat').find('.'+parentName).offset().left;
+	//	var posTop = $('.main-chat').find('.'+parentName).offset().top;
+
+		$(this).css('left',posLeft);
+		// $(this).css('top',posTop);
+    });
+}
+
 
 //1:1상담 컨텐츠 높이 변경
 function reHeight(){
 	$('.reHeight').each(function(){
-		autoHeight();
+		//autoHeight();
 		$(this).on('propertychange change keyup paste input', function(){
 			var currentVal = $(this).val();
 			if(currentVal == oldVal) {
@@ -259,16 +298,18 @@ function reHeight(){
 				var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
 				
 				var chatH = $('.chat-wrap').outerHeight();
-				var chatInputH = $('.chat-box').find('textarea').outerHeight();
+				var chatInputH = $('.chat-box').find('textarea').height();
 				var chatBoxH =  $('.chat-box').outerHeight();
-				var calcH  = chatH - chatInputH;				
-				if(chatInputH > 399){
+				var calcH  = chatH - chatInputH;	
+				
+				console.log( chatH + '/' + chatInputH + '/' + chatBoxH + '/' + calcH);
+				if(chatInputH > 99){
 					$(this).css('overflow-y', 'auto');
 				}else{
 					$(this).css('overflow-y', 'hidden');
 				}
 				$('.search-navi').css('bottom',chatBoxH);
-				$(this).css('height', 'auto').height(this.scrollHeight);
+				$(this).css('height', '15px').height(this.scrollHeight);
 				chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
 
 			});
