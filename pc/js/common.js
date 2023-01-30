@@ -37,7 +37,6 @@ $(document).ready(function(){
 
 
 	/* 탭영역 */	
-	
 	$(document).on('click', '.tab-item', function(){
 		if(!$(this).parent('div').hasClass('noneTab')){
 			var tabName = $(this).parent('div').attr('class');
@@ -54,15 +53,19 @@ $(document).ready(function(){
 
 
 	/* 클릭형 툴팁 */
-	$(document).on('click', '.btn-layer', function(){		
-		$('.tooltip-layer').hide();		
-		$(this).closest('.tooltip-area').find('.tooltip-layer').show();	
-		
+	$(document).on('click', '.btn-layer', function(){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on');		
+			$(this).closest('.tooltip-area').find('.tooltip-layer').hide();	
+		}else{
+			$(this).addClass('on');
+			$(this).closest('.tooltip-area').find('.tooltip-layer').show();	
+		}
 	});
-	$(document).on('click', '.tooltip-layer .btn-close', function(){		
-		$(this).closest('.tooltip-layer').hide();
-		// $(this).closest('.tooltip-layer').find('.btn-layer').removeClass('on');
-	})
+	$('.tooltip-layer .link-area > a').click(function(){
+		$(this).closest('.tooltip-area').find('.tooltip-layer').hide();	
+		$(this).closest('.tooltip-area').find('.btn-layer').removeClass('on');
+	});
 
 
 	/* 1:1상담내역 검색 show/hide */
@@ -199,6 +202,7 @@ $(window).on('load', function(){
 		$(this).addClass('on');
 
 		var name = $(this).attr('layer-name');
+		console.log(name)
         $('.layer-popup-fixed[layer-name=' + name + ']').fadeIn(100, function(){          
             $(this).addClass('open').closest('.layer-popup');
 			layerPopFixed();
@@ -272,10 +276,9 @@ function layerPopFixed(){
     $('.layer-popup-fixed').each(function(){
 		var parentName = $(this).attr('layer-name');
 		var posLeft = $('.main-chat').find('.'+parentName).offset().left;
-	//	var posTop = $('.main-chat').find('.'+parentName).offset().top;
-
-		$(this).css('left',posLeft);
-		// $(this).css('top',posTop);
+		if($(this).hasClass('open')){
+			$(this).css('left',posLeft);
+		}
     });
 }
 
