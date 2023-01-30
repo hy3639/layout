@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>하나톡 포탈</title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style2.css">
 </head>
 
 <body>
@@ -15,10 +15,10 @@
 				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
 			</a>
 			<div class="btn-toggle-area">
-				<button type="button" class="btn-msg">상담OFF</button>				
-			</div>			
+				<button type="button" class="btn-msg">상담 ON</button>
+				<button type="button" class="btn-msg on">상담 OFF</button>
+			</div>
 			<span class="waiting">대기 : <em>00명</em></span>
-			<span class="waiting">신규메시지 : <em>00명</em></span>
 		</div>
 		<div class="right-area">
 			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
@@ -40,40 +40,34 @@
 		</div>
 	</div>
 	<div class="container">
-		<!-- <div class="fixed-title">
+		<div class="fixed-title">
 			<div class="tit-area">
 				<h2>대인상담</h2>
 			</div>
-		</div> -->
+		</div>
 		<div class="contents main-chat">
 			<div class="content flex">
 				<div class="box chat-area">
 					<div class="top">
-						<div class="flex-area">
-							<h3 class="tit">1:1상담</h3>
-							<p class="customer-name"> <span class="name">홍길동</span> 손님 </p>
-						</div>
-						<div class="btn-area">
-							<button type="button" class="btn-search"><span class="blind">검색</span></button>
-							<button type="button" class="btn-chat-close">상담종료</button>
-						</div>
-					</div>	
+						<h3 class="tit">1:1상담</h3>
+						<p class="customer-name">[ <span class="name">홍길동</span> 손님 ]</p>
+					</div>
 					<div class="center">
-						<!-- <div class="search-area">
+						<div class="search-area">
 							<div class="search-box">
 								<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">
 								<a href="#" class="btn-search">검색</a>
 							</div>
-						</div> -->
+						</div>
 						<div class="chat-wrap">
 							<div class="chat-cont scroll-area">
-								<div class="date"><span>2022년 8월 31일 목요일</span></div>
+								<div class="date"><span>2022년 8월 31일</span></div>
 								<div class="system-msg">
 									<p>
 										<span class="tit">[시스템 메시지]</span>
-										<span class="f-blue">업무유형+상담종류</span> 상담을 요청하고,<br>
-										본인인증 완료한<span class="f-blue">'당행 손님입니다.'</span>or <span class="f-blue">'당행 손님이 아닙니다'</span><br>
-										손님과 상담 시 금융소비자보호 등 관련 법률을 준수하여 상담하시기 바랍니다.<br>
+										<span class="f-red">업무유형+상담종류</span> 상담을 요청하고,<br>
+										본인인증 완료한<span class="f-red">'당행 손님입니다.'</span>or <span class="f-red">'당행 손님이 아닙니다'</span><br>
+										손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.<br>
 									</p>
 								</div>
 								<div class="chat-item-list">
@@ -88,9 +82,9 @@
 									</div>
 									<div class="chat-item right">										
 										<div class="chat-txt">
-											<p class="txt">영업1부에서 개인대출을 담당하는 김은영입니다.</p>											
+											<p class="txt">영업1부에서 개인대출을 담당하는 김은영입니다.</p>
+											<span class="time">오후 12:28</span>
 										</div>
-										<span class="time">오후 12:28</span>
 									</div>
 									<div class="chat-item left">
 										<div class="chat-name">											
@@ -102,9 +96,9 @@
 									</div>
 									<div class="chat-item left">										
 										<div class="chat-txt">
-											<p class="txt">네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.</p>											
+											<p class="txt">네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.</p>
+											<span class="time">오후 12:28</span>
 										</div>
-										<span class="time">오후 12:28</span>
 									</div>
 									<div class="chat-item right">
 										<div class="chat-name">
@@ -116,9 +110,9 @@
 												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
 												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
 												안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
-											</p>											
+											</p>
+											<span class="time">오후 12:28</span>
 										</div>
-										<span class="time">오후 12:28</span>
 									</div>									
 									<div class="chat-item left">
 										<div class="chat-name">											
@@ -129,9 +123,9 @@
 												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
 												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
 												네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
-											</p>											
+											</p>
+											<span class="time">오후 12:28</span>
 										</div>
-										<span class="time">오후 12:28</span>
 									</div>
 									<div class="chat-item right">
 										<div class="chat-name">
@@ -148,11 +142,11 @@
 									</div>
 									<div class="chat-item right">										
 										<div class="chat-txt">
-											<p class="txt">안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?</p>											
+											<p class="txt">안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?</p>
+											<span class="time">오후 12:28</span>
 										</div>
-										<span class="time">오후 12:28</span>
 									</div>
-									<!-- <div class="chat-item right">
+									<div class="chat-item right">
 										<div class="chat-name">
 											<span class="category">지점명(업무유형명)</span>
 											<span class="name">김하나 (9812345)</span>
@@ -176,8 +170,9 @@
 													<a href="#" class="btn-round">버튼명</a>
 													<a href="#" class="btn-round">버튼명 버튼명 버튼명 버튼명 버튼명 버튼명 바로가기</a>
 												</div>							
-											</div>											
-										</div>										
+											</div>
+											<span class="time">오후 12:28</span>
+										</div>
 									</div>
 									<div class="chat-item right">									
 										<div class="chat-txt">
@@ -197,10 +192,10 @@
 													간편발송 내용 Contents 출력 <br>
 													간편발송 내용 Contents 출력 																	
 												</p>																			
-											</div>											
+											</div>
+											<span class="time">오후 12:28</span>
 										</div>
-										<span class="time">오후 12:28</span>
-									</div>	 -->
+									</div>	
 								</div>					
 								<div class="system-msg">
 									<p>
@@ -212,15 +207,8 @@
 								</div>								
 							</div>
 							<div class="chat-box">								
-								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>	
-								<div class="flex-area both">
-									<div class="quick-btn-area">
-										<button type="button" class="btn-quick"><span class="blind">빠른메뉴</span></button>
-										<button type="button" class="btn-quick-text"><span class="blind">자주쓰는문구</span></button>
-									</div>
-									<button type="button" class="btn-round btn-mid bg-navy">전송</button>
-								</div>			
-								
+								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>					
+								<button type="button" class="btn-round-square btn-send">전송</button>
 							</div>
 						</div>
 						<!-- 검색 네비게이션 -->
@@ -238,12 +226,8 @@
 						<!--// 결과가 없을경우 노출 -->
 					</div>
 					<div class="bottom">
-						<div class="quick-wrap">
-							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
+						<div class="btn-area">
+							<button type="button" class="btn-round-square btn-chat-close">상담종료</button>
 						</div>
 						<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
 					</div>
@@ -251,106 +235,174 @@
 				<div class="box chat-list-area">
 					<div class="top">
 						<div class="flex-area">
-							<h3 class="tit">상담 목록</h3>							
+							<h3 class="tit">상담 목록</h3>
+							<a href="#" class="btn-border btn-sm">초기화</a>
 						</div>						
-						<button type="button" class="btn-qustion btnPop" title="Popup02">도움말</button>
+						<button type="button" class="btn-qustion btnPop" title="Popup02"><span class="blind">도움말</span></button>
 					</div>
 					<div class="tab-wrap">
 						<div class="tab-lst">
 							<button type="button" class="tab-item on">
-								<span class="txt">상담중</span>
+								<span class="txt">상담목록</span>
 							</button>
 							<button type="button" class="tab-item">
 								<span class="txt">즐겨찾기</span>
-							</button>
-							<button type="button" class="tab-item">
-								<span class="txt">상담종료</span>
-							</button>						
+							</button>							
 						</div>
 						
-						<div class="tab-conts">												
-							<div class="tab-cont on">
-								<div class="search-area flex-area both">
-									<ul class="tit-list">
-										<li><span class="tit">대화상태</span>전체</li>
-										<li><span class="tit">업무유형</span>전체</li>
-									</ul>								
-									<div class="btn-area">
-										<div class="tooltip-area">
-											<button type="button" class="btn-round btn-order btn-layer"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
-											<div class="tooltip-layer w450 left">
-												<button type="button" class="btn-close">툴팁닫기</button>
-												<div class="layer-cont">
-													<div class="tit-area">
-														<p>대화상태</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li><input type="checkbox" id="chk1"><label class="flag type6" for="chk1">전체</label></li>
-															<li><input type="checkbox" id="chk2" checked><label class="flag type1" for="chk2">대기중</label></li>
-															<li><input type="checkbox" id="chk3"><label class="flag type2" for="chk3">상담중</label></li>
-															<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
-															<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
-														</ul>
-													</div>
-													<div class="tit-area">
-														<p>업무 유형</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
-															<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
-															<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
-															<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
-															<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
-															<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
-															<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
-															<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
-															<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
-															<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
-															<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
-															<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>
-															<li><input type="checkbox" id="chk18"><label class="flag type6" for="chk18">해외부동산 투자</label></li>	
-															<li><input type="checkbox" id="chk19"><label class="flag type6" for="chk19">기업성 해외자금</label></li>														
-														</ul>
+						<div class="tab-conts">	
+							<div class="search-area">
+								<div class="search-box">
+									<input type="text" placeholder="고객명 또는 고객번호 검색(Enter시 검색)">
+									<a href="#" class="btn-search">검색</a>
+								</div>
+								<div class="btn-area">
+									<div class="tooltip-area">
+										<button type="button" class="btn-round bg-gray btn-detail btn-layer">상세</button> <!-- 상세 검색내용이 있을경우 on 클래스 추가-->
+										<div class="tooltip-layer w467">
+											<button type="button" class="btn-close">툴팁닫기</button>
+											<div class="layer-cont">
+												<div class="tit-area flex-area both">
+													<p>상세검색</p>
+													<div class="btn-area">
+														<button type="button" class="btn-round btn-sm bg-navy">검색</button>
+														<button type="button" class="btn-round btn-sm bg-gray btn-reset">초기화</button>
 													</div>
 												</div>
-											</div>	
-										</div>
-									</div>
-								</div>		
-								<ul class="chat-list scroll-area">
-									<li>
-										<div class="category">
-											<span class="flag type1">대기중</span>											
-										</div>																				
-										<div class="list-info">
-											<span class="name">홍길동(123456789)</span>
-											<span class="tit">재외동포 재산반출</span>										
-											<span class="date">5월 9일(월) 오전 10:28</span><span class="txt-count">[1/10]</span>
-										</div>
-										<div class="btn-area">
-											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
-											<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>
-											<div class="tooltip-area">
-												<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
-												<div class="tooltip-layer w112">
-													<!-- <button type="button" class="btn-close">툴팁닫기</button> -->
-													<div class="layer-cont">
-														<ul>
-															<li>상담이관</li>
-															<li>상담이력</li>
-														</ul>
+												<div class="cont-area">
+													<div class="board-write2">
+														<table>
+															<caption>뷰</caption>
+															<colgroup>
+																<col style="width:85px">																
+																<col>									
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th scope="row">대화 일자</th>
+																	<td class="multi-cal-area">
+																		<div class="calendar-area left">
+																			<div class="input-text w120">
+																				<input type="text" id="from" name="from" readonly>	
+																			</div>
+																			<span class="divide">~</span>
+																			<div class="input-text w120">
+																				<input type="text"  id="to" name="to" readonly>	
+																			</div>
+																			<button type="button" class="btn-cal"><span class="blind">달력</span></button>
+																		</div>
+																		<div class="multi-cal-layer">
+																			<div class="from"></div>
+																			<div class="to"></div>
+																			<div class="btn-area">
+																				<button type="button" class="btn-cal-close"><span>닫기</span></button>
+																			</div>
+																		</div>
+																	</td>	
+																</tr>
+																<tr>
+																	<th scope="row">휴대폰번호</th>
+																	<td class="flex-area">
+																		<div class="input-text w148">
+																			<input type="number">
+																		</div>
+																		<p class="form-guide">숫자만 가능/ 10~11자리 입력</p>
+																	</td>																	
+																</tr>
+																<tr>
+																	<th scope="row">고객명</th>
+																	<td class="flex-area">
+																		<div class="input-text w148">
+																			<input type="text">
+																		</div>
+																		<p class="form-guide">한글,영문 가능/ 자릿수 제한 없음</p>
+																	</td>																	
+																</tr>
+																<tr>
+																	<th scope="row">고객번호</th>
+																	<td class="flex-area">
+																		<div class="input-text w148">
+																			<input type="number">
+																		</div>
+																		<p class="form-guide">숫자만 가능/ 9자리 입력</p>
+																	</td>																	
+																</tr>
+															</tbody>
+														</table>
 													</div>
-												</div>	
+												</div>
 											</div>
 										</div>
+									</div>
+									<div class="tooltip-area">
+										<button type="button" class="btn-round btn-order btn-layer on"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
+										<div class="tooltip-layer w450 left">
+											<button type="button" class="btn-close">툴팁닫기</button>
+											<div class="layer-cont">
+												<div class="tit-area">
+													<p>대화상태</p>
+												</div>
+												<div class="cont-area">
+													<ul class="check-list">
+														<li><input type="checkbox" id="chk1"><label class="flag type6" for="chk1">전체</label></li>
+														<li><input type="checkbox" id="chk2" checked><label class="flag type1" for="chk2">대기중</label></li>
+														<li><input type="checkbox" id="chk3"><label class="flag type2" for="chk3">상담중</label></li>
+														<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
+														<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
+													</ul>
+												</div>
+												<div class="tit-area">
+													<p>업무 유형</p>
+												</div>
+												<div class="cont-area">
+													<ul class="check-list">
+														<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
+														<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
+														<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
+														<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
+														<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
+														<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
+														<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
+														<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
+														<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
+														<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
+														<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
+														<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>
+														<li><input type="checkbox" id="chk18"><label class="flag type6" for="chk18">해외부동산 투자</label></li>	
+														<li><input type="checkbox" id="chk19"><label class="flag type6" for="chk19">기업성 해외자금</label></li>														
+													</ul>
+												</div>
+											</div>
+										</div>	
+									</div>
+									
+									<div>
+
+									</div>
+								</div>
+							</div>					
+							<div class="tab-cont on">			
+								<ul class="chat-list scroll-area">
+									<li class="fix"> <!-- 하위 btn-fixed버튼이 on일경우 fix클래스추가 (상단 li 3개까지만 top값 적용)-->
+										<div class="btn-area"><button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button></div>										
+										<div class="list-info">
+											<span class="tit">재외동포 재산반출</span>
+											<span class="name">홍길동(123456789)</span>
+											<span class="date">5월 9일(월) 오전 10:28</span>
+										</div>
+										<div class="category">
+											<span class="flag type1">대기중</span>											
+										</div>
 										<div class="count">
-											<span class="count-noti">22</span>
+											<span class="txt-count">[1/10]</span>
 											<a href="#" class="btnPopFixed" title="chat-util">버튼</a>
 										</div>
+										<div class="fix-noti">
+											<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>
+											<span class="count-noti">22</span>
+										</div>
 									</li>
-									<li class="select">
+									<li class="select fix">
 										<div class="btn-area"><button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button></div>										
 										<div class="list-info">
 											<span class="tit">재외동포 재산반출</span>
@@ -368,7 +420,7 @@
 											<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>											
 										</div>
 									</li>
-									<li>
+									<li class="fix">
 										<div class="btn-area"><button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button></div>										
 										<div class="list-info">
 											<span class="tit">재외동포 재산반출</span>
@@ -485,55 +537,6 @@
 								<!--// 순서저장하기 -->
 							</div>						
 							<div class="tab-cont">
-								<div class="search-area flex-area both">
-									<ul class="tit-list">
-										<li><span class="tit">대화상태</span>전체</li>
-										<li><span class="tit">업무유형</span>전체</li>
-									</ul>								
-									<div class="btn-area">
-										<div class="tooltip-area">
-											<button type="button" class="btn-round btn-order btn-layer on"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
-											<div class="tooltip-layer w450 left">
-												<button type="button" class="btn-close">툴팁닫기</button>
-												<div class="layer-cont">
-													<div class="tit-area">
-														<p>대화상태</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li><input type="checkbox" id="chk1"><label class="flag type6" for="chk1">전체</label></li>
-															<li><input type="checkbox" id="chk2" checked><label class="flag type1" for="chk2">대기중</label></li>
-															<li><input type="checkbox" id="chk3"><label class="flag type2" for="chk3">상담중</label></li>
-															<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
-															<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
-														</ul>
-													</div>
-													<div class="tit-area">
-														<p>업무 유형</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
-															<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
-															<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
-															<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
-															<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
-															<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
-															<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
-															<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
-															<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
-															<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
-															<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
-															<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>
-															<li><input type="checkbox" id="chk18"><label class="flag type6" for="chk18">해외부동산 투자</label></li>	
-															<li><input type="checkbox" id="chk19"><label class="flag type6" for="chk19">기업성 해외자금</label></li>														
-														</ul>
-													</div>
-												</div>
-											</div>	
-										</div>
-									</div>
-								</div>
 								<ul class="chat-list scroll-area sortable">
 									<li>
 										<div class="btn-area"><button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button></div>										
@@ -680,138 +683,301 @@
 									</li>
 								</ul>
 							</div>
-							<div class="tab-cont">
-								<div class="search-area">								
-									<div class="btn-area">
-										<div class="tooltip-area">
-											<button type="button" class="btn-round bg-gray btn-detail btn-layer">상세</button> <!-- 상세 검색내용이 있을경우 on 클래스 추가-->
-											<div class="tooltip-layer w467">
-												<button type="button" class="btn-close">툴팁닫기</button>
-												<div class="layer-cont">
-													<div class="tit-area flex-area both">
-														<p>상세검색</p>
-														<div class="btn-area">
-															<button type="button" class="btn-round btn-sm bg-navy">검색</button>
-															<button type="button" class="btn-round btn-sm bg-gray btn-reset">초기화</button>
-														</div>
-													</div>
-													<div class="cont-area">
-														<div class="board-write2">
-															<table>
-																<caption>뷰</caption>
-																<colgroup>
-																	<col style="width:85px">																
-																	<col>									
-																</colgroup>
-																<tbody>
-																	<tr>
-																		<th scope="row">대화 일자</th>
-																		<td class="multi-cal-area">
-																			<div class="calendar-area left">
-																				<div class="input-text w120">
-																					<input type="text" id="from" name="from" readonly>	
-																				</div>
-																				<span class="divide">~</span>
-																				<div class="input-text w120">
-																					<input type="text"  id="to" name="to" readonly>	
-																				</div>
-																				<button type="button" class="btn-cal"><span class="blind">달력</span></button>
-																			</div>
-																			<div class="multi-cal-layer">
-																				<div class="from"></div>
-																				<div class="to"></div>
-																				<div class="btn-area">
-																					<button type="button" class="btn-cal-close"><span>닫기</span></button>
-																				</div>
-																			</div>
-																		</td>	
-																	</tr>
-																	<tr>
-																		<th scope="row">휴대폰번호</th>
-																		<td class="flex-area">
-																			<div class="input-text w148">
-																				<input type="number">
-																			</div>
-																			<p class="form-guide">숫자만 가능/ 10~11자리 입력</p>
-																		</td>																	
-																	</tr>
-																	<tr>
-																		<th scope="row">고객명</th>
-																		<td class="flex-area">
-																			<div class="input-text w148">
-																				<input type="text">
-																			</div>
-																			<p class="form-guide">한글,영문 가능/ 자릿수 제한 없음</p>
-																		</td>																	
-																	</tr>
-																	<tr>
-																		<th scope="row">고객번호</th>
-																		<td class="flex-area">
-																			<div class="input-text w148">
-																				<input type="number">
-																			</div>
-																			<p class="form-guide">숫자만 가능/ 9자리 입력</p>
-																		</td>																	
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="tooltip-area">
-											<button type="button" class="btn-round btn-order btn-layer on"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
-											<div class="tooltip-layer w450 left">
-												<button type="button" class="btn-close">툴팁닫기</button>
-												<div class="layer-cont">
-													<div class="tit-area">
-														<p>대화상태</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li><input type="checkbox" id="chk1"><label class="flag type6" for="chk1">전체</label></li>
-															<li><input type="checkbox" id="chk2" checked><label class="flag type1" for="chk2">대기중</label></li>
-															<li><input type="checkbox" id="chk3"><label class="flag type2" for="chk3">상담중</label></li>
-															<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
-															<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
-														</ul>
-													</div>
-													<div class="tit-area">
-														<p>업무 유형</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
-															<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
-															<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
-															<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
-															<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
-															<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
-															<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
-															<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
-															<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
-															<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
-															<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
-															<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>
-															<li><input type="checkbox" id="chk18"><label class="flag type6" for="chk18">해외부동산 투자</label></li>	
-															<li><input type="checkbox" id="chk19"><label class="flag type6" for="chk19">기업성 해외자금</label></li>														
-														</ul>
-													</div>
-												</div>
-											</div>	
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
-				
+				<div class="box chat-util">
+					<div class="top">
+						<h3 class="tit">손님 정보</h3>						
+					</div>
+					<div class="bottom">
+						<div class="flex-area both">
+							<p class="tit">기본정보</p>
+							<a href="#" class="btn-border btn-sm">상세</a>
+						</div>						
+						<div class="board-write sm">
+							<table>
+								<caption>뷰</caption>
+								<colgroup>
+									<col style="width:22%;">
+									<col style="width:26%;">
+									<col style="width:23%;">
+									<col>									
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">손님명</th>
+										<td>홍길동</td>
+										<th scope="row">고객번호</th>
+										<td>123456789</td>
+									</tr>
+									<tr>
+										<th scope="row">연락처</th>
+										<td>010-****-****</td>
+										<th scope="row">당행고객여부</th>
+										<td>N</td>
+									</tr>
+									<tr>
+										<th scope="row">주거래</th>
+										<td>****</td>
+										<th scope="row">손님등급</th>
+										<td>Hana VIP</td>										
+									</tr>
+									<tr>
+										<th scope="row">주/실거래점</th>
+										<td>을지로본점</td>
+										<th scope="row">전담직원</th>
+										<td>김하나(123456)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="flex-area">
+							<p class="tit">최근접촉이력</p>						
+						</div>						
+						<div class="board-write sm">
+							<ul class="history-list scroll-area">
+								<li class="ellipsis">22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+								<li>22-7-26 JIRA 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송</li>
+							</ul>
+						</div>
+					</div>
+					<div class="top">
+						<h3 class="tit">간편 발송</h3>						
+					</div>
+					<div class="bottom">
+						<div class="tab-wrap">
+							<div class="tab-lst2">
+								<button type="button" class="tab-item on">
+									<span class="txt">즐겨찾기</span>
+								</button>
+								<button type="button" class="tab-item">
+									<span class="txt">기타</span>
+								</button>
+								<button type="button" class="tab-item">
+									<span class="txt">여신</span>
+								</button>
+								<button type="button" class="tab-item">
+									<span class="txt">수신</span>
+								</button>
+								<button type="button" class="tab-item">
+									<span class="txt">외환</span>
+								</button>
+								<button type="button" class="tab-item">
+									<span class="txt">전자금융</span>
+								</button>
+								<button type="button" class="tab-item">
+									<span class="txt">카드</span>
+								</button>							
+							</div>
+	
+							<div class="tab-conts">						
+								<div class="tab-cont on">
+									<ul class="send-list scroll-area sortable">	
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">기타</span>
+											<a href="#" class="cont ellipsis btnPop" title="Popup03">상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">여신</span>
+											<a href="#" class="cont ellipsis btnPop" title="Popup04">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">전자금융</span>
+											<a href="#" class="cont ellipsis">있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">외환</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">카드</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">기타</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">기타</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">기타</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">기타</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">기타</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">기타</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+											<span class="category">끝</span>
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+									</ul>
+									<!-- 순서저장하기 -->
+									<div class="btn-area fixed">
+										<button type="button" class="btn-round">순서 저장</button>	
+									</div>
+									<!--// 순서저장하기 -->
+								</div>						
+								<div class="tab-cont">
+									<ul class="send-list scroll-area sortable">						
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>										
+									</ul>
+								</div>
+								<div class="tab-cont">
+									<ul class="send-list scroll-area sortable">						
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>										
+									</ul>
+								</div>
+								<div class="tab-cont">
+									<ul class="send-list scroll-area sortable">						
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>										
+									</ul>
+								</div>
+								<div class="tab-cont">
+									<ul class="send-list scroll-area sortable">						
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>										
+									</ul>
+								</div>
+								<div class="tab-cont">
+									<ul class="send-list scroll-area sortable">						
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>										
+									</ul>
+								</div>
+								<div class="tab-cont">
+									<ul class="send-list scroll-area sortable">						
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>
+										<li>
+											<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>										
+											<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											<a href="#" class="btn-border btn-sm">선택</a>
+										</li>										
+									</ul>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
 			</div>
 			<div class="footer">
 				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
 			</div>
+
+			<div class="layer-popup-fixed draggable" title="chat-util">
+				<div class="popup-header">			
+					<button class="btn-close popClose">팝업닫기</button>	
+				</div>
+				<div class="layer-cont popup-cont">
+					<div class="tit-area flex-area">
+						<p>1:1 상담내역</p>				
+					</div>
+					<div class="cont-area history">
+						11111111111111111111
+					</div>
+				</div>
+			</div>
+
+			<div class="layer-popup-fixed draggable" title="chat-list-area">
+				<div class="popup-header">			
+					<button class="btn-close popClose">팝업닫기</button>	
+				</div>
+				<div class="layer-cont popup-cont">
+					<div class="tit-area flex-area">
+						<p>1:1 상담내역</p>				
+					</div>
+					<div class="cont-area history">
+						22222222222222
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 	
@@ -965,7 +1131,7 @@
 </div>
 
 
-<div class="layer-popup" title="Popup03">
+<div class="layer-popup fixed" title="Popup03">
 	<div class="popup sm">
 		<div class="popup-header">			
 			<button class="btn-close popClose">팝업닫기</button>	
@@ -1056,6 +1222,10 @@
 		</div>
 	</div>
 </div>
+
+
+
+
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/common.js"></script>
@@ -1063,24 +1233,6 @@
 
 	$('.btn-reset').click(function(){
 		setDate();
-	});
-
-
-	$('.btn-quick').click(function(){
-		var parentsDiv = $('.chat-area');
-	
-		if($(this).hasClass('on')){
-			$(this).removeClass('on');
-			parentsDiv.find('.center').css('bottom','30px');
-			parentsDiv.find('.quick-wrap').removeClass('on');
-		}else{
-			$(this).addClass('on');
-			parentsDiv.find('.center').css('bottom','151px');
-			parentsDiv.find('.quick-wrap').addClass('on');
-
-		}
-		
-
 	});
 </script>
 

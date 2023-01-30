@@ -3,50 +3,63 @@
 /* ==============================================
 	폰트
 ============================================== */
-@font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 300;	
-	src: url('font/NotoSansKR-Light.woff2') format('woff2'),	
-	url('font/NotoSansKR-Light.woff') format('woff'),	
-	url('font/NotoSansKR-Light.otf') format('opentype')	
-}
-	
-@font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 350;	
-	src: url('font/NotoSansKR-DemiLight.woff2') format('woff2'),	
-	url('font/NotoSansKR-DemiLight.woff') format('woff'),	
-	url('font/NotoSansKR-DemiLight.otf') format('opentype')	
-}
 
+/* noto-sans-kr-300 - korean */
 @font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 400;	
-	src: url('font/NotoSansKR-Regular.woff2') format('woff2'),	
-	url('font/NotoSansKR-Regular.woff') format('woff'),	
-	url('font/NotoSansKR-Regular.otf') format('opentype')	
-}
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 300;
+	src: url('font/noto-sans-kr-v27-korean-300.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		 url('font/noto-sans-kr-v27-korean-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('font/noto-sans-kr-v27-korean-300.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-300.woff') format('woff'), /* Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-300.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('font/noto-sans-kr-v27-korean-300.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+  }
+  /* noto-sans-kr-regular - korean */
+  
+  
+  @font-face {
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('font/noto-sans-kr-v27-korean-regular.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		 url('font/noto-sans-kr-v27-korean-400.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('font/noto-sans-kr-v27-korean-400.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-400.woff') format('woff'), /* Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-400.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('font/noto-sans-kr-v27-korean-400.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+  }
+  /* noto-sans-kr-500 - korean */
+  @font-face {
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 500;
+	src: url('font/noto-sans-kr-v27-korean-500.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		 url('font/noto-sans-kr-v27-korean-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('font/noto-sans-kr-v27-korean-500.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-500.woff') format('woff'), /* Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-500.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('font/noto-sans-kr-v27-korean-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+  }
+  /* noto-sans-kr-700 - korean */
+  @font-face {
+	font-family: 'noto';
+	font-style: normal;
+	font-weight: 700;
+	src: url('font/noto-sans-kr-v27-korean-700.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		 url('font/noto-sans-kr-v27-korean-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('font/noto-sans-kr-v27-korean-700.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-700.woff') format('woff'), /* Modern Browsers */
+		 url('font/noto-sans-kr-v27-korean-700.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('font/noto-sans-kr-v27-korean-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+  }
 
-@font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 500;	
-	src: url('font/NotoSansKR-Medium.woff2') format('woff2'),	
-	url('font/NotoSansKR-Medium.woff') format('woff'),	
-	url('font/NotoSansKR-Medium.otf') format('opentype')	
-}
 
-@font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 700;	
-	src: url('font/NotoSansKR-Bold.woff2') format('woff2'),	
-	url('font/NotoSansKR-Bold.woff') format('woff'),	
-	url('font/NotoSansKR-Bold.otf') format('opentype')	
-}
 /* ==============================================
 	리셋
 ============================================== */
@@ -96,10 +109,10 @@ input::-webkit-input-placeholder {color:#9ba9a8;font-weight:300}
 input::-moz-placeholder{color:#9ba9a8;font-weight:300}
 input::placeholder {color:#9ba9a8;font-weight:300}
 
-textarea:-ms-input-placeholder {color:#888;font-weight:350}
-textarea::-webkit-input-placeholder {color:#888;font-weight:350}
-textarea::-moz-placeholder{color:#888;font-weight:350}
-textarea::placeholder {color:#888;font-weight:350}
+textarea:-ms-input-placeholder {color:#9ba9a8;font-weight:300}
+textarea::-webkit-input-placeholder {color:#9ba9a8;font-weight:300}
+textarea::-moz-placeholder{color:#9ba9a8;font-weight:300}
+textarea::placeholder {color:#9ba9a8;font-weight:300}
 .hide {display:none;}
 .blind{
 	position: absolute;
