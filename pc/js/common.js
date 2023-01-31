@@ -51,6 +51,21 @@ $(document).ready(function(){
 	
 	});
 
+	/* 검색네비게이션 */
+	$('.chat-area .btn-search').click(function(){
+		var targetDiv = $(this).closest('.top').next('.search-area');	
+		if(!$(this).hasClass('on')){
+			$(this).addClass('on');
+			targetDiv.addClass('on');
+		}	
+	});
+	$('.search-box .btn-close').click(function(){
+		var targetDiv = $(this).closest('.search-area');
+	//	$(this).removeClass('on');
+		targetDiv.removeClass('on');
+		targetDiv.prev('.top').find('.btn-search').removeClass('on');
+	});
+
 
 	/* 클릭형 툴팁 */
 	$(document).on('click', '.btn-layer', function(){
@@ -276,8 +291,10 @@ function layerPopFixed(){
     $('.layer-popup-fixed').each(function(){
 		var parentName = $(this).attr('layer-name');
 		var posLeft = $('.main-chat').find('.'+parentName).offset().left;
-		if($(this).hasClass('open')){
+		var posTop = $('.main-chat').find('.'+parentName).offset().top;
+		if(!$(this).hasClass('open')){
 			$(this).css('left',posLeft);
+			$(this).css('top',posTop);
 		}
     });
 }

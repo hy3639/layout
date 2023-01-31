@@ -116,3 +116,11 @@ select {
 }
 table caption {display:none;}
 
+.scroll-area {
+	-ms-overflow-style: auto;	
+	scrollbar-width: thin;
+	overflow-y: auto;	
+  }
+  
+
+
