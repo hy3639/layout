@@ -47,7 +47,7 @@
 	border-radius: 20px;
 	text-align: right;
 	font-size:13px;
-	font-weight:350;
+	font-weight:300;
 	transition: all .3s;
 }
 .header .btn-toggle-area .btn-msg.on {	
@@ -81,7 +81,7 @@
 	padding-left:20px;
 	color:#b5bcd5;
 	font-size:14px;
-	font-weight: 350;
+	font-weight: 300;
 }
 /* .header .waiting:before {
 	content: '';
@@ -104,7 +104,7 @@
 .header .user-txt {
 	color:#fff;
 	opacity: .9;
-	font-weight:350;
+	font-weight:300;
 	letter-spacing: 1px;
 }
 .btn-logout {
@@ -166,7 +166,7 @@
 .gnb-list .depth1 li a {
 	font-size:20px;
 	color:#fff;
-	font-weight: 350;
+	font-weight: 300;
 }
 .gnb-list .depth1 > li {margin-top:60px}
 .gnb-list .depth1 > li:before {
@@ -265,7 +265,7 @@
 .footer p {
 	font-size:11px;
 	color:#666;
-	font-weight:350;
+	font-weight:300;
 	line-height:36px;
 	text-align: right;
 }
@@ -318,7 +318,7 @@
 .f-blue {color:#5b77df}
 
 .f-mid {font-weight:500 !important}
-.f-light {font-weight:350 !important}
+.f-light {font-weight:300 !important}
 .f-bold {font-weight:700 !important}
 
 .underline {text-decoration: underline;}
@@ -414,7 +414,7 @@ button:disabled {
 	height:36px;
 	/* line-height:36px; */
 	font-size:14px;
-	font-weight:350;
+	font-weight:300;
 }
 a.btn-mid2 {line-height:36px}
 
@@ -423,7 +423,7 @@ a.btn-mid2 {line-height:36px}
 	height:48px;
 	line-height:46px;
 	font-size:16px;
-	font-weight:350;
+	font-weight:300;
 	border-radius: 25px;
 }
 
@@ -434,7 +434,7 @@ a.btn-mid2 {line-height:36px}
 	background: url(../images/icon/ico-info-16.svg) no-repeat left center;
 	color:#727988;
 	font-size:12px;
-	font-weight:350
+	font-weight:300
  }
 
  .btn-row{
@@ -508,7 +508,7 @@ a.btn-mid2 {line-height:36px}
 .tit-list li .tit {
 	margin-right:8px;
 	color:#444;
-	font-weight:350
+	font-weight:300
 }
 
 /* ==============
@@ -770,7 +770,7 @@ table td.no-data {padding:50px 0 !important}
 	border-left:1px solid #e7e9ee;
 	font-size:14px;
 	color:#000;
-	font-weight:350;
+	font-weight:300;
 }
 .board-list2 table thead tr:first-child th:first-child {border-top-left-radius: 8px; }
 .board-list2 table thead tr:first-child th:first-child {border-left:0}
@@ -785,7 +785,7 @@ table td.no-data {padding:50px 0 !important}
 	border-left:1px solid #e7e9ee;
 	background-color:#fff;
 	word-wrap:break-word;
-	font-weight:350;
+	font-weight:300;
 }
 .board-list2 table td.left{
 	text-align: left;
@@ -843,7 +843,7 @@ table td.no-data {padding:50px 0 !important}
 .board-write.sm td {
 	height:40px;
 	padding:0 0 0  12px;
-	font-weight:350;
+	font-weight:300;
 }
 .board-write th.center {text-align:center; padding-left:0}
 .board-write td .text-area {min-height:200px}
@@ -856,7 +856,7 @@ table td.no-data {padding:50px 0 !important}
 .board-write2 > table > tbody > tr > td {
 	/* height:36px; */
 	padding:5px 12px;
-	font-weight:350;
+	font-weight:300;
 	box-sizing:border-box;
 	color:#666;
 	font-size: 13px;
@@ -869,7 +869,7 @@ table td.no-data {padding:50px 0 !important}
 	border-right:1px solid #e1e0ea;
 	background-color:#f5f7ff;	
 	color:#777;
-	font-weight:350;
+	font-weight:300;
 	text-align:left;
 }
 .board-write2 > table > tbody >  td {
@@ -884,7 +884,7 @@ table td.no-data {padding:50px 0 !important}
 .board-write2 td .form-guide {
 	font-size:12px;
 	color:#ea6170;
-	font-weight:350
+	font-weight:300
 }
 
 .board-write3 {}
@@ -900,7 +900,7 @@ table td.no-data {padding:50px 0 !important}
 	padding:15px;
 	background-color:#ebefff;	
 	border-top:1px solid #e7e9ee; 
-	font-weight:350;
+	font-weight:300;
 	text-align:center;
 }
 .board-write3 tr:first-child th {
@@ -1068,7 +1068,7 @@ table td.no-data {padding:50px 0 !important}
 	line-height:42px;
 	font-size:13px;
 	color:#bec7e3;
-	font-weight:350;
+	font-weight:300;
 	border-radius: 20px;
 }
 .tab-lst2 .tab-item.on > .txt {	
@@ -1107,7 +1107,7 @@ table td.no-data {padding:50px 0 !important}
 	/* line-height:42px; */
 	font-size:16px;
 	color:#83898f;
-	font-weight:350;
+	font-weight:300;
 	border-radius: 20px;
 }
 .tab-lst3 .tab-item.on {border-bottom:3px solid #455896; z-index: 3;}
@@ -1138,7 +1138,7 @@ table td.no-data {padding:50px 0 !important}
 	line-height:34px;
 	font-size:14px;
 	color:#999;
-	font-weight:350;
+	font-weight:300;
 	border-radius: 20px;
 }
 .tab-lst4 .tab-item.on > .txt {
@@ -1399,7 +1399,7 @@ html.popOpen {overflow:hidden;}
 .layer-cont {position:relative}
 .layer-cont .tit-area p {
 	color:#000;
-	font-weight:350;
+	font-weight:300;
 	font-size:14px;
 }
 .layer-cont .cont-area {margin-top:15px;}
@@ -1415,7 +1415,7 @@ html.popOpen {overflow:hidden;}
 }
 .layer-cont.popup-cont .tit-area p {
 	font-size:20px; 
-	font-weight:350
+	font-weight:300
 }
 .layer-cont.popup-cont .tit-area .btn-area button {
 	height:36px;
@@ -1433,13 +1433,13 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup-cont .guide-txt {
 	font-size:18px;
 	color:#000;
-	font-weight: 350;
+	font-weight: 300;
 }
 .layer-popup .popup-cont .sub-txt {
 	display:block;
 	font-size: 16px;
 	color:#757575;
-	font-weight: 350;
+	font-weight: 300;
 }
 .layer-popup .popup-cont .guide-txt + .sub-txt {padding-top:5px}
 .layer-popup .popup-cont + .btn-area {
@@ -1571,7 +1571,7 @@ html.popOpen {overflow:hidden;}
 .error-area .sub-txt {
 	font-size:16px;
 	color:#757575;
-	font-weight: 350;
+	font-weight: 300;
 	line-height: 24px;
 }
 .error-area .sub-txt + .sub-txt {margin-top:30px}
@@ -1645,7 +1645,7 @@ html.popOpen {overflow:hidden;}
 .main-chat .chat-area .top .customer-name {
 	padding-left:10px;
 	font-size:16px;
-	font-weight:350;
+	font-weight:300;
 	color:#0b0303;
 }
 .main-chat .chat-area .top .customer-name .name {color:#446cf3; font-weight:500}
@@ -1673,7 +1673,7 @@ html.popOpen {overflow:hidden;}
 	border:0; 
 	height:45px; 
 	background-color:#c9dcec;
-	font-weight:350;
+	font-weight:300;
 }
 .main-chat .chat-area .center .search-box input::placeholder {color:#646e76}
 .main-chat .chat-area .bottom {
@@ -1726,7 +1726,7 @@ html.popOpen {overflow:hidden;}
 	font-size:12px;
 	color:#444; 
 	background-color:#edf0f6;
-	font-weight:350;
+	font-weight:300;
 	border-radius:14px;	
 }
 .chat-cont .system-msg {text-align:center}
@@ -1734,7 +1734,7 @@ html.popOpen {overflow:hidden;}
 	display:block;
 	font-size:13px;
 	color:#444;
-	font-weight:350;
+	font-weight:300;
 	line-height:20px;
 }
 .chat-cont .system-msg p > .tit {display:block;font-weight:400}
@@ -1774,13 +1774,13 @@ html.popOpen {overflow:hidden;}
 .chat-cont .chat-item .chat-txt .time {
 	font-size:12px; 
 	color:#999; 
-	font-weight:350
+	font-weight:300
 }
 .chat-cont .chat-item .time {
 	display:block;
 	margin-top:8px; 
 	color:#666; 
-	font-weight:350
+	font-weight:300
 }
 
 .chat-cont .chat-item .chat-txt .txt {
@@ -1790,7 +1790,7 @@ html.popOpen {overflow:hidden;}
 	/* border:1px solid #e3e9f5; */
 	color:#222;
 	font-size:14px;
-	font-weight: 350;
+	font-weight: 300;
 	line-height:18px;
 	border-radius:8px;
 	word-wrap:break-word;
@@ -1993,9 +1993,9 @@ html.popOpen {overflow:hidden;}
 	margin-bottom:16px;
 	background-color:#fff;
 	border-radius: 12px;
-
 }
-.chat-list li:before {
+.chat-list li > div {z-index: 5;}
+.chat-list li:after {
 	content: '';
 	opacity: 0;
 	position:absolute;
@@ -2008,8 +2008,9 @@ html.popOpen {overflow:hidden;}
 	border:2px solid #446cf3;
 	border-radius: 12px;
 	transition:opacity .2s;
+	z-index: 2;
 }
-.chat-list li:hover:before{
+.chat-list li:hover:after{
 	opacity: 1;
 }
 
@@ -2055,12 +2056,12 @@ html.popOpen {overflow:hidden;}
 .chat-list .list-info .tit{
 	font-size:13px; 
 	color:#666; 
-	font-weight:350;
+	font-weight:300;
 }
 .chat-list .list-info .date {
 	font-size:12px;
 	color:#888;
-	font-weight:350;
+	font-weight:300;
 }
 
 .chat-list .btn-area {
@@ -2075,8 +2076,8 @@ html.popOpen {overflow:hidden;}
 /* .chat-list .category { text-align: center;} */
 /* .chat-list .count {flex:1;padding-left:4px} */
 .chat-list .count > span {font-size:12px;}
-.chat-list .info .txt-count {font-size: 12px;color:#446cf3;font-weight:350;}
-.chat-list .count .txt-stat {color:#999;font-weight:350;}
+.chat-list .info .txt-count {font-size: 12px;color:#446cf3;font-weight:300;}
+.chat-list .count .txt-stat {color:#999;font-weight:300;}
 
 .flag {
 	display:flex;
@@ -2189,7 +2190,7 @@ html.popOpen {overflow:hidden;}
 .chat-util .bottom{padding:0 20px;}
 .chat-util .bottom .flex-area {padding:5px 0 8px}
 .chat-util .bottom .flex-area .tit {
-	font-weight:350;
+	font-weight:300;
 	color:#666
 }
 .chat-util .board-write + .flex-area {margin-top:25px}
@@ -2204,7 +2205,7 @@ html.popOpen {overflow:hidden;}
 }
 .history-list li {
 	line-height:20px; 
-	font-weight:350; 
+	font-weight:300; 
 	color:#666
 }
 .chat-util .bottom + .top {margin-top:25px}
@@ -2238,7 +2239,7 @@ html.popOpen {overflow:hidden;}
 	flex:1; 
 	padding:0 15px 0 5px; 
 	color:#666; 
-	font-weight:350;
+	font-weight:300;
 }
 .chat-util .bottom .tab-conts .tab-cont:first-child .send-list li .cont {
 	max-width:66%; 
@@ -2257,7 +2258,7 @@ html.popOpen {overflow:hidden;}
 .send-box p {
 	font-size:12px;
 	line-height:18px;
-	font-weight:350;
+	font-weight:300;
 	word-break: break-all;
 }
 .send-box .btn-area {margin-top:16px}
@@ -2312,7 +2313,7 @@ html.popOpen {overflow:hidden;}
 	padding-right:20px;
 	font-size:14px;
 	color:#465e6f;
-	font-weight: 350;
+	font-weight: 300;
 }
 .admin-area .search-area .btn-search {
 	padding:0 25px 0 47px;
@@ -2334,12 +2335,12 @@ html.popOpen {overflow:hidden;}
 .layer-popup .history .top-area .name {
 	font-size:15px;
 	color:#000;
-	font-weight:350
+	font-weight:300
 }
 .layer-popup .history .top-area .flex-area .date {
 	font-size:14px;
 	color:#999;
-	font-weight:350
+	font-weight:300
 }
 .layer-popup .history .search-area {display: flex; margin-top:20px}
 .layer-popup .history .search-area > button {

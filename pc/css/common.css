@@ -4,49 +4,29 @@
 	폰트
 ============================================== */
 @font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 300;	
-	src: url('font/NotoSansKR-Light.woff2') format('woff2'),	
-	url('font/NotoSansKR-Light.woff') format('woff'),	
-	url('font/NotoSansKR-Light.otf') format('opentype')	
-}
-	
-@font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 350;	
-	src: url('font/NotoSansKR-DemiLight.woff2') format('woff2'),	
-	url('font/NotoSansKR-DemiLight.woff') format('woff'),	
-	url('font/NotoSansKR-DemiLight.otf') format('opentype')	
+    font-family: 'noto';
+    src: url('font/notosanskr-demilight.woff2') format('woff2'),
+         url('font/notosanskr-demilight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 400;	
-	src: url('font/NotoSansKR-Regular.woff2') format('woff2'),	
-	url('font/NotoSansKR-Regular.woff') format('woff'),	
-	url('font/NotoSansKR-Regular.otf') format('opentype')	
+    font-family: 'noto';
+    src: url('font/notosanskr-regular.woff2') format('woff2'),
+         url('font/notosanskr-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 500;	
-	src: url('font/NotoSansKR-Medium.woff2') format('woff2'),	
-	url('font/NotoSansKR-Medium.woff') format('woff'),	
-	url('font/NotoSansKR-Medium.otf') format('opentype')	
+    font-family: 'noto';
+    src: url('font/notosanskr-medium.woff2') format('woff2'),
+         url('font/notosanskr-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
 }
 
-@font-face {
-	font-family:'noto';	
-	font-style: normal;	
-	font-weight: 700;	
-	src: url('font/NotoSansKR-Bold.woff2') format('woff2'),	
-	url('font/NotoSansKR-Bold.woff') format('woff'),	
-	url('font/NotoSansKR-Bold.otf') format('opentype')	
-}
 /* ==============================================
 	리셋
 ============================================== */
@@ -61,12 +41,12 @@ select::-ms-expand {display:none}
 button{border:0 none;background-color:transparent;cursor:pointer}
 html {font-size:62.5%;}
 body{background:#fff;direction:ltr;-webkit-text-size-adjust:none; word-break: keep-all;}
-body,th,td,input,select,textarea,button {color:#000;font-size:13px;font-family:noto, sans-serif;font-weight:400;line-height:1.5;letter-spacing:-0.35px}
+body,th,td,input,select,textarea,button {color:#000;font-size:13px;font-family:'noto',sans-serif;font-weight:400;line-height:1.5;letter-spacing:-0.35px}
 a{color:#000;text-decoration:none}
 a:hover{text-decoration:none;}
 a:active{background-color:transparent;}
 *:focus {outline:none}
-address,caption,cite,code,dfn,em,var{font-style:normal;/*font-weight:300;*/}
+address,caption,cite,code,dfn,em,var{font-style:normal;}
 strong {font-weight:700;}
 table {table-layout:fixed;border-collapse:collapse;width:100%;border-spacing:0;border:0;}
 
@@ -96,10 +76,10 @@ input::-webkit-input-placeholder {color:#9ba9a8;font-weight:300}
 input::-moz-placeholder{color:#9ba9a8;font-weight:300}
 input::placeholder {color:#9ba9a8;font-weight:300}
 
-textarea:-ms-input-placeholder {color:#888;font-weight:350}
-textarea::-webkit-input-placeholder {color:#888;font-weight:350}
-textarea::-moz-placeholder{color:#888;font-weight:350}
-textarea::placeholder {color:#888;font-weight:350}
+textarea:-ms-input-placeholder {color:#888;font-weight:300}
+textarea::-webkit-input-placeholder {color:#888;font-weight:300}
+textarea::-moz-placeholder{color:#888;font-weight:300}
+textarea::placeholder {color:#888;font-weight:300}
 .hide {display:none;}
 .blind{
 	position: absolute;
@@ -109,13 +89,6 @@ textarea::placeholder {color:#888;font-weight:350}
     margin: -1px;
     overflow: hidden;
 }
-
-/* [role=button] {cursor:pointer;}
-[role=button]:focus,
-input[type=file]:focus,
-a:focus,
-button:focus {outline:1px dashed #265cf0;} */
-
 input[type=text],
 input[type=number],
 input[type=tel],
@@ -142,27 +115,4 @@ select {
 	-webkit-appearance:none; 
 }
 table caption {display:none;}
-
-/* css 스크롤스타일 */
-/* .scroll-area::-webkit-scrollbar-thumb {
-	background-color: #999;
-	width:15px;
-	background-clip: padding-box;
-	border-left: 1px solid transparent; 	
-
-  }
-  .scroll-area::-webkit-scrollbar-track {
-	background-color: transparent;
-  }
-  .scroll-area::-webkit-scrollbar {
-	width:4px;
-  }
-  .scroll-area:hover::-webkit-scrollbar {width:4px;} */
-  .scroll-area {
-	-ms-overflow-style: auto;	
-	scrollbar-width: thin;
-	overflow-y: auto;	
-  }
-  
-
 
