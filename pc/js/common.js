@@ -224,14 +224,14 @@ $(window).on('load', function(){
         });
 	});
 
-		/* 팝업닫기 */
-		$(document).on('click', '.popClose', function(){      
-			$(this).closest('.layer-popup-fixed').removeClass('open').scrollTop(0).fadeOut(300, function(){
-			   $('.btnPopFixed.on').focus().removeClass('on');
-			  $(this).closest('.layer-popup-fixed').css('inset', '');
-			//  layerPopFixed();
-		   });			
-	   });
+	/* 팝업닫기 */
+	$(document).on('click', '.popClose', function(){      
+		$(this).closest('.layer-popup-fixed').removeClass('open').scrollTop(0).fadeOut(300, function(){
+			$('.btnPopFixed.on').focus().removeClass('on');
+			$(this).closest('.layer-popup-fixed').css('inset', '');
+		//  layerPopFixed();
+		});			
+	});
 
 
 });
