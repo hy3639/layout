@@ -10,44 +10,114 @@
 <body>
 
 <div class="dimmed"></div>
-<div class="layer-popup" title="Popup03" style="display:block; margin-top:100px"> <!--팝업 노출할경우 스타일 추가 : display:block; -->
+<div class="layer-popup check-list" title="Popup03" style="display:block;"> <!--팝업 노출할경우 스타일 추가 : display:block; -->
 	<div class="popup lg" style="opacity: 1;">  <!--팝업 노출할경우 스타일 추가 :opacity: 1 -->
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="layer-cont popup-cont">
-			<div class="tit-area flex-area both">
+		<!-- <div class="popup-header">			
+			
+		</div> -->
+		<button class="btn-close popClose">팝업닫기</button>	
+		<div class="layer-cont">
+			<div class="tit-area align-center">
 				<p>금융소비자보호 일일 자가진단</p>
-				<div class="btn-area">
-					<button type="button" class="btn-round btn-mid bg-navy">확인 하였습니다.</button>				
-				</div>
+				<span class="f-lightblue">아래의 일일 준수사항을 확인해 주시기 바랍니다.</span>			
 			</div>
-			<div class="cont-area daily-check">
-				<p class="f-red">※ 아래의 일일 준수사항을 확인해 주시기 바랍니다.</p>	
-				<div class="scroll-area">
+			<div class="cont-area">
+				<div class="check-wrap">
 					<ul class="list-style num">
-						<li>적합성 원칙 : 손님의 정보를 파악하여 적합한 상품을 권유하고 확인받은 내용은 손님에게 즉시 제공</li>
-						<li>적정성 원칙 : 손님에게 적정하지 않은 상품을 판매시에는 손님에게 알리고 확인을 받음</li>
-						<li>설명의무 : 상품의 권유 및 손님의 요청시 상품을 손님이 이해할 수 있도록 설명하고 설명서를 제공</li>
-						<li>불공정영업행위의 금지 : 계약체결 강요, 부당한 담보/보증 요구, 편익 요구하거나 제공받는 행위 등</li>
-						<li>부당권유행위 금지 : 상품의 중요한 내용 안내 누락, 객관적 근거없이 유리하다고 알리는 행위 등</li>
-						<li>광고관련 준수사항 : 준법지원부 등의 심의가 완료된 홍보/광고물만 사용</li>
-						<li>계약서류의 제공의무 : 손님과 계약을 체결한 경우 지체없이 계약서류를 제공</li>						
+						<li class="checked">
+							<label>
+								<span class="txt"><em class="tit">적합성 원칙</em>손님의 정보를 파악하여 적합한 상품을 권유하고 확인받은 내용은 손님에게 즉시 제공</span>
+								<span class="chkbox">
+									<input type="checkbox" class="styled2" checked>
+									<span class="chk"></span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<span class="txt"><em class="tit">적정성 원칙</em>손님에게 적정하지 않은 상품을 판매시에는 손님에게 알리고 확인을 받음</span>
+								<span class="chkbox">
+									<input type="checkbox" class="styled2">
+									<span class="chk"></span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<span class="txt"><em class="tit">설명의무</em>상품의 권유 및 손님의 요청시 상품을 손님이 이해할 수 있도록 설명하고 설명서를 제공</span>
+								<span class="chkbox">
+									<input type="checkbox" class="styled2">
+									<span class="chk"></span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<span class="txt"><em class="tit">불공정영업행위의 금지</em>계약체결 강요, 부당한 담보/보증 요구, 편익 요구하거나 제공받는 행위 등</span>
+								<span class="chkbox">
+									<input type="checkbox" class="styled2">
+									<span class="chk"></span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<span class="txt"><em class="tit">부당권유행위 금지</em>상품의 중요한 내용 안내 누락, 객관적 근거없이 유리하다고 알리는 행위 등</span>
+								<span class="chkbox">
+									<input type="checkbox" class="styled2">
+									<span class="chk"></span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<span class="txt"><em class="tit">광고관련 준수사항</em>준법지원부 등의 심의가 완료된 홍보/광고물만 사용</span>
+								<span class="chkbox">
+									<input type="checkbox" class="styled2">
+									<span class="chk"></span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<span class="txt"><em class="tit">계약서류의 제공의무</em>손님과 계약을 체결한 경우 지체없이 계약서류를 제공</span>
+								<span class="chkbox">
+									<input type="checkbox" class="styled2">
+									<span class="chk"></span>
+								</span>
+							</label>
+						</li>	
 					</ul>
-				</div>
+				</div>				
+				
 				<ul class="user-info">
 					<li>YYYY년 MM월 DD일</li>
 					<li>행번 : 2311049</li>
 					<li>성명 : 홍길동</li>
 				</ul>
-			</div>
+			</div>			
+		</div>
+		<div class="btn-area single"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
+			<button type="button" class="btn-round btn-lg bg-blue">확인</button>				
 		</div>
 	</div>
+
 </div>
 
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/common.js"></script>
+<script>
+	layerPop();
+
+	$('.check-wrap .styled2').change(function(){
+		if($(this).is(":checked") == true){
+			$(this).closest('li').addClass('checked');
+		}else{
+			$(this).closest('li').removeClass('checked');
+		}
+	});
+</script>
 
 </body>
 </html>
