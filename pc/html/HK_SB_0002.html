@@ -88,12 +88,11 @@
 							</label>
 						</li>	
 					</ul>
-				</div>				
-				
+				</div>		
 				<ul class="user-info">
-					<li>YYYY년 MM월 DD일</li>
-					<li>행번 : 2311049</li>
-					<li>성명 : 홍길동</li>
+					<li class="date">2023년 01월 28일</li>
+					<li><span class="tit">행번</span>2311049</li>
+					<li><span class="tit">성명</span>홍길동</li>
 				</ul>
 			</div>			
 		</div>
@@ -110,6 +109,7 @@
 <script>
 	layerPop();
 
+	/*check시 클래스 추가*/
 	$('.check-wrap .styled2').change(function(){
 		if($(this).is(":checked") == true){
 			$(this).closest('li').addClass('checked');
@@ -117,6 +117,7 @@
 			$(this).closest('li').removeClass('checked');
 		}
 	});
+
 </script>
 
 </body>

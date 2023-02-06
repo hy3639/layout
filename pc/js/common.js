@@ -52,19 +52,18 @@ $(document).ready(function(){
 	});
 
 	/* 검색네비게이션 */
-	$('.chat-area .btn-search').click(function(){
-		var targetDiv = $(this).closest('.top').next('.search-area');	
-		if(!$(this).hasClass('on')){
-			$(this).addClass('on');
-			targetDiv.addClass('on');
-		}	
-	});
-	$('.search-box .btn-close').click(function(){
-		var targetDiv = $(this).closest('.search-area');
-	//	$(this).removeClass('on');
-		targetDiv.removeClass('on');
-		targetDiv.prev('.top').find('.btn-search').removeClass('on');
-	});
+	// $('.chat-area .btn-search').click(function(){
+	// 	var targetDiv = $(this).closest('.top').next('.search-area');	
+	// 	if(!$(this).hasClass('on')){
+	// 		$(this).addClass('on');
+	// 		targetDiv.addClass('on');
+	// 	}	
+	// });
+	// $('.search-box .btn-close').click(function(){
+	// 	var targetDiv = $(this).closest('.search-area');
+	// 	targetDiv.removeClass('on');
+	// 	targetDiv.prev('.top').find('.btn-search').removeClass('on');
+	// });
 
 
 	/* 클릭형 툴팁 */
@@ -185,7 +184,7 @@ $(window).on('load', function(){
 	rdoCheck(); // 라디오,체크박스
 
 
-	/*======= 레이어팝업 ======= */
+	//레이어팝업 (딤드 + 가운데정렬)
 	$(document).on('click', '.btnPop', function(){
         layerPop();
         $(this).addClass('on');
@@ -196,10 +195,8 @@ $(window).on('load', function(){
            // $(this).find('.firstTab').focus();
             $(this).addClass('open').closest('.layer-popup').prepend('<div class="dimmed">');
 			layerPop();
-        });
-		
+        });		
     });
-
 	/* 팝업닫기 */
     $(document).on('click', '.popClose,.dimmed', function(){      
 	 	$(this).closest('.layer-popup').removeClass('open').scrollTop(0).fadeOut(300, function(){
@@ -208,10 +205,9 @@ $(window).on('load', function(){
 		$('html').removeClass('popOpen');
 		});			
     });
+	
 
-	/*=======// 레이어팝업 ======= */
-
-
+	//레이어팝업 (상담쪽 영역 고정)
 	$(document).on('click', '.btnPopFixed', function(){
 		layerPopFixed();
 		$(this).addClass('on');
@@ -223,7 +219,6 @@ $(window).on('load', function(){
 			layerPopFixed();
         });
 	});
-
 	/* 팝업닫기 */
 	$(document).on('click', '.popClose', function(){      
 		$(this).closest('.layer-popup-fixed').removeClass('open').scrollTop(0).fadeOut(300, function(){
@@ -232,6 +227,36 @@ $(window).on('load', function(){
 		//  layerPopFixed();
 		});			
 	});
+
+
+	//토스트팝업 (하단에서 슬라이딩)
+	$('.btnToest').click(function(){
+		var name = $(this).attr('title');
+		var chatBoxH =  $('.chat-box').outerHeight();
+
+		//console.log(chatBoxH);
+		
+		
+		$('.toest-popup[layer-name=' + name + ']').css('bottom', '-1px').addClass('on');	
+		if(name == "Toest02"){
+			$('.toest-popup[layer-name="Toest02"].on').css('bottom',chatBoxH);
+			$(this).addClass('on');
+			$('.chat-box').addClass('quick').find('textarea').attr('placeholder','자주 쓰는 문구를 선택해 주세요');
+		}
+	});
+	/* 팝업닫기 */
+	$(document).on('click', '.toestClose', function(){     
+		var name = $(this).closest('.toest-popup').attr('layer-name');
+
+		$(this).closest('.toest-popup').hide().css('bottom','-100%').removeClass('on').css('display','');	
+		console.log(name);
+		if(name == 'Toest02'){
+			$('.btn-quick-text').removeClass('on');
+			$('.chat-box').removeClass('quick').find('textarea').attr('placeholder','메시지 입력(Enter시 메시지 발송됨)');;
+		
+		}	
+	});
+
 
 
 });
@@ -281,17 +306,18 @@ function layerPop(){
     });
 }
 
+// 레이어팝업 고정 위치설정
 function layerPopFixed(){
     $('.btnPopFixed, .layer-popup-fixed').each(function(){ 
        var tit = $(this).attr('title');
         $(this).attr('layer-name', tit).removeAttr('title');
     });
 
-
     $('.layer-popup-fixed').each(function(){
 		var parentName = $(this).attr('layer-name');
-		var posLeft = $('.main-chat').find('.'+parentName).offset().left;
-		var posTop = $('.main-chat').find('.'+parentName).offset().top;
+		var posLeft = $('.main-chat').find('.'+parentName).position().left;
+		var posTop = $('.main-chat').find('.'+parentName).position().top;
+		console.log(posLeft);
 		if(!$(this).hasClass('open')){
 			$(this).css('left',posLeft);
 			$(this).css('top',posTop);
@@ -318,7 +344,7 @@ function reHeight(){
 				var chatCont = $(this).closest('.chat-wrap').find('.chat-cont');
 				
 				var chatH = $('.chat-wrap').outerHeight();
-				var chatInputH = $('.chat-box').find('textarea').height();
+				var chatInputH = $('.chat-box').find('textarea').height() - 40;
 				var chatBoxH =  $('.chat-box').outerHeight();
 				var calcH  = chatH - chatInputH;	
 				
@@ -328,8 +354,8 @@ function reHeight(){
 				}else{
 					$(this).css('overflow-y', 'hidden');
 				}
-				$('.search-navi').css('bottom',chatBoxH);
-				$(this).css('height', '15px').height(this.scrollHeight);
+				$('.toest-popup[layer-name="Toest02"].on').css('bottom',chatBoxH);
+				$(this).css('height', '40px').height(this.scrollHeight);
 				chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
 
 			});

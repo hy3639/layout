@@ -12,7 +12,7 @@
 		.wrapper section.group > h2{font-size:20px;border-left:4px solid gold;padding-left:10px; margin:15px 0 30px}
 		.group > .cont {margin-bottom:30px}
 		.group .sub-cont {margin-top:20px}
-		.group .sub-cont .tit {font-weight:bold; font-size:14px}
+		/* .group .sub-cont .tit {font-weight:bold; font-size:14px} */
 		.container {padding-top:0}
 	</style>
 </head>
@@ -40,23 +40,21 @@
 							<div class="button-area margin center">
 								<button type="button" class="btn-mid btn-round bg-green btnPop" title="Popup01">alert</button>
 								<button type="button" class="btn-mid btn-round bg-green btnPop" title="Popup02">alert 버튼1개일경우</button>
-								<a href="#" class="btn-mid btn-border btnPop" title="Popup04">타이틀 있는 팝업</a>														
+								<a href="#" class="btn-mid btn-round bg-green btnPop" title="Popup03">타이틀 있는 팝업</a>														
 							</div>
 							
 
 							<!-- alert -->
 							<div class="layer-popup" title="Popup01">
 								<div class="popup sm">
-									<div class="popup-header">			
-										<button class="btn-close popClose">팝업닫기</button>	
-									</div>
 									<div class="popup-cont align-center">
-										<p class="guide-txt">로그아웃 하시겠습니까?</p>
-										<span class="sub-txt">상담 여부 '상담OFF'로 자동 변경 됩니다.</span>				
+										<p class="guide-txt">대기 중인 손님이 존재합니다.<br>그래도 로그아웃 하시겠습니까?</p>
+										<!-- <span class="sub-txt">상담 여부 '상담OFF'로 자동 변경 됩니다.</span>				 -->
 									</div>
-									<div class="btn-area"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
-										<button type="button" class="btn-round btn-mid bg-navy">예</button>	
-										<button type="button" class="btn-border btn-mid popClose">아니오</button>			
+									<div class="btn-area">
+										<button type="button" class="btn-round btn-mid bg-lightgray popClose">아니오</button>	
+										<button type="button" class="btn-round btn-mid bg-blue">로그아웃</button>	
+												
 									</div>
 								</div>
 							</div>
@@ -64,63 +62,104 @@
 							<!-- alert -->
 							<div class="layer-popup" title="Popup02">
 								<div class="popup sm">
-									<div class="popup-header">			
-										<button class="btn-close popClose">팝업닫기</button>	
+									<div class="popup-cont align-center">
+										<p class="guide-txt">로그아웃 하시겠습니까?</p>								
 									</div>
-									<div class="popup-cont align-center">									
-										<span class="sub-txt">상담 문구에 당행에서 금지하는 금칙어가 존재합니다.<br>금칙어에 해당하는 대화 변경 후 다시 전송해 주세요.</span>				
-									</div>
-									<div class="btn-area single"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
-										<button type="button" class="btn-round btn-mid bg-navy">확인</button>										
+									<div class="btn-area single"> <!-- 버튼하나일경우 single 클래스추가-->
+										<button type="button" class="btn-round btn-mid bg-blue">로그아웃</button>
 									</div>
 								</div>
 							</div>
 
 							<!-- 타이틀이 있는 팝업 -->
-							<div class="layer-popup" title="Popup04">
-								<div class="popup lg">
-									<div class="popup-header">			
-										<button class="btn-close popClose">팝업닫기</button>	
-									</div>
-									<div class="layer-cont popup-cont">
-										<div class="tit-area flex-area both">
-											<p>간편 발송 상세</p>
-											<div class="btn-area">
-												<button type="button" class="btn-round btn-sm bg-navy">선택</button>
-												<button type="button" class="btn-round btn-sm bg-gray">취소</button>
-											</div>
+							<div class="layer-popup check-list" title="Popup03"> 
+								<div class="popup lg"> 								
+									<button class="btn-close popClose">팝업닫기</button>	
+									<div class="layer-cont">
+										<div class="tit-area align-center">
+											<p>금융소비자보호 일일 자가진단</p>
+											<span class="f-lightblue">아래의 일일 준수사항을 확인해 주시기 바랍니다.</span>			
 										</div>
 										<div class="cont-area">
-											<div class="board-write sm">
-												<table>
-													<caption>간편 발송 상세</caption>
-													<colgroup>
-														<col style="width:20%;">						
-														<col>									
-													</colgroup>
-													<tbody>
-														<tr>
-															<th scope="row" class="center">제목</th>
-															<td>간편 발송 Title Text 출력</td>
-														</tr>
-														<tr>
-															<th scope="row" class="center">상세</th>
-															<td>
-																<div class="text-area">
-																	문구 경우 간편 발송 Contents Text 출력
-																	<br>or
-																	<br>링크 경우 '링크'문구 출력 (실제 링크 정보는 미 출력)
-																	문구 경우 간편 발송 Contents Text 출력										
-																</div>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
+											<div class="check-wrap">
+												<ul class="list-style num">
+													<li class="checked">
+														<label>
+															<span class="txt"><em class="tit">적합성 원칙</em>손님의 정보를 파악하여 적합한 상품을 권유하고 확인받은 내용은 손님에게 즉시 제공</span>
+															<span class="chkbox">
+																<input type="checkbox" class="styled2" checked>
+																<span class="chk"></span>
+															</span>
+														</label>
+													</li>
+													<li>
+														<label>
+															<span class="txt"><em class="tit">적정성 원칙</em>손님에게 적정하지 않은 상품을 판매시에는 손님에게 알리고 확인을 받음</span>
+															<span class="chkbox">
+																<input type="checkbox" class="styled2">
+																<span class="chk"></span>
+															</span>
+														</label>
+													</li>
+													<li>
+														<label>
+															<span class="txt"><em class="tit">설명의무</em>상품의 권유 및 손님의 요청시 상품을 손님이 이해할 수 있도록 설명하고 설명서를 제공</span>
+															<span class="chkbox">
+																<input type="checkbox" class="styled2">
+																<span class="chk"></span>
+															</span>
+														</label>
+													</li>
+													<li>
+														<label>
+															<span class="txt"><em class="tit">불공정영업행위의 금지</em>계약체결 강요, 부당한 담보/보증 요구, 편익 요구하거나 제공받는 행위 등</span>
+															<span class="chkbox">
+																<input type="checkbox" class="styled2">
+																<span class="chk"></span>
+															</span>
+														</label>
+													</li>
+													<li>
+														<label>
+															<span class="txt"><em class="tit">부당권유행위 금지</em>상품의 중요한 내용 안내 누락, 객관적 근거없이 유리하다고 알리는 행위 등</span>
+															<span class="chkbox">
+																<input type="checkbox" class="styled2">
+																<span class="chk"></span>
+															</span>
+														</label>
+													</li>
+													<li>
+														<label>
+															<span class="txt"><em class="tit">광고관련 준수사항</em>준법지원부 등의 심의가 완료된 홍보/광고물만 사용</span>
+															<span class="chkbox">
+																<input type="checkbox" class="styled2">
+																<span class="chk"></span>
+															</span>
+														</label>
+													</li>
+													<li>
+														<label>
+															<span class="txt"><em class="tit">계약서류의 제공의무</em>손님과 계약을 체결한 경우 지체없이 계약서류를 제공</span>
+															<span class="chkbox">
+																<input type="checkbox" class="styled2">
+																<span class="chk"></span>
+															</span>
+														</label>
+													</li>	
+												</ul>
+											</div>		
+											<ul class="user-info">
+												<li class="date">2023년 01월 28일</li>
+												<li><span class="tit">행번</span>2311049</li>
+												<li><span class="tit">성명</span>홍길동</li>
+											</ul>
+										</div>			
+									</div>
+									<div class="btn-area single"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
+										<button type="button" class="btn-round btn-lg bg-blue">확인</button>			
 									</div>
 								</div>
-							</div>				
+							</div>		
 
 						
 						</div>

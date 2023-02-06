@@ -72,10 +72,10 @@ input[type=number]::-webkit-inner-spin-button {
 	margin:0;
 }
 
-input:-ms-input-placeholder {color:#9ba9a8;font-weight:300}
-input::-webkit-input-placeholder {color:#9ba9a8;font-weight:300}
-input::-moz-placeholder{color:#9ba9a8;font-weight:300}
-input::placeholder {color:#9ba9a8;font-weight:300}
+input:-ms-input-placeholder {color:#9095a5;font-weight:300}
+input::-webkit-input-placeholder {color:#9095a5;font-weight:300}
+input::-moz-placeholder{color:#9095a5;font-weight:300}
+input::placeholder {color:#9095a5;font-weight:300}
 
 textarea:-ms-input-placeholder {color:#888;font-weight:300}
 textarea::-webkit-input-placeholder {color:#888;font-weight:300}

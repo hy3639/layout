@@ -165,30 +165,288 @@
 							</div>
 							<div class="chat-box">								
 								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>	
-								<div class="flex-area both">
-									<div class="quick-btn-area">
-										<button type="button" class="btn-quick"><span class="blind">빠른메뉴</span></button>
-										<button type="button" class="btn-quick-text"><span class="blind">자주쓰는문구</span></button>
-									</div>
-									<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->
-								</div>			
-								
+								<!-- <textarea class="reHeight scroll-area" placeholder="자주 쓰는 문구를 선택해 주세요"></textarea>								 -->
+								<div class="quick-btn-area flex-area both">
+									<!-- <button type="button" class="btn-quick"><span class="blind">빠른메뉴</span></button> -->
+									<button type="button" class="btn-quick-text btnToest" title="Toest02"><span class="blind">자주쓰는문구</span></button>
+									<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->									
+								</div>	
 							</div>
 						</div>
 						<!-- 결과가 없을경우 노출 -->
 						<p class="no-data">검색 결과가 없습니다.</p>
 						<!--// 결과가 없을경우 노출 -->
+
+						<!-- 자주쓰는문구 팝업 -->
+						<div class="toest-popup" layer-name="Toest02">
+							<div class="toest-header">
+								<h3 class="tit">자주 쓰는 문구</h3>		
+								<button type="button" class="btn-text toestClose">닫기</button>				
+							</div>
+							<div class="toest-cont">
+								<ul class="send-list type2 scroll-area">	
+									<li>
+										<a href="#">
+											<span class="category">#대출</span>
+											<span class="cont ellipsis">대출상품이 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">
+											<span class="category">#인증서</span>
+											<span class="cont ellipsis">인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">
+											<span class="category">#계좌개설</span>
+											<span class="cont ellipsis">계좌개설이 궁금하세요?</span>
+										</a>	
+									</li>											
+								</ul>
+													
+							</div>
+						</div>
+						<!--// 자주쓰는문구 팝업   -->
+
 					</div>
 					<div class="bottom">
 						<div class="quick-wrap">
 							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
-							<button type="button">모바일 명함</button>
+							<button type="button" class="btnToest" title="Toest01">간편발송</button>
+							<button type="button">상담이관</button>
+							<button type="button">SMS 발송</button>
+							<button type="button">상담이력</button>
 						</div>
 						<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
 					</div>
+					<!-- 간편발송 토스트팝업 -->
+					<div class="toest-popup" layer-name="Toest01">
+						<div class="toest-header">
+							<h3 class="tit">간편 발송</h3>		
+							<button type="button" class="btn-text toestClose">닫기</button>				
+						</div>
+						<div class="toest-cont">
+							<div class="search-box gray">
+								<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">								
+							</div>
+							<div class="tab-wrap">
+								<div class="tab-lst">
+									<button type="button" class="tab-item on">
+										<span class="txt">즐겨찾기</span>
+									</button>							
+									<button type="button" class="tab-item">
+										<span class="txt">여신</span>
+									</button>
+									<button type="button" class="tab-item">
+										<span class="txt">수신</span>
+									</button>
+									<button type="button" class="tab-item">
+										<span class="txt">외환</span>
+									</button>
+									<button type="button" class="tab-item">
+										<span class="txt">전자금융</span>
+									</button>
+									<button type="button" class="tab-item">
+										<span class="txt">카드</span>
+									</button>		
+									<button type="button" class="tab-item">
+										<span class="txt">기타</span>
+									</button>
+									<button type="button" class="btn-list-edit">
+										<span class="blind">목록편집</span>
+									</button>					
+								</div>
+		
+								<div class="tab-conts">						
+									<div class="tab-cont on">
+										<ul class="send-list scroll-area sortable">	
+											<li class="select">
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">여신</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">전자금융</span>
+												<span class="cont ellipsis">있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">외환</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">카드</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">끝</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+										</ul>
+										<!-- 순서저장하기 -->
+										<!-- <div class="btn-area fixed">
+											<button type="button" class="btn-round">순서 저장</button>	
+										</div> -->
+										<!--// 순서저장하기 -->
+									</div>						
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">												
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">여신</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">여신</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">여신</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>											
+										</ul>
+									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">수신</span>
+												<span class="cont ellipsis">상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">수신</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>																						
+										</ul>
+									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">외환</span>
+												<span class="cont ellipsis">상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">외환</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>																						
+										</ul>
+									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">전자금융</span>
+												<span class="cont ellipsis">상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">전자금융</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>																						
+										</ul>
+									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">카드</span>
+												<span class="cont ellipsis">상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">카드</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>																						
+										</ul>
+									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>																						
+										</ul>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+					<!--// 간편발송 토스트팝업 -->
 				</div>
 				<div class="box chat-list-area">
 					<div class="top">
@@ -1084,7 +1342,7 @@
 				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
 			</div>
 
-			<!-- 팝업영역 -->
+			<!-- 레이어팝업 (상담쪽 영역 고정) 영역 -->
 			<div class="layer-popup-fixed draggable" title="chat-util">
 				<div class="popup-header">			
 					<button class="btn-close popClose">팝업닫기</button>	
@@ -1112,7 +1370,7 @@
 					</div>
 				</div>
 			</div>
-			<!--// 팝업영역 -->
+			<!--// 레이어팝업 (상담쪽 영역 고정) 영역 -->
 		</div>
 	</div>	
 </div>
@@ -1131,6 +1389,7 @@
 	</div>
 </div>
 
+<!-- 레이어팝업 (딤드 + 가운데정렬) 영역 -->
 <div class="layer-popup" title="Popup02">
 	<div class="popup lg">
 		<div class="popup-header">			
@@ -1262,7 +1521,6 @@
 	</div>
 </div>
 
-
 <div class="layer-popup" title="Popup03">
 	<div class="popup sm">
 		<div class="popup-header">			
@@ -1354,6 +1612,8 @@
 		</div>
 	</div>
 </div>
+<!--// 레이어팝업 (딤드 + 가운데정렬) 영역 -->
+
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/common.js"></script>
@@ -1364,22 +1624,22 @@
 	});
 
 
-	$('.btn-quick').click(function(){
-		var parentsDiv = $('.chat-area');
+	// $('.btn-quick').click(function(){
+	// 	var parentsDiv = $('.chat-area');
 	
-		if($(this).hasClass('on')){
-			$(this).removeClass('on');
-			parentsDiv.find('.center').css('bottom','30px');
-			parentsDiv.find('.quick-wrap').removeClass('on');
-		}else{
-			$(this).addClass('on');
-			parentsDiv.find('.center').css('bottom','151px');
-			parentsDiv.find('.quick-wrap').addClass('on');
+	// 	if($(this).hasClass('on')){
+	// 		$(this).removeClass('on');
+	// 		parentsDiv.find('.center').css('bottom','30px');
+	// 		parentsDiv.find('.quick-wrap').removeClass('on');
+	// 	}else{
+	// 		$(this).addClass('on');
+	// 		parentsDiv.find('.center').css('bottom','151px');
+	// 		parentsDiv.find('.quick-wrap').addClass('on');
 
-		}
+	// 	}
 		
 
-	});
+	// });
 </script>
 
 </body>
