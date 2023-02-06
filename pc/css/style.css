@@ -1593,6 +1593,7 @@ html.popOpen {overflow:hidden;}
 	border-bottom: 0;
 	
 }
+.toest-popup.thin {padding:24px 16px}
 .toest-popup.on {bottom: -1px;transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);}
 .toest-popup .toest-header {
 	padding:0 0 16px 0;
@@ -1633,20 +1634,50 @@ html.popOpen {overflow:hidden;}
 .toest-popup[layer-name="Toest02"] {z-index:50;}
 .toest-popup[layer-name="Toest02"].on {bottom: 129px;}
 
-.toest-popup .send-list.type2 {height: inherit;}
+.toest-popup .send-list.type2 {height: inherit; max-height: 190px;}
 .toest-popup .send-list.type2 li {
-	height: 36px;
-	padding: 0 16px;
+	display: inherit;
+	padding: 0;
+	height: inherit;
+
 }
+.send-list.type2 li:hover,
+.send-list.type3 li:hover,
+.send-list.type2 li.select,
+.send-list.type3 li.select{border-radius: 8px;}
+.send-list.type3 li.select .cont{font-weight:500}
+
 .toest-popup .send-list.type2 li a {
 	display: flex;
+	align-items: center;
+	padding:11px 16px;
+	line-height: 20px;
+	background: url(../images/icon/ico-arrow-bottom-left-16.svg) no-repeat calc(100% - 16px) center;
+	background-size: 16px auto;
 }
 .toest-popup .send-list.type2 li .category {
 	width: inherit;
 	padding:0;
+	margin-right: 3px;
 }
 .toest-popup .send-list.type2 li .cont {padding-left: 5px;}
 
+/*간편발송 단축키 팝업*/
+.toest-popup[layer-name="Toest03"] {z-index: 50;}
+.toest-popup .send-list.type3 {
+	height: inherit;
+	max-height: 190px;
+}
+.toest-popup .send-list.type3 li{
+	width: 100%;
+	height: 36px;
+	padding:0 16px;
+}
+.toest-popup .send-list.type3 li a {
+	display: inline-block;
+	/* width: 100%; */
+}
+.toest-popup .send-list.type3 li .cont {padding:0 16px 0 0}
 /* ==============
 	툴팁
 ============== */
@@ -1976,7 +2007,7 @@ html.popOpen {overflow:hidden;}
 	position: absolute;
     left: 0;
     top: 64px;
-    bottom:153px; 
+    bottom:115px; 
 	/* bottom:151px; */
     width: 100%;
 }
@@ -2008,19 +2039,49 @@ html.popOpen {overflow:hidden;}
 }
 .main-chat .chat-area .bottom .quick-wrap {
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: space-between;
-	padding: 16px 20px;
+	/* padding: 16px 20px; */
 	border-top:1px solid #f2f3f7;
 	background-color:#fff;
 }
 /* .main-chat .chat-area .bottom .quick-wrap.on {display: flex;} */
 .main-chat .chat-area .bottom .quick-wrap > button {
-	width:90px;
-	height: 90px;
+	flex: 1;
+	height: 84px;
 	border-radius: 10px;
-	background-color:#f0f3f9;
+	border-left: 1px solid #f2f3f7;
+	color:#2b2e38;
+	font-size:12px;
+	padding-top:32px;
+	/* background-color:#f0f3f9; */
 }
+.main-chat .chat-area .bottom .quick-wrap > button:first-child{border-left: 0;}
+.main-chat .chat-area .bottom .quick-wrap .card {
+	background: url(../images/icon/ico-business-card-24.svg) no-repeat center 23px;
+	background-size: 24px 19px;
+}
+.main-chat .chat-area .bottom .quick-wrap .send {
+	background: url(../images/icon/ico-send-24.svg) no-repeat center 23px;
+	background-size: 19px 23px;
+}
+.main-chat .chat-area .bottom .quick-wrap .transfer {
+	background: url(../images/icon/ico-send-24.svg) no-repeat center 23px;
+	background-size: 21px 24px;
+}
+.main-chat .chat-area .bottom .quick-wrap .sms {
+	background: url(../images/icon/ico-sms-24.svg) no-repeat center 23px;
+	background-size: 22px 17px;
+}
+.main-chat .chat-area .bottom .quick-wrap .history {
+	background: url(../images/icon/ico-history-24.svg) no-repeat center 23px;
+	background-size: 22px 22px;
+}
+
+
+
+
+
 
 .chat-wrap {
 	display: flex;  
@@ -2079,6 +2140,7 @@ html.popOpen {overflow:hidden;}
 	color:#fff;
 }
 mark.current {background: blue!important;}
+.send-list mark {background-color: transparent; color:#3e61e4}
 
 .chat-cont .chat-item + .chat-item {margin-top:8px}
 .chat-cont .chat-item.right {align-items: flex-end;}
@@ -2174,10 +2236,11 @@ mark.current {background: blue!important;}
 	width:100% !important;
 	padding:16px 16px 16px 20px;
 	background-color:#fff;
-	 border-top:1px solid #cbd0d5; 
+	 border-top:1px solid #e7e9ee; 
 	box-shadow:0px -7px 5px -5px rgb(43 46 56 / 11%);
 	z-index:51;
 	display:flex; 
+	align-items: center;
 	/* margin-bottom: -6px; */
 	/* flex-direction: column; */
 }
@@ -2185,8 +2248,8 @@ mark.current {background: blue!important;}
 	/* flex:1; */
 	width:70%;
 	min-height: 20px;
-	height:40px;
-	padding: 12px 25px 12px 0;
+	height:20px;
+	padding: 0 25px 0 0;
 	max-height:100px;
 	resize:none; 
 	overflow:hidden; 
@@ -2198,6 +2261,7 @@ mark.current {background: blue!important;}
 	box-shadow: none;
 	line-height: 20px;	
 }
+/* .chat-box.quick {display: none;} */
 .chat-box.quick .reHeight {
 	padding-left: 40px;
 }
@@ -2230,8 +2294,9 @@ mark.current {background: blue!important;}
 	background: url(../images/icon/e-ico.svg) no-repeat center center;
 }
 .chat-box .quick-btn-area .btn-quick-text.on {
-	background: url(../images/icon/ico-close.svg) no-repeat center center;
-	background-size:20px auto;
+	/* background: url(../images/icon/ico-close.svg) no-repeat center center;
+	background-size:20px auto; */
+	display: none;
 }
 .chat-box .quick-btn-area .btn-round {font-size:16px; font-weight:400}
 /* .chat-box .quick-btn-area + .btn-mid {font-size:16px; font-weight:400} */
@@ -2600,7 +2665,7 @@ mark.current {background: blue!important;}
 	border-radius: 12px;
 }
 .send-list {
-	height:calc(100vh - 630px); /* 최근접촉이력 삭제될경우 557*/
+	height:calc(100vh - 630px);
 	background-color:#fff;
 	overflow-x:hidden;
 }
@@ -2629,16 +2694,13 @@ mark.current {background: blue!important;}
 .send-list li .category {
 	width:62px; 
 	padding-left: 16px;
-	text-align:left; 
-	color:#222; 
-	font-weight: 500;
+	text-align:left;
 }
 .send-list li .cont {
 	max-width:inherit; 
 	flex:1; 
 	padding:0 16px 0 20px; 
-	color:#444; 
-	font-weight:300;
+	color:#2b2e38; 
 }
 .send-list li .btn-text.sm {visibility: hidden;}
 /* .chat-util .bottom .tab-conts .tab-cont:first-child .send-list li .cont {

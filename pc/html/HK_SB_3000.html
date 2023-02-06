@@ -163,20 +163,21 @@
 									<a href="#" class="btn-border btn-sm">활동 등록하기</a>
 								</div>								
 							</div>
-							<div class="chat-box">								
-								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>	
-								<!-- <textarea class="reHeight scroll-area" placeholder="자주 쓰는 문구를 선택해 주세요"></textarea>								 -->
-								<div class="quick-btn-area flex-area both">
-									<!-- <button type="button" class="btn-quick"><span class="blind">빠른메뉴</span></button> -->
+							<!-- 2023-02-06 : 수정 -->
+							<div class="chat-box"> <!-- # 아이콘 있어야할 경우 "quick" 클래스 추가 -->
+								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>									
+								<div class="quick-btn-area flex-area both">									
 									<button type="button" class="btn-quick-text btnToest" title="Toest02"><span class="blind">자주쓰는문구</span></button>
 									<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->									
 								</div>	
 							</div>
+							<!--// 2023-02-06 : 수정 -->
 						</div>
 						<!-- 결과가 없을경우 노출 -->
 						<p class="no-data">검색 결과가 없습니다.</p>
 						<!--// 결과가 없을경우 노출 -->
 
+						<!-- 2023-02-06 추가 -->
 						<!-- 자주쓰는문구 팝업 -->
 						<div class="toest-popup" layer-name="Toest02">
 							<div class="toest-header">
@@ -187,37 +188,119 @@
 								<ul class="send-list type2 scroll-area">	
 									<li>
 										<a href="#">
-											<span class="category">#대출</span>
-											<span class="cont ellipsis">대출상품이 궁금하세요?</span>
+											<span class="cont"><span class="category">#대출</span>대출상품이 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">											
+											<span class="cont"><span class="category">#인증서</span>인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요?</span>
 										</a>	
 									</li>
 									<li>
 										<a href="#">
-											<span class="category">#인증서</span>
-											<span class="cont ellipsis">인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요?</span>
+											
+											<span class="cont"><span class="category">#계좌개설</span>계좌개설이 궁금하세요?</span>
 										</a>	
 									</li>
 									<li>
 										<a href="#">
-											<span class="category">#계좌개설</span>
-											<span class="cont ellipsis">계좌개설이 궁금하세요?</span>
+											<span class="cont"><span class="category">#대출</span>대출상품이 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">											
+											<span class="cont"><span class="category">#인증서</span>인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">
+											
+											<span class="cont"><span class="category">#계좌개설</span>계좌개설이 궁금하세요?</span>
 										</a>	
 									</li>											
-								</ul>
-													
+								</ul>													
 							</div>
 						</div>
 						<!--// 자주쓰는문구 팝업   -->
 
+						<!-- 간편발송 단축키 팝업 -->
+						<div class="toest-popup thin" layer-name="Toest03">							
+							<div class="toest-cont">
+								<ul class="send-list type3 scroll-area">	
+									<li>
+										<span class="cont ellipsis">첫거래손님(계좌개설+전자금융)</span>
+										<a href="#" class="btn-text sm">미리보기</a>
+									</li>
+									<li class="select">										
+										<span class="cont ellipsis">해지계좌 조회 해지계좌 조회 해지계좌 조회 해지계좌 조회  해지계좌 조회 해지계좌 조회</span>
+										<a href="#" class="btn-text sm">미리보기</a>
+									</li>
+									<li>
+										<span class="cont ellipsis">계좌개설 비대면</span>
+										<a href="#" class="btn-text sm">미리보기</a>	
+									</li>
+									<li>
+										<span class="cont ellipsis">계좌비번</span>
+										<a href="#" class="btn-text sm">미리보기</a>
+									</li>																	
+								</ul>
+													
+							</div>
+						</div>
+						<!--// 간편발송 단축키 팝업 -->
+
+						<!-- 자주쓰는문구 단축키 팝업 -->
+						<div class="toest-popup thin" layer-name="Toest04">							
+							<div class="toest-cont">
+								<ul class="send-list type2 scroll-area">	
+									<li>
+										<a href="#">
+											<span class="cont">대출상품이 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">											
+											<span class="cont"><mark>인증서</mark>가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">
+											
+											<span class="cont">계좌개설이 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">
+											<span class="cont">대출상품이 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">											
+											<span class="cont"><mark>인증서</mark>가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요?</span>
+										</a>	
+									</li>
+									<li>
+										<a href="#">
+											
+											<span class="cont">계좌개설이 궁금하세요?</span>
+										</a>	
+									</li>											
+								</ul>													
+							</div>
+						</div>
+						<!--// 자주쓰는문구 단축키 팝업 -->
+						<!--// 2023-02-06 추가 -->
 					</div>
 					<div class="bottom">
+						<!-- 2023-02-06 : 수정 -->
 						<div class="quick-wrap">
-							<button type="button">모바일 명함</button>
-							<button type="button" class="btnToest" title="Toest01">간편발송</button>
-							<button type="button">상담이관</button>
-							<button type="button">SMS 발송</button>
-							<button type="button">상담이력</button>
+							<button type="button" class="card">모바일 명함</button>
+							<button type="button" class="send btnToest" title="Toest01">간편발송</button>
+							<button type="button" class="transfer">상담이관</button>
+							<button type="button" class="sms">SMS 발송</button>
+							<button type="button" class="history">상담이력</button>
 						</div>
+						<!--// 2023-02-06 : 수정 -->
 						<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
 					</div>
 					<!-- 간편발송 토스트팝업 -->
@@ -1623,23 +1706,21 @@
 		setDate();
 	});
 
+	/* 2023-02-06 추가 (팝업 확인용) */
 
-	// $('.btn-quick').click(function(){
-	// 	var parentsDiv = $('.chat-area');
-	
-	// 	if($(this).hasClass('on')){
-	// 		$(this).removeClass('on');
-	// 		parentsDiv.find('.center').css('bottom','30px');
-	// 		parentsDiv.find('.quick-wrap').removeClass('on');
-	// 	}else{
-	// 		$(this).addClass('on');
-	// 		parentsDiv.find('.center').css('bottom','151px');
-	// 		parentsDiv.find('.quick-wrap').addClass('on');
-
-	// 	}
-		
-
+	/*간편발송 단축기 입력시 팝업 오픈*/
+	// $('.toest-popup').each(function(){		
+	// 	var chatBoxH =  $('.chat-box').outerHeight();
+	// 	$('.toest-popup[layer-name="Toest03"]').addClass('on').css('bottom',chatBoxH);;
 	// });
+
+	/*자주쓰는문구 단축기 입력시 팝업 오픈*/
+	// $('.toest-popup').each(function(){		
+	// 	var chatBoxH =  $('.chat-box').outerHeight();
+	// 	$('.toest-popup[layer-name="Toest04"]').addClass('on').css('bottom',chatBoxH);;
+	// });
+
+	/*// 2023-02-06 추가 */
 </script>
 
 </body>
