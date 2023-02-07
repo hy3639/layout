@@ -2,7 +2,7 @@ $(document).ready(function(){
 	reHeight();
 	sortable();
 	//layerPop();
-	draggable(); //ë©€í‹°íŒì—… ë“œë ˆê·¸
+	draggable(); //¸ÖÆ¼ÆË¾÷ µå·¹±×
 	setDate();
 
 	/*gnb*/
@@ -18,25 +18,25 @@ $(document).ready(function(){
 	
 	});
 
-	/* ìƒë‹´ on/off */
+	/* »ó´ã on/off */
 	$('.btn-toggle-area button').click(function(){
 		var header = $(this).closest('.header');
 		if($(this).hasClass('on')){
-			$(this).removeClass('on').text('ìƒë‹´OFF');
+			$(this).removeClass('on').text('»ó´ãOFF');
 			header.removeClass('on');
 		}else{
-			$(this).addClass('on').text('ìƒë‹´ON');
+			$(this).addClass('on').text('»ó´ãON');
 			header.addClass('on');
 		}
 	});
 
-	/* ê³µí†µ í† ê¸€ ë²„íŠ¼ */
+	/* °øÅë Åä±Û ¹öÆ° */
 	$('.btn-toggle').click(function(){
 		$(this).toggleClass('on');
 	});
 
 
-	/* íƒ­ì˜ì—­ */	
+	/* ÅÇ¿µ¿ª */	
 	$(document).on('click', '.tab-item', function(){
 		if(!$(this).parent('div').hasClass('noneTab')){
 			var tabName = $(this).parent('div').attr('class');
@@ -51,7 +51,7 @@ $(document).ready(function(){
 	
 	});
 
-	/* ê²€ìƒ‰ë„¤ë¹„ê²Œì´ì…˜ */
+	/* °Ë»ö³×ºñ°ÔÀÌ¼Ç */
 	 $('.chat-area .btn-search').click(function(){
 		var targetDiv = $(this).closest('.top').next('.search-area');	
 		if(!$(this).hasClass('on')){
@@ -66,7 +66,7 @@ $(document).ready(function(){
 	});
 
 
-	/* í´ë¦­í˜• íˆ´íŒ */
+	/* Å¬¸¯Çü ÅøÆÁ */
 	$(document).on('click', '.btn-layer', function(){
 		if($(this).hasClass('on')){
 			$(this).removeClass('on');		
@@ -82,9 +82,9 @@ $(document).ready(function(){
 	});
 
 
-	/* 1:1ìƒë‹´ë‚´ì—­ ê²€ìƒ‰ show/hide */
+	/* 1:1»ó´ã³»¿ª °Ë»ö show/hide */
 	$('.history .search-area > button').click(function(){
-		var item = $(this).attr('title');
+		var item = $(this).attr('data-title');
 		var target = $(this).parent('.search-area').next('.search-layer');
 		target.find('.'+item).css('display','flex');
 	});
@@ -94,7 +94,7 @@ $(document).ready(function(){
 		});
 	});
 
-	/* datepicker - ë‹¨ì¼ê²€ìƒ‰ */
+	/* datepicker - ´ÜÀÏ°Ë»ö */
 	$( ".single-calendar .single" ).datepicker({
 		showOn: "button",
 		buttonImage: "../images/icon/icon_20_date.png",
@@ -103,12 +103,12 @@ $(document).ready(function(){
 		changeMonth: true,
 		changeYear: true,		
 		minDate: '-100y',
-		nextText: 'ë‹¤ìŒ ë‹¬', 
-		prevText: 'ì´ì „ ë‹¬', 
+		nextText: '´ÙÀ½ ´Ş', 
+		prevText: 'ÀÌÀü ´Ş', 
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
-		dayNamesMin: ['ì›”', 'í™”', 'ìˆ˜', 'ëª©', 'ê¸ˆ', 'í† ', 'ì¼'], 
-		monthNamesShort: ['1ì›”','2ì›”','3ì›”','4ì›”','5ì›”','6ì›”','7ì›”','8ì›”','9ì›”','10ì›”','11ì›”','12ì›”'],
+		dayNamesMin: ['¿ù', 'È­', '¼ö', '¸ñ', '±İ', 'Åä', 'ÀÏ'], 
+		monthNamesShort: ['1¿ù','2¿ù','3¿ù','4¿ù','5¿ù','6¿ù','7¿ù','8¿ù','9¿ù','10¿ù','11¿ù','12¿ù'],
 		beforeShowDay: function(date){
 			if (date > new Date())
 				return [false];
@@ -116,19 +116,19 @@ $(document).ready(function(){
 		}
 	  });
 
-	/* datepicker - ê¸°ê°„ê²€ìƒ‰ */
+	/* datepicker - ±â°£°Ë»ö */
 	var dateFormat = "yy-mm-dd",
 	from = $(".from").datepicker({		
 		dateFormat: "yy-mm-dd", 	
 		changeMonth: true,
 		changeYear: true,		
 		minDate: '-100y',
-		nextText: 'ë‹¤ìŒ ë‹¬', 
-		prevText: 'ì´ì „ ë‹¬', 
+		nextText: '´ÙÀ½ ´Ş', 
+		prevText: 'ÀÌÀü ´Ş', 
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
-		dayNamesMin: ['ì›”', 'í™”', 'ìˆ˜', 'ëª©', 'ê¸ˆ', 'í† ', 'ì¼'], 
-		monthNamesShort: ['1ì›”','2ì›”','3ì›”','4ì›”','5ì›”','6ì›”','7ì›”','8ì›”','9ì›”','10ì›”','11ì›”','12ì›”'],
+		dayNamesMin: ['¿ù', 'È­', '¼ö', '¸ñ', '±İ', 'Åä', 'ÀÏ'], 
+		monthNamesShort: ['1¿ù','2¿ù','3¿ù','4¿ù','5¿ù','6¿ù','7¿ù','8¿ù','9¿ù','10¿ù','11¿ù','12¿ù'],
 
 	onSelect: function (dateText) {
 		$('#from').val(this.value);		
@@ -143,12 +143,12 @@ $(document).ready(function(){
 		changeMonth: true,
 		changeYear: true,		
 		minDate: '-100y',
-		nextText: 'ë‹¤ìŒ ë‹¬', 
-		prevText: 'ì´ì „ ë‹¬', 
+		nextText: '´ÙÀ½ ´Ş', 
+		prevText: 'ÀÌÀü ´Ş', 
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
-		dayNamesMin: ['ì›”', 'í™”', 'ìˆ˜', 'ëª©', 'ê¸ˆ', 'í† ', 'ì¼'], 
-		monthNamesShort: ['1ì›”','2ì›”','3ì›”','4ì›”','5ì›”','6ì›”','7ì›”','8ì›”','9ì›”','10ì›”','11ì›”','12ì›”'],
+		dayNamesMin: ['¿ù', 'È­', '¼ö', '¸ñ', '±İ', 'Åä', 'ÀÏ'], 
+		monthNamesShort: ['1¿ù','2¿ù','3¿ù','4¿ù','5¿ù','6¿ù','7¿ù','8¿ù','9¿ù','10¿ù','11¿ù','12¿ù'],
 	onSelect: function (dateText) {
 		$('#to').val(this.value);		
 	}
@@ -166,7 +166,7 @@ $(document).ready(function(){
 	  }
 	  return date;
 	}
-	setDate(); // ì´ˆê¸°ê°’ ì„¤ì •
+	setDate(); // ÃÊ±â°ª ¼³Á¤
  
 
 	$('.btn-cal').click(function(){
@@ -181,23 +181,21 @@ $(document).ready(function(){
 
 
 $(window).on('load', function(){
-	rdoCheck(); // ë¼ë””ì˜¤,ì²´í¬ë°•ìŠ¤
+	rdoCheck(); // ¶óµğ¿À,Ã¼Å©¹Ú½º
 
 
-	//ë ˆì´ì–´íŒì—… (ë”¤ë“œ + ê°€ìš´ë°ì •ë ¬)
-	$(document).on('click', '.btnPop', function(){
-        layerPop();
+	//·¹ÀÌ¾îÆË¾÷ (µõµå + °¡¿îµ¥Á¤·Ä)
+	$(document).on('click', '.btnPop', function(){    
         $(this).addClass('on');
         $('html').addClass('popOpen');
 
-        var name = $(this).attr('layer-name');
-        $('.layer-popup[layer-name=' + name + ']').fadeIn(100, function(){
-           // $(this).find('.firstTab').focus();
+        var name = $(this).attr('data-title');
+        $('.layer-popup[data-layer-name=' + name + ']').fadeIn(100, function(){          
             $(this).addClass('open').closest('.layer-popup').prepend('<div class="dimmed">');
 			layerPop();
         });		
     });
-	/* íŒì—…ë‹«ê¸° */
+	/* ÆË¾÷´İ±â */
     $(document).on('click', '.popClose,.dimmed', function(){      
 	 	$(this).closest('.layer-popup').removeClass('open').scrollTop(0).fadeOut(300, function(){
 		$('.btnPop.on').focus().removeClass('on');
@@ -207,57 +205,68 @@ $(window).on('load', function(){
     });
 	
 
-	//ë ˆì´ì–´íŒì—… (ìƒë‹´ìª½ ì˜ì—­ ê³ ì •)
+	//·¹ÀÌ¾îÆË¾÷ (»ó´ãÂÊ ¿µ¿ª °íÁ¤)
 	$(document).on('click', '.btnPopFixed', function(){
 		layerPopFixed();
 		$(this).addClass('on');
 
-		var name = $(this).attr('layer-name');
-		console.log(name)
-        $('.layer-popup-fixed[layer-name=' + name + ']').fadeIn(100, function(){          
+		var name = $(this).attr('data-title');
+        $('.layer-popup-fixed[data-layer-name=' + name + ']').fadeIn(100, function(){          
             $(this).addClass('open').closest('.layer-popup');
 			layerPopFixed();
         });
 	});
-	/* íŒì—…ë‹«ê¸° */
+	/* ÆË¾÷´İ±â */
 	$(document).on('click', '.popClose', function(){      
 		$(this).closest('.layer-popup-fixed').removeClass('open').scrollTop(0).fadeOut(300, function(){
 			$('.btnPopFixed.on').focus().removeClass('on');
-			$(this).closest('.layer-popup-fixed').css('inset', '');
-		//  layerPopFixed();
+			$(this).closest('.layer-popup-fixed').css('inset', '');		
 		});			
 	});
 
 
-	//í† ìŠ¤íŠ¸íŒì—… (í•˜ë‹¨ì—ì„œ ìŠ¬ë¼ì´ë”©)
+	//Åä½ºÆ®ÆË¾÷ (ÇÏ´Ü¿¡¼­ ½½¶óÀÌµù)
 	$('.btnToest').click(function(){
-		var name = $(this).attr('title');
+		var name = $(this).attr('data-title');
 		var chatBoxH =  $('.chat-box').outerHeight();
 		
-		$('.toest-popup[layer-name=' + name + ']').css('bottom', '-1px').addClass('on');	
+		$('.toest-popup[data-layer-name=' + name + ']').css('bottom', '-1px').addClass('on');	
 		if(name == "Toest02"){
-			$('.toest-popup[layer-name="Toest02"].on').css('bottom',chatBoxH);
+			$('.toest-popup[data-layer-name="Toest02"].on').css('bottom',chatBoxH);
 			$(this).addClass('on');
-			$('.chat-box').addClass('quick').find('textarea').attr('placeholder','ìì£¼ ì“°ëŠ” ë¬¸êµ¬ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”');
+			$('.chat-box').addClass('quick').find('textarea').attr('placeholder','ÀÚÁÖ ¾²´Â ¹®±¸¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä');
 		}
 	});
-	/* íŒì—…ë‹«ê¸° */
+	/* ÆË¾÷´İ±â */
 	$(document).on('click', '.toestClose', function(){     
-		var name = $(this).closest('.toest-popup').attr('layer-name');
+		var name = $(this).closest('.toest-popup').attr('data-layer-name');
 		$(this).closest('.toest-popup').hide().css('bottom','-100%').removeClass('on').css('display','');		
 		if(name == 'Toest02'){
 			$('.btn-quick-text').removeClass('on');
-			$('.chat-box').removeClass('quick').find('textarea').attr('placeholder','ë©”ì‹œì§€ ì…ë ¥(Enterì‹œ ë©”ì‹œì§€ ë°œì†¡ë¨)');
-			
+			$('.chat-box').removeClass('quick').find('textarea').attr('placeholder','¸Ş½ÃÁö ÀÔ·Â(Enter½Ã ¸Ş½ÃÁö ¹ß¼ÛµÊ)');			
 		}	
 	 });
 
-	 /* ë¦¬ìŠ¤íŠ¸ í´ë¦­ì‹œ íŒì—… ë‹«ê¸° */
+	 /* ¸®½ºÆ® Å¬¸¯½Ã ÆË¾÷ ´İ±â */
 	 $(document).on('click', '.send-list.type2 a', function(){
 		$(this).closest('.toest-popup').hide().css('bottom','-100%').removeClass('on').css('display','');	
-		$('.btn-quick-text').removeClass('on');
-			$('.chat-box').removeClass('quick').find('textarea').attr('placeholder','ë©”ì‹œì§€ ì…ë ¥(Enterì‹œ ë©”ì‹œì§€ ë°œì†¡ë¨)');	
+		// $('.btn-quick-text').removeClass('on');
+		$('.chat-box').removeClass('quick');	
 	 });
+
+   
+	 //·¹ÀÌ¾îÆË¾÷ (show/hide °íÁ¤À§Ä¡)
+	 $('.btnPopBorder').click(function(){
+		var name = $(this).attr('data-title');
+		$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');	
+	 });
+	 /*´İ±â*/
+	 $(document).on('click', '.popCloseBorder', function(){
+		var name = $(this).closest('.layer-popup-border').attr('data-layer-name');		
+		$('.layer-popup-border[data-layer-name=' + name + ']').removeClass('on');	
+	 });
+	
+
 
 
 
@@ -275,7 +284,7 @@ $(window).scroll(function(){
 
 
 
-// ë¼ë””ì˜¤,ì²´í¬ë°•ìŠ¤
+// ¶óµğ¿À,Ã¼Å©¹Ú½º
 function rdoCheck(){
     $('input[type=radio].styled, input[type=checkbox].styled').each(function(){
         if(!$(this).parent().hasClass('chkbox')){
@@ -287,14 +296,9 @@ function rdoCheck(){
 }
 
 
-// ë ˆì´ì–´íŒì—… ìœ„ì¹˜ì„¤ì •
+// ·¹ÀÌ¾îÆË¾÷ À§Ä¡¼³Á¤
 function layerPop(){
-    $('.btnPop, .layer-popup').each(function(){ 
-       var tit = $(this).attr('title');
-        $(this).attr('layer-name', tit).removeAttr('title');
-    });
-
-    $('.layer-popup').each(function(){
+       $('.layer-popup').each(function(){
 		var hei = $(window).height();		
         var popH = $(this).find('.popup').outerHeight();
         var pdT = (hei - popH) / 2;
@@ -309,15 +313,10 @@ function layerPop(){
     });
 }
 
-// ë ˆì´ì–´íŒì—… ê³ ì • ìœ„ì¹˜ì„¤ì •
+// ·¹ÀÌ¾îÆË¾÷ °íÁ¤ À§Ä¡¼³Á¤
 function layerPopFixed(){
-    $('.btnPopFixed, .layer-popup-fixed').each(function(){ 
-       var tit = $(this).attr('title');
-        $(this).attr('layer-name', tit).removeAttr('title');
-    });
-
     $('.layer-popup-fixed').each(function(){
-		var parentName = $(this).attr('layer-name');
+		var parentName = $(this).attr('data-layer-name');
 		var posLeft = $('.main-chat').find('.'+parentName).position().left;
 		var posTop = $('.main-chat').find('.'+parentName).position().top;
 		console.log(posLeft);
@@ -329,7 +328,7 @@ function layerPopFixed(){
 }
 
 
-//1:1ìƒë‹´ ì»¨í…ì¸  ë†’ì´ ë³€ê²½
+//1:1»ó´ã ÄÁÅÙÃ÷ ³ôÀÌ º¯°æ
 function reHeight(){
 	$('.reHeight').each(function(){
 		autoHeight();
@@ -357,7 +356,7 @@ function reHeight(){
 				}else{
 					$(this).css('overflow-y', 'hidden');
 				}
-				$('.toest-popup[layer-name="Toest02"].on').css('bottom',chatBoxH);
+				$('.toest-popup[data-layer-name="Toest02"].on').css('bottom',chatBoxH);
 				$(this).css('height', '20px').height(this.scrollHeight);
 				chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
 
@@ -376,7 +375,7 @@ function draggable(){
 	$('.draggable').draggable();
 }
 
-// ì´ˆê¸°ê°’ ì„¤ì •
+// ÃÊ±â°ª ¼³Á¤
 function setDate(){
 	$('.from').datepicker('setDate', '-1M'); 
 	$('.to').datepicker('setDate', 'today'); 		

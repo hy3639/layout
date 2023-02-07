@@ -22,7 +22,7 @@
 		</div>
 		<div class="right-area">
 			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
-			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button>
 			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
 			<div class="gnb-list">
 				<ul class="depth1">
@@ -165,9 +165,9 @@
 							</div>
 							<!-- 2023-02-06 : 수정 -->
 							<div class="chat-box"> <!-- # 아이콘 있어야할 경우 "quick" 클래스 추가 -->
-								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>									
+								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)">#인증서</textarea>									
 								<div class="quick-btn-area flex-area both">									
-									<button type="button" class="btn-quick-text btnToest" data-title="Toest02"><span class="blind">자주쓰는문구</span></button> <!-- textarea에 내용 있는경우 on 클래스 추가 -->
+									<button type="button" class="btn-quick-text btnToest on" data-title="Toest02"><span class="blind">자주쓰는문구</span></button> <!-- textarea에 내용 있는경우 on 클래스 추가 -->
 									<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->									
 								</div>	
 							</div>
@@ -295,7 +295,7 @@
 						<!-- 2023-02-06 : 수정 -->
 						<div class="quick-wrap">
 							<button type="button" class="card">모바일 명함</button>
-							<button type="button" class="send btnToest" data-title="Toest01">간편발송</button> <!--2023-02-07 : 버튼 title속성 data-title로 일괄변경 -->
+							<button type="button" class="send btnToest" data-title="Toest01">간편발송</button>
 							<button type="button" class="transfer">상담이관</button>
 							<button type="button" class="sms">SMS 발송</button>
 							<button type="button" class="history">상담이력</button>
@@ -304,7 +304,7 @@
 						<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
 					</div>
 					<!-- 간편발송 토스트팝업 -->
-					<div class="toest-popup" data-layer-name="Toest01"> <!-- 2023-02-06 : 속성명 일괄변경 layer-name => data-layer-name -->
+					<div class="toest-popup" data-layer-name="Toest01">
 						<div class="toest-header">
 							<h3 class="tit">간편 발송</h3>		
 							<button type="button" class="btn-text toestClose">닫기</button>				
@@ -336,10 +336,11 @@
 									<button type="button" class="tab-item">
 										<span class="txt">기타</span>
 									</button>
-									<button type="button" class="btn-list-edit btnPopBorder" data-title="send-list-edit"> <!-- 2023-02-06 -->
+									<button type="button" class="btn-list-edit">
 										<span class="blind">목록편집</span>
-									</button>												
-								</div>									
+									</button>													
+								</div>
+		
 								<div class="tab-conts">						
 									<div class="tab-cont on">
 										<ul class="send-list scroll-area sortable">	
@@ -347,7 +348,7 @@
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
 												<span class="cont ellipsis">상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm btnPopBorder" data-title="link-preview">미리보기</a> <!-- 2023-02-06 -->
+												<a href="#" class="btn-text sm">미리보기</a>
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
@@ -524,69 +525,8 @@
 											</li>																						
 										</ul>
 									</div>
-								</div>								
-							</div>
-							<!-- 2023-02-06 -->
-							<!-- 간편발송 목록편집 레이어 -->
-							<div class="layer-popup-border w260" data-layer-name="send-list-edit">
-								<p class="title">간편발송 목록 편집</p>
-								<ul class="send-list-edit sortable">
-									<li class="on">
-										<span class="tit">즐겨찾기</span>
-										<button type="button" class="btn-switch">켜짐</button>
-									</li>
-									<li>
-										<span class="tit">여신</span>
-										<button type="button" class="btn-switch">꺼짐</button>
-									</li>
-									<li>
-										<span class="tit">수신</span>
-										<button type="button" class="btn-switch">꺼짐</button>
-									</li>
-									<li>
-										<span class="tit">외환</span>
-										<button type="button" class="btn-switch">꺼짐</button>
-									</li>
-									<li class="on">
-										<span class="tit">전자금융</span>
-										<button type="button" class="btn-switch">켜짐</button>
-									</li>
-									<li class="on">
-										<span class="tit">카드</span>
-										<button type="button" class="btn-switch">켜짐</button>
-									</li>
-									<li class="on">
-										<span class="tit">기타</span>
-										<button type="button" class="btn-switch">켜짐</button>
-									</li>
-								</ul>
-								<div class="btn-area align-right">
-									<button type="button" class="btn-round btn-mid bg-white popCloseBorder">취소</button>
-									<button type="button" class="btn-round btn-mid bg-blue">저장</button>
 								</div>
-							</div>
-							<!--// 간편발송 목록편집 레이어 -->
-							<!-- 간편발송 미리보기 레이어 -->
-							<div class="layer-popup-border w260" data-layer-name="link-preview"> <!-- 레이어 보여야 할때 on 클래스 추가 / 닫혀야할때 on 삭제 -->
-								<div class="send-bg">
-									<p>
-										증명서 발급신청 관련 안내해 드려요. <br>
-										국문만 가능하고 출력은 인터넷뱅킹에서<br> 
-										가능한점 참고해주세요. 아래버튼을누르면<br>
-										하나원큐로 이동해요.														
-									</p>
-									
-									<div class="btn-area">
-										<a href="#" class="btn-round">거래내역서</a>									
-									</div>
-								</div>
-								<div class="flex-area">
-									<button type="button" class="f-gray popCloseBorder">취소</button>
-									<button type="button" class="f-blue">전송하기</button>
-								</div>
-							</div>
-							<!--// 간편발송 미리보기 레이어 -->					
-							<!--// 2023-02-06 -->
+							</div>						
 						</div>
 					</div>
 					<!--// 간편발송 토스트팝업 -->
@@ -596,7 +536,7 @@
 						<div class="flex-area">
 							<h3 class="tit">상담 목록</h3>							
 						</div>						
-						<button type="button" class="btn-qustion btnPop" data-title="Popup02">도움말</button> <!-- 2023-02-06 -->
+						<button type="button" class="btn-qustion btnPop" data-title="Popup02">도움말</button>
 					</div>
 					<div class="tab-wrap">
 						<div class="tab-lst">
@@ -688,10 +628,8 @@
 												<div class="tooltip-layer w112">													
 													<div class="layer-cont">
 														<div class="link-area">
-															<!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
 															<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
 															<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
-															<!--//2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
 														</div>
 													</div>
 												</div>	
@@ -1175,7 +1113,7 @@
 												<div class="tooltip-layer w112">													
 													<div class="layer-cont">
 														<div class="link-area">															
-															<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a> <!-- 2023-02-06 : 속성 일괄변경 -->
+															<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
 														</div>
 													</div>
 												</div>	
@@ -1488,7 +1426,7 @@
 			</div>
 
 			<!-- 레이어팝업 (상담쪽 영역 고정) 영역 -->
-			<div class="layer-popup-fixed draggable" data-layer-name="chat-util">  <!--2023-02-06 : layer-name속성 data-layer-name으로 일괄변경-->
+			<div class="layer-popup-fixed draggable" data-layer-name="chat-util">
 				<div class="popup-header">			
 					<button class="btn-close popClose">팝업닫기</button>	
 				</div>
@@ -1502,7 +1440,7 @@
 				</div>
 			</div>
 
-			<div class="layer-popup-fixed draggable" data-layer-name="chat-list-area">  <!--2023-02-06 : layer-name속성 data-layer-name으로 일괄변경-->
+			<div class="layer-popup-fixed draggable" data-layer-name="chat-list-area">
 				<div class="popup-header">			
 					<button class="btn-close popClose">팝업닫기</button>	
 				</div>
@@ -1521,12 +1459,11 @@
 </div>
 
 
-
 <!-- 레이어팝업 (딤드 + 가운데정렬) 영역 -->
-<div class="layer-popup" data-layer-name="Popup01"> <!--2023-02-06 : layer-name속성 data-layer-name으로 일괄변경-->
+<div class="layer-popup" data-layer-name="Popup01">
 	<div class="popup sm">
 		<div class="popup-cont align-center">
-			<p class="guide-txt">대기 중인 손님이 존재합니다.<br>그래도 로그아웃 하시겠습니까?</p>			
+			<p class="guide-txt">대기 중인 손님이 존재합니다.<br>그래도 로그아웃 하시겠습니까?</p>		
 		</div>
 		<div class="btn-area">
 			<button type="button" class="btn-round btn-mid bg-lightgray popClose">아니오</button>	
@@ -1536,7 +1473,7 @@
 	</div>
 </div>
 
-<!-- <div class="layer-popup" data-layer-name="Popup02"> 
+<!-- <div class="layer-popup" data-layer-name="Popup02">
 	<div class="popup lg">
 		<div class="popup-header">			
 			<button class="btn-close popClose">팝업닫기</button>	
@@ -1666,7 +1603,6 @@
 		</div>
 	</div>
 </div> -->
-
 <!--// 레이어팝업 (딤드 + 가운데정렬) 영역 -->
 
 <script src="../js/jquery-3.4.1.min.js"></script>
@@ -1677,34 +1613,14 @@
 	$('.btn-reset').click(function(){
 		setDate();
 	});
-	/* 2023-02-06 추가 */
-	/* 간편발송 목록편집 */
-	$('.btn-switch').click(function(){
-		var targetLi = $(this).closest('li');
-		if(targetLi.hasClass('on')){
-			targetLi.removeClass('on');	
-			$(this).text('꺼짐');		
-		}else{
-			targetLi.addClass('on');
-			$(this).text('켜짐');
-		}
+
+	/* 2023-02-06 추가 (팝업 확인용) */
+
+	/*자주쓰는문구 단축키 입력시 팝업 오픈*/
+	$('.toest-popup').each(function(){		
+		var chatBoxH =  $('.chat-box').outerHeight();
+		$('.toest-popup[data-layer-name="Toest04"]').addClass('on').css('bottom',chatBoxH);;
 	});
-
-
-
-
-
-	/*간편발송 단축키 입력시 팝업 오픈 (확인용)*/
-	// $('.toest-popup').each(function(){		
-	// 	var chatBoxH =  $('.chat-box').outerHeight();
-	// 	$('.toest-popup[data-layer-name="Toest03"]').addClass('on').css('bottom',chatBoxH);;
-	// });
-
-	/*자주쓰는문구 단축키 입력시 팝업 오픈 (확인용)*/
-	// $('.toest-popup').each(function(){		
-	// 	var chatBoxH =  $('.chat-box').outerHeight();
-	// 	$('.toest-popup[data-layer-name="Toest04"]').addClass('on').css('bottom',chatBoxH);;
-	// });
 
 	/*// 2023-02-06 추가 */
 </script>
