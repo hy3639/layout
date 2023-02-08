@@ -1,8 +1,8 @@
-@charset "utf-8";
+@charset "euc-kr";
 @import 'common.css'; 
 
 /* ==============
-	ë ˆì´ì•„ì›ƒ
+	·¹ÀÌ¾Æ¿ô
 ============== */
 .body-bg {background-color:#f2f2f2}
 .wrapper {
@@ -215,7 +215,7 @@
 	position:relative;
 	width:1280px; 
 	/* min-height: calc(100vh - 171px);  */
-	min-height: calc(100vh - 78px); /*fixed-titleì´ ìˆëŠ”ê²½ìš°*/
+	min-height: calc(100vh - 78px); /*fixed-titleÀÌ ÀÖ´Â°æ¿ì*/
 	padding:57px 0 36px; 
 }
 .content.flex {
@@ -224,7 +224,7 @@
 }
 .content.flex.center {justify-content: center;}
 
-/*fixed-titleì´ ì—†ëŠ”ê²½ìš°*/
+/*fixed-titleÀÌ ¾ø´Â°æ¿ì*/
 .no-fixed-tit .contents,
 .main-chat.contents {padding-top:0}
 .main-chat .content,
@@ -275,7 +275,7 @@
 	text-align: right;
 }
 
-/* ë¡œë”©ë°” */
+/* ·Îµù¹Ù */
 .loading-wrap {
 	position:fixed;
 	left:0;
@@ -312,10 +312,10 @@
 }
 
 /* ==============
-	ê³µí†µ
+	°øÅë
 ============== */
 
-/*í°íŠ¸*/
+/*ÆùÆ®*/
 .f-white {color:#fff !important}
 .f-red {color:#e53a4c !important}
 .f-gray {color:#999 !important}
@@ -329,7 +329,7 @@
 
 .underline {text-decoration: underline;}
 
-/* ì •ë ¬ */
+/* Á¤·Ä */
 .align-center {text-align: center !important;}
 .align-right{text-align:right !important}
 
@@ -337,10 +337,10 @@
 .flex-area.both {justify-content: space-between; }
 .flex-area.center {justify-content: center; }
 
-/*ì¸ë¼ì¸/ë¸”ë¡*/
+/*ÀÎ¶óÀÎ/ºí·Ï*/
 .block {display: block;}
 
-/* ë§ì¤„ì„ */
+/* ¸»ÁÙÀÓ */
 .ellipsis {
 	display: block; 
 	max-width: 100%;
@@ -349,7 +349,7 @@
 	text-overflow: ellipsis;  
 }
 
-/*ë„ˆë¹„*/
+/*³Êºñ*/
 .w90 {width:90px !important;}
 .w112 {width:112px !important;}
 .w120 {width:120px !important;}
@@ -365,7 +365,7 @@
 /*font-weight*/
 .bold {font-weight: 500 !important;}
 
-/* ë²„íŠ¼ */
+/* ¹öÆ° */
 /* button:not(.btn-prev,.btn-next):disabled {
 	background-color:#eceef2;
 	color:#727988;
@@ -394,7 +394,7 @@ button:disabled {
 .bg-white {background-color:#fff; color:#4a4e5e}
 /* .bg-gray:hover {background-color:#e7e9eb}  */
 
- /* borderë²„íŠ¼ */
+ /* border¹öÆ° */
 .btn-border{
 	display:inline-block;	
 	padding:0 15px;
@@ -447,7 +447,7 @@ a.btn-mid2 {line-height:36px}
 	border-radius: 6px;
 }
 
- /* ì•„ì´ì½˜ ë²„íŠ¼ */
+ /* ¾ÆÀÌÄÜ ¹öÆ° */
  .btn-qustion {	
 	height:20px;
 	padding-left:20px;
@@ -499,7 +499,7 @@ a.btn-mid2 {line-height:36px}
 .btn-round + .btn-round {margin-left:8px}
 
 /* ==============
-	ë¦¬ìŠ¤íŠ¸ ìŠ¤íƒ€ì¼
+	¸®½ºÆ® ½ºÅ¸ÀÏ
 ============== */
 .list-style1 li {
 	position:relative; 
@@ -547,7 +547,7 @@ a.btn-mid2 {line-height:36px}
 .tit-list2.right li .cont {text-align:right}
 
 /* ==============
-	í¼ìš”ì†Œ
+	Æû¿ä¼Ò
 ============== */
 input[type=radio][class^=styled],
 input[type=checkbox][class^=styled] {
@@ -576,7 +576,7 @@ input[type=checkbox][class^=styled] {
 	border-radius: 2px;
 }
 
-/* ë¼ë””ì˜¤ */
+/* ¶óµğ¿À */
 .chkbox input[type=radio] {
     width:20px;
     height:20px;
@@ -606,7 +606,7 @@ input[type=checkbox][class^=styled] {
 .chkbox input[type=radio][disabled] + .chk {background-color:#f5f5f5; border-color:#c7c7c7}
 .chkbox input[type=radio][disabled] + .chk:before {background-color:#ddd;}
 
-/* ì²´í¬ë°•ìŠ¤ */
+/* Ã¼Å©¹Ú½º */
 .chkbox input[type=checkbox] {
     width:20px;
     height:20px;
@@ -692,7 +692,7 @@ input[type=checkbox][class^=styled] {
 .form-list li .chkbox {margin-right:2px}
 
 
-/*ì…€ë ‰íŠ¸*/
+/*¼¿·ºÆ®*/
 .select-box {display:inline-block;}
 .select-box select.styled{
 	height: 36px;
@@ -719,7 +719,7 @@ input[type=checkbox][class^=styled] {
 .select-box.wide {display:block;}
 .select-box.wide select{width:100%;}
 
-/* ì¸í’‹ */
+/* ÀÎÇ² */
 .input-text {display: inline-block;}
 .input-text input,
 .input-text textarea{
@@ -732,7 +732,7 @@ input[type=checkbox][class^=styled] {
 .input-text input {border-radius:5px; color:#777}
 .input-text.wide input {width: 100%;}
 
-/*ê²€ìƒ‰ì˜ì—­*/
+/*°Ë»ö¿µ¿ª*/
  .search-area .search-box {position:relative;}
  .search-area .search-box input {
 	width:100%;
@@ -778,7 +778,7 @@ input[type=checkbox][class^=styled] {
 }
 
 /* ==============
-	í…Œì´ë¸”
+	Å×ÀÌºí
 ============== */
 [class^=board-] .input-text input[type="text"],
 [class^=board-] .input-text input[type="password"],
@@ -786,7 +786,7 @@ input[type=checkbox][class^=styled] {
 	width:100%;
 }
 
-/* ë¦¬ìŠ¤íŠ¸ í…Œì´ë¸” */
+/* ¸®½ºÆ® Å×ÀÌºí */
 table td.no-data {padding:50px 0 !important}
 .board-list {
 	border:1px solid #dbdbdb;
@@ -877,7 +877,7 @@ table td.no-data {padding:50px 0 !important}
 	vertical-align: middle;
 }
 
-/* ë·° */
+/* ºä */
 .board-write {
 	border:1px solid #dbdbdb;
 	border-top:0;
@@ -1008,7 +1008,7 @@ table td.no-data {padding:50px 0 !important}
 	font-size:16px;
 }
 
-/*í˜ì´ì§•*/
+/*ÆäÀÌÂ¡*/
 .pagenation {
 	position:relative;
 	margin-top:20px;
@@ -1064,7 +1064,7 @@ table td.no-data {padding:50px 0 !important}
 }
 
 /* ==============
-	íƒ­
+	ÅÇ
 ============== */
 .tab-lst {
 	display:flex;
@@ -1381,7 +1381,7 @@ table td.no-data {padding:50px 0 !important}
 .multi-cal-layer th, .multi-cal-layer td {padding-bottom:0 !important}
 
 /* ==============
-	ë ˆì´ì–´íŒì—…
+	·¹ÀÌ¾îÆË¾÷
 ============== */
 html.popOpen {overflow:hidden;}
 .dimmed {
@@ -1547,7 +1547,7 @@ html.popOpen {overflow:hidden;}
 .layer-popup.check-list .popup.lg .layer-cont .cont-area {margin-top: 32px;}
 
 
-/* íŒì—…ì˜¤í”ˆ */
+/* ÆË¾÷¿ÀÇÂ */
 .layer-popup .popup {opacity:0;}
 .layer-popup.open .popup {
     opacity:1;
@@ -1589,7 +1589,7 @@ html.popOpen {overflow:hidden;}
 }
 
 /* ==============
-	í† ìŠ¤íŠ¸íŒì—…
+	Åä½ºÆ®ÆË¾÷
 ============== */
 .btn-text {
 	color:#2b2e38;
@@ -1650,7 +1650,7 @@ html.popOpen {overflow:hidden;}
 }
 .toest-popup .search-box.gray {margin-bottom: 16px;}
 
-/*ìì£¼ì“°ëŠ”ë¬¸êµ¬ íŒì—…*/
+/*ÀÚÁÖ¾²´Â¹®±¸ ÆË¾÷*/
 .toest-popup[data-layer-name="Toest02"] {z-index:50;}
 .toest-popup[data-layer-name="Toest02"].on {bottom: 129px;}
 
@@ -1682,7 +1682,7 @@ html.popOpen {overflow:hidden;}
 }
 .toest-popup .send-list.type2 li .cont {padding-left: 5px;}
 
-/*ê°„í¸ë°œì†¡ ë‹¨ì¶•í‚¤ íŒì—…*/
+/*°£Æí¹ß¼Û ´ÜÃàÅ° ÆË¾÷*/
 .toest-popup[data-layer-name="Toest03"],
 .toest-popup[data-layer-name="Toest04"] {z-index: 50;}
 .toest-popup .send-list.type3 {
@@ -1700,7 +1700,7 @@ html.popOpen {overflow:hidden;}
 }
 .toest-popup .send-list.type3 li .cont {padding:0 16px 0 0}
 /* ==============
-	íˆ´íŒ
+	ÅøÆÁ
 ============== */
 .tooltip-area {display: inline-block;position:relative;}
 .tooltip-layer {
@@ -1747,7 +1747,7 @@ html.popOpen {overflow:hidden;}
     transform:translate(-50%,-50%) rotate(135deg);
 }
 
-/*ëŒ€ì¸ìƒë‹´, ìƒë‹´ë‚´ì—­ì¡°íšŒ íŒì—…ì˜ ë°ì´í„°ì—†ëŠ”ê²½ìš° */
+/*´ëÀÎ»ó´ã, »ó´ã³»¿ªÁ¶È¸ ÆË¾÷ÀÇ µ¥ÀÌÅÍ¾ø´Â°æ¿ì */
 .main-chat .no-data,
 .chat-area .no-data {
 	position:absolute;
@@ -1767,9 +1767,9 @@ html.popOpen {overflow:hidden;}
 }
 
 /* ==========================================
-	ì„œë¸Œì»¨í…ì¸ 
+	¼­ºêÄÁÅÙÃ÷
 ========================================== */
-/* ì—ëŸ¬í˜ì´ì§€ */
+/* ¿¡·¯ÆäÀÌÁö */
 .error-area {
 	display:flex;
 	flex-direction: column;
@@ -1796,7 +1796,7 @@ html.popOpen {overflow:hidden;}
 .error-area .btn-area {margin-top:50px}
 .error-area .btn-area button {min-width:200px}
 
-/* ê¸ˆìœµì†Œë¹„ìë³´í˜¸ ì¼ì¼ ìê°€ì§„ë‹¨ íŒì—… */
+/* ±İÀ¶¼ÒºñÀÚº¸È£ ÀÏÀÏ ÀÚ°¡Áø´Ü ÆË¾÷ */
 /* .daily-check {}
 .daily-check .scroll-area {
 	margin-top:20px;
@@ -1899,7 +1899,7 @@ html.popOpen {overflow:hidden;}
 .check-wrap + .user-info li:last-child {margin-left:16px;}
 
 
-/* ìƒë‹´ê´€ë¦¬ > ê°œì¸ìƒë‹´ */
+/* »ó´ã°ü¸® > °³ÀÎ»ó´ã */
 .content.flex .box {
 	/* flex:1;  */
 	position:relative;
@@ -2526,11 +2526,11 @@ mark.current {background: blue!important;}
 	line-height:15px;
 	font-weight: 500;
 }
-.flag.type1 {/*ëŒ€ê¸°ì¤‘*/
+.flag.type1 {/*´ë±âÁß*/
 	background-color:#e0ebfb;
 	color:#3162d2
 }
-.flag.type2 {/*ìƒë‹´ì¤‘*/
+.flag.type2 {/*»ó´ãÁß*/
 	background-color: #d8f4ed;
 	color:#07a57a;
 	
@@ -2539,11 +2539,11 @@ mark.current {background: blue!important;}
 	background-color:#7e6dc7 !important;
 	color:#fff;
 }
-.flag.type4 {/*ë¶€ì¬ì¤‘*/
+.flag.type4 {/*ºÎÀçÁß*/
 	background-color:#f9e8e9;
 	color:#c13437
 }
-.flag.type5 {/*ìƒë‹´ì¢…ë£Œ*/
+.flag.type5 {/*»ó´ãÁ¾·á*/
 	background-color:#e3e4e8;
 	color:#666
 }
@@ -2689,7 +2689,7 @@ mark.current {background: blue!important;}
 
 
 
-/* ê°„í¸ë°œì†¡ */
+/* °£Æí¹ß¼Û */
 .send-list {
 	height:calc(100vh - 630px);
 	background-color:#fff;
