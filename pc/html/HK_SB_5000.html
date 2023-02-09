@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+			<div class="btn-toggle-area">
+				<button type="button" class="btn-msg">상담 ON</button>
+				<button type="button" class="btn-msg on">상담 OFF</button>
+			</div>
+			<span class="waiting">대기 : <em>00명</em></span>
+		</div>
+		<div class="right-area">
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" title="Popup01">로그아웃</button>
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<ul class="depth1">
+					<li><a href="#">대인상담</a></li>
+					<li>Admin
+						<ul class="depth2">
+							<li><a href="#">채팅설정</a></li>
+							<li><a href="#">채널관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">메뉴권한관리</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	<div class="container">
+		<div class="fixed-title">
+			<div class="tit-area">
+				<h2>채널 목록 조회</h2>
+			</div>
+		</div>
+		<div class="contents admin-area">
+			<div class="content">
+				<!-- <p class="admin-tit">채널목록 조회</p> -->
+				<div class="search-area">
+					<div class="section">
+						<div class="group">
+							<label>지점명</label>
+							<span class="select-box">
+								<select class="styled w245">
+									<option value="">리테일손님지원부 디지털전담관리유닛</option>	<!-- 본점관리자 case -->									
+								</select>
+							</span>	
+							<span class="select-box">
+								<select class="styled w245" disabled> <!-- 지점관리자 case -->
+									<option value="">지점명</option>										
+								</select>
+							</span>		
+						</div>				
+					</div>
+					<div class="section">
+						<div class="group">
+							<label for="input1">검색어</label>
+							<span class="select-box">
+								<select class="styled w160">
+									<option value="">선택하세요</option>										
+								</select>
+							</span>
+							<div class="input-text">
+								<input type="text" id="input1" class="w782" placeholder="검색어를 입력해주세요.(Enter시 검색 가능)">
+							</div>
+							<button type="button" class="btn-round btn-mid2 bg-gray btn-search">검색</button>
+							<button type="button" class="btn-round btn-mid2 bg-gray">초기화</button>		
+						</div>
+					</div>
+				</div>
+				<p class="count">총 1,000건</p>
+				<div class="board-list2">
+					<table>
+						<caption>리스트</caption>
+						<colgroup>
+							<col style="width:6%;">									
+							<col style="width:20%;">
+							<col>
+							<col style="width:8%;">										
+							<col style="width:8%;">
+							<col style="width:11%;">							
+							<col style="width:8%;">
+							<col style="width:11%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">번호</th>
+								<th scope="col">지점명</th>
+								<th scope="col">지점 대표 채널명</th>
+								<th scope="col">지점 관리자명</th>
+								<th scope="col">상태</th>										
+								<th scope="col">지점 대표 채널 개설일</th>
+								<th scope="col">최종 수정자</th>
+								<th scope="col">최종 수정일</th>
+							</tr>
+						</thead>
+						<tbody>							
+							<tr>
+								<td>10</td>
+								<td><a href="#" class="link">리테일손님지원부 디지털전담관리유닛</a></td>									
+								<td class="left"><a href="#" class="link"> 하나은행 롯데월드타워금융센터지점 하나톡</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td><a href="#" class="link">지점명</a></td>									
+								<td class="left"><a href="#" class="link">지점 대표 채널명</a></td>		
+								<td>홍길동</td>						
+								<td>개설완료</td>
+								<td>2022-10-07</td>
+								<td>홍길동</td>
+								<td>2022-10-07</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="pagenation">
+					<a href="#" class="btn-first page">처음</a>
+					<a href="#" class="btn-prev page">이전</a>
+					<span class="page now">1</span>
+					<a href="#" class="page">2</a>
+					<a href="#" class="page">3</a>
+					<a href="#" class="page">4</a>
+					<a href="#" class="page">5</a>
+					<a href="#" class="page">6</a>
+					<a href="#" class="page">7</a>
+					<a href="#" class="page">8</a>
+					<a href="#" class="page">9</a>
+					<a href="#" class="page">10</a>
+					<a href="#" class="btn-next page">다음</a>
+					<a href="#" class="btn-last page">마지막</a>
+				</div>
+			</div>
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+</html>
