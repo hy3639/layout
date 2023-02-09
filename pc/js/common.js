@@ -255,16 +255,37 @@ $(window).on('load', function(){
 	 });
 
    
-	 //레이어팝업 (show/hide 고정위치)
+	 //간편발송 미리보기 / 목록편집 레이어
 	 $('.btnPopBorder').click(function(){
 		var name = $(this).attr('data-title');
-		$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');	
+		
+		if(name == 'link-preview'){ ///간편발송 미리보기 
+			var sHeight = window.innerHeight; 
+			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height();
+			var divTop = $(this).closest('li').offset().top; 
+
+			$('.layer-popup-border').removeClass('on');				
+			if( divTop + oHeight > sHeight ){	
+				$('.layer-popup-border[data-layer-name=' + name + ']').css({
+					"top": '',
+					"bottom": 0			
+				})
+			}else{
+				$('.layer-popup-border[data-layer-name=' + name + ']').css({
+					"top": divTop -100,
+					"bottom": ''
+				})		
+			}
+		}	
+		$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
 	 });
 	 /*닫기*/
 	 $(document).on('click', '.popCloseBorder', function(){
 		var name = $(this).closest('.layer-popup-border').attr('data-layer-name');		
 		$('.layer-popup-border[data-layer-name=' + name + ']').removeClass('on');	
 	 });
+
+	
 	
 
 
