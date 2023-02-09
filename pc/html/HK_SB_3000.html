@@ -57,7 +57,9 @@
 					<div class="search-area">
 						<div class="search-box">
 							<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">
+							
 							<div class="btn-arrow"> <!-- 검색어 입력시 노출 (on 클래스 추가) -->
+								<span class="count">2/16</span> <!-- 2023-02-06 -->
 								<button type="button" class="btn-prev"><span class="blind">이전</span></button>
 								<button type="button" class="btn-next"><span class="blind">다음</span></button>
 							</div>
@@ -202,7 +204,7 @@
 									</li>
 									<li>
 										<a href="#">											
-											<span class="cont"><span class="category">#인증서</span>인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요? 인증서가 궁금하세요?</span>
+											<span class="cont"><span class="category">#인증서</span>인증서가 궁금하세요?</span>
 										</a>	
 									</li>
 									<li>
@@ -320,7 +322,7 @@
 						</div>
 						<div class="toest-cont">
 							<div class="search-box gray">
-								<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">								
+								<input type="text" placeholder="키워드 검색 (Enter시 검색 가능)">	<!-- 2023-02-06 -->							
 							</div>
 							<div class="tab-wrap">
 								<div class="tab-lst">
@@ -352,7 +354,7 @@
 								<div class="tab-conts">						
 									<div class="tab-cont on">
 										<ul class="send-list scroll-area sortable">	
-											<li class="select">
+											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
 												<span class="cont ellipsis">상품 링크 발송기타</span>
@@ -362,31 +364,31 @@
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">여신</span>
 												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="btn-text sm">미리보기</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">전자금융</span>
 												<span class="cont ellipsis">있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="btn-text sm">미리보기</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">외환</span>
 												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="btn-text sm">미리보기</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">카드</span>
 												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="btn-text sm">미리보기</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
 												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="btn-text sm">미리보기</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
@@ -589,7 +591,7 @@
 								국문만 가능하고 출력은 인터넷뱅킹에서<br> 
 								가능한점 참고해주세요. 아래버튼을누르면<br>
 								하나원큐로 이동해요.														
-							</p>							
+							</p>												
 							<div class="btn-area">
 								<a href="#" class="btn-round">거래내역서</a>									
 							</div>
@@ -630,7 +632,7 @@
 									</ul>								
 									<div class="btn-area">
 										<div class="tooltip-area">
-											<button type="button" class="btn-round btn-order btn-layer"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
+											<button type="button" class="btn-round btn-order btn-layer"><span>필터</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
 											<div class="tooltip-layer w450 left">
 												<button type="button" class="btn-close">툴팁닫기</button>
 												<div class="layer-cont">
@@ -1406,10 +1408,15 @@
 							</ul>
 						</div>
 						<div class="list-area">
+							<!-- 2023-02-06 -->
 							<div class="flex-area both">
-								<p class="tit">기본정보</p>
+								<div class="tit-wrap">
+									<p class="tit">최근 활동 정보</p>
+									<span class="count">총2건</span>
+								</div>								
 								<a href="#" class="bg-gray btn-sm">상세보기</a>
-							</div>	
+							</div>
+							<!--// 2023-02-06 -->
 							<ul class="tit-list2">
 								<li>
 									<span class="tit">활동유형</span>
@@ -1700,6 +1707,13 @@
 		}
 	});
 
+	//간편발송 검색 focus 스타일
+	$('.search-box.gray input').focus(function(){
+		$(this).closest('.search-box.gray').addClass('on');
+	});
+	$('.search-box.gray input').blur(function(){
+		$(this).closest('.search-box.gray').removeClass('on');
+	});
 
 
 

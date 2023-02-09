@@ -261,10 +261,12 @@ $(window).on('load', function(){
 		
 		if(name == 'link-preview'){ ///간편발송 미리보기 
 			var sHeight = window.innerHeight; 
-			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height();
+			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height() + 36;
 			var divTop = $(this).closest('li').offset().top; 
-
+			
 			$('.layer-popup-border').removeClass('on');				
+			$(this).closest('li').addClass('select').siblings('li').removeClass('select');
+			
 			if( divTop + oHeight > sHeight ){	
 				$('.layer-popup-border[data-layer-name=' + name + ']').css({
 					"top": '',
@@ -272,7 +274,7 @@ $(window).on('load', function(){
 				})
 			}else{
 				$('.layer-popup-border[data-layer-name=' + name + ']').css({
-					"top": divTop -100,
+					"top": divTop -80,
 					"bottom": ''
 				})		
 			}
@@ -285,11 +287,9 @@ $(window).on('load', function(){
 		$('.layer-popup-border[data-layer-name=' + name + ']').removeClass('on');	
 	 });
 
+
 	
 	
-
-
-
 
 
 });

@@ -26,6 +26,14 @@
     font-weight: 500;
     font-style: normal;
 }
+@font-face {
+    font-family: 'roboto';
+    src:  url('font/Roboto-Medium.woff') format('woff');        
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 
 
 /* ==============================================
