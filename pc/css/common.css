@@ -86,10 +86,10 @@ input::-webkit-input-placeholder {color:#9095a5;font-weight:300}
 input::-moz-placeholder{color:#9095a5;font-weight:300}
 input::placeholder {color:#9095a5;font-weight:300}
 
-textarea:-ms-input-placeholder {color:#888;font-weight:300}
-textarea::-webkit-input-placeholder {color:#888;font-weight:300}
-textarea::-moz-placeholder{color:#888;font-weight:300}
-textarea::placeholder {color:#888;font-weight:300}
+/* textarea:-ms-input-placeholder {color:#888;font-weight:300} */
+textarea::-webkit-input-placeholder {color:#9095a5;font-weight:300}
+textarea::-moz-placeholder{color:#9095a5;font-weight:300}
+textarea::placeholder {color:#9095a5;font-weight:300}
 .hide {display:none;}
 .blind{
 	position: absolute;
