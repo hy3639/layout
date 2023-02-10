@@ -290,8 +290,21 @@ $(window).on('load', function(){
 	 });
 
 
-	
-	
+	//마우스오버 툴팁
+	 $('.tooltip_hover').tooltip({
+		position: {
+		  my: "right+15 top+15",
+		  at: "right bottom",
+		  using: function( position, feedback ) {
+			$( this ).css( position );
+			$( "<div>" )
+			  .addClass( "arrow" )
+			  .addClass( feedback.vertical )
+			  .addClass( feedback.horizontal )
+			  .appendTo( this );
+		  },
+		}
+	  });
 
 
 });
