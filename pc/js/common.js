@@ -230,7 +230,8 @@ $(window).on('load', function(){
 		var name = $(this).attr('data-title');
 		var chatBoxH =  $('.chat-box').outerHeight();
 		
-		$('.toest-popup[data-layer-name=' + name + ']').css('bottom', '-1px').addClass('on');	
+		$('.toest-popup[data-layer-name=' + name + ']').css('bottom', '-1px').addClass('on');
+	
 		if(name == "Toest02"){
 			$('.toest-popup[data-layer-name="Toest02"].on').css('bottom',chatBoxH);
 			$(this).addClass('on');
@@ -252,6 +253,7 @@ $(window).on('load', function(){
 		$(this).closest('.toest-popup').hide().css('bottom','-100%').removeClass('on').css('display','');	
 		// $('.btn-quick-text').removeClass('on');
 		$('.chat-box').removeClass('quick');	
+		
 	 });
 
    
@@ -261,7 +263,7 @@ $(window).on('load', function(){
 		
 		if(name == 'link-preview'){ ///간편발송 미리보기 
 			var sHeight = window.innerHeight; 
-			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height() + 36;
+			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height() + 36; //푸터높이
 			var divTop = $(this).closest('li').offset().top; 
 			
 			$('.layer-popup-border').removeClass('on');				

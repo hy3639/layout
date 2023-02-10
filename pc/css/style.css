@@ -1664,8 +1664,8 @@ html.popOpen {overflow:hidden;}
 .toest-popup .send-list.type2 {
 	height: inherit; 
 	max-height: 190px;
-	margin: 0 -8px;
 }
+.toest-header + .toest-cont .send-list.type2 { margin: 0 -8px;}
 .toest-popup .send-list.type2 li {
 	display: inherit;
 	padding: 0;
@@ -1691,7 +1691,9 @@ html.popOpen {overflow:hidden;}
 	padding:0;
 	margin-right: 3px;
 }
-.toest-popup .send-list.type2 li .cont {padding-left: 5px;}
+.send-list li .cont {padding-left: 0 !important;}
+.toest-popup .send-list.type2 li .category + .cont{padding-left: 5px;}
+
 
 /*간편발송 단축키 팝업*/
 .toest-popup[data-layer-name="Toest03"],

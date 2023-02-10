@@ -1619,7 +1619,8 @@
 	/*자주쓰는문구 단축키 입력시 팝업 오픈*/
 	$('.toest-popup').each(function(){		
 		var chatBoxH =  $('.chat-box').outerHeight();
-		$('.toest-popup[data-layer-name="Toest04"]').addClass('on').css('bottom',chatBoxH);;
+		$('.toest-popup[data-layer-name="Toest04"]').addClass('on').css('bottom',chatBoxH);
+		$('.chat-box').css('box-shadow','none');	
 	});
 
 	/*// 2023-02-06 추가 */
