@@ -182,6 +182,15 @@ $(document).ready(function(){
 		$('.multi-cal-area').removeClass('on');
 		$('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
 	});
+
+	$('.btn-cal-single').click(function(){
+		$('.single-cal-area').addClass('on');
+		$('.single-cal-area').find('.single-cal-layer').addClass('on');
+	});
+	$('.btn-single-close, .single-cal-layer .ui-state-default').click(function(){
+		$('.single-cal-area').removeClass('on');
+		$('.single-cal-area').find('.single-cal-layer').removeClass('on');
+	});
 	
 
 });

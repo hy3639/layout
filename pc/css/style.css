@@ -1350,7 +1350,7 @@ table td.no-data {padding:50px 0 !important}
 .calendar-area .btn-cal {
 	width:36px;
 	height:36px;
-	background: url(../images/icon/ico-calendar-24.svg) no-repeat center;
+	background: url(../images/icon/ico-calendar-24.svg) no-repeat center 5px;
 	background-size: 24px 24px;
 	margin-left: auto;
 }
@@ -1369,7 +1369,7 @@ table td.no-data {padding:50px 0 !important}
 .multi-cal-area.on {border-color:#446cf3; background-color:#fff;}
 .multi-cal-area.on .input-text input {color:#3e61e4 !important}
 .multi-cal-area.on .btn-cal {
-	background: url(../images/icon/ico-calendar-24-on.svg) no-repeat center;
+	background: url(../images/icon/ico-calendar-24-on.svg) no-repeat center 7px;
 	background-size: 24px 24px;
 }
 .multi-cal-area .calendar-area {padding-left:8px; width:100%;}
@@ -1443,23 +1443,33 @@ table td.no-data {padding:50px 0 !important}
 .multi-cal-layer th, .multi-cal-layer td {padding-bottom:0 !important}
 
 .single-cal-area {	
-	display:flex;
+	/* display:flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-between; */
 	position:relative;
 	overflow: visible;
-	height: 36px;
+	/* height: 36px;
 	background-color:#edf0f6;
 	border:2px solid #edf0f6;
+	border-radius: 8px; */
+}
+.single-cal-area .btn-cal-single {
+	width:36px;
+	height:36px;
+	border:2px solid #edf0f6;
+	background: #edf0f6 url(../images/icon/ico-calendar-24.svg) no-repeat center ;
+	background-size: 24px 24px;
+	margin-left: auto;
 	border-radius: 8px;
 }
 .single-cal-area.on {border-color:#446cf3; background-color:#fff;}
-.single-cal-area.on .input-text input {color:#3e61e4 !important}
-.single-cal-area.on .btn-cal {
-	background: url(../images/icon/ico-calendar-24-on.svg) no-repeat center;
+/* .single-cal-area.on .input-text input {color:#3e61e4 !important} */
+.single-cal-area.on .btn-cal-single  {
+	background: url(../images/icon/ico-calendar-24-on.svg) no-repeat center 6px;
 	background-size: 24px 24px;
+	border:2px solid #446cf3;
 }
-.single-cal-area .calendar-area {padding-left:8px; width:100%;}
+/* .single-cal-area .calendar-area {padding-left:8px; width:100%;} */
 .single-cal-area > .btn-area {margin-left:10px}
 .single-cal-area > .btn-area > button {
 	border-radius: 5px;
@@ -1469,32 +1479,32 @@ table td.no-data {padding:50px 0 !important}
 	line-height:18px;
 	margin-left:2px
 }
-.multi-cal-area > .btn-area > button.on {
+.single-cal-area > .btn-area > button.on {
 	background-color:#455896; 
 	color:#fff 
 }
-.multi-cal-area .multi-cal-layer {
+.single-cal-area .single-cal-layer {
 	display:none;
 	background-color:#fff;
 	position:absolute;
 	left:12px;
 	top:45px;
-	width:456px;
+	/* width:456px; */
 	padding:20px 20px 52px 20px;
 	box-shadow: 0px 8px 10px 0 rgba(0, 0, 0, 0.1);
   	border: solid 1px #9aa0b5;
 	border-radius: 12px;
 	z-index:50;
 }
-.multi-cal-area .multi-cal-layer.on {display:flex;}
-.multi-cal-area .multi-cal-layer .btn-area{	
+.single-cal-area .single-cal-layer.on {display:flex;}
+.single-cal-area .single-cal-layer .btn-area{	
 	position:absolute;
 	bottom:0;
 	left:0;
 	right:0;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
 	width:100%;
 	height: 52px;
 	padding: 8px 15px !important;
@@ -1503,27 +1513,27 @@ table td.no-data {padding:50px 0 !important}
 	padding-right: 0;
 	border-radius: 12px;
 }
-.multi-cal-area .multi-cal-layer .btn-cal-close {
+.single-cal-area .single-cal-layer .btn-cal-close {
 	position: relative;
     height: 26px;
     line-height: 24px;
 }
-.multi-cal-area .multi-cal-layer .btn-cal-close span {
+.single-cal-area .single-cal-layer .btn-cal-close span {
 	color:#444; 
 	font-size:13px; 
 	line-height: 22px;
 	vertical-align: top;
 }
-.multi-cal-layer div + div .ui-datepicker {border-left:0}
-.multi-cal-layer .ui-datepicker-header {
+.single-cal-layer div + div .ui-datepicker {border-left:0}
+.single-cal-layer .ui-datepicker-header {
 	position:relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.multi-cal-layer th, 
-.multi-cal-layer td {padding-top:0 !important}
-.multi-cal-layer th, .multi-cal-layer td {padding-bottom:0 !important}
+.single-cal-layer th, 
+.single-cal-layer td {padding-top:0 !important}
+.single-cal-layer th, .single-cal-layer td {padding-bottom:0 !important}
 
 /* ==============
 	레이어팝업
@@ -1732,14 +1742,14 @@ html.popOpen {overflow:hidden;}
 .layer-popup-fixed .popup-header .tit {
 	color:#252832;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 18px;
 }
 .layer-popup-fixed .popup-header .popClose {
 	font-size: 0;
 	width: 24px;
 	height: 24px;
 	background: url(../images/icon/ico-close.svg) no-repeat center;
-	background-size: 16px 16px;
+	background-size: 22px 22px;
 }
 .layer-popup-fixed .layer-cont {padding: 0 24px;}
 .layer-popup-fixed .layer-cont > .name {color:#4a4e5e}
@@ -2797,7 +2807,7 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 	height:112px;
 	border:2px solid #446cf3;
 	border-radius: 12px;
-	transition:opacity .2s;
+	/* transition:opacity .2s; */
 	z-index: 2;
 }
 .chat-list li:hover:after{
@@ -2981,10 +2991,27 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 
 /*1:1상담 레이어*/
 .layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .chat-cont {
-	height: calc(100vh - 244px);
-	margin: 0 -24px;
+	height: calc(100vh - 266px);
+	margin: 20px -24px 0 -24px;
+	padding-top: 0;
 	border-bottom-left-radius: 16px;
 	border-bottom-right-radius: 16px;
+}
+.layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area {align-items: center;}
+.layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area + .flex-area {height: 50px; align-items: flex-end;}
+.layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area .search-box {flex: 1; margin:15px 8px 0 0;}
+.layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area .search-box.gray:before {
+	width:36px;
+	height:36px;
+	background: url(../images/icon/ico-search-16-off.svg) no-repeat center;
+	background-size: 26px 26px;
+}
+.layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area .search-box input {
+	width: 100%; 
+	height: 36px !important;
+	border:0;
+	border-radius: 8px;
+	padding-left: 34px !important;
 }
  /* .tab-cont .btn-area.fixed {
 	position:absolute;
