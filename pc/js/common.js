@@ -35,6 +35,11 @@ $(document).ready(function(){
 		$(this).toggleClass('on');
 	});
 
+	/* 버튼 1개선택시 스타일 */
+	$('.radio-select > button').click(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+	});
+
 
 	/* 탭영역 */	
 	$(document).on('click', '.tab-item', function(){
@@ -95,7 +100,7 @@ $(document).ready(function(){
 	});
 
 	/* datepicker - 단일검색 */
-	$( ".single-calendar .single" ).datepicker({
+	$( ".single-cal-layer .single" ).datepicker({
 		showOn: "button",
 		buttonImage: "../images/icon/icon_20_date.png",
 		buttonImageOnly: true,
@@ -108,7 +113,7 @@ $(document).ready(function(){
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
 		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
-		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
 		beforeShowDay: function(date){
 			if (date > new Date())
 				return [false];
@@ -128,7 +133,7 @@ $(document).ready(function(){
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
 		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
-		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
 
 	onSelect: function (dateText) {
 		$('#from').val(this.value);		
@@ -148,7 +153,7 @@ $(document).ready(function(){
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
 		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
-		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
 	onSelect: function (dateText) {
 		$('#to').val(this.value);		
 	}
@@ -170,10 +175,12 @@ $(document).ready(function(){
  
 
 	$('.btn-cal').click(function(){
-		$(this).closest('.multi-cal-area').find('.multi-cal-layer').addClass('on');
+		$('.multi-cal-area').addClass('on');
+		$('.multi-cal-area').find('.multi-cal-layer').addClass('on');
 	});
 	$('.btn-cal-close').click(function(){
-		$(this).closest('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
+		$('.multi-cal-area').removeClass('on');
+		$('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
 	});
 	
 
@@ -182,6 +189,24 @@ $(document).ready(function(){
 
 $(window).on('load', function(){
 	rdoCheck(); // 라디오,체크박스
+
+	//체크박스 라벨 스타일
+	$('input[type=checkbox].styled').change(function(){
+		if(this.checked){
+			$(this).closest('.chkbox').addClass('on');
+		}else{
+			$(this).closest('.chkbox').removeClass('on');
+		}
+	});
+
+	//라디오 라벨 스타일
+	$('input[type=radio].styled').change(function(){
+		var name = $(this).attr('name');
+		if(this.checked){
+			$('input[name="'+ name +'"]').closest('.chkbox').removeClass('on');
+			$(this).closest('.chkbox').addClass('on');
+		}
+	});
 
 
 	//레이어팝업 (딤드 + 가운데정렬)
@@ -257,7 +282,7 @@ $(window).on('load', function(){
 	 });
 
    
-	 //간편발송 미리보기 / 목록편집 레이어
+	 //간편발송 미리보기 / 위치고정 레이어
 	 $('.btnPopBorder').click(function(){
 		var name = $(this).attr('data-title');
 		
@@ -291,7 +316,7 @@ $(window).on('load', function(){
 
 
 	//마우스오버 툴팁
-	 $('.tooltip_hover').tooltip({
+	 $('.tooltip-hover').tooltip({
 		position: {
 		  my: "right+15 top+15",
 		  at: "right bottom",
@@ -305,6 +330,8 @@ $(window).on('load', function(){
 		  },
 		}
 	  });
+
+	
 
 
 });
@@ -327,6 +354,12 @@ function rdoCheck(){
             $(this).wrap('<span class="chkbox"></span>');
             var $chk = $(this).closest('.chkbox');
             $chk.append('<span class="chk"></span>');
+
+			if(this.checked){
+				$(this).closest('.chkbox').addClass('on');
+			}else{
+				$(this).closest('.chkbox').removeClass('on');
+			}
         }
     });
 }
@@ -353,11 +386,13 @@ function layerPop(){
 function layerPopFixed(){
     $('.layer-popup-fixed').each(function(){
 		var parentName = $(this).attr('data-layer-name');
-		var posLeft = $('.main-chat').find('.'+parentName).position().left;
-		var posTop = $('.main-chat').find('.'+parentName).position().top;
-		console.log(posLeft);
+		var targetParent = $('.main-chat').find('.'+parentName);
+	//	var posLeft = targetParent.position().left;
+		var posRight = $('.wrapper').width() - (targetParent.position().left + targetParent.outerWidth());
+		var posTop = targetParent.position().top;
+	//	console.log(posRight);
 		if(!$(this).hasClass('open')){
-			$(this).css('left',posLeft);
+			$(this).css('right',posRight);
 			$(this).css('top',posTop);
 		}
     });
@@ -386,7 +421,7 @@ function reHeight(){
 				var chatBoxH =  $('.chat-box').outerHeight();
 				var calcH  = chatH - chatInputH;	
 				
-				console.log( chatH + '/' + chatInputH + '/' + chatBoxH + '/' + calcH);
+				//console.log( chatH + '/' + chatInputH + '/' + chatBoxH + '/' + calcH);
 				if(chatInputH > 99){
 					$(this).css('overflow-y', 'auto');
 				}else{

@@ -41,7 +41,7 @@
 	</div>
 	<div class="container">		
 		<div class="contents main-chat">
-			<div class="content flex">
+			<div class="content flex ">
 				<div class="box chat-area">
 					<div class="top">
 						<div class="flex-area">
@@ -58,7 +58,7 @@
 						<div class="search-box">
 							<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">
 							
-							<div class="btn-arrow"> <!-- 검색어 입력시 노출 (on 클래스 추가) -->
+							<div class="btn-arrow on"> <!-- 검색어 입력시 노출 (on 클래스 추가) -->
 								<span class="count">2/16</span> <!-- 2023-02-06 -->
 								<button type="button" class="btn-prev"><span class="blind">이전</span></button>
 								<button type="button" class="btn-next"><span class="blind">다음</span></button>
@@ -629,50 +629,64 @@
 									<ul class="tit-list">
 										<li><span class="tit">대화상태</span>전체</li>
 										<li><span class="tit">업무유형</span>전체</li>
-									</ul>								
+									</ul>
+									<!-- 2023-02-10  -->
 									<div class="btn-area">
-										<div class="tooltip-area">
-											<button type="button" class="btn-round btn-order btn-layer"><span>필터</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
-											<div class="tooltip-layer w450 left">
-												<button type="button" class="btn-close">툴팁닫기</button>
-												<div class="layer-cont">
-													<div class="tit-area">
+										<button type="button" class="btn-order btnPopBorder" data-title="filter"><span>필터</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
+										<div class="layer-popup-border" data-layer-name="filter">
+											<!-- <button type="button" class="btn-close">툴팁닫기</button> -->
+											<div class="layer-cont">
+												<div class="group">
+													<div class="tit-area flex-area both">
 														<p>대화상태</p>
+														<div class="form-list">
+															<input type="checkbox" class="styled" id="chk1" checked><label for="chk1">전체</label>
+														</div>
+														
 													</div>
 													<div class="cont-area">
-														<ul class="check-list">
-															<li><input type="checkbox" id="chk1"><label class="flag type6" for="chk1">전체</label></li>
-															<li><input type="checkbox" id="chk2" checked><label class="flag type1" for="chk2">대기중</label></li>
-															<li><input type="checkbox" id="chk3"><label class="flag type2" for="chk3">상담중</label></li>
-															<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
-															<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
-														</ul>
-													</div>
-													<div class="tit-area">
-														<p>업무 유형</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
-															<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
-															<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
-															<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
-															<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
-															<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
-															<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
-															<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
-															<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
-															<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
-															<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
-															<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>
-															<li><input type="checkbox" id="chk18"><label class="flag type6" for="chk18">해외부동산 투자</label></li>	
-															<li><input type="checkbox" id="chk19"><label class="flag type6" for="chk19">기업성 해외자금</label></li>														
+														<ul class="check-list">															
+															<li><input type="checkbox" id="status1" checked><label class="btn-check" for="status1">대기중</label></li>
+															<li><input type="checkbox" id="status2"><label class="btn-check" for="status2">상담중</label></li>
+															<li><input type="checkbox" id="status3"><label class="btn-check" for="status3">부재중</label></li>
+															<li><input type="checkbox" id="status4"><label class="btn-check" for="status4">상담종료</label></li>
 														</ul>
 													</div>
 												</div>
-											</div>	
+												<div class="group">
+													<div class="tit-area flex-area both">
+														<p>업무 유형</p>
+														<div class="form-list">
+															<input type="checkbox" class="styled" id="chk2"><label for="chk2">전체</label>
+														</div>														
+													</div>
+													<div class="cont-area">
+														<ul class="check-list">					
+															<li><input type="checkbox" id="category1"><label class="btn-check" for="category1">개인사업자 대출</label></li>	
+															<li><input type="checkbox" id="category2"><label class="btn-check" for="category2">기업 대출</label></li>		
+															<li><input type="checkbox" id="category3"><label class="btn-check" for="category3">기업성 해외자금</label></li>	
+															<li><input type="checkbox" id="category4"><label class="btn-check" for="category4">목돈 굴리기</label></li>
+															<li><input type="checkbox" id="category5"><label class="btn-check" for="category5">목돈 모으기</label></li>		
+															<li><input type="checkbox" id="category6" checked><label class="btn-check on" for="category6">부동산담보 대출</label></li>	
+															<li><input type="checkbox" id="category7"><label class="btn-check" for="category7">신용 대출</label></li>
+															<li><input type="checkbox" id="category8"><label class="btn-check" for="category8">오토금융</label></li>
+															<li><input type="checkbox" id="category9"><label class="btn-check" for="category9">유학 등 기타자금</label></li>
+															<li><input type="checkbox" id="category10"><label class="btn-check" for="category10">재외동포 재산반출</label></li>
+															<li><input type="checkbox" id="category11" checked><label class="btn-check on" for="category11">전(월)세 대출</label></li>
+															<li><input type="checkbox" id="category12"><label class="btn-check" for="category12">퇴직연금 IRP</label></li>
+															<li><input type="checkbox" id="category13"><label class="btn-check" for="category13">해외부동산 투자</label></li>	
+																												
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="btn-area align-right">
+												<button type="button" class="btn-round btn-mid bg-white popCloseBorder">취소</button>
+												<button type="button" class="btn-round btn-mid bg-blue">저장</button>
+											</div>
 										</div>
 									</div>
+									<!--// 2023-02-10  -->
 								</div>		
 								<ul class="chat-list scroll-area">
 									<li>
@@ -688,7 +702,7 @@
 													<span class="txt-count">1/10</span>
 												</div>												
 												<div class="count">
-													<span class="count-noti tooltip_hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">22</span>	 <!-- 2023-02-10 : 툴팁 추가 -->									
+													<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">22</span>	 <!-- 2023-02-10 : 툴팁 추가 -->									
 												</div>
 											</div>		
 										</div>
@@ -816,7 +830,7 @@
 													<span class="txt-count">업무 외 시간 진입</span>
 												</div>
 												<div class="count">
-													<span class="count-noti tooltip_hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...1111? 주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">99+</span>															
+													<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...1111? 주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">99+</span>															
 												</div>
 											</div>		
 										</div>
@@ -849,7 +863,7 @@
 													<span class="txt-count">상담 OFF시 진입</span>
 												</div>												
 												<div class="count">
-													<span class="count-noti tooltip_hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">99+</span> 															
+													<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">99+</span> 															
 												</div>
 											</div>		
 										</div>
@@ -885,49 +899,63 @@
 										<li><span class="tit">대화상태</span>전체</li>
 										<li><span class="tit">업무유형</span>전체</li>
 									</ul>								
+									<!-- 2023-02-10  -->
 									<div class="btn-area">
-										<div class="tooltip-area">
-											<button type="button" class="btn-round btn-order btn-layer on"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
-											<div class="tooltip-layer w450 left">
-												<button type="button" class="btn-close">툴팁닫기</button>
-												<div class="layer-cont">
-													<div class="tit-area">
+										<button type="button" class="btn-order btnPopBorder" data-title="filter"><span>필터</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
+										<div class="layer-popup-border" data-layer-name="filter">
+											<!-- <button type="button" class="btn-close">툴팁닫기</button> -->
+											<div class="layer-cont">
+												<div class="group">
+													<div class="tit-area flex-area both">
 														<p>대화상태</p>
+														<div class="form-list">
+															<input type="checkbox" class="styled" id="chk3" checked><label for="chk3">전체</label>
+														</div>
+														
 													</div>
 													<div class="cont-area">
-														<ul class="check-list">
-															<li><input type="checkbox" id="chk1"><label class="flag type6" for="chk1">전체</label></li>
-															<li><input type="checkbox" id="chk2" checked><label class="flag type1" for="chk2">대기중</label></li>
-															<li><input type="checkbox" id="chk3"><label class="flag type2" for="chk3">상담중</label></li>
-															<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
-															<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
-														</ul>
-													</div>
-													<div class="tit-area">
-														<p>업무 유형</p>
-													</div>
-													<div class="cont-area">
-														<ul class="check-list">
-															<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
-															<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
-															<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
-															<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
-															<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
-															<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
-															<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
-															<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
-															<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
-															<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
-															<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
-															<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>
-															<li><input type="checkbox" id="chk18"><label class="flag type6" for="chk18">해외부동산 투자</label></li>	
-															<li><input type="checkbox" id="chk19"><label class="flag type6" for="chk19">기업성 해외자금</label></li>														
+														<ul class="check-list">															
+															<li><input type="checkbox" id="status2-1" checked><label class="btn-check" for="status2-1">대기중</label></li>
+															<li><input type="checkbox" id="status2-2"><label class="btn-check" for="status2-2">상담중</label></li>
+															<li><input type="checkbox" id="status2-3"><label class="btn-check" for="status2-3">부재중</label></li>
+															<li><input type="checkbox" id="status2-4"><label class="btn-check" for="status2-4">상담종료</label></li>
 														</ul>
 													</div>
 												</div>
-											</div>	
+												<div class="group">
+													<div class="tit-area flex-area both">
+														<p>업무 유형</p>
+														<div class="form-list">
+															<input type="checkbox" class="styled" id="chk4"><label for="chk4">전체</label>
+														</div>														
+													</div>
+													<div class="cont-area">
+														<ul class="check-list">					
+															<li><input type="checkbox" id="category2-1"><label class="btn-check" for="category2-1">개인사업자 대출</label></li>	
+															<li><input type="checkbox" id="category2-2"><label class="btn-check" for="category2-2">기업 대출</label></li>		
+															<li><input type="checkbox" id="category2-3"><label class="btn-check" for="category2-3">기업성 해외자금</label></li>	
+															<li><input type="checkbox" id="category2-4" checked><label class="btn-check on" for="category2-4">목돈 굴리기</label></li>
+															<li><input type="checkbox" id="category2-5" checked><label class="btn-check on" for="category2-5">목돈 모으기</label></li>		
+															<li><input type="checkbox" id="category2-6" checked><label class="btn-check on" for="category2-6">부동산담보 대출</label></li>	
+															<li><input type="checkbox" id="category2-7"><label class="btn-check" for="category2-7">신용 대출</label></li>
+															<li><input type="checkbox" id="category2-8"><label class="btn-check" for="category2-8">오토금융</label></li>
+															<li><input type="checkbox" id="category2-9"><label class="btn-check" for="category2-9">유학 등 기타자금</label></li>
+															<li><input type="checkbox" id="category2-10"><label class="btn-check" for="category2-10">재외동포 재산반출</label></li>
+															<li><input type="checkbox" id="category2-11" checked><label class="btn-check on" for="category2-11">전(월)세 대출</label></li>
+															<li><input type="checkbox" id="category2-12"><label class="btn-check" for="category2-12">퇴직연금 IRP</label></li>
+															<li><input type="checkbox" id="category2-13"><label class="btn-check" for="category2-13">해외부동산 투자</label></li>	
+																												
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="btn-area align-right">
+												<button type="button" class="btn-round btn-mid bg-white popCloseBorder">취소</button>
+												<button type="button" class="btn-round btn-mid bg-blue">저장</button>
+											</div>
 										</div>
 									</div>
+									<!--// 2023-02-10  -->
 								</div>
 								<ul class="chat-list scroll-area sortable">
 									<li>
@@ -1120,54 +1148,132 @@
 							</div>
 							<div class="tab-cont">
 								<div class="search-area flex-area both">
-									<ul class="tit-list">
-										<li><span class="tit">대화상태</span>전체</li>
-										<li><span class="tit">업무유형</span>전체</li>
-									</ul>								
+									<!-- 2023-02-10 -->
+									<div class="btn-area radio-select">
+										<button type="button" class="btn-fliter on">당일</button> <!-- 선택시 on클래스 추가 -->
+										<button type="button" class="btn-fliter">3일</button>
+										<button type="button" class="btn-fliter">7일</button>
+									</div>
 									<div class="btn-area">
-										<div class="tooltip-area">
-											<button type="button" class="btn-round btn-order btn-layer"><span class="blind">정렬</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
-											<div class="tooltip-layer w450 left">
-												<button type="button" class="btn-close">툴팁닫기</button>
-												<div class="layer-cont">
-													<div class="tit-area">
-														<p>대화상태</p>
+										<button type="button" class="btn-search btnPopBorder" data-title="search-detail"><span>검색</span></button> <!-- 필터가 체크된경우 on 클래스 추가-->
+										<div class="layer-popup-border" data-layer-name="search-detail">
+											<!-- <button type="button" class="btn-close">툴팁닫기</button> -->
+											<div class="layer-cont">
+												<div class="group">
+													<div class="tit-area flex-area both">
+														<p>대화 일자</p>																									
 													</div>
 													<div class="cont-area">
-														<ul class="check-list">
-															<li><input type="checkbox" id="chk1"><label class="flag type6" for="chk1">전체</label></li>
-															<li><input type="checkbox" id="chk2" checked><label class="flag type1" for="chk2">대기중</label></li>
-															<li><input type="checkbox" id="chk3"><label class="flag type2" for="chk3">상담중</label></li>
-															<li><input type="checkbox" id="chk4"><label class="flag type4" for="chk4">부재중</label></li>
-															<li><input type="checkbox" id="chk5"><label class="flag type5" for="chk5">상담종료</label></li>
-														</ul>
+														<div class="btn-date-area radio-select">
+															<button type="button" class="btn-date on">당일</button> <!-- 선택시 on 클래스 추가 -->
+															<button type="button" class="btn-date">3일</button>
+															<button type="button" class="btn-date">7일</button>
+															<button type="button" class="btn-date">1개월</button>
+															<button type="button" class="btn-date btn-cal">설정</button>
+														</div>
+														<div class="multi-cal-area">
+															<div class="calendar-area">
+																<div class="input-text">
+																	<input type="text" id="from" name="from" readonly>	
+																</div>
+																<span class="divide">-</span>
+																<div class="input-text">
+																	<input type="text"  id="to" name="to" readonly>	
+																</div>
+																<button type="button" class="btn-cal"><span class="blind">달력</span></button>
+															</div>
+															<div class="multi-cal-layer">
+																<div class="from"></div>
+																<div class="to"></div>
+																<div class="btn-area">
+																	<button type="button" class="btn-cal-close"><span>닫기</span></button>
+																</div>
+															</div>
+														</div>
 													</div>
+												</div>
+												<div class="group flex-area both">
 													<div class="tit-area">
-														<p>업무 유형</p>
+														<p>목록 정렬</p>																										
 													</div>
 													<div class="cont-area">
-														<ul class="check-list">
-															<li class="block"><input type="checkbox" id="chk6"><label class="flag type6" for="chk6">전체선택</label></li>
-															<li><input type="checkbox" id="chk7" checked><label class="flag type6" for="chk7">전(월)세 대출</label></li>
-															<li><input type="checkbox" id="chk8" checked><label class="flag type6" for="chk8">부동산담보 대출</label></li>
-															<li><input type="checkbox" id="chk9"><label class="flag type6" for="chk9">신용 대출</label></li>
-															<li><input type="checkbox" id="chk10"><label class="flag type6" for="chk10">오토금융</label></li>
-															<li><input type="checkbox" id="chk11"><label class="flag type6" for="chk11">개인사업자 대출</label></li>
-															<li><input type="checkbox" id="chk12"><label class="flag type6" for="chk12">기업 대출</label></li>
-															<li><input type="checkbox" id="chk13"><label class="flag type6" for="chk13">목돈 굴리기</label></li>
-															<li><input type="checkbox" id="chk14"><label class="flag type6" for="chk14">목돈 모으기</label></li>
-															<li><input type="checkbox" id="chk15"><label class="flag type6" for="chk15">퇴직연금 IRP</label></li>
-															<li><input type="checkbox" id="chk16"><label class="flag type6" for="chk16">유학 등 기타자금</label></li>
-															<li><input type="checkbox" id="chk17"><label class="flag type6" for="chk17">재외동포 재산반출</label></li>
-															<li><input type="checkbox" id="chk18"><label class="flag type6" for="chk18">해외부동산 투자</label></li>	
-															<li><input type="checkbox" id="chk19"><label class="flag type6" for="chk19">기업성 해외자금</label></li>														
+														<ul class="form-list right">
+															<li><input type="radio" class="styled" name="select" id="rdo1"><label for="rdo1">최신순</label></li>
+															<li><input type="radio" class="styled" name="select" id="rdo2" checked><label for="rdo2">과거순</label></li>
 														</ul>
 													</div>
 												</div>
-											</div>	
+												<div class="group flex-area both">
+													<div class="tit-area">
+														<p>휴대폰번호</p>																										
+													</div>
+													<div class="cont-area">
+														<div class="input-text gray">
+															<input type="number" placeholder="숫자만 가능/10~11자리 입력">
+														</div>
+													</div>
+												</div>
+												<div class="group flex-area both">
+													<div class="tit-area">
+														<p>고객명</p>																										
+													</div>
+													<div class="cont-area">
+														<div class="input-text gray">
+															<input type="text" placeholder="한글 영문 가능/자릿수제한 없음">
+														</div>
+													</div>
+												</div>
+												<div class="group flex-area both">
+													<div class="tit-area">
+														<p>고객번호</p>																										
+													</div>
+													<div class="cont-area">
+														<div class="input-text gray">
+															<input type="number" placeholder="숫자만 가능/9자리 입력">
+														</div>
+													</div>
+												</div>
+												<div class="group">
+													<div class="tit-area flex-area both">
+														<p>업무 유형</p>
+														<div class="form-list">
+															<input type="checkbox" class="styled" id="chk5"><label for="chk5">전체</label>
+														</div>														
+													</div>
+													<div class="cont-area">
+														<ul class="check-list">					
+															<li><input type="checkbox" id="category3-1"><label class="btn-check" for="category3-1">개인사업자 대출</label></li>	
+															<li><input type="checkbox" id="category3-2"><label class="btn-check" for="category3-2">기업 대출</label></li>		
+															<li><input type="checkbox" id="category3-3"><label class="btn-check" for="category3-3">기업성 해외자금</label></li>	
+															<li><input type="checkbox" id="category3-4" checked><label class="btn-check on" for="category3-4">목돈 굴리기</label></li>
+															<li><input type="checkbox" id="category3-5" checked><label class="btn-check on" for="category3-5">목돈 모으기</label></li>		
+															<li><input type="checkbox" id="category3-6" checked><label class="btn-check on" for="category3-6">부동산담보 대출</label></li>	
+															<li><input type="checkbox" id="category3-7"><label class="btn-check" for="category3-7">신용 대출</label></li>
+															<li><input type="checkbox" id="category3-8"><label class="btn-check" for="category3-8">오토금융</label></li>
+															<li><input type="checkbox" id="category3-9"><label class="btn-check" for="category3-9">유학 등 기타자금</label></li>
+															<li><input type="checkbox" id="category3-10"><label class="btn-check" for="category3-10">재외동포 재산반출</label></li>
+															<li><input type="checkbox" id="category3-11" checked><label class="btn-check on" for="category3-11">전(월)세 대출</label></li>
+															<li><input type="checkbox" id="category3-12"><label class="btn-check" for="category3-12">퇴직연금 IRP</label></li>
+															<li><input type="checkbox" id="category3-13"><label class="btn-check" for="category3-13">해외부동산 투자</label></li>																													
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="btn-area flex-area both">
+												<div class="left">
+													<button type="button" class="btn-reset"><span>초기화</span></button>
+												</div>
+												<div class="right">
+													<button type="button" class="btn-round btn-mid bg-white popCloseBorder">취소</button>
+													<button type="button" class="btn-round btn-mid bg-blue">검색</button>
+												</div>
+											</div>
+											
 										</div>
-									</div>
-								</div>		
+									</div>									
+									<!--// 2023-02-10 -->
+								</div>
+
 								<ul class="chat-list scroll-area">									
 									<li>
 										<div class="category">
@@ -1338,9 +1444,13 @@
 										</div>									
 									</li>
 								</ul>
-								<!-- 결과가 없을경우 노출 -->
-								<!-- <p class="no-data">검색 결과가 없습니다.</p>  -->
 								
+								<!-- 2023-02-10 : 결과가 없을경우 노출 -->
+								<!-- <div class="chat-list no-data">
+									<p>검색 결과가 없습니다.</p> 
+								</div> -->
+								<!--// 2023-02-10 : 결과가 없을경우 노출 -->
+
 								<!-- 순서저장하기 -->
 								<!-- <div class="btn-area fixed">
 									<button type="button" class="btn-round">순서 저장</button>	
@@ -1507,34 +1617,269 @@
 				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
 			</div>
 
+			
 			<!-- 레이어팝업 (상담쪽 영역 고정) 영역 -->
-			<div class="layer-popup-fixed draggable" data-layer-name="chat-util">  <!--2023-02-06 : layer-name속성 data-layer-name으로 일괄변경-->
-				<div class="popup-header">			
+			<!-- 2023-02-10 : 상담이력 레이어 추가-->
+			<div class="layer-popup-fixed gray draggable" data-layer-name="chat-util">  
+				<div class="popup-header">	
+					<p class="tit">상담 이력</p>		
 					<button class="btn-close popClose">팝업닫기</button>	
 				</div>
 				<div class="layer-cont popup-cont">
-					<div class="tit-area flex-area">
-						<p>1:1 상담내역</p>				
+					<p class="name">홍길동 (123456789)</p>
+					<div class="btn-date-area radio-select">
+						<button type="button" class="btn-date on">당일</button> <!-- 선택시 on 클래스 추가 -->
+						<button type="button" class="btn-date">3일</button>
+						<button type="button" class="btn-date">7일</button>
+						<button type="button" class="btn-date">1개월</button>
+						<button type="button" class="btn-date btn-cal">설정</button>
 					</div>
-					<div class="cont-area history">
-						11111111111111111111
+					<div class="multi-cal-area">						
+						<div class="multi-cal-layer">
+							<div class="from"></div>
+							<div class="to"></div>
+							<div class="btn-area">
+								<button type="button" class="btn-cal-close"><span>닫기</span></button>
+							</div>
+						</div>
 					</div>
+					<ul class="chat-list scroll-area">
+						<li class="btnPopFixed btn-chat-list" data-title="chat-list-area">
+							<div class="category">
+								<span class="flag type1">대기중</span>											
+							</div>																				
+							<div class="list-info">
+								<span class="name">홍길동(123456789)</span>
+								<span class="tit">재외동포 재산반출</span>
+								<div class="flex-area both">
+									<div class="info">
+										<span class="date">5월 9일(월) 오전 10:28</span>
+										<span class="txt-count">1/10</span>
+									</div>	
+								</div>		
+							</div>																
+						</li>
+						<li>
+							<div class="category">
+								<span class="flag type2">상담중</span>											
+							</div>																				
+							<div class="list-info">
+								<span class="name">홍길동(123456789)</span>
+								<span class="tit">전(월)세 대출</span>
+								<div class="flex-area both">
+									<div class="info">
+										<span class="date">5월 9일(월) 오전 10:28</span>
+										<span class="txt-count">2/10</span>
+									</div>
+								</div>		
+							</div>															
+						</li>
+						<li>
+							<div class="category">
+								<span class="flag type2">상담중</span>											
+							</div>																				
+							<div class="list-info">
+								<span class="name">홍길동(123456789)</span>
+								<span class="tit">전(월)세 대출</span>
+								<div class="flex-area both">
+									<div class="info">
+										<span class="date">5월 9일(월) 오전 10:28</span>
+										<span class="txt-count">상담 OFF시 진입</span>
+									</div>
+								</div>		
+							</div>																
+						</li>
+						<li>
+							<div class="category">
+								<span class="flag type2">상담중</span>											
+							</div>																				
+							<div class="list-info">
+								<span class="name">홍길동(123456789)</span>
+								<span class="tit">전(월)세 대출</span>
+								<div class="flex-area both">
+									<div class="info">
+										<span class="date">5월 9일(월) 오전 10:28</span>
+										<span class="txt-count">업무 외 시간 진입</span>
+									</div>
+								</div>		
+							</div>															
+						</li>
+						<li>
+							<div class="category">
+								<span class="flag type4">부재중</span>											
+							</div>																				
+							<div class="list-info">
+								<span class="name">홍길동(123456789)</span>
+								<span class="tit">재외동포 재산반출</span>
+								<div class="flex-area both">
+									<div class="info">
+										<span class="date">5월 9일(월) 오전 10:28</span>
+										<span class="txt-count">상담 OFF시 진입</span>
+									</div>		
+								</div>		
+							</div>																
+						</li>
+						<li>
+							<div class="category">
+								<span class="flag type5">상담<br>종료</span>											
+							</div>																				
+							<div class="list-info">
+								<span class="name">홍길동(123456789)</span>
+								<span class="tit">재외동포 재산반출</span>
+								<div class="flex-area both">
+									<div class="info">
+										<span class="date">5월 9일(월) 오전 10:28</span>
+										<span class="txt-count">2/10</span>
+									</div>
+								</div>		
+							</div>						
+						</li>
+						<li>
+							<div class="category">
+								<span class="flag type5">상담<br>종료</span>											
+							</div>																				
+							<div class="list-info">
+								<span class="name">홍길동(123456789)</span>
+								<span class="tit">재외동포 재산반출</span>
+								<div class="flex-area both">
+									<div class="info">
+										<span class="date">5월 9일(월) 오전 10:28</span>
+										<span class="txt-count">2/10</span>
+									</div>
+								</div>		
+							</div>						
+						</li>
+					</ul>
 				</div>
 			</div>
+			<!--// 2023-02-10 : 상담이력 레이어 추가-->
 
-			<div class="layer-popup-fixed draggable" data-layer-name="chat-list-area">  <!--2023-02-06 : layer-name속성 data-layer-name으로 일괄변경-->
-				<div class="popup-header">			
+			<!-- 2023-02-10 : 1:1 상담내역 레이어 추가-->
+			<div class="layer-popup-fixed draggable" data-layer-name="chat-list-area">  
+				<div class="popup-header">	
+					<p class="tit">1:1 상담 내역</p>		
 					<button class="btn-close popClose">팝업닫기</button>	
 				</div>
 				<div class="layer-cont popup-cont">
-					<div class="tit-area flex-area">
-						<p>1:1 상담내역</p>				
+					<div class="flex-area both">
+						<p class="name">홍길동 (123456789)</p>
+						<span class="date">2023년 5월 9일(월) 오전 10:28</span>
 					</div>
-					<div class="cont-area history">
-						22222222222222
+					
+					<div class="search-box gray">
+						<input type="text" placeholder="키워드 검색 (Enter시 검색 가능)">
+						<button type="button" class="btn-cal"><span class="blind">달력</span></button>					
 					</div>
+					<div class="single-cal-area">						
+						<div class="single-cal-layer">
+							<div class="single"></div>							
+							<div class="btn-area">
+								<button type="button" class="btn-cal-close"><span>닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<div class="chat-cont scroll-area">
+						<div class="date"><span>2022년 8월 31일 목요일</span></div>
+						<div class="system-msg">
+							<p>
+								<span class="tit">[시스템 메시지]</span>
+								<span class="f-blue">업무유형+상담종류</span> 상담을 요청하고,<br>
+								본인인증 완료한<span class="f-blue">'당행 손님입니다.'</span>or <span class="f-blue">'당행 손님이 아닙니다'</span><br>
+								손님과 상담 시 금융소비자보호 등 관련 법률을 준수하여 상담하시기 바랍니다.<br>
+							</p>
+						</div>
+						<div class="chat-item-list">
+							<div class="chat-item right">
+								<div class="chat-name">
+									<span class="category">지점명(업무유형명)</span>
+									<span class="name">김하나 (9812345)</span>
+								</div>
+								<div class="chat-txt">
+									<p class="txt">안녕하세요, 홍길동님!</p>											
+								</div>
+							</div>
+							<div class="chat-item right">										
+								<div class="chat-txt">
+									<p class="txt">영업1부에서 개인대출을 담당하는 김은영입니다.</p>											
+								</div>
+								<span class="time">오후 12:28</span>
+							</div>
+							<div class="chat-item left">
+								<div class="chat-name">											
+									<span class="name">홍길동 (재외동포 재산반출)</span>
+								</div>
+								<div class="chat-txt">
+									<p class="txt">네 서울 강남구 압구정동 현대<mark class="current">아파트</mark> 105동 1207호 입니다네 서울 강남구 압구정동 현대<mark>아파트</mark> 105동 1207호 입니다네 서울 강남구 압구정동 현대<mark>아파트</mark> 105동 1207호 입니다.</p>											
+								</div>
+							</div>
+							<div class="chat-item left">										
+								<div class="chat-txt">
+									<p class="txt">네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.</p>											
+								</div>
+								<span class="time">오후 12:28</span>
+							</div>
+							<div class="chat-item right">
+								<div class="chat-name">
+									<span class="category">지점명(업무유형명)</span>
+									<span class="name">김하나 (9812345)</span>
+								</div>
+								<div class="chat-txt">
+									<p class="txt">
+										안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+										안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+										안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+									</p>											
+								</div>
+								<span class="time">오후 12:28</span>
+							</div>									
+							<div class="chat-item left">
+								<div class="chat-name">											
+									<span class="name">홍길동 (재외동포 재산반출)</span>
+								</div>
+								<div class="chat-txt">
+									<p class="txt">
+										네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+										네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+										네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+									</p>											
+								</div>
+								<span class="time">오후 12:28</span>
+							</div>
+							<div class="chat-item right">
+								<div class="chat-name">
+									<span class="category">지점명(업무유형명)</span>
+									<span class="name">김하나 (9812345)</span>
+								</div>
+								<div class="chat-txt">
+									<p class="txt">
+										안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+										안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+										안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+									</p>											
+								</div>
+							</div>					
+							<div class="chat-item right">										
+								<div class="chat-txt">
+									<div class="send-bg">
+										<p>
+											증명서 발급신청 관련 안내해 드려요. <br>
+											국문만 가능하고 출력은 인터넷뱅킹에서<br> 
+											가능한점 참고해주세요. 아래버튼을누르면<br>
+											하나원큐로 이동해요.														
+										</p>												
+										<div class="btn-area">
+											<a href="#" class="btn-round">거래내역서</a>									
+										</div>
+									</div>										
+								</div>
+								<span class="time">오후 12:28</span>
+							</div>
+						</div>					
+					</div>					
 				</div>
 			</div>
+			<!--// 2023-02-10 : 1:1 상담내역 레이어 추가-->
+
 			<!--// 레이어팝업 (상담쪽 영역 고정) 영역 -->
 		</div>
 	</div>	
@@ -1728,6 +2073,8 @@ top: 480px;">
 	$('.search-box.gray input').blur(function(){
 		$(this).closest('.search-box.gray').removeClass('on');
 	});
+
+
 
 
 
