@@ -120,6 +120,14 @@ $(document).ready(function(){
 			return [true];
 		}
 	  });
+	$('.btn-cal-single').click(function(){
+		$('.single-cal-area').addClass('on');
+		$('.single-cal-area').find('.single-cal-layer').addClass('on');
+	});
+	$('.btn-single-close, .single-cal-layer .ui-state-default').click(function(){
+		$('.single-cal-area').removeClass('on');
+		$('.single-cal-area').find('.single-cal-layer').removeClass('on');
+	});
 
 	/* datepicker - 기간검색 */
 	var dateFormat = "yy-mm-dd",
@@ -171,8 +179,7 @@ $(document).ready(function(){
 	  }
 	  return date;
 	}
-	setDate(); // 초기값 설정
- 
+	setDate(); // 초기값 설정 
 
 	$('.btn-cal').click(function(){
 		$('.multi-cal-area').addClass('on');
@@ -183,14 +190,7 @@ $(document).ready(function(){
 		$('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
 	});
 
-	$('.btn-cal-single').click(function(){
-		$('.single-cal-area').addClass('on');
-		$('.single-cal-area').find('.single-cal-layer').addClass('on');
-	});
-	$('.btn-single-close, .single-cal-layer .ui-state-default').click(function(){
-		$('.single-cal-area').removeClass('on');
-		$('.single-cal-area').find('.single-cal-layer').removeClass('on');
-	});
+	
 	
 
 });
@@ -264,8 +264,7 @@ $(window).on('load', function(){
 		var name = $(this).attr('data-title');
 		var chatBoxH =  $('.chat-box').outerHeight();
 		
-		$('.toest-popup[data-layer-name=' + name + ']').css('bottom', '-1px').addClass('on');
-		
+		$('.toest-popup[data-layer-name=' + name + ']').css('bottom', '-1px').addClass('on');		
 		if(name == "Toest02"){
 			$('.toest-popup[data-layer-name="Toest02"].on').css('bottom',chatBoxH);
 			$(this).addClass('on');
@@ -303,7 +302,7 @@ $(window).on('load', function(){
 			$('.layer-popup-border').removeClass('on');				
 			$(this).closest('li').addClass('select').siblings('li').removeClass('select');
 			
-			if( divTop + oHeight > sHeight ){	
+			if( divTop + oHeight > sHeight ){
 				$('.layer-popup-border[data-layer-name=' + name + ']').css({
 					"top": '',
 					"bottom": 0			
@@ -396,14 +395,45 @@ function layerPopFixed(){
     $('.layer-popup-fixed').each(function(){
 		var parentName = $(this).attr('data-layer-name');
 		var targetParent = $('.main-chat').find('.'+parentName);
-	//	var posLeft = targetParent.position().left;
+		var sWidth = $('.wrapper').outerWidth();
+
+		var posLeft = targetParent.position().left;
 		var posRight = $('.wrapper').width() - (targetParent.position().left + targetParent.outerWidth());
-		var posTop = targetParent.position().top;
-	//	console.log(posRight);
-		if(!$(this).hasClass('open')){
-			$(this).css('right',posRight);
-			$(this).css('top',posTop);
-		}
+		var posTop = targetParent.position().top;	
+
+		if(!$(this).hasClass('open')){ // 열리지 않았을경우에만 실행
+			if(posRight + targetParent.outerWidth() > sWidth ){  // 부모 position + width가 wrapper 너비 이상일때
+				$(this).find('.multi-cal-layer').css({				
+					"right": 0,
+					"left": ''
+				})
+				$(this).css({
+					"top": posTop,
+					"left": 0,
+					"right": ''			
+				})				
+			}else if(posLeft == 0){ // 손님정보가 맨 앞으로 갔을경우
+				$(this).find('.multi-cal-layer').css({				
+					"left": 0,
+					"right": ''
+				})		
+				$(this).css({
+					"top": posTop,
+					"left": 0,
+					"right": ''
+				})				
+			}else{
+				$(this).find('.multi-cal-layer').css({				
+					"right": 0,
+					"left": ''
+				})	
+				$(this).css({
+					"top": posTop,
+					"left": '',
+					"right": posRight
+				})	
+			}
+		}	
     });
 }
 

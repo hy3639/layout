@@ -416,6 +416,7 @@ button:disabled {
     border-radius: 8px;
 } */
 .btn-sm {
+	display: inline-block;
 	min-width:48px; 
 	padding:0 8px;
 	height:28px;
@@ -1376,7 +1377,7 @@ table td.no-data {padding:50px 0 !important}
 .multi-cal-area .from {margin-right: 12px;}
 .multi-cal-area .to {margin-left: 12px;}
 .multi-cal-area .input-text {width: 78px; padding:0 4px}
-.multi-cal-area .input-text input {padding:0}
+.multi-cal-area .input-text input {padding:0; border:0; background-color:transparent}
 .multi-cal-area > .btn-area {margin-left:10px}
 .multi-cal-area > .btn-area > button {
 	border-radius: 5px;
@@ -1394,7 +1395,7 @@ table td.no-data {padding:50px 0 !important}
 	display:none;
 	background-color:#fff;
 	position:absolute;
-	left:12px;
+	right:0;
 	top:45px;
 	width:456px;
 	padding:20px 20px 52px 20px;
@@ -1487,7 +1488,7 @@ table td.no-data {padding:50px 0 !important}
 	display:none;
 	background-color:#fff;
 	position:absolute;
-	left:12px;
+	left:0;
 	top:45px;
 	/* width:456px; */
 	padding:20px 20px 52px 20px;
@@ -1496,6 +1497,7 @@ table td.no-data {padding:50px 0 !important}
 	border-radius: 12px;
 	z-index:50;
 }
+.layer-popup-fixed .single-cal-area .single-cal-layer {right:0; left:inherit;}
 .single-cal-area .single-cal-layer.on {display:flex;}
 .single-cal-area .single-cal-layer .btn-area{	
 	position:absolute;
@@ -3232,9 +3234,10 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 	z-index: 100;
 	border-radius: 16px;
 	box-shadow: 0px 8px 12px 0 rgba(178, 182, 190, 0.35);
-	
-	
 }
+.main-chat .content .box:nth-child(3) .layer-popup-border[data-layer-name^="link-preview"]{right:inherit; left:-260px}
+.main-chat .content .box:nth-child(1) .layer-popup-border .multi-cal-layer{right:inherit; left:0;}
+/* .main-chat .content .box:nth-child(3) .layer-popup-border .single-cal-layer{right:0; left:inherit;} */
 /* .toest-popup[data-layer-name="Toest01"] .layer-popup-border[data-layer-name="link-preview"] {top:185px}
 .toest-popup[data-layer-name="Toest03"] .layer-popup-border[data-layer-name="link-preview"] {top:15px} */
 
