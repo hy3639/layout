@@ -1752,7 +1752,7 @@ html.popOpen {overflow:hidden;}
 	background-size: 22px 22px;
 }
 .layer-popup-fixed .layer-cont {padding: 0 24px;}
-.layer-popup-fixed .layer-cont > .name {color:#4a4e5e}
+.layer-popup-fixed .layer-cont .name {color:#4a4e5e}
 
 
 .layer-popup-border {
@@ -2995,6 +2995,7 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 	border-bottom-right-radius: 16px;
 }
 .layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area {align-items: center;}
+.layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area .date {font-size: 12px; color:#727988}
 .layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area + .flex-area {height: 50px; align-items: flex-end;}
 .layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area .search-box {
 	display: flex;
