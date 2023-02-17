@@ -99,6 +99,26 @@ $(document).ready(function(){
 		});
 	});
 
+
+	/* 리스트테이블 고정 헤더 */
+	function isIE() {
+		return navigator.userAgent.indexOf('MSIE') > -1 || navigator.appVersion.indexOf('Trident/') > -1
+	}
+	if (isIE()) {
+		// Fix table head
+		function tableFixHead(ths) {
+			var sT = this.scrollTop;
+			[].forEach.call(ths, function(th) {
+			th.style.transform = "translateY(" + sT + "px)";
+			});
+		}
+		[].forEach.call(document.querySelectorAll(".fix-head"), function(el) {
+			var ths = el.querySelectorAll("thead th");
+			el.addEventListener("scroll", tableFixHead.bind(el, ths));
+		});
+	}
+
+
 	/* datepicker - 단일검색 */
 	$( ".single-cal-layer .single" ).datepicker({
 		showOn: "button",

@@ -608,7 +608,7 @@
 						<div class="flex-area">
 							<h3 class="tit">상담 목록</h3>							
 						</div>						
-						<button type="button" class="btn-qustion btnPop" data-title="Popup02">도움말</button> <!-- 2023-02-06 -->
+						<button type="button" class="btn-qustion">도움말</button> <!-- 2023-02-06 -->
 					</div>
 					<div class="tab-wrap">
 						<div class="tab-lst">
@@ -737,7 +737,7 @@
 													<span class="txt-count">상담 OFF시 진입</span>
 												</div>												
 												<div class="count">
-													<span class="count-noti">22</span>											
+													<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요!">22</span>	 <!-- 2023-02-10 : 툴팁 추가 -->																			
 												</div>
 											</div>		
 										</div>
@@ -1527,7 +1527,7 @@
 									<p class="tit">최근 활동 정보</p>
 									<span class="count">총2건</span>
 								</div>								
-								<a href="#" class="bg-gray btn-sm">상세보기</a>
+								<a href="#" class="bg-gray btn-sm btnPop" data-title="Popup02">상세보기</a>
 							</div>
 							<!--// 2023-02-06 -->
 							<ul class="tit-list2">
@@ -1568,7 +1568,7 @@
 									<span class="count">5/14</span>
 								</div>
 								
-								<a href="#" class="bg-gray btn-sm">상세보기</a>
+								<a href="#" class="bg-gray btn-sm btnPop" data-title="Popup03">상세보기</a>
 							</div>				
 						</div>
 						<div class="list-area">
@@ -1625,7 +1625,7 @@
 					<p class="tit">상담 이력</p>		
 					<button class="btn-close popClose">팝업닫기</button>	
 				</div>
-				<div class="layer-cont popup-cont">
+				<div class="layer-cont">
 					<p class="name">홍길동 (123456789)</p>
 					<div class="btn-date-area radio-select">
 						<button type="button" class="btn-date on">당일</button> <!-- 선택시 on 클래스 추가 -->
@@ -1760,7 +1760,7 @@
 					<p class="tit">1:1 상담 내역</p>		
 					<button class="btn-close popClose">팝업닫기</button>	
 				</div>
-				<div class="layer-cont popup-cont">
+				<div class="layer-cont">
 					<div class="flex-area both">
 						<p class="name">홍길동 (123456789)</p>
 						<span class="date">2023년 5월 9일(월) 오전 10:28</span>
@@ -1909,147 +1909,432 @@
 	</div>
 </div>
 
-<!-- <div class="layer-popup" data-layer-name="Popup02"> 
-	<div class="popup lg">
+<!-- 2023-02-10 -->
+<!-- 최근 활동 정보 팝업 -->
+<div class="layer-popup type2" data-layer-name="Popup02"> 
+	<div class="popup xl">
 		<div class="popup-header">			
+			<p class="title">최근 활동 정보</p>
+			<span class="sub-txt">(총24건)</span>
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
-		<div class="layer-cont popup-cont">
-			<div class="tit-area flex-area">
-				<p>도움말</p>				
-			</div>
+		<div class="layer-cont">			
 			<div class="cont-area">
-				<div class="board-list">
+				<div class="board-list fix-head">
 					<table>
-						<caption>도움말</caption>
+						<caption>최근 활동 정보</caption>
 						<colgroup>
-							<col style="width:100px;">
+							<col style="width: 12%;">
+							<col style="width: 13%;">
 							<col>
-							<col style="width:200px;">							
-							
+							<col style="width: 8%;">
+							<col style="width: 12%;">
+							<col style="width: 13%;">
+							<col style="width: 13%;">
 						</colgroup>
 						<thead>
 							<tr>
+								<th scope="col">활동유형</th>
+								<th scope="col">상세유형</th>
+								<th scope="col">내용</th>
 								<th scope="col">상태</th>
-								<th scope="col">설명</th>
-								<th scope="col">상담 목록 출력</th>	
+								<th scope="col">등록일자</th>
+								<th scope="col">등록지원</th>
+								<th scope="col">등록지원</th>
 							</tr>
 						</thead>
 						<tbody>							
 							<tr>
-								<td rowspan="2">대기중</td>
-								<td class="left">
-									<ul class="list-style1">
-										<li>상담 ON 상태로 손님 진입한 경우</li>
-									</ul>
-								</td>									
-								<td>대기중<br>(대기 순번 수/총 대기 수)</td>	
+								<td>이벤트</td>
+								<td>생일</td>
+								<td>내용은 전체내용 제한없이 모두출력</td>
+								<td>비완료</td>
+								<td>2023-02-10</td>
+								<td>이하나</td>
+								<td>영등포금융센터</td>	
 							</tr>
 							<tr>
-								<td class="left">
-									<ul class="list-style1">
-										<li>'부재중'으로 표시된 손님이 익일 근무시간 내 먼저 대화를 다시 시도한 경우</li>
-									</ul>
-								</td>									
-								<td>대기중<br>(마지막 대기 순번+1/총 대기 수)</td>	
+								<td>이벤트이벤트</td>
+								<td>생일생일생일</td>
+								<td>내용은 전체내용 제한없이 모두출력내용은 전체내용 제한없이 모두출력 내용은 전체내용 제한없이 모두출력 내용은 전체내용 제한없이 모두출력</td>
+								<td>완료</td>
+								<td>2023-02-10</td>
+								<td>이하나이하나</td>
+								<td>영등포금융센터 영등포금융센터</td>	
 							</tr>
 							<tr>
-								<td>Now</td>
-								<td class="left">
-									<ul class="list-style1">
-										<li>직원이 메시지를 전송할 경우</li>
-									</ul>
-								</td>									
-								<td>Now</td>	
+								<td>이벤트</td>
+								<td>생일</td>
+								<td>내용은 전체내용 제한없이 모두출력</td>
+								<td>비완료</td>
+								<td>2023-02-10</td>
+								<td>이하나</td>
+								<td>영등포금융센터</td>	
 							</tr>
 							<tr>
-								<td rowspan="3">상담중</td>
-								<td class="left">
-									<ul class="list-style1">
-										<li>직원이 대기중 상담 방 답변 후 다른 상담 방 선택하여 답변한 경우</li>
-									</ul>
-								</td>									
-								<td>상담중<br>(기존 대기중 번호/총 대기 수)</td>	
-							</tr>
-							<tr>								
-								<td class="left">
-									<ul class="list-style1">
-										<li>직원이 부재중(상담 OFF시 진입) 방 답변 후 다른 상담 방 선택하여 답변한 경우</li>
-									</ul>
-								</td>									
-								<td>상담중<br>(상담OFF시 진입)</td>	
-							</tr>
-							<tr>								
-								<td class="left">
-									<ul class="list-style1">
-										<li>직원이 부재중(근무시간 외 진입) 방 답변 후 다른 상담 방 선택하여 답변한 경우</li>
-									</ul>
-								</td>									
-								<td>상담중<br>(업무외 시간 진입)</td>	
+								<td>이벤트</td>
+								<td>생일</td>
+								<td>내용은 전체내용 제한없이 모두출력</td>
+								<td>비완료</td>
+								<td>2023-02-10</td>
+								<td>이하나</td>
+								<td>영등포금융센터</td>	
 							</tr>
 							<tr>
-								<td rowspan="2">부재중</td>
-								<td class="left">
-									<ul class="list-style1">
-										<li>상담 OFF 상태로 손님 진입한 경우</li>
-									</ul>
-								</td>									
-								<td>부재중<br>(상담OFF시 진입)</td>	
+								<td>이벤트</td>
+								<td>생일</td>
+								<td>내용은 전체내용 제한없이 모두출력</td>
+								<td>비완료</td>
+								<td>2023-02-10</td>
+								<td>이하나</td>
+								<td>영등포금융센터</td>	
 							</tr>
 							<tr>
-								<td class="left">
-									<ul class="list-style1">
-										<li>근무시간 외 손님이 진입한 경우</li>
-									</ul>
-								</td>									
-								<td>부재중<br>(업무외 시간 진입)</td>	
+								<td>이벤트이벤트</td>
+								<td>생일생일생일</td>
+								<td>내용은 전체내용 제한없이 모두출력내용은 전체내용 제한없이 모두출력 내용은 전체내용 제한없이 모두출력 내용은 전체내용 제한없이 모두출력</td>
+								<td>완료</td>
+								<td>2023-02-10</td>
+								<td>이하나이하나</td>
+								<td>영등포금융센터 영등포금융센터</td>	
 							</tr>
-							<tr>	
-								<td rowspan="3">상담종료</td>							
-								<td class="left">
-									<ul class="list-style1">
-										<li>직원이 '상담종료'버튼 선택하여 정상 종료한 경우</li>
-										<li>손님이 먼저 대화방 나가기 하여 정상 종료한 경우</li>
-										<li>손님이 하나의 채널(영업점)에서 복수로 상담을 하려고 하는 경우, 이전의 상담은 자동으로 종료</li>
-									</ul>
-								</td>									
-								<td>상담종료</td>	
+							<tr>
+								<td>이벤트</td>
+								<td>생일</td>
+								<td>내용은 전체내용 제한없이 모두출력</td>
+								<td>비완료</td>
+								<td>2023-02-10</td>
+								<td>이하나</td>
+								<td>영등포금융센터</td>	
 							</tr>
-							<tr>								
-								<td class="left">
-									<ul class="list-style1">
-										<li>시스템(배치)에 의해 자동 종료 처리한 경우</li>
-									</ul>
-								</td>									
-								<td>상담종료<br>(시스템 자동종료)</td>	
+							<tr>
+								<td>이벤트</td>
+								<td>생일</td>
+								<td>내용은 전체내용 제한없이 모두출력</td>
+								<td>비완료</td>
+								<td>2023-02-10</td>
+								<td>이하나</td>
+								<td>영등포금융센터</td>	
 							</tr>
-							<tr>								
-								<td class="left">
-									<ul class="list-style1">
-										<li>직원이 답변하기 이전에 손님이 먼저 대화방 나가기 하여 종료한 경우</li>
-										<li>직원이 답변하기 이전에 일정시간 동안 대화가 없어 시스템에 의해 자동 종료된 경우</li>
-									</ul>
-								</td>									
-								<td>상담종료<br>(상담 없이 종료)</td>	
-							</tr>			
 						</tbody>
 					</table>
 				</div>
 			</div>
 		</div>
+		<div class="bottom-area">
+			<div class="pagenation">
+				<a href="#" class="btn-first">처음</a>
+				<a href="#" class="btn-prev">이전</a>
+				<span class="page now">1</span>
+				<a href="#" class="page">2</a>
+				<a href="#" class="page">3</a>
+				<a href="#" class="page">4</a>
+				<a href="#" class="page">5</a>
+				<a href="#" class="page">6</a>
+				<a href="#" class="page">7</a>
+				<a href="#" class="page">8</a>
+				<a href="#" class="page">9</a>
+				<a href="#" class="page">10</a>
+				<a href="#" class="btn-next">다음</a>
+				<a href="#" class="btn-last">마지막</a>
+			</div>
+		</div>
 	</div>
-</div> -->
+</div>
 
-<!-- <div class="ui-tooltip" style="position: absolute;
-left: 740px;
-top: 480px;">
-	<p class="arrow bottom"></p>
-		주택 담보 대출 관련 문의가 있어요! <br>
-10년 차 직장인이고 사업을 하려고 합니다. <br>
-소유한 주택을 담보로 대출 받고 싶은데요...
-	
-	
-</div> -->
+<!-- 최근 활동 정보 팝업 -->
+<div class="layer-popup type2" data-layer-name="Popup03"> 
+	<div class="popup xl">
+		<div class="popup-header">			
+			<p class="title">마케팅 교차판매 상세정보</p>
+			<span class="sub-txt">(5/16)</span>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="flex-area both box">
+			<div class="layer-cont">			
+				<div class="cont-area">
+					<div class="board-list fix-head">
+						<table>
+							<caption>마케팅 교차판매 상세정보</caption>
+							<colgroup>
+								<col style="width: 37%;">
+								<col style="width: 18%;">
+								<col style="width: 18%;">			
+								<col style="width: 27%;">		
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">보유</th>
+									<th scope="col">충족</th>
+									<th scope="col">금액</th>								
+								</tr>
+							</thead>
+							<tbody>							
+								<tr>
+									<td>요구불</td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>10,000,000</td>								
+								</tr>
+								<tr>
+									<td>적립식</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>거치식</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>신탁</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>ISA(신탁형)</td>
+									<td></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>ISA(일임형)</td>
+									<td></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>집합투자</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>방카</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>노란우산공제</td>
+									<td></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>주택청약</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>개인연금</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>연금펀드</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>연금신탁</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>연금보험</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>퇴직연금</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>DC(가입자)</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>DC(사업자)</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>DB(가입자)</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>IRP</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="layer-cont">			
+				<div class="cont-area">
+					<div class="board-list fix-head">
+						<table>
+							<caption>마케팅 교차판매 상세정보</caption>
+							<colgroup>
+								<col style="width: 37%;">
+								<col style="width: 18%;">
+								<col style="width: 18%;">			
+								<col style="width: 27%;">		
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">보유</th>
+									<th scope="col">충족</th>
+									<th scope="col">금액</th>								
+								</tr>
+							</thead>
+							<tbody>							
+								<tr>
+									<td>담보대출</td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>10,000,000</td>								
+								</tr>
+								<tr>
+									<td>기타대출</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>소호대출</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>입금이체</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>급여</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>연금</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>가맹점</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>출금이체</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>카드이체</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>관리비</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>휴대폰</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>기타이체</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>디지털</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>개인외환</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>환전</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>송금</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>수출</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr class="depth">
+									<td>수입</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td></td>
+									<td>0</td>							
+								</tr>
+								<tr>
+									<td>하나멤버스</td>
+									<td><input type="checkbox" class="styled"></td>
+									<td><input type="checkbox" class="styled"></td>
+									<td>0</td>							
+								</tr>								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+<!--// 2023-02-10 -->
 
 <!--// 레이어팝업 (딤드 + 가운데정렬) 영역 -->
 
@@ -2084,8 +2369,7 @@ top: 480px;">
 
 
 
-
-
+	
 
 	/*간편발송 단축키 입력시 팝업 오픈 (확인용)*/
 	// $('.toest-popup').each(function(){		
