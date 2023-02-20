@@ -40,7 +40,12 @@
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: 'roboto';
+    src:  url('font/Roboto-Bold.woff') format('woff');        
+    font-weight: 700;
+    font-style: normal;
+}
 
 
 /* ==============================================

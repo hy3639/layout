@@ -8,24 +8,23 @@ $(document).ready(function(){
 	/*gnb*/
 	$('.btn-gnb').click(function(){
 		var gnbList = $(this).next('.gnb-list');
-		if($(this).hasClass('on')){
-			$(this).removeClass('on');
-			gnbList.slideUp('300');
-		}else{
-			$(this).addClass('on');
-			gnbList.slideDown('slow');
-		}
-	
+		$(this).addClass('on');
+		gnbList.fadeIn('300');	
 	});
+	$('.btn-gnb-close').click(function(){
+		$(this).removeClass('on');
+			$(this).closest('.gnb-list').fadeOut('100');
+	});
+
 
 	/* 상담 on/off */
 	$('.btn-toggle-area button').click(function(){
 		var header = $(this).closest('.header');
 		if($(this).hasClass('on')){
-			$(this).removeClass('on').text('상담OFF');
+			$(this).removeClass('on').text('OFF');
 			header.removeClass('on');
 		}else{
-			$(this).addClass('on').text('상담ON');
+			$(this).addClass('on').text('ON');
 			header.addClass('on');
 		}
 	});
@@ -313,7 +312,7 @@ $(window).on('load', function(){
 	 //간편발송 미리보기 / 위치고정 레이어
 	 $('.btnPopBorder').click(function(){
 		var name = $(this).attr('data-title');
-		
+		$(this).addClass('on');
 		if(name == 'link-preview'){ ///간편발송 미리보기 
 			var sHeight = window.innerHeight; 
 			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height() + 36; //푸터높이
@@ -338,8 +337,10 @@ $(window).on('load', function(){
 	 });
 	 /*닫기*/
 	 $(document).on('click', '.popCloseBorder', function(){
-		var name = $(this).closest('.layer-popup-border').attr('data-layer-name');		
+		var name = $(this).closest('.layer-popup-border').attr('data-layer-name');	
+	
 		$('.layer-popup-border[data-layer-name=' + name + ']').removeClass('on');	
+		$('.btnPopBorder[data-title=' + name + ']').removeClass('on');	
 	 });
 
 
