@@ -25,27 +25,25 @@
 			<h1>레이어팝업 가이드</h1>
 	
 			<section class="group">
-				<h2 class="tit">dimmed 팝업</h2>
+				<h2 class="tit">dimmed 팝업 (가운데정렬)</h2>
 				<ul>
-					<li>1. 버튼에 btnPop클래스 추가 및 title값 추가</li>
-					<li>2. layer-popup div에 버튼과 같은 title값 추가</li>
+					<li>1. 버튼에 btnPop클래스 추가 및 data-title값 추가</li>
+					<li>2. layer-popup div에 버튼과 같은 data-layer-name값 추가</li>
 					<li>3. 팝업 크기별로 popup에 클래스추가 (sm/mid/lg) - 정의되지 않은 크기는 임의로 너비 추가</li>
 					<li>4. 팝업닫기버튼에 class="btn-close popClose" 공통</li>
 					<!-- <li>5. 팝업이 이중으로 노출될 때 부모팝업이 닫히지 않아야 할경우 부모팝업에 noneClose 클래스 추가,자식팝업에 scroll 클래스 추가</li>	 -->
 				</ul>
 				<div class="cont">
-					<div class="sub-cont">
-						
+					<div class="sub-cont">						
 						<div class="cont">
 							<div class="button-area margin center">
-								<button type="button" class="btn-mid btn-round bg-green btnPop" title="Popup01">alert</button>
-								<button type="button" class="btn-mid btn-round bg-green btnPop" title="Popup02">alert 버튼1개일경우</button>
-								<a href="#" class="btn-mid btn-round bg-green btnPop" title="Popup03">타이틀 있는 팝업</a>														
-							</div>
-							
+								<button type="button" class="btn-mid btn-round bg-green btnPop" data-title="Popup01">alert</button>
+								<button type="button" class="btn-mid btn-round bg-green btnPop" data-title="Popup02">alert 버튼1개일경우</button>
+								<a href="#" class="btn-mid btn-round bg-green btnPop" data-title="Popup03">타이틀 있는 팝업</a>														
+							</div>							
 
 							<!-- alert -->
-							<div class="layer-popup" title="Popup01">
+							<div class="layer-popup" data-layer-name="Popup01">
 								<div class="popup sm">
 									<div class="popup-cont align-center">
 										<p class="guide-txt">대기 중인 손님이 존재합니다.<br>그래도 로그아웃 하시겠습니까?</p>
@@ -60,7 +58,7 @@
 							</div>
 
 							<!-- alert -->
-							<div class="layer-popup" title="Popup02">
+							<div class="layer-popup" data-layer-name="Popup02">
 								<div class="popup sm">
 									<div class="popup-cont align-center">
 										<p class="guide-txt">로그아웃 하시겠습니까?</p>								
@@ -72,7 +70,7 @@
 							</div>
 
 							<!-- 타이틀이 있는 팝업 -->
-							<div class="layer-popup check-list" title="Popup03"> 
+							<div class="layer-popup check-list" data-layer-name="Popup03"> 
 								<div class="popup lg"> 								
 									<button class="btn-close popClose">팝업닫기</button>	
 									<div class="layer-cont">
@@ -155,13 +153,11 @@
 											</ul>
 										</div>			
 									</div>
-									<div class="btn-area single"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
+									<div class="btn-area single">
 										<button type="button" class="btn-round btn-lg bg-blue">확인</button>			
 									</div>
 								</div>
-							</div>		
-
-						
+							</div>						
 						</div>
 					</div>	
 				</div>	

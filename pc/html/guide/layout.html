@@ -8,66 +8,88 @@
 </head>
 
 <body>
-<div class="wrapper main-chat">
-	<div class="header">
+<div class="wrapper">	
+	<div class="header"> <!-- 상담 on 일경우 header에 on 클래스 추가--> 
 		<div class="left-area">
 			<a href="#" class="logo">
 				<img src="../../images/layout/header_logo.png" alt="하나톡 포탈 로고">
-			</a>
-			<div class="btn-toggle-area">
-				<button type="button" class="btn-msg">상담 ON</button>
-				<button type="button" class="btn-msg on">상담 OFF</button>
-			</div>
-			<span class="waiting">대기 : <em>00명</em></span>
+			</a>				
 		</div>
 		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w320" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">
+						3가지 타입 외에도 상담하기 화면에서<br>
+						Drag &amp; Drop하여 원하는 순서로 변경할 수 있어요!
+					</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
 			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
-			<button type="button" class="btn-logout">로그아웃</button>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button>
 			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
 			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
 				<ul class="depth1">
-					<li><a href="#">대인상담</a></li>
-					<li>Admin
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
 						<ul class="depth2">
-							<li><a href="#">채팅설정</a></li>
-							<li><a href="#">채널관리</a></li>
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
 							<li><a href="#">상담내역</a></li>
-							<li><a href="#">메뉴권한관리</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>			
 		</div>
 	</div>
-	<div class="container">
-		<div class="fixed-title">
-			<div class="tit-area">
-				<h2>대인상담</h2>
-			</div>
-		</div>
-		<div class="contents">
-			<div class="loading-wrap">
-				<div class="loading"><p>데이터 처리중입니다.</p></div>
+
+	<div class="container">		
+		<div class="contents main-chat">
+			<div class="content">
 				
 			</div>
 			<div class="footer">
 				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
 			</div>
 		</div>
-	</div>
-	
+	</div>	
 </div>
 
-<div class="layer-popup" title="Popup01">
+<div class="layer-popup" data-layer-name="Popup01"> 
 	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
+		<div class="popup-cont align-center">
+			<p class="guide-txt">대기 중인 손님이 존재합니다.<br>그래도 로그아웃 하시겠습니까?</p>			
 		</div>
-		<div class="popup-cont">
-			<p class="guide-txt align-center">일치하는 회원정보가 없습니다.</p>				
-		</div>
-		<div class="btn-area  align-center">			
-			<button type="button" class="btn-mid bg-green popClose">확인</button>			
+		<div class="btn-area">
+			<button type="button" class="btn-round btn-mid bg-lightgray popClose">아니오</button>	
+			<button type="button" class="btn-round btn-mid bg-blue">로그아웃</button>
 		</div>
 	</div>
 </div>

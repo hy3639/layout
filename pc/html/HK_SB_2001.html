@@ -14,25 +14,56 @@
 			<a href="#" class="logo">
 				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
 			</a>
-			<div class="btn-toggle-area">
-				<button type="button" class="btn-msg">상담 ON</button>
-				<button type="button" class="btn-msg on">상담 OFF</button>
-			</div>
-			<span class="waiting">대기 : <em>00명</em></span>
+			
 		</div>
 		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w320" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">
+						3가지 타입 외에도 상담하기 화면에서<br>
+						Drag &amp; Drop하여 원하는 순서로 변경할 수 있어요!
+					</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
 			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
-			<button type="button" class="btn-logout">로그아웃</button>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
 			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
 			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
 				<ul class="depth1">
-					<li><a href="#">대인상담</a></li>
-					<li>Admin
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
 						<ul class="depth2">
-							<li><a href="#">채팅설정</a></li>
-							<li><a href="#">채널조회</a></li>
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
 							<li><a href="#">상담내역</a></li>
-							<li><a href="#">메뉴권한관리</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
 						</ul>
 					</li>
 				</ul>

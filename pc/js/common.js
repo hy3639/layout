@@ -425,8 +425,8 @@ function layerPopFixed(){
 		if(!$(this).hasClass('open')){ // 열리지 않았을경우에만 실행
 			if(posRight + targetParent.outerWidth() > sWidth ){  // 부모 position + width가 wrapper 너비 이상일때
 				$(this).find('.multi-cal-layer').css({				
-					"right": 0,
-					"left": ''
+					"left": 0,
+					"right": ''
 				})
 				$(this).css({
 					"top": posTop,
