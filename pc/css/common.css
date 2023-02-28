@@ -132,8 +132,13 @@ select {
 	box-sizing:border-box;
 	background-color:#fff;
 	outline:0;
-	transition:all .1s;
-	-webkit-appearance:none; 
+	-webkit-appearance:none; /* for chrome */
+	-moz-appearance:none; /*for firefox*/ 
+	appearance:none;
+}
+select::-ms-value {
+	background: none; /* remove blue background on ie10/ie11 when selected*/
+	color:#252832;
 }
 table caption {display:none;}
 

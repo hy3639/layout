@@ -8,7 +8,7 @@
 	<style>
 		.wrapper { max-height:100%; width:100%; background-color:#fff}
 		.wrapper h1 {background-color:bisque; padding-left:20px;}
-		.wrapper section.group {border-bottom:1px solid #666; adding:0 20px 30px 20px}
+		.wrapper section.group {border-bottom:1px solid #666; padding:0 20px 30px 20px}
 		.wrapper section.group > h2{font-size:20px;border-left:4px solid gold;padding-left:10px; margin:15px 0 30px}
 		.group > .cont {margin-bottom:30px}
 		.group .sub-cont {margin-top:20px}
@@ -158,6 +158,249 @@
 									</div>
 								</div>
 							</div>						
+						</div>
+					</div>	
+				</div>	
+			</section>
+			<section class="group">
+				<h2 class="tit">토스트 텍스트 팝업 (3초후 사라짐)</h2>
+				<ul>
+					<li>1. 각각의 div가운데 위치해야 하므로 html에 주석처리된 위치에 넣어야 함.(HK_SB_3000.html페이지 내의 주석처리)</li>
+					<li>2. 토스트 팝업이 필요한 위치에서 toestTxt() 호출</li>
+					<li>개발에서 호출해서 사용하려면 "toest-txt" 만 사용가능 </li>		
+				</ul>
+				<div class="cont">
+					<div class="sub-cont">	
+						<button type="button" class="btn-mid btn-round bg-green" onclick="toestTxt()">토스트팝업 호출</button>					
+						<div class="cont flex-area" style="width:422px; position:relative">					
+							<ul class="chat-list scroll-area" >
+								<li>
+									<div class="category">
+										<span class="flag type1">대기중</span>											
+									</div>																				
+									<div class="list-info">
+										<span class="name">홍길동(123456789)</span>
+										<span class="tit">재외동포 재산반출</span>
+										<div class="flex-area both">
+											<div class="info">
+												<span class="date">5월 9일(월) 오전 10:28</span>
+												<span class="txt-count">1/10</span>
+											</div>												
+											<div class="count">
+												<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">22</span>	 <!-- 2023-02-10 : 툴팁 추가 -->									
+											</div>
+										</div>		
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+										<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>
+										<div class="tooltip-area">
+											<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
+											<div class="tooltip-layer w112">													
+												<div class="layer-cont">
+													<div class="link-area">
+														<!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+														<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
+														<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+														<!--//2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>									
+								</li>
+								<li>
+									<div class="category">
+										<span class="flag type3">NOW</span>											
+									</div>																				
+									<div class="list-info">
+										<span class="name">홍길동(123456789)</span>
+										<span class="tit">재외동포 재산반출</span>
+										<div class="flex-area both">
+											<div class="info">
+												<span class="date">5월 9일(월) 오전 10:28</span>
+												<span class="txt-count">상담 OFF시 진입</span>
+											</div>												
+											<div class="count">
+												<span class="count-noti">22</span>											
+											</div>
+										</div>		
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+										<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>
+										<div class="tooltip-area">
+											<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
+											<div class="tooltip-layer w112">													
+												<div class="layer-cont">
+													<div class="link-area">
+														<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
+														<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>									
+								</li>
+								<li>
+									<div class="category">
+										<span class="flag type2">상담중</span>											
+									</div>																				
+									<div class="list-info">
+										<span class="name">홍길동(123456789)</span>
+										<span class="tit">전(월)세 대출</span>
+										<div class="flex-area both">
+											<div class="info">
+												<span class="date">5월 9일(월) 오전 10:28</span>
+												<span class="txt-count">2/10</span>
+											</div>
+										</div>		
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+										<button type="button" class="btn-fixed btn-toggle on"><span class="blind">대화고정</span></button>
+										<div class="tooltip-area">
+											<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
+											<div class="tooltip-layer w112">													
+												<div class="layer-cont">
+													<div class="link-area">
+														<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
+														<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>									
+								</li>
+								<!-- <li>
+									<div class="category">
+										<span class="flag type2">상담중</span>											
+									</div>																				
+									<div class="list-info">
+										<span class="name">홍길동(123456789)</span>
+										<span class="tit">전(월)세 대출</span>
+										<div class="flex-area both">
+											<div class="info">
+												<span class="date">5월 9일(월) 오전 10:28</span>
+												<span class="txt-count">상담 OFF시 진입</span>
+											</div>
+										</div>		
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>
+										<button type="button" class="btn-fixed btn-toggle"><span class="blind">대화고정</span></button>
+										<div class="tooltip-area">
+											<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
+											<div class="tooltip-layer w112">													
+												<div class="layer-cont">
+													<div class="link-area">
+														<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
+														<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>									
+								</li>
+								<li>
+									<div class="category">
+										<span class="flag type2">상담중</span>											
+									</div>																				
+									<div class="list-info">
+										<span class="name">홍길동(123456789)</span>
+										<span class="tit">전(월)세 대출</span>
+										<div class="flex-area both">
+											<div class="info">
+												<span class="date">5월 9일(월) 오전 10:28</span>
+												<span class="txt-count">업무 외 시간 진입</span>
+											</div>
+											<div class="count">
+												<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...1111? 주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">99+</span>															
+											</div>
+										</div>		
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>
+										<button type="button" class="btn-fixed btn-toggle"><span class="blind">대화고정</span></button>
+										<div class="tooltip-area">
+											<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
+											<div class="tooltip-layer w112">													
+												<div class="layer-cont">
+													<div class="link-area">
+														<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
+														<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>									
+								</li> -->
+								<li>
+									<div class="category">
+										<span class="flag type4">부재중</span>											
+									</div>																				
+									<div class="list-info">
+										<span class="name">홍길동(123456789)</span>
+										<span class="tit">재외동포 재산반출</span>
+										<div class="flex-area both">
+											<div class="info">
+												<span class="date">5월 9일(월) 오전 10:28</span>
+												<span class="txt-count">상담 OFF시 진입</span>
+											</div>												
+											<div class="count">
+												<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">99+</span> 															
+											</div>
+										</div>		
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn-like btn-toggle"><span class="blind">즐겨찾기</span></button>
+										<button type="button" class="btn-fixed btn-toggle"><span class="blind">대화고정</span></button>
+										<div class="tooltip-area">
+											<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
+											<div class="tooltip-layer w112">													
+												<div class="layer-cont">
+													<div class="link-area">
+														<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
+														<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>									
+								</li>
+								<li>
+									<div class="category">
+										<span class="flag type5">상담<br>종료</span>											
+									</div>																				
+									<div class="list-info">
+										<span class="name">홍길동(123456789)</span>
+										<span class="tit">재외동포 재산반출</span>
+										<div class="flex-area both">
+											<div class="info">
+												<span class="date">5월 9일(월) 오전 10:28</span>
+												<span class="txt-count">2/10</span>
+											</div>
+										</div>		
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>											
+										<div class="tooltip-area">
+											<button type="button" class="btn-more btn-layer"><span class="blind">더보기</span></button> 
+											<div class="tooltip-layer w112">													
+												<div class="layer-cont">
+													<div class="link-area">
+														<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
+														<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>									
+								</li>
+							</ul>
+							<!--  토스트 팝업 위치 -->
+							<p class="toest-txt">저장 되었습니다.</p> 
+							<!-- // 토스트 팝업 위치 -->			
 						</div>
 					</div>	
 				</div>	

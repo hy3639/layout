@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	reHeight();
 	sortable();
-	//layerPop();
+//	layerPop();
 	draggable(); //멀티팝업 드레그
-	setDate();
+	// setDate();
 
 	/*gnb*/
 	$('.btn-gnb').click(function(){
@@ -99,25 +99,6 @@ $(document).ready(function(){
 	});
 
 
-	/* 리스트테이블 고정 헤더 */
-	function isIE() {
-		return navigator.userAgent.indexOf('MSIE') > -1 || navigator.appVersion.indexOf('Trident/') > -1
-	}
-	if (isIE()) {
-		// Fix table head
-		function tableFixHead(ths) {
-			var sT = this.scrollTop;
-			[].forEach.call(ths, function(th) {
-			th.style.transform = "translateY(" + sT + "px)";
-			});
-		}
-		[].forEach.call(document.querySelectorAll(".fix-head"), function(el) {
-			var ths = el.querySelectorAll("thead th");
-			el.addEventListener("scroll", tableFixHead.bind(el, ths));
-		});
-	}
-
-
 	/* datepicker - 단일검색 */
 	$( ".single-cal-layer .single" ).datepicker({
 		showOn: "button",
@@ -137,15 +118,20 @@ $(document).ready(function(){
 			if (date > new Date())
 				return [false];
 			return [true];
+		},
+		onSelect: function (dateText) {
+			$(this).closest('.single-cal-area').find('.date').val(this.value);	
+			$('.single-cal-area').removeClass('on');
+			$('.single-cal-area').find('.single-cal-layer').removeClass('on');	
 		}
 	  });
 	$('.btn-cal-single').click(function(){
-		$('.single-cal-area').addClass('on');
-		$('.single-cal-area').find('.single-cal-layer').addClass('on');
+		$(this).closest('.single-cal-area').addClass('on');
+		$(this).closest('.single-cal-area').find('.single-cal-layer').addClass('on');
 	});
 	$('.btn-single-close, .single-cal-layer .ui-state-default').click(function(){
-		$('.single-cal-area').removeClass('on');
-		$('.single-cal-area').find('.single-cal-layer').removeClass('on');
+		$(this).closest('.single-cal-area').removeClass('on');
+		$(this).closest('.single-cal-area').find('.single-cal-layer').removeClass('on');
 	});
 
 	/* datepicker - 기간검색 */
@@ -163,7 +149,7 @@ $(document).ready(function(){
 		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
 
 	onSelect: function (dateText) {
-		$('#from').val(this.value);		
+		$(this).closest('.multi-cal-area').find('.input-from').val(this.value);		
 	},
 
 	})
@@ -182,7 +168,7 @@ $(document).ready(function(){
 		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
 		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
 	onSelect: function (dateText) {
-		$('#to').val(this.value);		
+		$(this).closest('.multi-cal-area').find('.input-to').val(this.value);			
 	}
 	})
 	.on("change", function () {
@@ -198,18 +184,24 @@ $(document).ready(function(){
 	  }
 	  return date;
 	}
-	setDate(); // 초기값 설정 
+	// setDate(); 
 
 	$('.btn-cal').click(function(){
-		$('.multi-cal-area').addClass('on');
-		$('.multi-cal-area').find('.multi-cal-layer').addClass('on');
+		var parentName = $(this).closest('[class*="layer-pop"]').attr('data-layer-name');
+		console.log(parentName);
+		if(parentName == 'chat-util'){
+			$(this).closest('.btn-date-area').next('.multi-cal-area').addClass('on');
+			$(this).closest('.btn-date-area').next('.multi-cal-area').find('.multi-cal-layer').addClass('on');
+		}else{
+			$(this).closest('.multi-cal-area').addClass('on');
+			$(this).closest('.multi-cal-area').find('.multi-cal-layer').addClass('on');
+		}
+	
 	});
 	$('.btn-cal-close').click(function(){
-		$('.multi-cal-area').removeClass('on');
-		$('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
-	});
-
-	
+		$(this).closest('.multi-cal-area').removeClass('on');
+		$(this).closest('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
+	});	
 	
 
 });
@@ -237,6 +229,19 @@ $(window).on('load', function(){
 	});
 
 
+	//셀렉트 화살표 스타일
+	$('select.styled').on('click',function (){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on')
+		}else{
+			$(this).addClass('on')
+		}
+	  })
+	  .on('blur',function (){
+		$(this).removeClass('on')
+	});
+	
+
 	//레이어팝업 (딤드 + 가운데정렬)
 	$(document).on('click', '.btnPop', function(){    
         $(this).addClass('on');
@@ -245,12 +250,52 @@ $(window).on('load', function(){
         var name = $(this).attr('data-title');
         $('.layer-popup[data-layer-name=' + name + ']').fadeIn(100, function(){          
             $(this).addClass('open').closest('.layer-popup').prepend('<div class="dimmed">');
-			layerPop();
+
+			var hei = $(window).height();		
+			var popH = $(this).find('.popup').outerHeight();
+			var pdT = (hei - popH) / 2;
+			var mgB = $(this).find('.popup').css('margin-bottom');
+			var space = mgB.replace(/px/g, '') * 2;
+		
+		
+			if($(this).hasClass('type2')){ // 헤더고정 테이블 들어있는 팝업 (window.height보다 내용이 길어지면 꽉차게)				
+				var popHeader = 0;
+				var popBottom = 0;
+				var popPadding = $(this).find('.popup').css('padding-top').replace(/px/g, '') * 2;
+				var popHeader = $(this).find('.popup-header').outerHeight();
+				var tblFixedHeader =$(this).find('.fix-th').outerHeight();
+				var layerCont = $(this).find('.fix-head');
+				var tableBody = $(this).find('table').outerWidth();
+			
+				if($(this).find('.bottom-area').length){			
+					var popBottom = $(this).find('.bottom-area').outerHeight();			
+				}						
+				var sum = hei - (popPadding + popHeader + popBottom + tblFixedHeader + 16); // 세로 스크롤영역 계산(layer-cont paddingT/B(16) 포함)					
+				layerCont.css('max-height', sum); // 스크롤영역 높이값
+
+				$(this).find('.fix-th.type1').css('width', tableBody); 
+				$(this).find('.fix-th.type2 > div').css('width', tableBody);
+			
+				if(hei < popH){
+					$(this).find('.popup').css('height', '100vh');
+					$(this).find('.fix-th.type1').css('width', tableBody - 17);  //스크롤 생겼을때 스크롤 너비(17)만큼 빼줌
+					$(this).find('.fix-th.type2 > div').css('width', tableBody - 8.5);		 
+				}else if(hei > popH){
+					 $(this).css({'padding-top':pdT});
+				}
+		
+			}else{	// 기본 레이어팝업		
+				if(hei - space < popH){
+					$(this).css({'padding-top':mgB});
+				}else{
+					$(this).css({'padding-top':pdT});
+				}
+			}
         });		
     });
 	/* 팝업닫기 */
     $(document).on('click', '.popClose,.dimmed', function(){      
-	 	$(this).closest('.layer-popup').removeClass('open').scrollTop(0).fadeOut(300, function(){
+	 	$(this).closest('.layer-popup').css('padding-top','').removeClass('open').scrollTop(0).fadeOut(300, function(){
 		$('.btnPop.on').focus().removeClass('on');
 		$(this).closest('.layer-popup').find('.dimmed').remove();
 		$('html').removeClass('popOpen');
@@ -366,7 +411,7 @@ $(window).on('load', function(){
 });
 
 $(window).resize(function(){	
-	layerPop();	
+//	layerPop();	
 	
 });
 
@@ -394,22 +439,7 @@ function rdoCheck(){
 }
 
 
-// 레이어팝업 위치설정
-function layerPop(){
-       $('.layer-popup').each(function(){
-		var hei = $(window).height();		
-        var popH = $(this).find('.popup').outerHeight();
-        var pdT = (hei - popH) / 2;
-        var mgB = $(this).find('.popup').css('margin-bottom');
-        var space = mgB.replace(/px/g, '') * 2;
-	
-        if(hei - space < popH){
-            $(this).css({'padding-top':mgB});
-        }else{
-            $(this).css({'padding-top':pdT});
-        }
-    });
-}
+
 
 // 레이어팝업 고정 위치설정
 function layerPopFixed(){
@@ -506,14 +536,20 @@ function draggable(){
 	$('.draggable').draggable();
 }
 
-// 초기값 설정
-function setDate(){
-	$('.from').datepicker('setDate', '-1M'); 
-	$('.to').datepicker('setDate', 'today'); 		
-	fromDate = $(".from").val();
-	toDate = $(".to").val();
-	
-	$('.calendar-area #from').val(fromDate); 
-	$('.calendar-area #to').val(toDate); 
-
+//토스트 메시지 팝업 
+function toestTxt(){
+	$('.toest-txt').fadeIn(400).delay(1000).fadeOut(400);
 }
+
+
+// 초기값 설정
+// function setDate(){
+// 	$('.from').datepicker('setDate', '-1M'); 
+// 	$('.to').datepicker('setDate', 'today'); 		
+// 	fromDate = $(".from").val();
+// 	toDate = $(".to").val();
+	
+// 	$('.calendar-area #from').val(fromDate); 
+// 	$('.calendar-area #to').val(toDate); 
+
+// }
