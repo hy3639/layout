@@ -450,7 +450,7 @@ button:disabled {
 .bg-blue {background-color:#446cf3; color:#fff;}
 .bg-blue:disabled {background-color:#eceef2; color:#a7adbf}
 .bg-gray {background-color:#727988; color:#fff}
-.bg-lightgray {background-color:#eceef2; color:#727988}
+.bg-lightgray {background-color:#eceef2; color:#4a4e5e; font-weight: 400 !important;}
 .bg-red {background-color:red; color:#fff}
 .bg-white {background-color:#fff; color:#4a4e5e}
 /* .bg-gray:hover {background-color:#e7e9eb}  */
@@ -499,6 +499,13 @@ button:disabled {
 	font-size:14px;
 	font-weight:300;
 }
+.btn-mid3 {
+	min-width: 92px;
+	height:44px;
+	font-size:16px;
+	line-height: 42px;
+	font-weight: 500;
+}
 a.btn-mid2 {line-height:36px}
 
 .btn-lg {
@@ -543,7 +550,7 @@ a.btn-mid2 {line-height:36px}
 }
 
 
-
+/*
  .btn-row{
 	position:relative;
 	width: 22px;
@@ -582,7 +589,7 @@ a.btn-mid2 {line-height:36px}
   }  
   .btn-row.minus:after{ 
 	transform: rotate(180deg); 
-  }
+  }*/
 .btn-round + .btn-round {margin-left:8px}
 
 /*버튼 그룹*/
@@ -626,6 +633,23 @@ a.btn-mid2 {line-height:36px}
 	color:#446cf3;
 	font-weight: 500;
 }
+
+.btn-group-area.check {
+	flex-wrap: wrap;
+	background-color: transparent
+}
+.btn-group-area.check li {width: 100%; margin-top: 12px;}
+.btn-group-area.check li:first-child {margin-top: 0;}
+.btn-group-area.check li .btn-type1{
+	width: 100%;
+	padding: 0 8px 0 16px;
+	text-align: left;
+}
+.btn-group-area.check .btn-type1.on {
+	background: url(../images/icon/btn-check3-on.svg) no-repeat calc(100% - 8px) center;
+	background-size: 32px 32px;
+} 
+
 /* ==============
 	리스트 스타일
 ============== */
@@ -746,7 +770,7 @@ input[type=checkbox][class^=styled] {
 .chkbox input[type=radio].styled + .chk {
 	border-radius:50%; 
 	display: inline-block;
-	border:2px solid #dde0e7;
+	border:0;
 	background-color:#dde0e7;
 }
 .chkbox input[type=radio].styled + .chk:before {
@@ -762,16 +786,16 @@ input[type=checkbox][class^=styled] {
     opacity:0;
 }
 /* .chkbox input[type=radio]:checked + .chk {border:2px solid#455896} */
-.chkbox input[type=radio].styled:checked + .chk {background-color:#fff;border:2px solid #426cf3;}
+.chkbox input[type=radio].styled:checked + .chk {background-color:#426cf3;/*border:2px solid #426cf3;*/}
 .chkbox input[type=radio].styled:checked + .chk:before {
     width:8px;
     height:8px;
     opacity:1;
-	background-color:#426cf3;
+	background-color:#fff;
     /* transition:all .3s; */
 }
-.chkbox input[type=radio].styled[disabled] + .chk {background-color:#f5f5f5; border-color:#c7c7c7;}
-.chkbox input[type=radio].styled[disabled] + .chk:before {background-color:#ddd;}
+.chkbox input[type=radio].styled[disabled] + .chk {background-color:#f1f3f7;}
+.chkbox input[type=radio].styled[disabled] + .chk:before {background-color:#dde0e7;}
 
 /* 체크박스 */
 .chkbox input[type=checkbox] {
@@ -804,7 +828,10 @@ input[type=checkbox][class^=styled] {
 	background-size: 24px 24px;
 }
 .chkbox.on + label {color:#446cf3; font-weight: 500;}
-/* .chkbox input[type=checkbox][disabled] + .chk {background-color:#f5f5f5;} */
+.chkbox input[type=checkbox][disabled] + .chk {
+	background: url(../images/icon/btn-check-disable.svg) no-repeat center;
+	background-size: 24px 24px;
+}
 /* .chkbox input[type=checkbox]:checked + .chk:before {
     transform:translate(-50%,-50%) rotate(45deg);
     opacity:1;
@@ -1667,12 +1694,31 @@ table td.no-data {padding:50px 0 !important}
 	justify-content: space-between; 
 	align-items: center;
 }
+.calendar-area.disabled input {color:#a7adbf; }
+.calendar-area.disabled .divide:before {background-color:#a7adbf;}
+.calendar-area.disabled .btn-cal {
+	background: url(../images/icon/ico-calendar-24.svg) no-repeat center;
+	background-size: 24px 24px;
+	cursor: default;
+}
 .calendar-area.left {justify-content: flex-start;}
-.calendar-area .divide {width:16px; text-align: center;}
+.calendar-area .divide {position:relative;width:16px; text-align: center;font-size: 0;}
+.calendar-area .divide:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	margin-left: -4px;
+	width: 8px;
+	height: 1px;
+	background-color: #4a4e5e;
+}
+.calendar-area input {font-family: 'roboto';}
 .calendar-area .btn-cal {
 	width:36px;
 	height:36px;
-	background: url(../images/icon/ico-calendar-24.svg) no-repeat center 5px;
+	background: url(../images/icon/ico-calendar-24.svg) no-repeat center;
 	background-size: 24px 24px;
 	margin-left: auto;
 }
@@ -1689,16 +1735,17 @@ table td.no-data {padding:50px 0 !important}
 	border-radius: 8px;
 }
 .multi-cal-area.on {border-color:#446cf3; background-color:#fff;}
-.multi-cal-area.on .input-text input {color:#3e61e4 !important}
+.multi-cal-area.on .divide:before {background-color:#446cf3}
+.multi-cal-area.on .input-text input {color:#3e61e4 !important; font-weight: 500;}
 .multi-cal-area.on .btn-cal {
-	background: url(../images/icon/ico-calendar-24-on.svg) no-repeat center 7px;
+	background: url(../images/icon/ico-calendar-24-on.svg) no-repeat center;
 	background-size: 24px 24px;
 }
 .multi-cal-area .calendar-area {padding-left:8px; width:100%;}
 .multi-cal-area .from {margin-right: 12px;}
 .multi-cal-area .to {margin-left: 12px;}
-.multi-cal-area .input-text {width: 78px; padding:0 4px}
-.multi-cal-area .input-text input {padding:0; border:0; background-color:transparent}
+.multi-cal-area .input-text {width: 80px; padding:0 4px}
+.multi-cal-area .input-text input {padding:0; border:0; background-color:transparent; font-family: 'roboto';}
 .multi-cal-area > .btn-area {margin-left:10px}
 .multi-cal-area > .btn-area > button {
 	border-radius: 5px;
@@ -1777,7 +1824,7 @@ table td.no-data {padding:50px 0 !important}
 	border:2px solid #edf0f6; */
 	border-radius: 8px;
 }
-.single-cal-area.input {border:2px solid #edf0f6; padding-left: 16px;background-color: #edf0f6;}
+.single-cal-area.input {border:2px solid #edf0f6; padding-left: 16px;background-color: #edf0f6; font-family: 'roboto';}
 .single-cal-area.input.on input,
 .single-cal-area.input.on .calendar-area {background-color: #fff; color:#3e61e4}
 /* .single-cal-area.input.on .calendar-area {background-color: #edf0f6;} */
@@ -1800,7 +1847,7 @@ table td.no-data {padding:50px 0 !important}
 
 /* .single-cal-area.on .input-text input {color:#3e61e4 !important} */
 .single-cal-area.on .btn-cal-single  {
-	background: #fff url(../images/icon/ico-calendar-24-on.svg) no-repeat center 8px;
+	background: #fff url(../images/icon/ico-calendar-24-on.svg) no-repeat center;
 	background-size: 24px 24px;
 	border:2px solid #446cf3;
 }
@@ -2707,6 +2754,7 @@ html.popOpen {overflow:hidden;}
 	margin-right: 12px;
 	font-size: 14px;
 	color:#727988;
+	font-family: 'roboto';
 }
 .main-chat .chat-area .search-box  .btn-arrow button:not(.btn-text-delete) {
 	position:relative;
@@ -3529,6 +3577,7 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 	margin-right: 8px;
 	font-size: 13px;
 	color:#727988;
+	font-family: 'roboto';
 }
 .layer-popup-fixed[data-layer-name="chat-list-area"] .search-box .btn-arrow .btn-text-delete {margin-right: 16px;}
 .layer-popup-fixed[data-layer-name="chat-list-area"] .search-box .btn-arrow button:not(.btn-text-delete) {
@@ -3866,7 +3915,8 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 
 .admin-area .box-white .box:last-child {padding-left: 32px;padding-right:0;}
 .admin-area .box-white .box .input-text input,
-.select-box select.styled {height: 44px; line-height: 44px;}
+.admin-area .box-white .box .select-box select.styled {height: 44px; line-height: 44px; font-size: 14px;}
+.admin-area .box-white .box .select-box select.styled {font-family: 'roboto';} 
 .admin-area:not(.cont-area) .box-white .box .cont > * + * {margin-top: 12px;}
 .admin-area .box-white .box .cont .list-style2 {margin-top: 32px;}
 .admin-area .box-white .box .cont .gray-box {max-height: 120px; overflow-y:auto;}
@@ -3945,7 +3995,7 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 .admin-area .search-area .btn-search:hover {background: #e7e9eb url(../images/icon/ico_srch2.png) no-repeat 20px center;}
 
 
-
+.admin-area .btn-group-area.check + .list-style2 {margin-bottom: 20px;}
 
 
 /*활동 등록 팝업, sms발송팝업 */

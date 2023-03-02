@@ -198,6 +198,11 @@ $(document).ready(function(){
 		}
 	
 	});
+	$('.btn-cal-setting').click(function(){
+		$(this).closest('.btn-date-area').next('.multi-cal-area').find('.btn-cal').trigger('click');
+	});	
+	
+	
 	$('.btn-cal-close').click(function(){
 		$(this).closest('.multi-cal-area').removeClass('on');
 		$(this).closest('.multi-cal-area').find('.multi-cal-layer').removeClass('on');
