@@ -39,7 +39,8 @@
 							<div class="button-area margin center">
 								<button type="button" class="btn-mid btn-round bg-green btnPop" data-title="Popup01">alert</button>
 								<button type="button" class="btn-mid btn-round bg-green btnPop" data-title="Popup02">alert 버튼1개일경우</button>
-								<a href="#" class="btn-mid btn-round bg-green btnPop" data-title="Popup03">타이틀 있는 팝업</a>														
+								<a href="#" class="btn-mid btn-round bg-green btnPop" data-title="Popup03">타이틀 있는 팝업</a>	
+								<a href="#" class="btn-mid btn-round bg-green btnPop" data-title="Popup04">타이틀 있는 팝업2</a>															
 							</div>							
 
 							<!-- alert -->
@@ -157,7 +158,102 @@
 										<button type="button" class="btn-round btn-lg bg-blue">확인</button>			
 									</div>
 								</div>
-							</div>						
+							</div>	
+							
+							<!-- 타이틀이 있는 팝업(기본) -->
+							<div class="layer-popup type2" data-layer-name="Popup04"> 
+								<div class="popup xl">
+									<div class="popup-header">			
+										<p class="title">활동 등록</p>		
+										<button class="btn-close popClose">팝업닫기</button>	
+									</div>		
+									<div class="cont-area admin-area">
+										<div class="section">
+											<p class="sub-txt">
+												활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 활동 등록 안내 문구 미정<br>
+												활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 활동 등록 안내 문구 미정 
+											</p>
+											<div class="box-white flex-width">					
+												<div class="box" style="width:282px">
+													<p class="admin-tit">손님목록</p>
+													<div class="cont">
+														<!-- 고객정보 검색 전  -->
+														<!-- <p class="no-data">고객 정보를 검색해 주세요</p> -->
+														<!-- //고객정보 검색 전  -->
+														<ul class="tit-list2">
+															<li>
+																<span class="tit">손님명</span>
+																<span class="cont">홍길동</span>
+															</li>
+															<li>
+																<span class="tit">손님번호</span>
+																<span class="cont">123456789</span>
+															</li>
+															<li>
+																<span class="tit">연령</span>
+																<span class="cont">30대</span>
+															</li>
+															<li>
+																<span class="tit">성별</span>
+																<span class="cont">여성</span>
+															</li>
+															<li>
+																<span class="tit">세분화</span>
+																<span class="cont">Mass, 직업코드갱신 대상</span>
+															</li>
+															<li>
+																<span class="tit">전담직원</span>
+																<span class="cont">김하나</span>
+															</li>	
+															<li>
+																<span class="tit">담당직원</span>
+																<span class="cont">김하나</span>
+															</li>										
+														</ul>						
+													</div>								
+												</div>
+												<div class="box">
+													<p class="admin-tit">영업활동 등록</p>
+													<div class="cont">							
+														<p class="sub-tit">관심상품</p>
+														<ul class="form-list wrap left">
+															<li><input type="radio" name="radio1" class="styled" id="radio1-1" checked><label for="radio1-1">적립식</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-2"><label for="radio1-2">거치식</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-3"><label for="radio1-3">청약</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-4"><label for="radio1-4">집합투자</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-5"><label for="radio1-5">신탁</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-6"><label for="radio1-6">방카</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-7"><label for="radio1-7">대출</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-8"><label for="radio1-8">결재성</label></li>
+															<li><input type="radio" name="radio1" class="styled" id="radio1-9"><label for="radio1-9">기타</label></li>
+														</ul>	
+														
+														<p class="sub-tit">활동내용</p>
+														<div class="gray-box text-area">
+															<textarea placeholder="활동내용을 입력해 주세요 (4,000byte 이내)"></textarea>
+															<p class="txt-count">0/4,000 byte</p>
+														</div>
+														
+														<p class="sub-tit">손님반응</p>
+														<ul class="form-list wrap left">
+															<li><input type="radio" name="radio3" class="styled" id="radio3-1" checked><label for="radio3-1">해당 없음</label></li>
+															<li><input type="radio" name="radio3" class="styled" id="radio3-2"><label for="radio3-2">매우긍정</label></li>
+															<li><input type="radio" name="radio3" class="styled" id="radio3-3"><label for="radio3-3">긍정</label></li>
+															<li><input type="radio" name="radio3" class="styled" id="radio3-4"><label for="radio3-4">보통</label></li>
+															<li><input type="radio" name="radio3" class="styled" id="radio3-5"><label for="radio3-5">부정</label></li>
+															<li><input type="radio" name="radio3" class="styled" id="radio3-6"><label for="radio3-6">매우부정</label></li>								
+														</ul>
+													</div>
+													<div class="btn-area align-right">								
+														<button type="button" class="btn-round btn-mid bg-lightgray popClose">취소</button>
+														<button type="button" class="btn-round btn-mid bg-blue popClose">저장</button>						
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>		
+								</div>
+							</div>
 						</div>
 					</div>	
 				</div>	

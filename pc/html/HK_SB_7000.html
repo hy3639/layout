@@ -14,160 +14,643 @@
 			<a href="#" class="logo">
 				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
 			</a>
-			<div class="btn-toggle-area">
-				<button type="button" class="btn-msg">상담 ON</button>
-				<button type="button" class="btn-msg on">상담 OFF</button>
-			</div>
-			<span class="waiting">대기 : <em>00명</em></span>
 		</div>
 		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w320" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">
+						3가지 타입 외에도 상담하기 화면에서<br>
+						Drag &amp; Drop하여 원하는 순서로 변경할 수 있어요!
+					</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
 			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
-			<button type="button" class="btn-logout btnPop" title="Popup01">로그아웃</button>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
 			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
 			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
 				<ul class="depth1">
-					<li><a href="#">대인상담</a></li>
-					<li>Admin
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
 						<ul class="depth2">
-							<li><a href="#">채팅설정</a></li>
-							<li><a href="#">채널관리</a></li>
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
 							<li><a href="#">상담내역</a></li>
-							<li><a href="#">메뉴권한관리</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>			
 		</div>
 	</div>
-	<div class="container">
-		<div class="fixed-title">
-			<div class="tit-area">
-				<h2>메뉴권한관리</h2>
-				<div class="btn-area">
-					<button type="button" class="btn-round btn-mid2 bg-navy">저장</button>				
-				</div>
-			</div>
-		</div>
+	
+	<div class="container">	
 		<div class="contents admin-area">
-			<div class="content">				
-				<div class="section">				
-					<div class="board-list2 multi">
-						<table>
-							<caption>리스트</caption>
-							<colgroup>
-								<col style="width:20%">
-								<col style="width:20%">	
-								<col >	
-								<col style="width:10%">
-								<col style="width:10%">
-								<col style="width:10%">																	
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col" rowspan="2">화면ID</th>
-									<th scope="col" rowspan="2">화면명</th>
-									<th scope="col" rowspan="2">화면URL</th>
-									<th scope="col" colspan="3">권한설정</th>
-								</tr>
-								<tr>								
-									<th scope="col">본점 관리자</th>
-									<th scope="col">지점 관리자</th>
-									<th scope="col">지점 담당자</th>									
-								</tr>
-							</thead>
-							<tbody>							
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled" checked></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-								<tr>
-									<td>화면ID</td>
-									<td>화면명</td>
-									<td class="left">화면URL</td>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td><input type="checkbox" class="styled"></td>
-									<td><input type="checkbox" class="styled"></td>									
-								</tr>
-							</tbody>
-						</table>
-					</div>	
+			<div class="tit-area">
+				<h2>상담 현황</h2>
+			</div>			
+			<div class="content box-white-column">					
+				<div class="section">
+					<div class="box-white">
+						<div class="cont">
+							<ul class="form-group">								
+								<li class="flex-area">
+									<p class="tit">직원 선택</p>
+									<div class="cont">
+										<span class="select-box">
+											<select class="styled">
+												<option value="">전체</option>
+												<option value="">홍길동(0123456)</option>												
+											</select>
+										</span>
+									</div>
+								</li>									
+							</ul>
+						</div>							
+					</div>
+					<div class="box-white">
+						<div class="cont">
+							<ul class="form-group flex-area">								
+								<li class="flex-area">
+									<p class="tit">지점</p>
+									<div class="cont flex-area"> 
+										<ul class="btn-group-area radio">
+											<li><input type="radio" name="radio1" id="radio1-1" checked><label class="btn-type1" for="radio1-1">전체 지점</label></li>
+											<li><input type="radio" name="radio1" id="radio1-2"><label class="btn-type1" for="radio1-2">지점 선택</label></li>											
+										</ul>						
+									</div>
+								</li>
+								<li class="flex-area">
+									<p class="tit">직원 선택</p>
+									<div class="cont"> <!-- input text 입력시 input-on 클래스 추가 -->
+										<div class="input-text gray">
+											<input type="text" placeholder="직원명 또는 행번을 입력해 주세요">
+											<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+										</div>
+										<div class="input-layer">
+											<ul>
+												<li><a href="#"><mark>이하나</mark>(0123785)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0124458)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0123588)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0124553)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0124583)</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>									
+							</ul>
+						</div>							
+					</div>
+					<div class="box-white">
+						<div class="cont">
+							<ul class="form-group flex-area">								
+								<li class="flex-area">
+									<p class="tit">지점</p>
+									<div class="cont">
+										<ul class="btn-group-area radio">
+											<li><input type="radio" name="radio2" id="radio2-1"><label class="btn-type1" for="radio2-1">전체 지점</label></li>
+											<li><input type="radio" name="radio2" id="radio2-2" checked><label class="btn-type1" for="radio2-2">지점 선택</label></li>											
+										</ul>
+									</div>
+									<div class="cont flex-area input-on">  <!-- input text 입력시 input-on 클래스 추가 -->
+										<div class="input-text gray">
+											<input type="text" placeholder="지점명 또는 지점코드를 입력해 주세요">
+											<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+										</div>
+										<div class="input-layer">
+											<ul>
+												<li><a href="#"><mark>강남</mark> 1지점(0123)</a></li>
+												<li><a href="#"><mark>강남</mark> 2지점(0124)</a></li>
+												<li><a href="#"><mark>강남</mark> 3지점(0123)</a></li>
+												<li><a href="#"><mark>강남</mark> 4지점(0123)</a></li>
+												<li><a href="#"><mark>강남</mark> 5지점(0123)</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="flex-area">
+									<p class="tit">직원 선택</p>
+									<div class="cont input-on">  <!-- input text 입력시 input-on 클래스 추가 -->
+										<div class="input-text gray">
+											<input type="text" placeholder="직원명 또는 행번을 입력해 주세요">
+											<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+										</div>
+										<div class="input-layer">
+											<ul>
+												<li><a href="#"><mark>이하나</mark>(0123785)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0124458)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0123588)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0124553)</a></li>
+												<li><a href="#"><mark>이하나</mark>(0124583)</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>									
+							</ul>
+						</div>							
+					</div>
+					<div class="box-white pdt0">
+						<div class="top-info">
+							<ul>
+								<li class="num">2023-02-16</li>
+								<li>강남 1지점(01234)</li>
+								<li>전체</li>
+								<li>총 92건</li>
+							</ul>
+						</div>
+						<div class="board-list2">					
+							<table>
+								<caption>상담현황 테이블</caption>
+								<colgroup>
+									<col style="width: 172px;">
+									<col style="width: 180px;">									
+									<col style="width: 94px;">
+									<col style="width: 94px;">
+									<col style="width: 118px;">
+									<col style="width: 94px;">									
+									<col style="width: 94px;">
+									<col style="width: 118px;">
+									<col style="width: 172px">
+								</colgroup>	
+								<thead>
+									<tr>
+										<th rowspan="2">구분</th>
+										<th rowspan="2" class="align-left">업무유형</th>
+										<th colspan="3" class="line">상담 중 현황</th>
+										<th colspan="3"  class="line">상담 종료 현황</th>
+										<th rowspan="2">합계</th>										
+									</tr>
+									<tr>
+										<th>상담중</th>
+										<th>대기중</th>
+										<th>부재중</th>
+										<th>정상 종료</th>
+										<th>시스템 종료</th>
+										<th>대화없이 종료</th>										
+									</tr>									
+								</thead>					
+								<tbody>							
+									<tr class="row">
+										<td rowspan="3">예적금</td>
+										<td  class="align-left">목돈 굴리기</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button> <!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">목돈 굴리기</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<!-- 
+														차트 컬러는 순서대로 노출
+														#34e5b2
+														#486df5
+														#fe7676
+														#e84392
+														#ffca6e
+														#6d5ce8
+														#4caadd
+														#005095
+														#856f67
+														#856f67
+														#552d86
+														#cc8ece
+														#f6a2c6
+														#646d8d
+													 -->
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>										
+										</td> 
+									</tr>
+									<tr>									
+										<td  class="align-left">목돈 모으기</td>
+										<td class="num">-</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">1</td>
+										<td class="num">3</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">2</button>								
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">목돈 모으기</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">퇴직연금 IRP</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num row">-</td>
+									</tr>
+									<tr class="row">
+										<td rowspan="6">대출</td>
+										<td  class="align-left">전(월세) 대출</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">13</td>
+										<td class="num">2</td>
+										<td class="num">1</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">20</button>								
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">전(월세) 대출</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">부동산담보 대출</td>
+										<td class="num">-</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button>									
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">부동산담보 대출</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">신용 대출</td>
+										<td class="num">1</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">5</td>
+										<td class="num">6</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button><!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">신용 대출</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">오토 금융</td>
+										<td class="num">-</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button><!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">오토 금융</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">개인 사업자 대출</td>
+										<td class="num">1</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">5</td>
+										<td class="num">6</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button><!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">개인 사업자 대출</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">기업 대출</td>
+										<td class="num">1</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">5</td>
+										<td class="num">6</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button><!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">기업 대출</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="row">
+										<td rowspan="4">외환</td>
+										<td  class="align-left">유학 등 기타자금</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button><!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">유학 등 기타자금</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td> 
+									</tr>
+									<tr>									
+										<td  class="align-left">재외동포 재산반출</td>
+										<td class="num">-</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num">2</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button><!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">재외동포 재산반출</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">해외부동산</td>
+										<td class="num">5</td>
+										<td class="num">1</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num">3</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">해외부동산</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>									
+										<td  class="align-left">기업성 해외자금</td>
+										<td class="num">2</td>
+										<td class="num">3</td>
+										<td class="num">4</td>
+										<td class="num">1</td>
+										<td class="num">-</td>
+										<td class="num">4</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">기업성 해외자금</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="row">
+										<td>기타 안내</td>
+										<td  class="align-left">도움이 필요하세요?</td>
+										<td class="num">1</td>
+										<td class="num">2</td>
+										<td class="num">1</td>
+										<td class="num">2</td>
+										<td class="num">-</td>
+										<td class="num">-</td>
+										<td class="num row">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">17</button><!-- 클릭시 on 클래스 추가-->										
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit">도움이 필요하세요?</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph2.png">
+													</div>
+												</div>
+											</div>
+										</td> 
+									</tr>
+								</tbody> 
+								<tfoot>
+									<tr>
+										<td colspan="2">합계</td>
+										<td class="num col">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit type2">상담중</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph1.png">
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="num col">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit type2">대기중</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph1.png">
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="num col">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit type2">부재중</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph1.png">
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="num col">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit type2">정상 종료</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph1.png">
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="num col">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit type2">시스템 종료</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph1.png">
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="num col">
+											<button type="button" class="btnPopBorder btn-graph" data-title="graph">8</button>
+											<div class="layer-popup-border" data-layer-name="graph">  
+												<div class="popup-header">	
+													<p class="tit type2">대화없이 종료</p>		
+													<button class="btn-close popCloseBorder">팝업닫기</button>	
+												</div>
+												<div class="layer-cont">
+													<div class="graph-area">
+														<img src="../images/img/@temp_graph1.png">
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="num">32</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>									
+					</div>
+					
 				</div>
 			</div>
 			<div class="footer">
 				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
 			</div>
 		</div>
-	</div>
-	
+	</div>	
 </div>
+
+
 
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>

@@ -129,7 +129,7 @@ $(document).ready(function(){
 		$(this).closest('.single-cal-area').addClass('on');
 		$(this).closest('.single-cal-area').find('.single-cal-layer').addClass('on');
 	});
-	$('.btn-single-close, .single-cal-layer .ui-state-default').click(function(){
+	$('.btn-single-close').click(function(){
 		$(this).closest('.single-cal-area').removeClass('on');
 		$(this).closest('.single-cal-area').find('.single-cal-layer').removeClass('on');
 	});
@@ -265,17 +265,17 @@ $(window).on('load', function(){
 		
 			if($(this).hasClass('type2')){ // 헤더고정 테이블 들어있는 팝업 (window.height보다 내용이 길어지면 꽉차게)				
 				var popHeader = 0;
-				var popBottom = 0;
+				// var popBottom = 0;
 				var popPadding = $(this).find('.popup').css('padding-top').replace(/px/g, '') * 2;
 				var popHeader = $(this).find('.popup-header').outerHeight();
 				var tblFixedHeader =$(this).find('.fix-th').outerHeight();
 				var layerCont = $(this).find('.fix-head');
 				var tableBody = $(this).find('table').outerWidth();
 			
-				if($(this).find('.bottom-area').length){			
-					var popBottom = $(this).find('.bottom-area').outerHeight();			
-				}						
-				var sum = hei - (popPadding + popHeader + popBottom + tblFixedHeader + 16); // 세로 스크롤영역 계산(layer-cont paddingT/B(16) 포함)					
+				// if($(this).find('.bottom-area').length){			
+				// 	var popBottom = $(this).find('.bottom-area').outerHeight();			
+				// }						
+				var sum = hei - (popPadding + popHeader + tblFixedHeader + 16); // 세로 스크롤영역 계산(layer-cont paddingT/B(16) 포함)					
 				layerCont.css('max-height', sum); // 스크롤영역 높이값
 
 				$(this).find('.fix-th.type1').css('width', tableBody); 
@@ -359,11 +359,13 @@ $(window).on('load', function(){
 	 });
 
    
-	 //간편발송 미리보기 / 위치고정 레이어
+	 //위치고정 레이어
 	 $('.btnPopBorder').click(function(){
 		var name = $(this).attr('data-title');
 		$(this).addClass('on');
-		if(name == 'link-preview'){ ///간편발송 미리보기 
+		
+		if(name == 'link-preview'){ ///간편발송 미리보기 	
+
 			var sHeight = window.innerHeight; 
 			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height() + 36; //푸터높이
 			var divTop = $(this).closest('li').offset().top; 
@@ -382,8 +384,52 @@ $(window).on('load', function(){
 					"bottom": ''
 				})		
 			}
-		}	
-		$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
+			$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
+		}else if(name=='graph'){ // 상담현황 그래프팝업	
+
+			var sWidth = $('.wrapper').outerWidth();
+			var winPos = $(window).scrollTop() +  $(window).outerHeight() - 78; //헤더높이 78
+			var targetDiv = $(this).closest('td');
+			var targetLayer = $(this).closest('td').find('.layer-popup-border');			
+			var posTop = targetDiv.position().top + 61;	//td높이 + 레이어간격 61
+			var posLeft = targetDiv.position().left;
+			var layerW = targetDiv.find('.layer-popup-border').outerWidth();
+			var layerH = targetDiv.find('.layer-popup-border').outerHeight();
+			
+			if($(this).parent().hasClass('row')){
+				if(posTop + layerH > winPos) {
+					targetLayer.css({				
+						"bottom": 61,
+						"right": 0,
+						"top" : ''
+					}).addClass('on');
+				
+				}else{
+					targetLayer.css({				
+						"top": 61,
+						"right": 0,
+						"bottom" :''
+					}).addClass('on');				
+				}				
+			}else{
+				if(posLeft + layerW > sWidth) {
+					targetLayer.css({				
+						"bottom": 61,
+						"right": 0,
+						"left": ''
+					}).addClass('on');				
+				}else{
+					targetLayer.css({				
+						"bottom": 61,
+						"left": 0,
+						"right": ''
+					}).addClass('on');				
+				}
+			}
+		}else{ // 일반 위치고정 팝업	
+			$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
+		}
+		
 	 });
 	 /*닫기*/
 	 $(document).on('click', '.popCloseBorder', function(){
@@ -545,6 +591,30 @@ function draggable(){
 function toestTxt(){
 	$('.toest-txt').fadeIn(400).delay(1000).fadeOut(400);
 }
+
+
+// 레이어팝업 설정
+function layerPop(){
+    $('.btnPop, .layer-popup').each(function(){ 
+       var tit = $(this).attr('title');
+        $(this).attr('layer-name', tit).removeAttr('title');
+    });
+
+    $('.layer-popup').each(function(){
+		var hei = $('.wrapper').outerHeight();		
+        var popH = $(this).find('.popup').outerHeight();
+        var pdT = (hei - popH) / 2;
+        var mgB = $(this).find('.popup').css('margin-bottom');
+        var space = mgB.replace(/px/g, '') * 2;
+
+        if(hei - space < popH){
+            $(this).css({'padding-top':mgB});
+        }else{
+            $(this).css({'padding-top':pdT});
+        }
+    });
+}
+
 
 
 // 초기값 설정

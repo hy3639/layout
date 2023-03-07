@@ -355,7 +355,7 @@
 							<button type="button" class="btn-text toestClose">닫기</button>				
 						</div>
 						<div class="toest-cont">
-							<div class="search-box gray">
+							<div class="search-box gray"> <!-- 2023-03-06 input 입력시 input-on클래스 추가 (텍스트 삭제 버튼노출)-->
 								<input type="text" placeholder="키워드 검색 (Enter시 검색 가능)">	<!-- 2023-02-06 -->
 								<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button> <!-- 2023-02-22 -->							
 							</div>
@@ -1257,7 +1257,7 @@
 														<p>고객명</p>																										
 													</div>
 													<div class="cont-area">
-														<div class="input-text gray">
+														<div class="input-text gray">  <!-- 2023-03-06 input 입력시 input-on클래스 추가 (텍스트 삭제 버튼노출)-->
 															<input type="text" placeholder="한글 영문 가능/자릿수제한 없음">
 															<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button> <!-- 2023-02-22-->
 														</div>
@@ -2101,7 +2101,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bottom-area">
+		<!-- <div class="bottom-area">
 			<div class="pagenation">
 				<a href="#" class="btn-first">처음</a>
 				<a href="#" class="btn-prev">이전</a>
@@ -2118,7 +2118,7 @@
 				<a href="#" class="btn-next">다음</a>
 				<a href="#" class="btn-last">마지막</a>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 
@@ -2444,147 +2444,7 @@
 					</table>
 				</div>
 			</div>
-		</div>
-		<!-- <div class="layer-cont">			
-			<div class="cont-area">
-				<div class="board-list fix-head">
-					<table>
-						<caption>마케팅 교차판매 상세정보</caption>
-						<colgroup>
-							<col style="width: 37%;">
-							<col style="width: 18%;">
-							<col style="width: 18%;">			
-							<col style="width: 27%;">		
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">구분</th>
-								<th scope="col">보유</th>
-								<th scope="col">충족</th>
-								<th scope="col">금액</th>								
-							</tr>
-						</thead>
-						<tbody>							
-							<tr>
-								<td>담보대출</td>
-								<td><input type="checkbox" class="styled" checked></td>
-								<td><input type="checkbox" class="styled"></td>
-								<td>10,000,000</td>								
-							</tr>
-							<tr>
-								<td>기타대출</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td><input type="checkbox" class="styled"></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>소호대출</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr>
-								<td>입금이체</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td><input type="checkbox" class="styled" checked></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>급여</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>연금</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>가맹점</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr>
-								<td>출금이체</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td><input type="checkbox" class="styled" checked></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>카드이체</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>관리비</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>휴대폰</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>기타이체</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr>
-								<td>디지털</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td><input type="checkbox" class="styled" checked></td>
-								<td>0</td>							
-							</tr>
-							<tr>
-								<td>개인외환</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td><input type="checkbox" class="styled"></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>환전</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>송금</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>수출</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr class="depth">
-								<td>수입</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td></td>
-								<td>0</td>							
-							</tr>
-							<tr>
-								<td>하나멤버스</td>
-								<td><input type="checkbox" class="styled"></td>
-								<td><input type="checkbox" class="styled"></td>
-								<td>0</td>							
-							</tr>								
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div> -->
-			
+		</div>	
 	</div>
 </div>
 
@@ -2821,9 +2681,9 @@
 <script src="../js/common.js"></script>
 <script>
 
-	$('.btn-reset').click(function(){
-		setDate();
-	});
+	// $('.btn-reset').click(function(){
+	// 	setDate();
+	// });
 	/* 2023-02-06 추가 */
 	/* 간편발송 목록편집 */
 	$('.btn-switch').click(function(){

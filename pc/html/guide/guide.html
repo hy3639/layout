@@ -98,6 +98,40 @@
 								</div>
 							</div>
 						</div>
+						<div class="cont">
+							<div class="single-cal-area input">	
+								<div class="calendar-area">
+									<div class="input-text">
+										<input type="text" class="date" name="from" readonly>	
+									</div>										
+									<button type="button" class="btn-cal-single"><span class="blind">달력</span></button>
+								</div>					
+								<div class="single-cal-layer">
+									<div class="single"></div>				
+									<div class="btn-area">
+										<button type="button" class="btn-reset"><span>초기화</span></button>
+										<button type="button" class="btn-single-close"><span>닫기</span></button>
+									</div>
+								</div>
+							</div>
+							<!-- disabled -->
+							<div class="single-cal-area input">	
+								<div class="calendar-area disabled">
+									<div class="input-text">
+										<input type="text" class="date" name="from" readonly>	
+									</div>										
+									<button type="button" class="btn-cal-single" disabled><span class="blind">달력</span></button>
+								</div>					
+								<div class="single-cal-layer">
+									<div class="single"></div>				
+									<div class="btn-area">
+										<button type="button" class="btn-reset"><span>초기화</span></button>
+										<button type="button" class="btn-single-close"><span>닫기</span></button>
+									</div>
+								</div>
+							</div>
+							<!--// disabled -->
+						</div>
 					</div>
 				</div>
 			</section>
@@ -244,6 +278,21 @@
 							<!-- <div class="input-text">
 								<input type="text" placeholder="검색어를 입력해주세요" disabled>
 							</div>	 -->
+						</div>
+						<div class="cont input-on"> <!-- input 입력시 on클래스 추가 (텍스트 삭제 버튼, 검색레이어 노출)-->
+							<div class="input-text gray">
+								<input type="text" value="강남">
+								<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+							</div>
+							<div class="input-layer"> 
+								<ul>
+									<li><a href="#"><mark>강남</mark> 1지점(0123)</a></li>
+									<li><a href="#"><mark>강남</mark> 2지점(0124)</a></li>
+									<li><a href="#"><mark>강남</mark> 3지점(0123)</a></li>
+									<li><a href="#"><mark>강남</mark> 4지점(0123)</a></li>
+									<li><a href="#"><mark>강남</mark> 5지점(0123)</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 
