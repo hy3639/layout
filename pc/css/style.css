@@ -444,10 +444,12 @@ button:disabled {
 }
 
 .btn-round {
-	display:inline-block;	
+	display:inline-flex;	
 	padding:0 20px;
 	color:#fff;	
-	text-align:center;	
+	text-align:center;
+	justify-content: center;
+	/* align-items: center;	 */
 	border-radius: 8px;
 }
 .bg-green {background-color:#21b9bf; color:#fff}
@@ -488,7 +490,7 @@ button:disabled {
 	min-width:48px; 
 	padding:0 8px;
 	height:28px;
-	line-height:28px;
+	line-height:27px;
 	font-size:12px;
 	border-radius: 6px;
 	text-align: center;
@@ -497,7 +499,7 @@ button:disabled {
 	/* min-width:48px;  */
 	padding: 0 24px;
 	height:40px;
-	line-height:38px;
+	line-height:39px;
 	font-size:14px;
 	/* font-weight:300; */
 }
@@ -511,7 +513,7 @@ button:disabled {
 	min-width: 92px;
 	height:44px;
 	font-size:16px;
-	line-height: 42px;
+	line-height: 43px;
 	font-weight: 500;
 }
 a.btn-mid2 {line-height:36px}
@@ -519,7 +521,7 @@ a.btn-mid2 {line-height:36px}
 .btn-lg {
 	min-width:200px; 
 	height:48px;
-	line-height:46px;
+	line-height:47px;
 	font-size:16px;
 	font-weight:400;
 	border-radius: 8px;
@@ -1985,7 +1987,7 @@ table td.no-data {padding:50px 0 !important}
 	box-shadow: 0px 8px 10px 0 rgba(0, 0, 0, 0.1);
   	border: solid 1px #9aa0b5;
 	border-radius: 12px;
-	z-index:50;
+	z-index:100;
 }
 .single-cal-area.input .single-cal-layer {right:0; left:inherit; top:53px}
 .layer-popup-fixed .single-cal-area .single-cal-layer {right:0; left:inherit;}
@@ -4082,7 +4084,7 @@ mark.current {background: #21ed99!important; color:#000 !important;}
 .admin-area .box-white .btn-area .btn-mid {
 	min-width: 92px;
 	height: 44px;
-	line-height: 42px;
+	line-height:43px;
 	font-size: 16px;
 }
 .admin-area .box-white .btn-area .btn-mid.confirm-after {background-color:#eceef2;color:#4a4e5e; font-weight: 500;}

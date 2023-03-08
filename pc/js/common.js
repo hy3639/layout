@@ -385,7 +385,7 @@ $(window).on('load', function(){
 				})		
 			}
 			$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
-		}else if(name=='graph'){ // 상담현황 그래프팝업	
+		}else if(name == 'graph'){ // 상담현황 그래프팝업	
 
 			var sWidth = $('.wrapper').outerWidth();
 			var winPos = $(window).scrollTop() +  $(window).outerHeight() - 78; //헤더높이 78

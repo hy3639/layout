@@ -106,8 +106,8 @@ textarea::placeholder {color:#9095a5;font-weight:300}
 .blind{
 	position: absolute;
     clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
+    width: 0;
+    height: 0;
     margin: -1px;
     overflow: hidden;
 }
