@@ -112,13 +112,13 @@ $(document).ready(function(){
 		prevText: '이전 달', 
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
-		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+		dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], 
 		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
-		beforeShowDay: function(date){
-			if (date > new Date())
-				return [false];
-			return [true];
-		},
+		// beforeShowDay: function(date){
+		// 	if (date < new Date())
+		// 		return [false];
+		// 	return [true];
+		// },
 		onSelect: function (dateText) {
 			$(this).closest('.single-cal-area').find('.date').val(this.value);	
 			$('.single-cal-area').removeClass('on');
@@ -145,7 +145,7 @@ $(document).ready(function(){
 		prevText: '이전 달', 
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
-		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+		dayNamesMin: ['일','월', '화', '수', '목', '금', '토' ],
 		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
 
 	onSelect: function (dateText) {
@@ -165,7 +165,7 @@ $(document).ready(function(){
 		prevText: '이전 달', 
 		numberOfMonths:1, 		 
 		showMonthAfterYear: true ,   
-		dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+		dayNamesMin: ['일','월', '화', '수', '목', '금', '토'], 
 		monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
 	onSelect: function (dateText) {
 		$(this).closest('.multi-cal-area').find('.input-to').val(this.value);			
@@ -249,7 +249,11 @@ $(window).on('load', function(){
 
 	//레이어팝업 (딤드 + 가운데정렬)
 	$(document).on('click', '.btnPop', function(){    
-        $(this).addClass('on');
+        
+		if(!$(this).hasClass('none')){  // 버튼 on,off 동작 여부
+			$(this).addClass('on');
+		}	
+
         $('html').addClass('popOpen');
 
         var name = $(this).attr('data-title');
@@ -265,26 +269,36 @@ $(window).on('load', function(){
 		
 			if($(this).hasClass('type2')){ // 헤더고정 테이블 들어있는 팝업 (window.height보다 내용이 길어지면 꽉차게)				
 				var popHeader = 0;
-				// var popBottom = 0;
+				//var popBottom = 0;
 				var popPadding = $(this).find('.popup').css('padding-top').replace(/px/g, '') * 2;
 				var popHeader = $(this).find('.popup-header').outerHeight();
 				var tblFixedHeader =$(this).find('.fix-th').outerHeight();
 				var layerCont = $(this).find('.fix-head');
 				var tableBody = $(this).find('table').outerWidth();
 			
-				// if($(this).find('.bottom-area').length){			
-				// 	var popBottom = $(this).find('.bottom-area').outerHeight();			
-				// }						
-				var sum = hei - (popPadding + popHeader + tblFixedHeader + 16); // 세로 스크롤영역 계산(layer-cont paddingT/B(16) 포함)					
+				if($(this).find('.popup-info').length){			
+					var popBottom = $(this).find('.popup-info').outerHeight();	
+					var sum = hei - (popPadding + popHeader + tblFixedHeader + popBottom + 16);		
+				}else {
+					var sum = hei - (popPadding + popHeader + tblFixedHeader + 16); // 세로 스크롤영역 계산(layer-cont paddingT/B(16) 포함)		
+				}						
+							
 				layerCont.css('max-height', sum); // 스크롤영역 높이값
 
-				$(this).find('.fix-th.type1').css('width', tableBody); 
-				$(this).find('.fix-th.type2 > div').css('width', tableBody);
+				if($(this).find('.fix-th').hasClass('type2')){ // table 개수에 따라
+					$(this).find('.fix-th.type2 > div').css('width', tableBody);
+				}else{
+					$(this).find('.fix-th').css('width', tableBody); 
+				}					
 			
 				if(hei < popH){
 					$(this).find('.popup').css('height', '100vh');
-					$(this).find('.fix-th.type1').css('width', tableBody - 17);  //스크롤 생겼을때 스크롤 너비(17)만큼 빼줌
-					$(this).find('.fix-th.type2 > div').css('width', tableBody - 8.5);		 
+					if($(this).find('.fix-th').hasClass('type2')){
+						$(this).find('.fix-th.type2 > div').css('width', tableBody - 8.5);	
+					}else{
+						$(this).find('.fix-th').css('width', tableBody - 17);  //스크롤 생겼을때 스크롤 너비(17)만큼 빼줌
+					}				
+					 
 				}else if(hei > popH){
 					 $(this).css({'padding-top':pdT});
 				}
@@ -299,9 +313,14 @@ $(window).on('load', function(){
         });		
     });
 	/* 팝업닫기 */
-    $(document).on('click', '.popClose,.dimmed', function(){      
+    $(document).on('click', '.open .popClose,.dimmed', function(){	
+		var type = $(this).closest('.layer-popup').hasClass('none');
 	 	$(this).closest('.layer-popup').css('padding-top','').removeClass('open').scrollTop(0).fadeOut(300, function(){
-		$('.btnPop.on').focus().removeClass('on');
+		
+		if(!type == true){ // 버튼 on,off 동작 여부
+			$('.btnPop.on').focus().removeClass('on');	
+		}
+		
 		$(this).closest('.layer-popup').find('.dimmed').remove();
 		$('html').removeClass('popOpen');
 		});			
