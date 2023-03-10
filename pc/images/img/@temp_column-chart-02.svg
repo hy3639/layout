@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="524" height="315">
+    <path fill-rule="evenodd" fill="#E5E7ED" d="M23.1 281.1H524v1.9H23.1v-1.9z"/>
+    <path fill="none" d="M34 290.1h59.1V315H34v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="51" y="308.127">10대</text>
+    <path fill="none" d="M94 290.1h59.1V315H94v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="111" y="308.127">20대</text>
+    <path fill="none" d="M154 290.1h59.1V315H154v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="172" y="308.127">30대</text>
+    <path fill="none" d="M214 290.1h59.1V315H214v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="231" y="308.127">40대</text>
+    <path fill="none" d="M274 290.1h59.1V315H274v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="292" y="308.127">50대</text>
+    <path fill="none" d="M334 290.1h59.1V315H334v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="351" y="308.127">60대</text>
+    <path fill="none" d="M394 290.1h59.1V315H394v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="411" y="308.127">70대</text>
+    <path fill="none" d="M454 290.1h59.1V315H454v-24.9z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="472" y="308.205">기타</text>
+    <text font-family="Roboto" fill="#727988" font-size="13" x="8" y="286">0</text>
+    <text font-family="Roboto" fill="#727988" font-size="13" y="149">20</text>
+    <text font-family="Roboto" fill="#727988" font-size="13" y="9">40</text>
+    <text font-family="Roboto" fill="#727988" font-size="13" y="79">30</text>
+    <text font-family="Roboto" fill="#727988" font-size="13" x="1" y="217">10</text>
+    <path fill-rule="evenodd" fill="#F2F3F7" d="M23.1 143.1H524v1.9H23.1v-1.9zM23.1 212.1H524v1.9H23.1v-1.9zM23.1 73.1H524V75H23.1v-1.9zM23.1 4.1H524V6H23.1V4.1z"/>
+    <path fill-rule="evenodd" fill="#446CF3" d="M64 243.1c3.314 0 6 3.586 6 6V282H57.1v-32.9c0-2.414 3.586-6 6.9-6z"/>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="61" y="240">5</text>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="117" y="120">23</text>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="177" y="69">30</text>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="237" y="24">37</text>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="297" y="124">22</text>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="477" y="118">23</text>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="361" y="225">8</text>
+    <text font-family="Roboto" fill="#3E61E4" font-size="12" x="420" y="246">4</text>
+    <path fill-rule="evenodd" fill="#446CF3" d="M124 123.1c3.314 0 6 3.586 6 6V282h-12.9V129.1c0-2.414 3.586-6 6.9-6zM184 73a6 6 0 0 1 6 6v202.1h-12.9V79c0-3.314 3.586-6 6.9-6zM244 28c3.314 0 6 2.686 6 5.1v248h-12.9v-248c0-2.414 3.586-5.1 6.9-5.1zM304 128a6 6 0 0 1 6 6v147.1h-12.9V134c0-3.314 3.586-6 6.9-6zM364 229a6 6 0 0 1 6 6v46.1h-12.9V235c0-3.314 3.586-6 6.9-6zM484 122a6 6 0 0 1 6 6v153.1h-12.9V128c0-3.314 3.586-6 6.9-6zM424 250a6 6 0 0 1 6 6v25.1h-12.9V256c0-3.314 3.586-6 6.9-6z"/>
+</svg>

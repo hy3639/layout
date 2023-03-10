@@ -74,7 +74,7 @@
 	<!--// 2023-02-10 -->
 	<div class="container">		
 		<div class="contents main-chat">
-			<div class="content flex sortable">
+			<div class="content flex">
 				<div class="box chat-area">
 					<div class="top">
 						<div class="flex-area">
@@ -210,11 +210,14 @@
 							</div>
 							<!-- 2023-02-06 : 수정 -->
 							<div class="chat-box"> <!-- # 아이콘 있어야할 경우 "quick" 클래스 추가 -->
-								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>									
-								<div class="quick-btn-area flex-area both">									
-									<button type="button" class="btn-quick-text btnToest" data-title="Toest02"><span class="blind">자주쓰는문구</span></button> <!-- textarea에 내용 있는경우 on 클래스 추가 -->
-									<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->									
-								</div>	
+								<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
+								<div class="chat-box-inner">
+									<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>									
+									<div class="quick-btn-area flex-area both">									
+										<button type="button" class="btn-quick-text btnToest" data-title="Toest02"><span class="blind">자주쓰는문구</span></button> <!-- textarea에 내용 있는경우 on 클래스 추가 -->
+										<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->									
+									</div>	
+								</div>							
 							</div>
 							<!--// 2023-02-06 : 수정 -->
 						</div>
@@ -345,8 +348,7 @@
 							<button type="button" class="sms btnPop" data-title="Popup04">SMS 발송</button> <!--2023-02-22 -->
 							<button type="button" class="history">상담이력</button>
 						</div>
-						<!--// 2023-02-06 : 수정 -->
-						<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
+						<!--// 2023-02-06 : 수정 -->						
 					</div>
 					<!-- 간편발송 토스트팝업 -->
 					<div class="toest-popup" data-layer-name="Toest01"> <!-- 2023-02-06 : 속성명 일괄변경 layer-name => data-layer-name -->
@@ -2722,177 +2724,130 @@
 </div>
 <!-- //2023-02-22 -->
 
-<!-- 상담이관 -->
+<!-- 2023-03-09 상담이관 -->
 <div class="layer-popup type2" data-layer-name="Popup07"> 
 	<div class="popup xl">
 		<div class="popup-header">			
 			<p class="title">상담 이관</p>			
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
-		<p class="sub-txt">
+		<div class="popup-info">
+			<p class="sub-txt">
 				상담 중 고객이니 상담 대기 중인 고객을 선택하여 지점의 다른 담당자에게 상담 이관을 할 수 있습니다.<br>
 				현재 상담 가능한 지점 담당자별 업무 유형을 선택하여 상담 이관이 가능합니다. 상담 이관 시 손님은 종료하지 않고 연계하여 상담이 진행됩니다.
 			</p>
-		<div class="layer-cont">
-						
+			<p class="sub-tit">현재 이관 가능 담당자 
+				<span class="count"><em class="f-lightblue num">10</em><em class="num">/26</em>명</span>
+			</p>
+		</div>
+		
+		<div class="layer-cont">						
 			<div class="cont-area">
-				<div class="fix-th type1">
-					<span class="th">활동유형</span>
-					<span class="th">상세유형</span>
-					<span class="th">내용</span>
-					<span class="th">상태</span>
-					<span class="th">등록일자</span>
-					<span class="th">등록지원</span>
-					<span class="th">등록지원</span>
+				<div class="fix-th type3">
+					<span class="th">지점 담당자</span>
+					<span class="th">대기 인원</span>
+					<span class="th">현재 등록된 상담 업무 유형</span>					
 				</div>
 				<div class="board-list fix-head">					
 					<table>
 						<caption>최근 활동 정보</caption>
 						<colgroup>
-							<col style="width: 12%;">
+							<col style="width: 18%">
 							<col style="width: 13%;">
-							<col>
-							<col style="width: 8%;">
-							<col style="width: 12%;">
-							<col style="width: 13%;">
-							<col style="width: 13%;">
+							<col style="width: 69%;">						
 						</colgroup>						
 						<tbody>							
 							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
+								<td>이하나(0123456)</td>
+								<td>1명</td>
+								<td>
+									<ul class="btn-group-area wrap">
+										<li><button type="button" class="btn-type2 on">목돈 굴리기</button></li>
+										<li><button type="button" class="btn-type2">목돈 모으기</button></li>
+										<li><button type="button" class="btn-type2">퇴직연금 IRP</button></li>
+										<li><button type="button" class="btn-type2">전(월)세 대출</button></li>
+										<li><button type="button" class="btn-type2">부동산 담보 대출</button></li>
+										<li><button type="button" class="btn-type2">신용 대출</button></li>
+										<li><button type="button" class="btn-type2">오토 금융</button></li>
+										<li><button type="button" class="btn-type2">개인사업자 대출</button></li>
+										<li><button type="button" class="btn-type2">기업대출</button></li>
+										<li><button type="button" class="btn-type2">유학 등 기타 자금</button></li>
+										<li><button type="button" class="btn-type2">재외도포 재산반출</button></li>
+										<li><button type="button" class="btn-type2">해외 부동산</button></li>
+										<li><button type="button" class="btn-type2">기업성 해외자금</button></li>
+										<li><button type="button" class="btn-type2">도움이 필요하세요?</button></li>																				
+									</ul>
+								</td>							
 							</tr>
 							<tr>
-								<td>이벤트이벤트</td>
-								<td>생일생일생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>완료</td>
-								<td>2023-02-10</td>
-								<td>이하나이하나</td>
-								<td>영등포금융센터 영등포금융센터</td>	
+								<td>홍길동(0123456)</td>
+								<td>1명</td>
+								<td>
+									<ul class="btn-group-area wrap">
+										<li><button type="button" class="btn-type2 on">목돈 굴리기</button></li>
+										<li><button type="button" class="btn-type2">목돈 모으기</button></li>
+										<li><button type="button" class="btn-type2">퇴직연금 IRP</button></li>
+										<li><button type="button" class="btn-type2">전(월)세 대출</button></li>																														
+									</ul>
+								</td>							
 							</tr>
 							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
+								<td>이하나하나(0123456)</td>
+								<td>1명</td>
+								<td>
+									<ul class="btn-group-area wrap">
+										<li><button type="button" class="btn-type2">오토 금융</button></li>
+										<li><button type="button" class="btn-type2">개인사업자 대출</button></li>																													
+									</ul>
+								</td>							
+							</tr>							
 							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
+								<td>홍길동(0123456)</td>
+								<td>1명</td>
+								<td>
+									<ul class="btn-group-area wrap">
+										<li><button type="button" class="btn-type2 on">목돈 굴리기</button></li>
+										<li><button type="button" class="btn-type2">목돈 모으기</button></li>
+										<li><button type="button" class="btn-type2">퇴직연금 IRP</button></li>
+										<li><button type="button" class="btn-type2">전(월)세 대출</button></li>																														
+									</ul>
+								</td>							
 							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
+							<tr class="disabled">
+								<td>홍길동(0123456)</td>
+								<td>1명</td>
+								<td>
+									<ul class="btn-group-area wrap">
+										<li><button type="button" class="btn-type2 on">목돈 굴리기</button></li>
+										<li><button type="button" class="btn-type2">목돈 모으기</button></li>
+										<li><button type="button" class="btn-type2">퇴직연금 IRP</button></li>
+										<li><button type="button" class="btn-type2">전(월)세 대출</button></li>																														
+									</ul>
+								</td>							
 							</tr>
-							<tr>
-								<td>이벤트이벤트</td>
-								<td>생일생일생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>완료</td>
-								<td>2023-02-10</td>
-								<td>이하나이하나</td>
-								<td>영등포금융센터 영등포금융센터</td>	
+							<tr class="disabled">
+								<td>이하나하나(0123456)</td>
+								<td>1명</td>
+								<td>
+									<ul class="btn-group-area wrap">
+										<li><button type="button" class="btn-type2">오토 금융</button></li>
+										<li><button type="button" class="btn-type2">개인사업자 대출</button></li>																													
+									</ul>
+								</td>							
 							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트이벤트</td>
-								<td>생일생일생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>완료</td>
-								<td>2023-02-10</td>
-								<td>이하나이하나</td>
-								<td>영등포금융센터 영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
-							<tr>
-								<td>이벤트</td>
-								<td>생일</td>
-								<td>내용은 전체내용 제한없이 모두출력</td>
-								<td>비완료</td>
-								<td>2023-02-10</td>
-								<td>이하나</td>
-								<td>영등포금융센터</td>	
-							</tr>
+							<tr class="disabled">
+								<td>이하나하나(0123456)</td>
+								<td>1명</td>
+								<td>
+									<ul class="btn-group-area wrap">
+										<li><button type="button" class="btn-type2">부동산 담보 대출</button></li>
+										<li><button type="button" class="btn-type2">신용 대출</button></li>
+										<li><button type="button" class="btn-type2">오토 금융</button></li>
+										<li><button type="button" class="btn-type2">개인사업자 대출</button></li>
+										<li><button type="button" class="btn-type2">기업대출</button></li>																												
+									</ul>
+								</td>							
+							</tr>						
 						</tbody>
 					</table>
 				</div>
@@ -2901,6 +2856,7 @@
 		
 	</div>
 </div>
+<!--// 2023-03-09 상담이관  -->
 
 <!--// 레이어팝업 (딤드 + 가운데정렬) 영역 -->
 

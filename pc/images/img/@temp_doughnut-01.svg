@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="160">
+    <path fill-rule="evenodd" fill="#34E5B2" d="M159.998 79.999c0 27.447-13.827 51.658-34.89 66.067l-23.137-36.3c9.114-6.739 15.027-17.561 15.027-30.666 0-18.524-14.97-34.44-33.999-35.969V.075c42.79 1.58 76.999 36.747 76.999 79.924z"/>
+    <path fill-rule="evenodd" fill="#486DF5" d="M79.998 159.999c-44.183 0-80-35.818-80-80 0-44.183 35.817-80 80-80 1.007 0 2.003.039 3.001.076v43.056c-.991-.079-1.989-1.031-3.001-1.031-20.434 0-36.999 17.465-36.999 37 0 21.334 16.565 37 36.999 37 8.299 0 15.96-1.833 22.132-6.447l23.331 36.162c-12.912 8.936-28.571 14.184-45.463 14.184z"/>
+    <path fill="none" d="M0 0h159.1v159.1H0V0z"/>
+    <path fill="none" d="M42.1 42.1H117V117H42.1V42.1z"/>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="5" y="104">60.65%</text>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="118" y="72">32.35%</text>
+    <path fill="none" d="M197.1 55.1H296V80h-98.9V55.1z"/>
+    <path fill-rule="evenodd" fill="#34E5B2" d="M201.996 63.998a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="215" y="73">남</text>
+    <path fill="none" d="M197.1 79.1H296V104h-98.9V79.1z"/>
+    <path fill-rule="evenodd" fill="#486DF5" d="M201.996 87.998a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="214" y="97.348">여</text>
+</svg>

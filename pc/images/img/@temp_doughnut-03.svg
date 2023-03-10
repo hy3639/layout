@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="160">
+    <path fill-rule="evenodd" fill="#486DF5" d="m88.026 159.597-2.715-42.983c14.341-2.063 26.021-12.348 30.112-25.926l40.854 13.469c-9.467 29.92-36.044 52.231-68.251 55.44z"/>
+    <path fill-rule="evenodd" fill="#FE7676" d="M79.998 116.1c1.831 0 3.629.761 5.388.505l2.803 42.979a80.894 80.894 0 0 1-8.191.415c-32.939 0-61.218-19.913-73.482-48.352l39.751-16.449C52.066 108.05 64.983 116.1 79.998 116.1z"/>
+    <path fill-rule="evenodd" fill="#E84392" d="M82.999 43.131c-.991-.079-1.99-1.031-3.001-1.031-20.434 0-36.999 17.465-36.999 37 0 6.712 1.344 12.209 3.732 17.103L7.465 113.748A79.665 79.665 0 0 1-.002 79.999c0-44.183 35.817-80 80-80 1.006 0 2.003.039 3.001.076v43.056z"/>
+    <path fill-rule="evenodd" fill="#34E5B2" d="M159.998 79.999a79.886 79.886 0 0 1-3.977 24.914l-40.696-13.885c1.087-3.483 1.673-7.187 1.673-11.928 0-18.524-14.97-34.44-33.999-35.969V.075c42.79 1.58 76.999 36.747 76.999 79.924z"/>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="15" y="54">22.35%</text>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="108" y="50">32.35%</text>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="99" y="128">32.35%</text>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="33" y="133">35.49%</text>
+    <path fill="none" d="M0 0h159.1v159.1H0V0z"/>
+    <path fill="none" d="M42.1 42.1H117V117H42.1V42.1zM197.1 31.1H296V56h-98.9V31.1z"/>
+    <path fill-rule="evenodd" fill="#34E5B2" d="M201.996 39.998a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="215" y="49.011">Hana VIP</text>
+    <path fill="none" d="M197.1 55.1H296V80h-98.9V55.1z"/>
+    <path fill-rule="evenodd" fill="#486DF5" d="M201.996 63.998a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="213" y="73.011">VIP</text>
+    <path fill="none" d="M197.1 79.1H296V104h-98.9V79.1z"/>
+    <path fill-rule="evenodd" fill="#FE7676" d="M201.996 87.998a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="215" y="97.011">Hana Family</text>
+    <path fill="none" d="M197.1 103.1H296V128h-98.9v-24.9z"/>
+    <path fill-rule="evenodd" fill="#E84392" d="M201.996 111.999a4 4 0 1 1 .001 7.999 4 4 0 0 1-.001-7.999z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="215" y="121.011">Family</text>
+</svg>

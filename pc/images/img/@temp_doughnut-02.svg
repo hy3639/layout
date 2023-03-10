@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="160">
+    <path fill-rule="evenodd" fill="#34E5B2" d="M159.998 79.999c0 44.182-35.817 80-80 80s-80-35.818-80-80c0-19.177 6.755-36.772 18.005-50.552l33.965 26.417c-5.584 6.48-8.969 14.911-8.969 23.236 0 21.334 16.565 37 36.999 37s37-15.666 37-37c0-18.524-14.97-34.44-33.999-35.969V.075c42.79 1.58 76.999 36.747 76.999 79.924z"/>
+    <path fill-rule="evenodd" fill="#486DF5" d="M82.999 43.131c-.991-.079-1.989-1.031-3.001-1.031-11.233 0-21.289 5.913-28.074 13.815L17.915 29.559C32.583 11.526 54.942-.001 79.998-.001c1.007 0 2.003.039 3.001.076v43.056z"/>
+    <path fill="none" d="M0 0h159.1v159.1H0V0z"/>
+    <path fill="none" d="M42.1 42.1H117V117H42.1V42.1z"/>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="37" y="31">11.12%</text>
+    <text font-family="Roboto" fill="#FFF" font-size="12" x="77" y="139">81.08%</text>
+    <path fill="none" d="M197.1 55.1H296V80h-98.9V55.1z"/>
+    <path fill-rule="evenodd" fill="#34E5B2" d="M201.996 63.998a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="214" y="73">손님</text>
+    <path fill="none" d="M197.1 79.1H296V104h-98.9V79.1z"/>
+    <path fill-rule="evenodd" fill="#486DF5" d="M201.996 87.998a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <text font-family="Noto Sans CJK KR" fill="#727988" font-size="13" x="214" y="97">손님 아님</text>
+</svg>
