@@ -2468,7 +2468,7 @@ html.popOpen {overflow:hidden;}
 	z-index: 9999;
 	max-width: 262px;
 	padding: 18px;
-    color: #fff;
+    color: #fff !important;
     border-radius: 12px;
     font-size: 13px;
 	font-weight: 300;
@@ -2476,6 +2476,7 @@ html.popOpen {overflow:hidden;}
 	background-color: #727988;
 	box-shadow: 0px 8px 10px 0 rgba(0, 0, 0, 0.1);
 }
+.ui-tooltip > * {color:#fff}
 .ui-tooltip .arrow:before {
 	content: "";
 	display: block;
@@ -2983,7 +2984,7 @@ mark.current {
 	padding:16px 16px 16px 20px;
 }
 .chat-box .reHeight{
-	width:70%;
+	width:100%;
 	min-height: 20px;
 	height:20px;
 	padding: 0 25px 0 0;
@@ -4035,28 +4036,37 @@ mark.current {
 
 /*상담 손님정보*/
 .admin-area .content + .tit-area {margin-top: 65px;}
+ /* .grid-area > .flex-area > div {width:588px !important}  */
+ .grid-area > .flex-area {align-items: flex-start; justify-content: space-between;}
 .grid-area .box-white-column {
-	display: flex;
+	/*display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	flex: 1;
+	justify-content: space-between;*/
+	/* flex: 1; */
+	/* width: 588px; */
 	/* height: 480px; */
+	/* margin-right: 24px; */
 }
-.grid-area .box-white-column .box-white:first-child {padding-bottom: 0; height: 84px; line-height: 84px; box-shadow: none;}  
+.grid-area .box-white-column .box-white:first-child {padding-bottom: 0; height: 84px; line-height: 84px; box-shadow: none;margin-bottom: 24px;}  
 .grid-area .box-white-column .box-white {
-	width: 100%;
+	/* display: flex;
+	flex-direction: column;
+	flex-wrap: wrap; */
+	/* width: 588px; 
+	max-width: 100%;*/
 }
-.grid-area .box-white-column .box-white + .box-white {margin-top: 24px !important;}
+.grid-area .box-white-column .box-white + .box-white {}
 .grid-area .box-white {
 	flex-wrap: wrap;
 }
-.grid-area .box-white-column + .box-white {margin-left: 24px; flex:1;}
-.grid-area .chart-area {width:100%;margin:0 auto;}
-.grid-area .chart-area img {width: 100%; height:100%}
+.grid-area .box-white-column + .box-white {margin-left: 24px; /*flex:1; width: 588px;*/}
+ .grid-area .chart-area {margin:0 auto;} 
+
 .grid-area .chart-area.type1 {width:524px; height: 208px;}
 .grid-area .chart-area.type2 {width:524px; height: 315px;}
 .grid-area .chart-area.type3 {width:296px; height: 160px;}
-.grid-area > .flex-area {align-items: stretch; margin: 35px 0 24px;} 
+.grid-area .chart-area img {width:100%; height: 100%;}
+.grid-area > .flex-area {/*align-items: stretch;*/ margin: 35px 0 24px;} 
 .grid-area .flex-area .box-white { padding: 0 32px 32px 32px; margin-top:0 !important}
 .grid-area .flex-area + .flex-area {margin: 0 -12px;}
 .grid-area .flex-area + .flex-area .box-white{flex:1; margin:0 12px}

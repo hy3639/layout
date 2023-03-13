@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	reHeight();
 	sortable();
-//	layerPop();
 	draggable(); //멀티팝업 드레그
-	// setDate();
+	tooltip(); //마우스 오버 툴팁
+
 
 	/*gnb*/
 	$('.btn-gnb').click(function(){
@@ -12,8 +12,15 @@ $(document).ready(function(){
 		gnbList.fadeIn('300');	
 	});
 	$('.btn-gnb-close').click(function(){
-		$(this).removeClass('on');
-			$(this).closest('.gnb-list').fadeOut('100');
+		$(this).removeClass('on').closest('.gnb-list').fadeOut('100');
+	});
+	// gnb외부영역 클릭 시 팝업 닫기
+	$(document).mouseup(function (e){
+		var gnbList = $('.gnb-list')
+		if(gnbList.has(e.target).length === 0){
+		gnbList.fadeOut('100');
+		$('.btn-gnb-close').removeClass('on');
+		}
 	});
 
 
@@ -459,21 +466,7 @@ $(window).on('load', function(){
 	 });
 
 
-	//마우스오버 툴팁
-	 $('.tooltip-hover').tooltip({
-		position: {
-		  my: "right+15 top+15",
-		  at: "right bottom",
-		  using: function( position, feedback ) {
-			$( this ).css( position );
-			$( "<div>" )
-			  .addClass( "arrow" )
-			  .addClass( feedback.vertical )
-			  .addClass( feedback.horizontal )
-			  .appendTo( this );
-		  },
-		}
-	  });
+	
 
 	
 
@@ -634,7 +627,23 @@ function layerPop(){
     });
 }
 
-
+//마우스오버 툴팁
+function tooltip(){	
+	$('.tooltip-hover').tooltip({
+		position: {
+		  my: "right+15 top+15",
+		  at: "right bottom",
+		  using: function( position, feedback ) {
+			$( this ).css( position );
+			$( "<div>" )
+			  .addClass( "arrow" )
+			  .addClass( feedback.vertical )
+			  .addClass( feedback.horizontal )
+			  .appendTo( this );
+		  },
+		}
+	  });
+}
 
 // 초기값 설정
 // function setDate(){
