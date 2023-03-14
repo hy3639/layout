@@ -3497,6 +3497,7 @@ mark.current {
 	padding-right: 0;
 	line-height: 34px;
 }
+.layer-popup-fixed[data-layer-name="chat-list-area"] .layer-cont .flex-area .search-box .btn-text-delete {margin-right: 8px;}
 .layer-popup-fixed[data-layer-name="chat-list-area"] .search-box .btn-arrow {
 	display: none; 	
 	margin-right: 8px;	
@@ -3504,7 +3505,7 @@ mark.current {
 .layer-popup-fixed[data-layer-name="chat-list-area"] .search-box .btn-arrow.on {
 	display: flex;
 	align-items: center;
-	margin:0 8px;
+	margin:0 8px 0 0;
 }
 .layer-popup-fixed[data-layer-name="chat-list-area"] .search-box .btn-arrow .count {
 	margin-right: 8px;
