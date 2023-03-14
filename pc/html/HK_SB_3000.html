@@ -20,16 +20,18 @@
 		<div class="right-area">
 			<div class="layer-pop-wrap">
 				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
-				<div class="layer-popup-border w320" data-layer-name="box-change">
+				<div class="layer-popup-border w376" data-layer-name="box-change">
 					<p class="title">상담하기 화면 배치</p>
-					<span class="sub-txt">
-						3가지 타입 외에도 상담하기 화면에서<br>
-						Drag &amp; Drop하여 원하는 순서로 변경할 수 있어요!
-					</span>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
 					<div class="type-select-area">
 						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
 						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
 						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
 					</div>
 					<div class="btn-area align-right">
 						<button type="button" class="btn-text popCloseBorder">닫기</button>				
@@ -210,7 +212,9 @@
 							</div>
 							<!-- 2023-02-06 : 수정 -->
 							<div class="chat-box"> <!-- # 아이콘 있어야할 경우 "quick" 클래스 추가 -->
+								<!-- 2023-03-14 -->
 								<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
+								<!--// 2023-03-14 -->
 								<div class="chat-box-inner">
 									<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>									
 									<div class="quick-btn-area flex-area both">									
@@ -357,7 +361,7 @@
 							<button type="button" class="btn-text toestClose">닫기</button>				
 						</div>
 						<div class="toest-cont">
-							<div class="search-box gray"> <!-- 2023-03-06 input 입력시 input-on클래스 추가 (텍스트 삭제 버튼노출)-->
+							<div class="search-box gray"> <!-- 2023-03-14 input 입력시 input-on 클래스 추가 (텍스트 삭제 버튼노출)-->
 								<input type="text" placeholder="키워드 검색 (Enter시 검색 가능)">	<!-- 2023-02-06 -->
 								<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button> <!-- 2023-02-22 -->							
 							</div>
@@ -391,77 +395,67 @@
 								<div class="tab-conts">						
 									<div class="tab-cont on">										
 										<ul class="send-list scroll-area sortable">	
+											<!-- 2023-03-14 : 미리보기 삭제 및 태그변경 -->
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
-												<span class="cont ellipsis">상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm btnPopBorder" data-title="link-preview">미리보기</a> <!-- 2023-02-06 -->
+												<a href="#" class="cont ellipsis btnPopBorder" data-title="link-preview">상품 링크 발송기타</a>											
 											</li>
+											<!--// 2023-03-14 -->
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">여신</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>  
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">전자금융</span>
-												<span class="cont ellipsis">있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>  
+												<a href="#" class="cont ellipsis">있어 관련 상품 링크 발송기타</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">외환</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>  
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">카드</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>  
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>  
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>  
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a> 
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a> 
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a> 
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a> 
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">기타</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a> 
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">끝</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a> 
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a> 
 											</li>
 										</ul>										
 									</div>						
@@ -470,20 +464,17 @@
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">여신</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">여신</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">여신</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											</li>											
 										</ul>
 									</div>
@@ -492,14 +483,12 @@
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">수신</span>
-												<span class="cont ellipsis">상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">수신</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											</li>																						
 										</ul>
 									</div>
@@ -508,14 +497,12 @@
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">외환</span>
-												<span class="cont ellipsis">상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">외환</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											</li>																						
 										</ul>
 									</div>
@@ -524,14 +511,12 @@
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">전자금융</span>
-												<span class="cont ellipsis">상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">전자금융</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											</li>																						
 										</ul>
 									</div>
@@ -540,14 +525,12 @@
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">카드</span>
-												<span class="cont ellipsis">상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
 											</li>
 											<li>
 												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
 												<span class="category">카드</span>
-												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
-												<a href="#" class="btn-text sm">미리보기</a>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
 											</li>																						
 										</ul>
 									</div>
@@ -1259,7 +1242,7 @@
 														<p>고객명</p>																										
 													</div>
 													<div class="cont-area">
-														<div class="input-text gray">  <!-- 2023-03-06 input 입력시 input-on클래스 추가 (텍스트 삭제 버튼노출)-->
+														<div class="input-text gray">  <!-- 2023-03-14 input 입력시 input-on클래스 추가 (텍스트 삭제 버튼노출)-->
 															<input type="text" placeholder="한글 영문 가능/자릿수제한 없음">
 															<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button> <!-- 2023-02-22-->
 														</div>
@@ -1569,7 +1552,7 @@
 									<p class="tit">최근 활동 정보</p>
 									<span class="count">총2건</span>
 								</div>								
-								<a href="#" class="bg-gray btn-sm btnPop" data-title="Popup02">상세보기</a>
+								<button type="button" class="bg-gray btn-sm btnPop" data-title="Popup02">상세보기</button> <!-- 2023-03-14 : 태그변경 disabled 스타일 추가 -->
 							</div>
 							<!--// 2023-02-06 -->
 							<ul class="tit-list2">
@@ -1608,9 +1591,8 @@
 								<div class="tit-wrap">
 									<p class="tit">마케팅 교차판매</p>
 									<span class="count">5/14</span>
-								</div>
-								
-								<a href="#" class="bg-gray btn-sm btnPop" data-title="Popup03">상세보기</a>
+								</div>								
+								<button type="button" class="bg-gray btn-sm btnPop" data-title="Popup02">상세보기</button> <!-- 2023-03-14 : 태그변경 disabled 스타일 추가 -->
 							</div>				
 						</div>
 						<div class="list-area">
@@ -1937,9 +1919,9 @@
 								<span class="time">오후 12:28</span>
 							</div>
 						</div>	
-						<!-- 2023-03-06 검색결과가 없는경우 -->
+						<!-- 2023-03-14 검색결과가 없는경우 -->
 						<p class="no-data">검색 결과가 없습니다.</p>
-						<!--//  2023-03-06 검색결과가 없는경우 -->				
+						<!--//  2023-03-14 검색결과가 없는경우 -->				
 					</div>					
 				</div>
 			</div>
@@ -2724,7 +2706,7 @@
 </div>
 <!-- //2023-02-22 -->
 
-<!-- 2023-03-09 상담이관 -->
+<!-- 2023-03-14 상담이관 -->
 <div class="layer-popup type2" data-layer-name="Popup07"> 
 	<div class="popup xl">
 		<div class="popup-header">			
@@ -2856,7 +2838,7 @@
 		
 	</div>
 </div>
-<!--// 2023-03-09 상담이관  -->
+<!--// 2023-03-14 상담이관  -->
 
 <!--// 레이어팝업 (딤드 + 가운데정렬) 영역 -->
 

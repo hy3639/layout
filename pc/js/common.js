@@ -78,11 +78,13 @@ $(document).ready(function(){
 
 
 	/* 클릭형 툴팁 */
-	$(document).on('click', '.btn-layer', function(){
+	$(document).on('click', '.btn-layer', function(){	
 		if($(this).hasClass('on')){
 			$(this).removeClass('on');		
 			$(this).closest('.tooltip-area').find('.tooltip-layer').hide();	
 		}else{
+			$('.tooltip-area').find('.tooltip-layer').hide();
+			$('.tooltip-area').find('.btn-layer').removeClass('on');
 			$(this).addClass('on');
 			$(this).closest('.tooltip-area').find('.tooltip-layer').show();	
 		}
@@ -388,7 +390,7 @@ $(window).on('load', function(){
 	 //위치고정 레이어
 	 $('.btnPopBorder').click(function(){
 		var name = $(this).attr('data-title');
-		$(this).addClass('on');
+	
 		
 		if(name == 'link-preview'){ ///간편발송 미리보기 	
 
@@ -403,14 +405,13 @@ $(window).on('load', function(){
 				$('.layer-popup-border[data-layer-name=' + name + ']').css({
 					"top": '',
 					"bottom": 0			
-				})
+				}).addClass('on');
 			}else{
 				$('.layer-popup-border[data-layer-name=' + name + ']').css({
 					"top": divTop -80,
 					"bottom": ''
-				})		
-			}
-			$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
+				}).addClass('on');	
+			}		
 		}else if(name == 'graph'){ // 상담현황 그래프팝업	
 
 			var sWidth = $('.wrapper').outerWidth();
@@ -422,6 +423,10 @@ $(window).on('load', function(){
 			var layerW = targetDiv.find('.layer-popup-border').outerWidth();
 			var layerH = targetDiv.find('.layer-popup-border').outerHeight();
 			
+			$('.btnPopBorder').removeClass('on');
+			$('.layer-popup-border').removeClass('on');
+
+			$(this).addClass('on');
 			if($(this).parent().hasClass('row')){
 				if(posTop + layerH > winPos) {
 					targetLayer.css({				
@@ -452,8 +457,16 @@ $(window).on('load', function(){
 					}).addClass('on');				
 				}
 			}
-		}else{ // 일반 위치고정 팝업	
-			$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
+		
+		}else{ // 일반 위치고정 팝업
+
+			if($(this).hasClass('on')){
+				$(this).removeClass('on');
+				$('.layer-popup-border[data-layer-name=' + name + ']').removeClass('on');
+			}else{
+				$(this).addClass('on');
+				$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
+			}
 		}
 		
 	 });
