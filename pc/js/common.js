@@ -78,7 +78,14 @@ $(document).ready(function(){
 
 
 	/* 클릭형 툴팁 */
-	$(document).on('click', '.btn-layer', function(){	
+	$(document).on('click', '.btn-layer', function(){
+		// var btnH = $(this).outerHeight();
+		// var oOffset = $('.chat-list').offset().top;
+		var sHeight = $('.chat-list').outerHeight(); 		
+		var oHeight = $(this).closest('.tooltip-area').find('.tooltip-layer').outerHeight();
+		var divTop = $(this).closest('.tooltip-area').offset().top - 211; // 스크롤시작지점 offset (211)
+
+		
 		if($(this).hasClass('on')){
 			$(this).removeClass('on');		
 			$(this).closest('.tooltip-area').find('.tooltip-layer').hide();	
@@ -86,10 +93,23 @@ $(document).ready(function(){
 			$('.tooltip-area').find('.tooltip-layer').hide();
 			$('.tooltip-area').find('.btn-layer').removeClass('on');
 			$(this).addClass('on');
-			$(this).closest('.tooltip-area').find('.tooltip-layer').show();	
+
+			if( divTop + oHeight > sHeight ){
+				$(this).closest('.tooltip-area').find('.tooltip-layer').css({
+					"top": '',
+					"bottom": 28			
+				}).show();
+			
+			}else{
+				$(this).closest('.tooltip-area').find('.tooltip-layer').css({
+					"top": 28,
+					"bottom": ''
+				}).show();
+			}
+			
 		}
 	});
-	$('.tooltip-layer .link-area > a').click(function(){
+	$('.tooltip-layer .link-area > button').click(function(){
 		$(this).closest('.tooltip-area').find('.tooltip-layer').hide();	
 		$(this).closest('.tooltip-area').find('.btn-layer').removeClass('on');
 	});

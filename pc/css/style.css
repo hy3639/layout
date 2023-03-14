@@ -2428,7 +2428,7 @@ html.popOpen {overflow:hidden;}
 .tooltip-layer {
 	display:none;
 	position:absolute;
-	top: 28px;
+	/* top: 28px; */
 	right:0;
 	padding:6px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
@@ -2437,6 +2437,9 @@ html.popOpen {overflow:hidden;}
 	z-index:200;
 	border-radius: 10px;
 }
+/* 
+.chat-list li:nth-last-child(2) .tooltip-layer,
+.chat-list li:last-child .tooltip-layer {top:-182px} */
 
 /*대인상담, 상담내역조회 팝업의 데이터없는경우 */
 .chat-area .no-data,
@@ -2720,7 +2723,7 @@ html.popOpen {overflow:hidden;}
 	box-shadow: 0px 4px 8px 0 rgba(178, 182, 190, 0.35);
 }
 .main-chat .chat-area .search-area.on {display:block}
-.main-chat .chat-area .search-box {display: flex;}
+.main-chat .chat-area .search-box {display: flex; align-items: center;}
 .main-chat .chat-area .search-box  input {
 	flex: 1;
 	border:0;
@@ -2738,7 +2741,7 @@ html.popOpen {overflow:hidden;}
 .main-chat .chat-area .search-box  .btn-arrow.on {
 	display: flex;
 	align-items: center;
-	margin:0 16px;
+	margin:0 0 0 16px;
 }
 .main-chat .chat-area .search-box  .btn-arrow .count {
 	margin-right: 12px;
@@ -2771,12 +2774,13 @@ html.popOpen {overflow:hidden;}
 	background: url(../images/icon/btn-arrow-down-36.svg) no-repeat 0 0;
 	background-size: 36px 36px;
 }
-.main-chat .chat-area .search-box  .btn-arrow .btn-text-delete {display:block; margin-right: 20px;}
+.main-chat .chat-area .search-box  .btn-arrow .btn-text-delete { margin-right: 20px;}
 .main-chat .chat-area .search-area .btn-close {
 	width: 32px;
 	font-size:14px;
 	color:#444; 
 	font-weight:500;
+	margin-left:16px;
 }
 .main-chat .chat-area .center {
 	position: absolute;
@@ -3144,6 +3148,7 @@ mark.current {
 	border:0; 
 	color:#4a4e5e; 
 	border-radius: 8px;
+	padding:0
 }
 .search-area .layer-popup-border .group .multi-cal-area {margin-top: 8px;}
 .search-area .layer-popup-border .group .multi-cal-area input {font-size:14px}
@@ -3246,8 +3251,8 @@ mark.current {
 	border-radius: 12px;
 	box-shadow: 0px 8px 12px 0 rgba(178, 182, 190, 0.35);
 }
-.chat-list li > div {z-index: 5;}
-.chat-list li:after {
+/* .chat-list li > div {z-index: 5;} */
+.chat-list li:before {
 	content: '';
 	opacity: 0;
 	position:absolute;
@@ -3259,9 +3264,9 @@ mark.current {
 	height:112px;
 	border:2px solid #446cf3;
 	border-radius: 12px;	
-	z-index: 2;
+	/* z-index: 2; */
 }
-.chat-list li:hover:after{
+.chat-list li:hover:before{
 	opacity: 1;
 }
 
@@ -3396,26 +3401,28 @@ mark.current {
 	text-align:center;
 	font-size:11px;
 }
-.chat-list .tooltip-area .link-area a {
+.chat-list .tooltip-area .link-area > button {
 	position: relative;
 	display: block;
 	width:100%;
 	height:32px;
 	padding-left:38px;
 	line-height:32px;
+	text-align: left;
 }
-.chat-list .tooltip-area .link-area a:hover{background-color:#f0f2f7; border-radius: 4px;}
-.chat-list .tooltip-area .link-area a:before {
+.chat-list .tooltip-area .link-area button:hover{background-color:#f0f2f7; border-radius: 4px;}
+.chat-list .tooltip-area .link-area button:before {
 	content: '';
-	display: block;
-	width: 16px;
-    height: 16px;
+	display: block;	
 	position:absolute;
 	top:8px;
 	left:12px;
 }
-.chat-list .tooltip-area .link-area a:first-child:before {background: url(../images/icon/ico-transfer.svg) no-repeat center;}
-.chat-list .tooltip-area .link-area a:nth-child(2):before {background: url(../images/icon/ico-history.svg) no-repeat center;}
+.chat-list .tooltip-area .link-area .link-type1:before {background: url(../images/icon/ico-transfer.svg) no-repeat center;width: 16px; height: 16px;}
+.chat-list .tooltip-area .link-area .link-type2:before {background: url(../images/icon/ico-history.svg) no-repeat center;width: 17px; height: 16px;}
+.chat-list .tooltip-area .link-area .link-type3:before {background: url(../images/icon/ico-block.svg) no-repeat center;width: 17px; height: 16px;}
+.chat-list .tooltip-area .link-area .link-type4:before {background: url(../images/icon/ico-unblock.svg) no-repeat center;width: 17px; height: 15px;}
+.chat-list .tooltip-area .link-area .link-type5:before {background: url(../images/icon/ico-register.svg) no-repeat center;width: 16px; height: 17px;}
 
 /*상담이력 레이어*/
 .layer-popup-fixed[data-layer-name="chat-util"] .layer-cont .chat-list {
