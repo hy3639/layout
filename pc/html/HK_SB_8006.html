@@ -18,16 +18,18 @@
 		<div class="right-area">
 			<div class="layer-pop-wrap">
 				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
-				<div class="layer-popup-border w320" data-layer-name="box-change">
+				<div class="layer-popup-border w376" data-layer-name="box-change">
 					<p class="title">상담하기 화면 배치</p>
-					<span class="sub-txt">
-						3가지 타입 외에도 상담하기 화면에서<br>
-						Drag &amp; Drop하여 원하는 순서로 변경할 수 있어요!
-					</span>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
 					<div class="type-select-area">
 						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
 						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
 						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
 					</div>
 					<div class="btn-area align-right">
 						<button type="button" class="btn-text popCloseBorder">닫기</button>				
@@ -87,7 +89,7 @@
 								<ul class="form-group">
 									<li>
 										<p class="tit">지점</p>
-										<div class="cont input-on"> <!-- input 입력시 input-on클래스 추가 (텍스트 삭제 버튼, 검색레이어 노출)-->
+										<div class="cont input-on"> <!-- 내용 입력, focus 있을경우 input-on 클래스 추가 (텍스트 삭제 버튼, 검색레이어 노출) -->
 											<div class="input-text gray">
 												<input type="text" value="강남" placeholder="지점명 또는 지점코드 입력">
 												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button> <!-- input 입력시 on클래스 추가-->
@@ -105,7 +107,7 @@
 									</li>
 									<li>
 										<p class="tit">직원 선택</p>
-										<div class="cont"> <!-- input 입력시 input-on클래스 추가 (텍스트 삭제 버튼, 검색레이어 노출)-->
+										<div class="cont"><!-- 내용 입력, focus 있을경우 input-on 클래스 추가 (텍스트 삭제 버튼, 검색레이어 노출) -->
 											<div class="input-text gray">
 												<input type="text" value="이하나" placeholder="지점명 또는 지점코드 입력">
 												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
@@ -175,7 +177,7 @@
 					</div>
 					<div class="right">
 						<div class="box-white">
-							<!-- 2023-03-14 :발송건수 삭제 -->
+							<!-- 2023-03-15 :발송건수 삭제 -->
 							<div class="board-list">					
 								<table>
 									<caption>최근 활동 정보</caption>
@@ -200,7 +202,7 @@
 									<tbody>							
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td> <!-- 2023-03-15 : 버튼 태그 변경 -->
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -208,7 +210,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -216,7 +218,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -224,7 +226,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -232,7 +234,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -240,7 +242,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -248,7 +250,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -256,7 +258,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -264,7 +266,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -272,7 +274,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -280,7 +282,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -288,7 +290,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -296,7 +298,7 @@
 										</tr>
 										<tr>
 											<td class="date">2023-01-29 15:45:40</td>
-											<td class="flex-area both">예약 <a href="#" class="bg-palegray btn-sm">취소</a></td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
 											<td>상담 중 손님</td>
 											<td>예약 발송</td>
 											<td class="date">2023-01-29</td>
@@ -305,7 +307,7 @@
 									</tbody> 
 								</table>
 							</div>	
-							<!--// 2023-03-14 :발송건수 삭제 -->								
+							<!--// 2023-03-15 :발송건수 삭제 -->								
 						</div>
 						<div class="pagenation">							
 							<a href="#" class="btn-prev">이전</a>

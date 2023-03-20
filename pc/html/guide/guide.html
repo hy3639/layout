@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<div class="wrapper">
+<div class="wrapper" style="width:1280px">
 	
 	<div class="container">
 		<div class="cont-wrap">
@@ -37,7 +37,7 @@
 			<section class="group">
 				<h2 class="tit">달력</h2>
 				<div class="cont">
-					<div class="sub-cont">
+					<div class="sub-cont" style="width:500px">
 						<p class="tit">기간달력</p>
 						<div class="cont">
 							<div class="cont-area">
@@ -82,7 +82,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="sub-cont">
+					<div class="sub-cont" style="width:500px">
 						<p class="tit">단일 선택 달력</p>
 						<div class="cont">
 							<div class="flex-area both">								
@@ -142,6 +142,8 @@
 						<p class="tit">small (height:28px)</p>
 						<div class="cont">
 							<a href="#" class="bg-gray btn-sm">상세보기</a>	
+							<button type="button" class="bg-gray btn-sm">상세보기</button>
+							<button type="button" class="bg-gray btn-sm" disabled>상세보기</button>
 						</div>
 					</div>				
 					<div class="sub-cont">
@@ -151,6 +153,7 @@
 							<button type="button" class="btn-round btn-mid bg-blue">저장</button>	
 							<button type="button" class="btn-round btn-mid bg-lightgray">취소</button>				
 							<button type="button" class="btn-round btn-mid bg-white">취소</button>
+							<button type="button" class="btn-round btn-mid bg-blue" disabled>저장</button>	
 						</div>
 					</div>
 					<!-- <div class="sub-cont">
@@ -193,7 +196,7 @@
 			<section class="group">
 				<h2 class="tit">폼요소</h2>
 				<div class="cont">
-					<div class="sub-cont">
+					<div class="sub-cont" style="width:500px">
 						<p class="tit">체크박스</p>
 						<div class="cont">
 							<!-- 체크박스 -->
@@ -224,7 +227,7 @@
 							
 						</div>
 					</div>
-					<div class="sub-cont">
+					<div class="sub-cont" style="width:500px">
 						<p class="tit">라디오</p>
 						<div class="cont">
 							<!-- 라디오 -->
@@ -242,7 +245,7 @@
 							<input type="radio" class="styled" name="select" id="rdo2"><label for="rdo2">선택안함</label>
 						</div>
 					</div>
-					<div class="sub-cont">
+					<div class="sub-cont" style="width:500px">
 						<p class="tit">셀렉트박스</p>
 						<div class="cont">
 							<span class="select-box wide">
@@ -268,25 +271,25 @@
 						</div>
 					</div>
 					
-					<div class="sub-cont">
+					<div class="sub-cont" style="width:500px">
 						<p class="tit">인풋</p>
 						<div class="cont">
-							<div class="input-text gray" style="width:300px">
+							<div class="input-text gray">
 								<input type="number" placeholder="숫자만 가능/9자리 입력">
 								<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
 							</div>
-							<!-- <div class="input-text">
-								<input type="text" placeholder="검색어를 입력해주세요" disabled>
+							<!-- <div class="input-text gray">
+								<input type="text" value="disabled" placeholder="검색어를 입력해주세요" disabled>
 							</div>	 -->
 						</div>
-						<div class="cont input-on"> <!-- input 입력시 on클래스 추가 (텍스트 삭제 버튼, 검색레이어 노출)-->
+						<div class="cont input-on" style="height:230px"> <!-- input 입력, focus 있을때 input-on 클래스 추가 (텍스트 삭제 버튼, 검색레이어 노출)-->
 							<div class="input-text gray">
 								<input type="text" value="강남">
 								<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
 							</div>
 							<div class="input-layer"> 
 								<ul>
-									<li><a href="#"><mark>강남</mark> 1지점(0123)</a></li>
+									<li><a href="#"><mark>강남</mark> 1지점(0123)</a></li>-
 									<li><a href="#"><mark>강남</mark> 2지점(0124)</a></li>
 									<li><a href="#"><mark>강남</mark> 3지점(0123)</a></li>
 									<li><a href="#"><mark>강남</mark> 4지점(0123)</a></li>
@@ -308,205 +311,59 @@
 					
 				</div>
 			</section>
-			<!-- <section class="group">
+			<section class="group">
 				<h2 class="tit">테이블</h2>
 				<div class="cont">
 					<div class="sub-cont">
 						<p class="tit">리스트</p>
 						<div class="cont">
-							<div class="board-list">
+							<div class="board-list">					
 								<table>
-									<caption>리스트</caption>
+									<caption>최근 활동 정보</caption>
 									<colgroup>
-										<col style="width:6%;">									
-										<col style="width:10%;">
-										<col style="width:10%;">
-										<col>
-										<col style="width:11.5%;">
-										<col style="width:10%;">
-										
-									</colgroup>
+										<col style="width: 190px;">
+										<col style="width: 150px;">
+										<col style="width: 140px">
+										<col style="width: 90px;">
+										<col style="width: 136px;">										
+										<col style="width: 110px;">
+									</colgroup>	
 									<thead>
 										<tr>
-											<th scope="col">번호</th>
-											<th scope="col">구분</th>
-											<th scope="col">종류</th>											
-											<th scope="col">내용</th>
-											<th scope="col">최종 수정자</th>
-											<th scope="col">최종 수정일</th>
-										</tr>
-									</thead>
+											<th>발송 일시</th>
+											<th>발송 상태</th>
+											<th>손님 유형</th>
+											<th>발송 유형</th>										
+											<th>발송일</th>
+											<th>발송자</th>
+										</tr>									
+									</thead>					
 									<tbody>							
 										<tr>
-											<td>10</td>
-											<td>여신</td>									
-											<td>문구</td>								
-											<td>간편발송 내용</td>
-											<td>홍길동</td>
-											<td>2017.12.24</td>
+											<td class="date">2023-01-29 15:45:40</td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td> <!-- 2023-03-14 : 버튼 태그 변경 -->
+											<td>상담 중 손님</td>
+											<td>예약 발송</td>
+											<td class="date">2023-01-29</td>
+											<td>홍길동길동</td>	
 										</tr>
-									</tbody>
+										<tr>
+											<td class="date">2023-01-29 15:45:40</td>
+											<td class="flex-area both">예약 <button type="button" class="bg-palegray btn-sm">취소</button></td>
+											<td>상담 중 손님</td>
+											<td>예약 발송</td>
+											<td class="date">2023-01-29</td>
+											<td>홍길동</td>	
+										</tr>																
+									</tbody> 
 								</table>
 							</div>
-						</div>
-						<div class="cont">
-							<div class="board-list2">
-								<table>
-									<caption>리스트</caption>
-									<colgroup>
-										<col style="width:6%;">									
-										<col style="width:12%;">
-										<col>
-										<col style="width:8%;">										
-										<col style="width:8%;">
-										<col style="width:10%;">							
-										<col style="width:8%;">
-										<col style="width:10%;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">번호</th>
-											<th scope="col">지점명</th>
-											<th scope="col">지점 대표 채널명</th>
-											<th scope="col">지점 관리자명</th>
-											<th scope="col">상태</th>										
-											<th scope="col">지점 대표 채널 개설일</th>
-											<th scope="col">최종 수정자</th>
-											<th scope="col">최종 수정일</th>
-										</tr>
-									</thead>
-									<tbody>							
-										<tr>
-											<td>10</td>
-											<td><a href="#" class="link">지점명</a></td>									
-											<td class="left"><a href="#" class="link">지점 대표 채널명 </a></td>		
-											<td>홍길동</td>						
-											<td>개설완료</td>
-											<td>2022-10-07</td>
-											<td>홍길동</td>
-											<td>2022-10-07</td>
-										</tr>
-					
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="cont">
-							<div class="board-list2 multi">
-								<table>
-									<caption>리스트</caption>
-									<colgroup>
-										<col style="width:20%;">	
-										<col style="width:15%;">	
-										<col>							
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col" rowspan="2">상태</th>
-											<th scope="col" rowspan="2">대기시간</th>
-											<th scope="col">발송시점</th>
-										</tr>
-										<tr>								
-											<th scope="col">메시지</th>
-										</tr>
-									</thead>
-									<tbody>							
-										<tr class="multi-row">
-											<td rowspan="2">상담지연(손님 없음)</td>
-											<td rowspan="2">00분</td>
-											<td class="left">대화중인 손님이 없는 상태에 일정 시간 직원이 답변을 못 할 경우</td>	
-										</tr>
-										<tr>
-											<td class="left">
-												메시지 출력<br>
-												메시지 출력
-											</td>
-										</tr>
-										<tr class="multi-row">
-											<td rowspan="2">상담지연(손님 있음)</td>
-											<td rowspan="2">00분</td>
-											<td class="left">대화중인 손님이 없는 상태에 일정 시간 직원이 답변을 못 할 경우</td>	
-										</tr>
-										<tr>
-											<td class="left">
-												메시지 출력<br>
-												메시지 출력
-											</td>
-										</tr>					
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="cont">
-							<div class="board-list2 multi scroll">
-								<table>
-									<caption>리스트</caption>
-									<colgroup>
-										<col style="width:180px">	
-										<col style="width:124px">	
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">							
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">
-										<col style="width:72px">														
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col" rowspan="2">사용여부<br>(인사이동/퇴사 시<br>사용한함 설정 필요)</th>
-											<th scope="col" rowspan="2">지점 담당자</th>
-											<th scope="col" colspan="13">업무유형</th>
-										</tr>
-										<tr>								
-											<th scope="col">전(월)세 대출</th>
-											<th scope="col">부동산 담보대출</th>
-											<th scope="col">신용대출</th>
-											<th scope="col">오토금융</th>
-											<th scope="col">개인사업자 대출</th>
-											<th scope="col">기업대출</th>
-											<th scope="col">목돈 굴리기</th>
-											<th scope="col">목돈 모으기</th>
-											<th scope="col">퇴직연금 IRP</th>
-											<th scope="col">유학 등 기타자금</th>
-											<th scope="col">재외동포 재산반출</th>
-											<th scope="col">해외부동산 투자</th>
-											<th scope="col">기업성 해외자금</th>
-										</tr>
-									</thead>
-									<tbody>							
-										<tr>
-											<td>사용</td>
-											<td>홍길동[1234567]</td>
-											<td><span class="check">check</span></td>
-											<td><span class="check">check</span></td>
-											<td></td>
-											<td><span class="check">check</span></td>
-											<td><span class="check">check</span></td>
-											<td></td>
-											<td></td>
-											<td><span class="check">check</span></td>
-											<td><span class="check">check</span></td>
-											<td><span class="check">check</span></td>
-											<td><span class="check">check</span></td>
-											<td></td>
-											<td><span class="check">check</span></td>	
-										</tr>								
-									</tbody>
-								</table>
-							</div>
-						</div>
+						</div>					
 						
 					</div>
 					<div class="sub-cont">
 						<p class="tit">뷰</p>
-						<div class="cont">
+						<!-- <div class="cont">
 							<div class="board-write">
 								<table>
 									<caption>뷰</caption>
@@ -522,8 +379,8 @@
 									</tbody>
 								</table>
 							</div>
-						</div>
-						<div class="cont">
+						</div> -->
+						<!-- <div class="cont">
 							<div class="board-write3">
 								<table>
 									<caption>업무 유형 별 상담 종류</caption>
@@ -562,8 +419,8 @@
 									</tbody>
 								</table>
 							</div>
-						</div>
-						<div class="cont">
+						</div> -->
+						<!-- <div class="cont">
 							<div class="board-write3 multi">
 								<table>
 									<caption>본인 인증 메시지</caption>
@@ -597,8 +454,8 @@
 									</tbody>
 								</table>
 							</div>
-						</div>
-						<div class="cont">
+						</div> -->
+						<!-- <div class="cont">
 							<div class="board-write3 multi type2">
 								<table>
 									<caption>지점 대표 채널 정보</caption>
@@ -624,31 +481,27 @@
 									</tbody>
 								</table>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<div class="sub-cont">
 						<p class="tit">페이지네이션</p>
 						<div class="cont">
-							<div class="pagenation">
-								<a href="#" class="btn-first page">처음</a>
-								<a href="#" class="btn-prev page">이전</a>
-								<span class="page now">1</span>
-								<a href="#" class="page">2</a>
-								<a href="#" class="page">3</a>
-								<a href="#" class="page">4</a>
-								<a href="#" class="page">5</a>
-								<a href="#" class="page">6</a>
-								<a href="#" class="page">7</a>
-								<a href="#" class="page">8</a>
-								<a href="#" class="page">9</a>
-								<a href="#" class="page">10</a>
-								<a href="#" class="btn-next page">다음</a>
-								<a href="#" class="btn-last page">마지막</a>
+							<div class="pagenation">							
+								<a href="#" class="btn-prev">이전</a>
+								<span class="page">1</span>
+								<span class="ellipsis-divide">ellipsis</span>
+								<span class="page now">14</span>
+								<a href="#" class="page">15</a>
+								<a href="#" class="page">16</a>
+								<a href="#" class="page">17</a>						
+								<span class="ellipsis-divide">ellipsis</span>
+								<span class="page">35</span>
+								<a href="#" class="btn-next">다음</a>						
 							</div>
 						</div>
 					</div>	
 				</div>
-			</section> -->
+			</section>
 			<section class="group">
 				<h2 class="tit">탭</h2>
 				<div class="cont">
@@ -800,10 +653,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
-												<!--//2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -835,8 +686,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -865,8 +716,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -895,8 +746,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -928,8 +779,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -961,8 +812,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -990,8 +841,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -1025,10 +876,11 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
-												<!--//2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>
+												<button class="link-type3">차단하기</button>
+												<button class="link-type4">차단해제</button>
+												<button class="link-type5">활동등록</button>
 											</div>
 										</div>
 									</div>	
@@ -1060,8 +912,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -1090,8 +942,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -1123,8 +975,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	
@@ -1152,8 +1004,8 @@
 									<div class="tooltip-layer w112">													
 										<div class="layer-cont">
 											<div class="link-area">
-												<a href="#" class="btnPopFixed" data-title="chat-list-area">상담이관</a>
-												<a href="#" class="btnPopFixed" data-title="chat-util">상담이력</a>
+												<button class="link-type1">상담이관</button>
+												<button class="link-type2 btnPopFixed" data-title="chat-util">상담이력</button>											
 											</div>
 										</div>
 									</div>	

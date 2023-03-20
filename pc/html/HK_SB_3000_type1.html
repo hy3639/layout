@@ -19,16 +19,18 @@
 		<div class="right-area">
 			<div class="layer-pop-wrap">
 				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
-				<div class="layer-popup-border w320" data-layer-name="box-change">
+				<div class="layer-popup-border w376" data-layer-name="box-change">
 					<p class="title">상담하기 화면 배치</p>
-					<span class="sub-txt">
-						3가지 타입 외에도 상담하기 화면에서<br>
-						Drag &amp; Drop하여 원하는 순서로 변경할 수 있어요!
-					</span>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
 					<div class="type-select-area">
 						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
 						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
 						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
 					</div>
 					<div class="btn-area align-right">
 						<button type="button" class="btn-text popCloseBorder">닫기</button>				
@@ -195,13 +197,18 @@
 									<a href="#" class="btn-border btn-sm">활동 등록하기</a>
 								</div>								
 							</div>
+							<!-- 2023-03-14 -->
+							<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
+							<!--// 2023-03-14 -->
 							<!-- 2023-02-06 : 수정 -->
-							<div class="chat-box"> <!-- # 아이콘 있어야할 경우 "quick" 클래스 추가 -->
-								<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)">@계좌</textarea>									
-								<div class="quick-btn-area flex-area both">									
-									<button type="button" class="btn-quick-text btnToest on" data-title="Toest02"><span class="blind">자주쓰는문구</span></button> <!-- textarea에 내용 있는경우 on 클래스 추가 -->
-									<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->									
-								</div>	
+							<div class="chat-box"> <!-- # 아이콘 있어야할 경우 "quick" 클래스 추가 -->								
+								<div class="chat-box-inner">
+									<textarea class="reHeight scroll-area" placeholder="메시지 입력(Enter시 메시지 발송됨)"></textarea>									
+									<div class="quick-btn-area flex-area both">									
+										<button type="button" class="btn-quick-text btnToest" data-title="Toest02"><span class="blind">자주쓰는문구</span></button> <!-- textarea에 내용 있는경우 on 클래스 추가 -->
+										<button type="button" class="btn-round btn-mid bg-navy">전송</button> <!-- 비활성화시 disabled 속성 추가-->									
+									</div>	
+								</div>							
 							</div>
 							<!--// 2023-02-06 : 수정 -->
 						</div>
@@ -331,8 +338,7 @@
 							<button type="button" class="sms">SMS 발송</button>
 							<button type="button" class="history">상담이력</button>
 						</div>
-						<!--// 2023-02-06 : 수정 -->
-						<p class="warning-txt">손님과 상담 시 금융소비자보호법 등 관련 법률을 준수하여 상담하시기 바랍니다.</p>
+						<!--// 2023-02-06 : 수정 -->						
 					</div>
 					<!-- 간편발송 토스트팝업 -->
 					<div class="toest-popup" data-layer-name="Toest01">
@@ -1350,6 +1356,8 @@
 	});
 
 	/*// 2023-02-06 추가 */
+
+
 </script>
 
 </body>

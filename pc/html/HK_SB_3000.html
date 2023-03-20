@@ -2865,7 +2865,7 @@
 <div class="layer-popup type3" data-layer-name="Popup08"> 
 	<div class="popup lg2">
 		<div class="popup-header">			
-			<p class="title">발송 확인</p>			
+			<p class="title">상담 차단</p><!-- 2023-03-15 : 문구수정 -->
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		
@@ -2934,22 +2934,27 @@
 	});
 
 
-	/* 2023-03-15 추가 */	
-	layerBtnEvent('Popup03');//레이어팝업 재호출 해야할 경우 
-	layerBtnEventClose('Popup03'); //레이어팝업 함수 닫기 호출
+	/* 2023-03-15 추가 */
+
+	//레이어팝업 재호출 해야할 경우 
+//	layerBtnEvent('Popup03');
+
+	//레이어팝업 함수 닫기 호출
+//	layerBtnEventClose('Popup03'); 	
+
 	/*// 2023-03-15 추가 */
 	
 
 	/*간편발송 단축키 입력시 팝업 오픈 (확인용)*/
 	// $('.toest-popup').each(function(){		
 	// 	var chatBoxH =  $('.chat-box').outerHeight();
-	// 	$('.toest-popup[data-layer-name="Toest03"]').addClass('on').css('bottom',chatBoxH);;
+	// 	$('.toest-popup[data-layer-name="Toest03"]').addClass('on').css('bottom',chatBoxH);
 	// });
 
 	/*자주쓰는문구 단축키 입력시 팝업 오픈 (확인용)*/
 	// $('.toest-popup').each(function(){		
 	// 	var chatBoxH =  $('.chat-box').outerHeight();
-	// 	$('.toest-popup[data-layer-name="Toest04"]').addClass('on').css('bottom',chatBoxH);;
+	// 	$('.toest-popup[data-layer-name="Toest04"]').addClass('on').css('bottom',chatBoxH);
 	// });
 
 	/*// 2023-02-06 추가 */

@@ -8,18 +8,17 @@ $(document).ready(function(){
 	/*gnb*/
 	$('.btn-gnb').click(function(){
 		var gnbList = $(this).next('.gnb-list');
-		$(this).addClass('on');
 		gnbList.fadeIn('300');	
 	});
 	$('.btn-gnb-close').click(function(){
 		$(this).removeClass('on').closest('.gnb-list').fadeOut('100');
 	});
+	
 	// gnb외부영역 클릭 시 팝업 닫기
-	$(document).mouseup(function (e){
-		var gnbList = $('.gnb-list')
-		if(gnbList.has(e.target).length === 0){
-		gnbList.fadeOut('100');
-		$('.btn-gnb-close').removeClass('on');
+	$(document).mouseup(function (e) {
+		var container = $(".gnb-list");		
+		if (!container.is(e.target) && container.has(e.target).length === 0){		
+			container.fadeOut('100');			
 		}
 	});
 
@@ -113,8 +112,14 @@ $(document).ready(function(){
 		$(this).closest('.tooltip-area').find('.tooltip-layer').hide();	
 		$(this).closest('.tooltip-area').find('.btn-layer').removeClass('on');
 	});
-
-
+	//외부영역 클릭시 툴팁 닫기
+	$(document).mouseup(function (e) {
+		var container = $(".tooltip-area");		
+		if (!container.is(e.target) && container.has(e.target).length === 0){		
+			container.find('.tooltip-layer').hide();
+			container.find('.tooltip-layer').prev('.btn-layer').removeClass('on');		
+		}
+	});
 	/* 1:1상담내역 검색 show/hide */
 	$('.history .search-area > button').click(function(){
 		var item = $(this).attr('data-title');
@@ -217,7 +222,9 @@ $(document).ready(function(){
 
 	$('.btn-cal').click(function(){
 		var parentName = $(this).closest('[class*="layer-pop"]').attr('data-layer-name');
-		console.log(parentName);
+		$(this).closest('.multi-cal-area').prev('.btn-date-area').find('button').removeClass('on');
+		$(this).closest('.multi-cal-area').prev('.btn-date-area').find('.btn-cal-setting').addClass('on');
+		
 		if(parentName == 'chat-util'){
 			$(this).closest('.btn-date-area').next('.multi-cal-area').addClass('on');
 			$(this).closest('.btn-date-area').next('.multi-cal-area').find('.multi-cal-layer').addClass('on');
@@ -277,82 +284,15 @@ $(window).on('load', function(){
 	
 
 	//레이어팝업 (딤드 + 가운데정렬)
-	$(document).on('click', '.btnPop', function(){    
-        
-		if(!$(this).hasClass('none')){  // 버튼 on,off 동작 여부
-			$(this).addClass('on');
-		}	
-
-        $('html').addClass('popOpen');
-
-        var name = $(this).attr('data-title');
-        $('.layer-popup[data-layer-name=' + name + ']').fadeIn(100, function(){          
-            $(this).addClass('open').closest('.layer-popup').prepend('<div class="dimmed">');
-
-			var hei = $(window).height();		
-			var popH = $(this).find('.popup').outerHeight();
-			var pdT = (hei - popH) / 2;
-			var mgB = $(this).find('.popup').css('margin-bottom');
-			var space = mgB.replace(/px/g, '') * 2;
-		
-		
-			if($(this).hasClass('type2')){ // 헤더고정 테이블 들어있는 팝업 (window.height보다 내용이 길어지면 꽉차게)				
-				var popHeader = 0;
-				//var popBottom = 0;
-				var popPadding = $(this).find('.popup').css('padding-top').replace(/px/g, '') * 2;
-				var popHeader = $(this).find('.popup-header').outerHeight();
-				var tblFixedHeader =$(this).find('.fix-th').outerHeight();
-				var layerCont = $(this).find('.fix-head');
-				var tableBody = $(this).find('table').outerWidth();
-			
-				if($(this).find('.popup-info').length){			
-					var popBottom = $(this).find('.popup-info').outerHeight();	
-					var sum = hei - (popPadding + popHeader + tblFixedHeader + popBottom + 16);		
-				}else {
-					var sum = hei - (popPadding + popHeader + tblFixedHeader + 16); // 세로 스크롤영역 계산(layer-cont paddingT/B(16) 포함)		
-				}						
-							
-				layerCont.css('max-height', sum); // 스크롤영역 높이값
-
-				if($(this).find('.fix-th').hasClass('type2')){ // table 개수에 따라
-					$(this).find('.fix-th.type2 > div').css('width', tableBody);
-				}else{
-					$(this).find('.fix-th').css('width', tableBody); 
-				}					
-			
-				if(hei < popH){
-					$(this).find('.popup').css('height', '100vh');
-					if($(this).find('.fix-th').hasClass('type2')){
-						$(this).find('.fix-th.type2 > div').css('width', tableBody - 8.5);	
-					}else{
-						$(this).find('.fix-th').css('width', tableBody - 17);  //스크롤 생겼을때 스크롤 너비(17)만큼 빼줌
-					}				
-					 
-				}else if(hei > popH){
-					 $(this).css({'padding-top':pdT});
-				}
-		
-			}else{	// 기본 레이어팝업		
-				if(hei - space < popH){
-					$(this).css({'padding-top':mgB});
-				}else{
-					$(this).css({'padding-top':pdT});
-				}
-			}
-        });		
-    });
+	$(document).on('click', '.btnPop', function(){  
+		var lyBtnObj = $(this).attr('data-title');
+		layerBtnEvent(lyBtnObj);
+	});
+	
 	/* 팝업닫기 */
     $(document).on('click', '.open .popClose,.dimmed', function(){	
-		var type = $(this).closest('.layer-popup').hasClass('none');
-	 	$(this).closest('.layer-popup').css('padding-top','').removeClass('open').scrollTop(0).fadeOut(300, function(){
-		
-		if(!type == true){ // 버튼 on,off 동작 여부
-			$('.btnPop.on').focus().removeClass('on');	
-		}
-		
-		$(this).closest('.layer-popup').find('.dimmed').remove();
-		$('html').removeClass('popOpen');
-		});			
+		var lyBtnObj = $(this).closest('.layer-popup').attr('data-layer-name');
+		layerBtnEventClose(lyBtnObj);		
     });
 	
 
@@ -380,14 +320,20 @@ $(window).on('load', function(){
 	$('.btnToest').click(function(){
 		var name = $(this).attr('data-title');
 		var chatBoxH =  $('.chat-box').outerHeight();
+		var warnH = $('.warning-txt').outerHeight();
+	
+		if(name == "Toest01"){
+			$('.toest-popup[data-layer-name=' + name + ']').css('bottom', '-1px').addClass('on');
 		
-		$('.toest-popup[data-layer-name=' + name + ']').css('bottom', '-1px').addClass('on');		
-		if(name == "Toest02"){
-			$('.toest-popup[data-layer-name="Toest02"].on').css('bottom',chatBoxH);
-			$(this).addClass('on');
-			$('.chat-box').addClass('quick').find('textarea').attr('placeholder','자주 쓰는 문구를 선택해 주세요');
+		}else {
+			$('.toest-popup[data-layer-name=' + name + ']').addClass('on').css('bottom', (chatBoxH + warnH) - warnH);
+		
+			if(name == "Toest02"){
+				$(this).addClass('on');
+				$('.chat-box').addClass('quick').find('textarea').attr('placeholder','자주 쓰는 문구를 선택해 주세요');
+			}		
 		}
-	});
+	}); 
 	/* 팝업닫기 */
 	$(document).on('click', '.toestClose', function(){     
 		var name = $(this).closest('.toest-popup').attr('data-layer-name');
@@ -409,8 +355,7 @@ $(window).on('load', function(){
    
 	 //위치고정 레이어
 	 $('.btnPopBorder').click(function(){
-		var name = $(this).attr('data-title');
-	
+		var name = $(this).attr('data-title');	
 		
 		if(name == 'link-preview'){ ///간편발송 미리보기 	
 
@@ -498,23 +443,10 @@ $(window).on('load', function(){
 		$('.btnPopBorder[data-title=' + name + ']').removeClass('on');	
 	 });
 
-
-	
-
 	
 
 
 });
-
-$(window).resize(function(){	
-//	layerPop();	
-	
-});
-
-$(window).scroll(function(){
-	
-});
-
 
 
 // 라디오,체크박스
@@ -533,8 +465,6 @@ function rdoCheck(){
         }
     });
 }
-
-
 
 
 // 레이어팝업 고정 위치설정
@@ -605,7 +535,9 @@ function reHeight(){
 				var chatH = $('.chat-wrap').outerHeight();
 				var chatInputH = $('.chat-box').find('textarea').height();
 				var chatBoxH =  $('.chat-box').outerHeight();
-				var calcH  = chatH - chatInputH;	
+				var warnH = $('.warning-txt').outerHeight() + 1;
+				var calcH  = chatH - chatInputH;
+			
 				
 				//console.log( chatH + '/' + chatInputH + '/' + chatBoxH + '/' + calcH);
 				if(chatInputH > 99){
@@ -613,7 +545,7 @@ function reHeight(){
 				}else{
 					$(this).css('overflow-y', 'hidden');
 				}
-				$('.toest-popup[data-layer-name="Toest02"].on').css('bottom',chatBoxH);
+				$('.toest-popup.on').css('bottom',chatBoxH );					
 				$(this).css('height', '20px').height(this.scrollHeight);
 				chatCont.css('height', calcH ).scrollTop(chatCont[0].scrollHeight);
 
@@ -676,6 +608,91 @@ function tooltip(){
 		  },
 		}
 	  });
+}
+ 
+// 레이어팝업 (딤드 + 가운데정렬)
+function layerBtnEvent(obj) { 	
+	var objName = obj;
+	// var btnPopThis = $('.layer-popup[data-layer-name=' + objName + ']');
+	var layerName =  $('.layer-popup[data-layer-name=' + objName + ']');	
+
+	if(!layerName.hasClass('none')){ 
+		layerName.addClass('on');
+	}	
+
+	$('html').addClass('popOpen');	
+	layerName.fadeIn(100, function () { 		
+		var objName = obj;
+		var layerName =  $('.layer-popup[data-layer-name=' + objName + ']');	
+		layerName.addClass('open').prepend('<div class="dimmed">');
+
+		var hei = $(window).height();		
+		var popH = layerName.find('.popup').outerHeight();
+		var pdT = (hei - popH) / 2;
+		var mgB = layerName.find('.popup').css('margin-bottom');
+		var space = mgB.replace(/px/g, '') * 2;
+
+		
+	if(layerName.hasClass('type2')){ // 헤더고정 테이블 들어있는 팝업 (window.height보다 내용이 길어지면 꽉차게)				
+		var popHeader = 0;
+		//var popBottom = 0;
+		var popPadding = layerName.find('.popup').css('padding-top').replace(/px/g, '') * 4; 
+		var popHeader = layerName.find('.popup-header').outerHeight();
+		var tblFixedHeader =layerName.find('.fix-th').outerHeight();
+		var layerCont = layerName.find('.fix-head');
+		var tableBody = layerName.find('table').outerWidth();
+	
+		if(layerName.find('.popup-info').length){			
+			var popBottom = layerName.find('.popup-info').outerHeight();	
+			var sum = hei - (popPadding + popHeader + tblFixedHeader + popBottom + 16);		
+		}else {
+			var sum = hei - (popPadding + popHeader + tblFixedHeader + 16); // 세로 스크롤영역 계산(layer-cont paddingT/B(16) 포함)		
+		}						
+					
+		layerCont.css('max-height', sum); // 스크롤영역 높이값
+
+		if(layerName.find('.fix-th').hasClass('type2')){ // table 개수에 따라
+			layerName.find('.fix-th.type2 > div').css('width', tableBody);
+		}else{
+			layerName.find('.fix-th').css('width', tableBody); 
+		}					
+	
+		if(hei < popH){
+			layerName.find('.popup').css('height', 100 + 'vh' - 80); // 팝업 위아래 간격 40 * 2
+			if(layerName.find('.fix-th').hasClass('type2')){
+				layerName.find('.fix-th.type2 > div').css('width', tableBody - 8.5);	
+			}else{
+				layerName.find('.fix-th').css('width', tableBody - 17);  //스크롤 생겼을때 스크롤 너비(17)만큼 빼줌
+			}				
+				
+		}else if(hei > popH){
+				layerName.css({'padding-top':pdT});
+		}
+
+	}else{	// 기본 레이어팝업		
+		if(hei - space < popH){
+			layerName.css({'padding-top':mgB});
+		}else{
+			layerName.css({'padding-top':pdT});
+		}
+	}
+      
+ 	});   
+}
+
+//레이어팝업 (딤드 + 가운데정렬) 닫기
+function layerBtnEventClose(obj) {
+	var objName = obj;	
+	var layerName =  $('.layer-popup[data-layer-name=' + objName + ']');
+	var type = layerName.hasClass('none');
+	layerName.css('padding-top','').removeClass('open').scrollTop(0).fadeOut(300, function(){
+		
+		if(!type == true){ // 버튼 on,off 동작 여부
+			$('.btnPop.on').focus().removeClass('on');	
+		}		
+		layerName.find('.dimmed').remove();
+		$('html').removeClass('popOpen');
+	});	
 }
 
 // 초기값 설정
