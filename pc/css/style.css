@@ -3380,6 +3380,11 @@ mark.current {
 .chat-list li:hover {
 	border:2px solid #446cf3;
 }
+.chat-list li.block {
+	background-color:#f6f8fb;
+	border-color: #f6f8fb;	
+	box-shadow: none;
+}
 
 .btn-like {
 	width: 20px;
