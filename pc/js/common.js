@@ -287,8 +287,7 @@ $(window).on('load', function(){
 	$(document).on('click', '.btnPop', function(){  
 		var lyBtnObj = $(this).attr('data-title');
 		layerBtnEvent(lyBtnObj);
-	});
-	
+	});	
 	/* 팝업닫기 */
     $(document).on('click', '.open .popClose,.dimmed', function(){	
 		var lyBtnObj = $(this).closest('.layer-popup').attr('data-layer-name');
@@ -344,7 +343,6 @@ $(window).on('load', function(){
 			$('.chat-box').removeClass('quick').find('textarea').attr('placeholder','메시지 입력(Enter시 메시지 발송됨)');			
 		}	
 	 });
-
 	 /* 리스트 클릭시 팝업 닫기 */
 	 $(document).on('click', '.send-list.type2 a', function(){
 		$(this).closest('.toest-popup').hide().css('bottom','-100%').removeClass('on').css('display','');
@@ -353,98 +351,28 @@ $(window).on('load', function(){
 	 });
 
    
-	 //위치고정 레이어
-	 $('.btnPopBorder').click(function(){
-		var name = $(this).attr('data-title');	
-		
-		if(name == 'link-preview'){ ///간편발송 미리보기 	
+	 //위치고정 레이어(간편발송 외 공통)
+	 $(document).on('click', '.btnPopBorder', function(){  
+		var lyBtnObj = $(this).attr('data-title');	
+		layerBtnEvent2(lyBtnObj);		
+	}); 
+	/* 팝업닫기 */
+	$(document).on('click', '.popCloseBorder', function(){	
+		var lyBtnObj = $(this).closest('.layer-popup-border').attr('data-layer-name');
+		layerBtnEventClose2(lyBtnObj);		
+	});
 
-			var sHeight = window.innerHeight; 
-			var oHeight = $('.layer-popup-border[data-layer-name=' + name + ']').height() + 36; //푸터높이
-			var divTop = $(this).closest('li').offset().top; 
-			
-			$('.layer-popup-border').removeClass('on');				
-			$(this).closest('li').addClass('select').siblings('li').removeClass('select');
-			
-			if( divTop + oHeight > sHeight ){
-				$('.layer-popup-border[data-layer-name=' + name + ']').css({
-					"top": '',
-					"bottom": 0			
-				}).addClass('on');
-			}else{
-				$('.layer-popup-border[data-layer-name=' + name + ']').css({
-					"top": divTop -80,
-					"bottom": ''
-				}).addClass('on');	
-			}		
-		}else if(name == 'graph'){ // 상담현황 그래프팝업	
 
-			var sWidth = $('.wrapper').outerWidth();
-			var winPos = $(window).scrollTop() +  $(window).outerHeight() - 78; //헤더높이 78
-			var targetDiv = $(this).closest('td');
-			var targetLayer = $(this).closest('td').find('.layer-popup-border');			
-			var posTop = targetDiv.position().top + 61;	//td높이 + 레이어간격 61
-			var posLeft = targetDiv.position().left;
-			var layerW = targetDiv.find('.layer-popup-border').outerWidth();
-			var layerH = targetDiv.find('.layer-popup-border').outerHeight();
-			
-			$('.btnPopBorder').removeClass('on');
-			$('.layer-popup-border').removeClass('on');
-
-			$(this).addClass('on');
-			if($(this).parent().hasClass('row')){
-				if(posTop + layerH > winPos) {
-					targetLayer.css({				
-						"bottom": 61,
-						"right": 0,
-						"top" : ''
-					}).addClass('on');
-				
-				}else{
-					targetLayer.css({				
-						"top": 61,
-						"right": 0,
-						"bottom" :''
-					}).addClass('on');				
-				}				
-			}else{
-				if(posLeft + layerW > sWidth) {
-					targetLayer.css({				
-						"bottom": 61,
-						"right": 0,
-						"left": ''
-					}).addClass('on');				
-				}else{
-					targetLayer.css({				
-						"bottom": 61,
-						"left": 0,
-						"right": ''
-					}).addClass('on');				
-				}
-			}
-		
-		}else{ // 일반 위치고정 팝업
-
-			if($(this).hasClass('on')){
-				$(this).removeClass('on');
-				$('.layer-popup-border[data-layer-name=' + name + ']').removeClass('on');
-			}else{
-				$(this).addClass('on');
-				$('.layer-popup-border[data-layer-name=' + name + ']').addClass('on');
-			}
-		}
-		
-	 });
-	 /*닫기*/
-	 $(document).on('click', '.popCloseBorder', function(){
-		var name = $(this).closest('.layer-popup-border').attr('data-layer-name');	
-	
-		$('.layer-popup-border[data-layer-name=' + name + ']').removeClass('on');	
-		$('.btnPopBorder[data-title=' + name + ']').removeClass('on');	
-	 });
-
-	
-
+	 //상담현황 그래프 레이어
+	 $(document).on('click', '.btnPopGraph', function(){  
+		var lyBtnObj = $(this).attr('data-title');	
+		layerGraph(lyBtnObj);		
+	}); 
+	/*팝업닫기*/
+	$(document).on('click', '.popCloseGraph', function(){	
+		var lyBtnObj = $(this).closest('.layer-popup-border').attr('data-layer-name');
+		layerGraphClose(lyBtnObj);		
+	});	
 
 });
 
@@ -695,14 +623,107 @@ function layerBtnEventClose(obj) {
 	});	
 }
 
-// 초기값 설정
-// function setDate(){
-// 	$('.from').datepicker('setDate', '-1M'); 
-// 	$('.to').datepicker('setDate', 'today'); 		
-// 	fromDate = $(".from").val();
-// 	toDate = $(".to").val();
-	
-// 	$('.calendar-area #from').val(fromDate); 
-// 	$('.calendar-area #to').val(toDate); 
+//위치고정 레이어 (간편발송포함 공통)
+function layerBtnEvent2(lyBtnObj) {
+	var objName = lyBtnObj;	
+	var btnName = $('.btnPopBorder[data-title=' + objName + ']');	
+	var layerName = $('.layer-popup-border[data-layer-name=' + objName + ']');		
 
-// }
+		if(objName.indexOf("link-preview") > -1){ ///간편발송 미리보기 	
+			
+			var sHeight = window.innerHeight; 
+			var oHeight = layerName.height() + 36; //푸터높이
+			var divTop = btnName.closest('li').offset().top; 
+			
+			$('.layer-popup-border').removeClass('on');				
+			btnName.closest('li').addClass('select').siblings('li').removeClass('select');
+			
+			if( divTop + oHeight > sHeight ){
+				layerName.css({
+					"top": '',
+					"bottom": 0			
+				}).addClass('on');
+			}else{
+				layerName.css({
+					"top": divTop -80,
+					"bottom": ''
+				}).addClass('on');	
+			}		
+		}else{ // 일반 위치고정 팝업
+
+			if($(this).hasClass('on')){
+				btnName.removeClass('on');
+				layerName.removeClass('on');
+			}else{
+				btnName.addClass('on');
+				layerName.addClass('on');
+			}
+		}
+}
+//위치고정 레이어 닫기
+function layerBtnEventClose2(obj) {
+	var objName = obj;	
+	var layerName =  $('.layer-popup-border[data-layer-name=' + objName + ']');
+	
+	layerName.removeClass('on');	
+	$('.btnPopBorder[data-title=' + objName + ']').removeClass('on');	
+	
+}
+
+//상담현황 그래프 레이어
+function layerGraph(lyBtnObj){
+	var objName = lyBtnObj;	
+	var btnName = $('.btnPopGraph[data-title=' + objName + ']');	
+	var layerName = $('.layer-popup-border[data-layer-name=' + objName + ']');		
+
+	var sWidth = $('.wrapper').outerWidth();
+	var winPos = $(window).scrollTop() +  $(window).outerHeight() - 78; //헤더높이 78
+	var targetDiv = layerName.closest('td');	
+	var posTop = targetDiv.position().top + 61;	//td높이 + 레이어간격 61
+	var posLeft = targetDiv.position().left;
+	var layerW = targetDiv.find('.layer-popup-border').outerWidth();
+	var layerH = targetDiv.find('.layer-popup-border').outerHeight();
+	
+	$('.btnPopGraph, .layer-popup-border').removeClass('on');
+
+	btnName.addClass('on');
+	if(layerName.parent().hasClass('row')){
+		if(posTop + layerH > winPos) {
+			layerName.css({				
+				"bottom": 61,
+				"right": 0,
+				"top" : ''
+			}).addClass('on');
+		
+		}else{
+			layerName.css({				
+				"top": 61,
+				"right": 0,
+				"bottom" :''
+			}).addClass('on');				
+		}				
+	}else{
+		if(posLeft + layerW > sWidth) {
+			layerName.css({				
+				"bottom": 61,
+				"right": 0,
+				"left": ''
+			}).addClass('on');				
+		}else{
+			layerName.css({				
+				"bottom": 61,
+				"left": 0,
+				"right": ''
+			}).addClass('on');				
+		}
+	}
+}
+//상담현황 그래프 레이어 닫기
+function layerGraphClose(obj) {
+	var objName = obj;	
+	var layerName =  $('.layer-popup-border[data-layer-name=' + objName + ']');
+	
+	layerName.removeClass('on');	
+	$('.btnPopGraph[data-title=' + objName + ']').removeClass('on');	
+	
+}

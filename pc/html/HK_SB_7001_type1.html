@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+		</div>
+		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w376" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+				<ul class="depth1">
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
+						<ul class="depth2">
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="container">	
+		<div class="contents admin-area">
+			<div class="tit-area">
+				<h2>통계</h2>
+			</div>
+			<div class="content">
+				<div class="tab-lst2 noneTab">
+					<a href="#" class="tab-item on"><span class="txt">전점</span></a>
+					<a href="#" class="tab-item"><span class="txt">지점별</span></a>
+					<a href="#" class="tab-item"><span class="txt">업무 유형별</span></a>
+					<a href="#" class="tab-item"><span class="txt">직원별</span></a>										
+				</div>
+				<div class="tab-wrap">
+					<div class="box-white-column">					
+						<div class="section">
+							<div class="box-white">
+								<div class="cont">
+									<ul class="form-group flex-area">	
+										<li class="flex-area">
+											<p class="tit">기간 선택</p>
+											<div class="btn-date-area radio-select">
+												<button type="button" class="btn-date on">오늘</button> <!-- 선택시 on 클래스 추가 -->
+												<button type="button" class="btn-date">어제</button>
+												<button type="button" class="btn-date">1주일</button>
+												<button type="button" class="btn-date">1개월</button>
+												<button type="button" class="btn-date btn-cal-setting">설정</button> <!-- 2023-02-22 클래스변경-->
+											</div>
+											<div class="multi-cal-area">
+												<div class="calendar-area">
+													<div class="input-text">
+														<input type="text" class="input-from" name="from" readonly>	
+													</div>
+													<span class="divide">-</span>
+													<div class="input-text">
+														<input type="text" class="input-to" name="to" readonly>	
+													</div>
+													<button type="button" class="btn-cal"><span class="blind">달력</span></button>
+												</div>
+												<div class="multi-cal-layer">
+													<div class="from"></div>
+													<div class="to"></div>
+													<div class="btn-area">
+														<button type="button" class="btn-cal-close"><span>닫기</span></button>
+													</div>
+												</div>
+											</div>
+										</li>								
+									</ul>							
+								</div>
+								<div class="cont">
+									<ul class="form-group flex-area">	
+										<li class="flex-area">
+											<p class="tit">지점 선택</p>
+											<div class="cont">
+												<span class="select-box">
+													<select class="styled">
+														<option value="">전체</option>							
+													</select>
+												</span>
+											</div>
+										</li>
+										<li class="flex-area">
+											<p class="tit">업무 유형</p>
+											<div class="cont">
+												<span class="select-box">
+													<select class="styled">
+														<option value="">전체</option>							
+													</select>
+												</span>
+											</div>
+										</li>							
+										<li class="flex-area">
+											<p class="tit">직원 선택</p>
+											<div class="cont">
+												<span class="select-box">
+													<select class="styled">
+														<option value="">전체</option>							
+													</select>
+												</span>
+											</div>
+										</li>									
+									</ul>
+								</div>	
+								<div class="cont">
+									<ul class="form-group flex-area both">								
+										<li class="flex-area">
+											<p class="tit">기간 선택</p>
+											<div class="cont flex-area"> 
+												<ul class="btn-group-area radio">
+													<li><input type="radio" name="radio1" id="radio1-1"><label class="btn-type1" for="radio1-1">손님별 통계</label></li>
+													<li><input type="radio" name="radio1" id="radio1-2" checked><label class="btn-type1" for="radio1-2">상담별 통계</label></li>	
+													<li><input type="radio" name="radio1" id="radio1-3"><label class="btn-type1" for="radio1-3">상담 직원 통계</label></li>
+													<li><input type="radio" name="radio1" id="radio1-4"><label class="btn-type1" for="radio1-4">간변발송 순위 통계</label></li>											
+												</ul>						
+											</div>												
+										</li>
+										<li class="flex-area">
+											<div class="btn-area flex-area">
+												<button type="button" class="btn-reset"><span>초기화</span></button>
+												<button type="button" class="btn-round btn-mid bg-blue">검색</button> 
+											</div>
+										</li>													
+									</ul>
+								
+								</div>		
+												
+							</div>			
+						</div>
+						<div class="section">
+							<div class="top-info flex-area both">
+								<ul>
+									<li class="num">2023-02-16</li>
+									<li>지점별</li>
+									<li>업무유형 전체</li>
+									<li>직원 전체</li>
+									<li>손님별 통계</li>
+								</ul>
+								<span class="unit">종료 기준 (대화없이 종료 제외)</span>
+							</div>
+							<div class="board-list3">					
+								<table>
+									<caption>통계 테이블</caption>
+									<colgroup>
+										<col style="width: 102px;">
+										<col style="width: 140px;">									
+										<col style="width: 78px;">
+										<col style="width: 78px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 42px;">
+										<col style="width: 78px;">
+										<col style="width: 94px;">
+									</colgroup>	
+									<thead>
+										<tr>
+											<th rowspan="2">지점명</th>
+											<th rowspan="2">업무유형</th>
+											<th rowspan="2">총손님<br>수</th>
+											<th rowspan="2">상담 건수<br>(대화창)</th>											
+											<th colspan="15">상담 요청 시간 분포</th>
+											<th rowspan="2">평균<br>상담 시간</th>
+											<th rowspan="2">손님 질문<br>시점~<br>답변 시점<br>평균 시간</th>									
+										</tr>
+										<tr>
+											<th>00시<br>~06시</th>
+											<th>~<br>07시</th>
+											<th>~<br>08시</th>
+											<th>~<br>09시</th>
+											<th>~<br>10시</th>
+											<th>~<br>11시</th>
+											<th>~<br>12시</th>
+											<th>~<br>13시</th>
+											<th>~<br>14시</th>
+											<th>~<br>15시</th>
+											<th>~<br>16시</th>
+											<th>~<br>17시</th>
+											<th>~<br>18시</th>
+											<th>~<br>19시</th>
+											<th>00시<br>~06시</th>				
+										</tr>									
+									</thead>					
+									<tbody>	
+										<tr class="highlight">
+											<td>전점</td>
+											<td class="left">전체</td>
+											<td class="num">100</td>
+											<td class="num">99</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>15분</td>
+										</tr>
+										<tr>
+											<td rowspan="12">전점</td>
+											<td class="left">목돈 굴리기</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">목돈 모으기</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">퇴직연금 IRP</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">전(월)세 대출</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">부동산담보 대출</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">신용 대출</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">오토 금융</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">개인 사업자 대출</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">기업 대출</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">재외동포 재산반출</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">해외부동산</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>
+										<tr>											
+											<td class="left">기업성 해외자금</td>
+											<td class="num">10</td>
+											<td class="num">9</td>
+											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td>15분</td>
+											<td>5분</td>
+										</tr>			
+										<!-- 데이터가 없는경우  -->
+										<tr>
+											<td colspan="21" class="no-data">검색 결과가 없습니다.</td>
+										</tr>
+										<!--// 데이터가 없는경우  -->
+									</tbody>
+								</table>
+							</div>
+							<div class="pagenation">							
+								<a href="#" class="btn-prev">이전</a>
+								<span class="page">1</span>
+								<span class="ellipsis-divide">ellipsis</span>
+								<span class="page now">14</span>
+								<a href="#" class="page">15</a>
+								<a href="#" class="page">16</a>
+								<a href="#" class="page">17</a>						
+								<span class="ellipsis-divide">ellipsis</span>
+								<span class="page">35</span>
+								<a href="#" class="btn-next">다음</a>						
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+</html>
