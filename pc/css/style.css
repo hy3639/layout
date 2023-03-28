@@ -4478,6 +4478,8 @@ mark.current {
 .example-area + [class^=board-write] {
 	width: 634px;
 }
+.example-area + .board-write2 tr:last-child th,
+.example-area + .board-write2 tr:last-child td {border-bottom: 0;}
 .example-area + .board-write2 th,
 .example-area + .board-write2 td {
 	padding: 22px 0;
