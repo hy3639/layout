@@ -131,7 +131,19 @@
 									<li>
 										<span class="tit">전화번호</span>
 										<span class="cont">010-4567-4587</span>
-									</li>									
+									</li>			
+									<!-- 2023-03-29 : 업무유형 추가 -->
+									<li>
+										<span class="tit">업무 유형</span>
+										<span class="cont">
+											<span class="select-box wide">
+												<select class="styled">
+													<option value="">선택</option>													
+												</select>
+											</span>
+										</span>
+									</li>
+									<!--// 2023-03-29 : 업무유형 추가 -->							
 								</ul>
 							</div>
 							<div class="btn-area align-right">								
@@ -174,7 +186,7 @@
 									</div>
 								</div>
 								<span class="select-box wide">
-									<select class="styled">
+									<select class="styled num"> <!-- 2023-03-29 : 클래스 추가 -->
 										<option value="">09:00</option>
 										<option value="">10:00</option>
 										<option value="">11:00</option>									
@@ -220,7 +232,7 @@
 
 <!-- 2023-03-09 전담손님목록 팝업 -->
 <div class="layer-popup type2 none" data-layer-name="Popup02"> <!-- 팝업 버튼 클릭시 스타일 적용되는것을 제외하기 위해 none 클래스 추가-->
-	<div class="popup full">
+	<div class="popup w-full"> <!-- 2023-03-29 : 클래스변경-->
 		<div class="popup-header">			
 			<p class="title">전담손님 목록</p>			
 			<button class="btn-close popClose">팝업닫기</button>	

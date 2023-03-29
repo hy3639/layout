@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+		</div>
+		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w376" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+				<ul class="depth1">
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
+						<ul class="depth2">
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="container">	
+		<div class="contents admin-area">
+			<div class="tit-area">
+				<h2>업무 유형 관리</h2>			
+			</div>
+			<div class="content">
+				<div class="box-white-column">
+					<div class="section">						
+						<div class="board-list3">				
+							<table>
+								<caption>업무 유형 관리</caption>
+								<colgroup>
+									<col style="width: 20%;">
+									<col style="width: 20%;">
+									<col style="width: 40%;">
+									<col style="width: 20%;">														
+								</colgroup>	
+								<thead>
+									<tr>
+										<th>사용 여부</th>										
+										<th>대분류 명</th>
+										<th>소분류 명</th>
+										<th>업무 유형 코드</th>																			
+									</tr>																		
+								</thead>					
+								<tbody>										
+									<tr>
+										<td>사용</td>										
+										<td>예적금</td>
+										<td>목돈 굴리기</td>
+										<td class="num">010</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>예적금</td>
+										<td>목돈 모으기</td>
+										<td class="num">020</td>																							
+									</tr>	
+									<tr>
+										<td>사용</td>										
+										<td>예적금</td>
+										<td>퇴직연금 IRP</td>
+										<td class="num">030</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>대출</td>
+										<td>전(월)세 대출</td>
+										<td class="num">040</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>대출</td>
+										<td>부동산담보 대출</td>
+										<td class="num">050</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>대출</td>
+										<td>신용 대출</td>
+										<td class="num">060</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>대출</td>
+										<td>오토 금융</td>
+										<td class="num">070</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>대출</td>
+										<td>개인사업자 대출</td>
+										<td class="num">080</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>대출</td>
+										<td>기업 대출</td>
+										<td class="num">090</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>외환</td>
+										<td>유학 등 기타 자금</td>
+										<td class="num">100</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>외환</td>
+										<td>재외동포 재산반출</td>
+										<td class="num">110</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>외환</td>
+										<td>해외 부동산</td>
+										<td class="num">120</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>외환</td>
+										<td>기업성 해외자금</td>
+										<td class="num">130</td>																							
+									</tr>
+									<tr>
+										<td>사용</td>										
+										<td>기타 안내</td>
+										<td>도움이 필요하세요?</td>
+										<td class="num">140</td>																							
+									</tr>
+								</tbody>
+							</table>							
+						</div>	
+						<div class="btn-area align-right">						
+							<button type="button" class="btn-round btn-mid3 bg-blue">수정/추가</button> 
+						</div>					
+					</div>					
+				</div>						
+			</div>		
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+
+
+</body>
+</html>

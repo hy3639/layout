@@ -75,7 +75,7 @@
 	<div class="container">	
 		<div class="contents admin-area">
 			<div class="tit-area">
-				<h2>하나톡 메인 관리 등록</h2>
+				<h2>하나톡 메인 관리 수정</h2>
 			</div>			
 			<div class="content">					
 				<div class="section">				
@@ -83,11 +83,9 @@
 						<div class="flex-area bothT full">
 							<div class="example-area">
 								<p class="tit">하나톡 메인 예시 이미지</p>
-								<!-- 2023-03-29 : 이미지추가 -->
 								<div class="img-area">
 									<img src="../images/img/img-hana-example.png">
 								</div>
-								<!--// 2023-03-29 : 이미지추가 -->
 							</div>
 							<div class="board-write">
 								<table>
@@ -121,7 +119,7 @@
 												<div class="single-cal-area input">	
 													<div class="calendar-area">
 														<div class="input-text">
-															<input type="text" class="date" name="from">	
+															<input type="text" class="date start" name="from">	
 														</div>										
 														<button type="button" class="btn-cal-single"><span class="blind">달력</span></button>
 													</div>					
@@ -141,7 +139,7 @@
 												<div class="single-cal-area input">	
 													<div class="calendar-area">
 														<div class="input-text">
-															<input type="text" class="date" name="from">	
+															<input type="text" class="date end" name="from">	
 														</div>										
 														<button type="button" class="btn-cal-single"><span class="blind">달력</span></button>
 													</div>					
@@ -192,7 +190,7 @@
 											<th scope="row" class="align-top"><span class="number">주 제목</span></th>
 											<td>
 												<div class="gray-box text-area">
-													<textarea class="h60" placeholder="주 제목을 입력하세요."></textarea>								
+													<textarea class="h60" placeholder="주 제목을 입력하세요." >안녕하세요. 환영합니다.!&#10;하나은행 하나톡입니다.</textarea>								
 												</div>
 												<ul class="list-style2">
 													<li>입력 글자 수 제한: 40자(3줄 까지 입력 가능).</li>
@@ -204,7 +202,10 @@
 											<th scope="row" class="align-top"><span class="number">유의사항</span></th>
 											<td>
 												<div class="gray-box text-area">
-													<textarea class="h260" placeholder="유의사항을 입력하세요."></textarea>								
+													<textarea class="h260" placeholder="유의사항을 입력하세요.">하나 톡에서는&#10;· 하나, 일반상담을 제공해요.&#10;계좌조회, 신규가입등의 금융거래가 필요한 경우에는 하나원큐(하나은&#10;모바일 뱅크 앱) 등으로 안내 드리는 점 참고해 주세요.&#10;&#10;
+· 둘, 일반상담을 제공해요.&#10;계좌조회, 신규가입등의 금융거래가 필요한 경우에는 하나원큐(하나은&#10;모바일 뱅크 앱) 등으로 안내 드리는 점 참고해 주세요.&#10;&#10;	
+· 셋, 일반상담을 제공해요.&#10;계좌조회, 신규가입등의 금융거래가 필요한 경우에는 하나원큐(하나은&#10;모바일 뱅크 앱) 등으로 안내 드리는 점 참고해 주세요.&#10;&#10;
+· 넷, 일반상담을 제공해요.&#10;계좌조회, 신규가입등의 금융거래가 필요한 경우에는 하나원큐(하나은&#10;모바일 뱅크 앱) 등으로 안내 드리는 점 참고해 주세요.</textarea>								
 												</div>
 											</td>
 										</tr>
@@ -212,7 +213,7 @@
 											<th scope="row" class="align-top"><span class="number">은행 주소</span></th>
 											<td>
 												<div class="gray-box text-area">
-													<textarea placeholder="은행 주소를 입력하세요."></textarea>								
+													<textarea placeholder="은행 주소를 입력하세요.">서울특별시 중구 을지로 35 1599-1111	35,&#10;Eulji-ro, Jung-gu, Seoul, Republic of Korea</textarea>								
 												</div>
 											</td>
 										</tr>
@@ -220,7 +221,7 @@
 											<th scope="row"><span class="number">copyright</span></th>
 											<td>
 												<div class="input-text gray full">
-													<input type="text" placeholder="Copyright를 입력하세요." >
+													<input type="text" placeholder="Copyright를 입력하세요." value="ⓒ 2023 Hana Bank all right reserved">
 													<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
 												</div>												
 											</td>
@@ -248,6 +249,9 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/common.js"></script>
+<script>
+
+</script>
 
 </body>
 </html>

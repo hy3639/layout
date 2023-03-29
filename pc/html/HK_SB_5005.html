@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+		</div>
+		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w376" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+				<ul class="depth1">
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
+						<ul class="depth2">
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="container">	
+		<div class="contents admin-area">
+			<div class="tit-area">
+				<h2>업무 유형 수정/추가</h2>			
+			</div>
+			<div class="content">
+				<div class="box-white-column">
+					<div class="section">	
+						<div class="top-info flex-area right">														
+							<button type="button" class="btn-add">업무 유형 추가</button>
+						</div>					
+						<div class="board-list3">				
+							<table>
+								<caption>업무 유형 수정/추가 리스트</caption>
+								<colgroup>
+									<col style="width: 14%;">
+									<col style="width: 20%;">									
+									<col style="width: 46%;">
+									<col style="width: 20%;">														
+								</colgroup>	
+								<thead>
+									<tr>
+										<th>사용 여부</th>										
+										<th>대분류 명</th>
+										<th>소분류 명</th>
+										<th>업무 유형 코드</th>																			
+									</tr>																		
+								</thead>					
+								<tbody>										
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="" selected>예적금</option>
+													<option value="">대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="목돈 굴리기">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">010</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="" selected>예적금</option>
+													<option value="">대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="목돈 모으기">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">020</td>																							
+									</tr>	
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="" selected>예적금</option>
+													<option value="">대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="퇴직연금 IRP">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">030</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="" selected>대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="전(월)세 대출">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">040</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="" selected>대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="부동산담보 대출">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">050</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="" selected>대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="신용 대출">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">060</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="" selected>대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="오토 금융">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">070</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="" selected>대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="개인사업자 대출">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">080</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="" selected>대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="기업 대출">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">090</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="">대출</option>
+													<option value="" selected>외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="유학 등 기타 자금">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">100</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="">대출</option>
+													<option value="" selected>외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="재외동포 재산반출">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">110</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="">대출</option>
+													<option value="" selected>외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="해외 부동산">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">120</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="">대출</option>
+													<option value="" selected>외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="기업성 해외자금">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">130</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area on">
+												<span class="txt">사용</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="">대출</option>
+													<option value="">외환</option>	
+													<option value="" selected>기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" value="도움이 필요하세요?">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num">140</td>																							
+									</tr>
+									<tr>
+										<td>
+											<div class="btn-switch-area">
+												<span class="txt">사용 안함</span>
+												<button type="button" class="button-switch"><span class="blind">사용</span></button>
+											</div>	
+										</td>										
+										<td>
+											<span class="select-box">
+												<select class="styled h36 w160">
+													<option value="">대분류 선택</option>
+													<option value="">예적금</option>
+													<option value="">대출</option>
+													<option value="">외환</option>	
+													<option value="">기타</option>
+													<option value="">대분류 수정/추가</option>												
+												</select>
+											</span>
+										</td>
+										<td>
+											<div class="input-text gray">
+												<input type="text" placeholder="소분류 입력">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</td>
+										<td class="num"></td>																							
+									</tr>
+								</tbody>
+							</table>							
+						</div>	
+						<div class="btn-area align-right">
+							<button type="button" class="btn-round btn-mid3 bg-white">취소</button>							
+							<button type="button" class="btn-round btn-mid3 bg-blue">저장</button> 
+						</div>				
+					</div>	
+					<div class="section border">
+						<ul class="list-style2 type2">
+							<li>사용 여부는 버튼을 선택 시 교차로 출력 됩니다. 수정 후 [저장] 시 반영 됩니다.</li>
+							<li>업무 유형 추가 : [업무 유형 추가] 버튼 클릭하여 하단에 추가된 영역에 대분류 선택 / 소분류 입력 후 [저장]시 반영 됩니다.</li>
+							<li>대분류 명 수정 : '대분류 선택박스'를 선택하여 수정 가능하며, 하단에 있는 '추가하기'를 선택하여 추가 가능합니다.</li>
+							<li>
+								소분류 명 수정 : 입력 영역에 출력된 명칭을 수정할 수 있으나, 업무 유형이 바뀌는 명칭으로의ㅣ 수정은 자제하시기 바랍니다.<br>
+								예시: 목돈 굴리기 => 예금(수정O), 목돈 굴리기 => 대출(수정X)<br>
+								<span class="f-red">수정 시 기존 명칭이 전체 바뀌게 되오니, 주의 하시기 바랍니다.</span>
+							</li>
+							<li>글자수 제한: <span class="f-blue">대 분류 10자, 소 분류 10자</span></li>
+							<li>업무 유형 삭제 불가 합니다.</li>
+							<li>업무 유형 코드는 수정 불가 합니다.</li>
+						</ul>
+					</div>				
+				</div>						
+			</div>		
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<!-- 업무 유형 대분류 수정/ 추가 -->
+<div class="layer-popup type2" data-layer-name="category-modify"> 
+	<div class="popup lg3">
+		<div class="popup-header">			
+			<p class="title">업무 유형 대분류 수정/ 추가</p>			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>		
+		<div class="popup-cont pdt0">	
+			<div class="top-info flex-area right">														
+				<button type="button" class="btn-add">대분류 추가</button>
+			</div>	
+			<div class="section mgt12">
+				<div class="board-list3">				
+					<table>
+						<caption>업무 유형 수정/추가 리스트</caption>
+						<colgroup>
+							<col style="width: 30%;">
+							<col style="width: 70%;">						
+						</colgroup>	
+						<thead>
+							<tr>
+								<th>사용 여부</th>										
+								<th>대분류 명</th>																							
+							</tr>																		
+						</thead>					
+						<tbody>										
+							<tr>
+								<td>
+									<div class="btn-switch-area on">
+										<span class="txt">사용</span>
+										<button type="button" class="button-switch"><span class="blind">사용</span></button>
+									</div>	
+								</td>
+								<td>
+									<div class="input-text gray">
+										<input type="text" value="예적금">
+										<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</td>																				
+							</tr>
+							<tr>
+								<td>
+									<div class="btn-switch-area on">
+										<span class="txt">사용</span>
+										<button type="button" class="button-switch"><span class="blind">사용</span></button>
+									</div>	
+								</td>
+								<td>
+									<div class="input-text gray">
+										<input type="text" value="대출">
+										<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</td>																				
+							</tr>
+							<tr>
+								<td>
+									<div class="btn-switch-area">
+										<span class="txt">사용 안함</span>
+										<button type="button" class="button-switch"><span class="blind">사용 안함</span></button>
+									</div>	
+								</td>
+								<td>
+									<div class="input-text gray">
+										<input type="text" placeholder="대분류 입력">
+										<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</td>																				
+							</tr>
+						</tbody>
+					</table>							
+				</div>
+			</div>	
+			<div class="section">
+				<ul class="list-style2 type3">
+					<li>업무 유형 대분류 삭제 불가</li>
+					<li>대분류 추가 : [대분류 추가]버튼 클릭하여 하단에 추가된 영역에 입력 후 [저장]시 반영</li>
+					<li>업무 유형 대분류 수정 : 사영 여부 '사용'인 경우 수정 불가, '사용 안함'으로 선택 [저장] 후, 입력 영역 내 수정 가능</li>					
+					<li>글자수 제한: <span class="f-blue">대 분류 10자</span></li>					
+				</ul>
+			</div>
+		</div>
+		<div class="btn-area align-right">
+			<button type="button" class="btn-round btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-round btn-mid bg-blue">저장</button>
+		</div>
+	</div>
+</div>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+	layerBtnEvent('category-modify');//레이어팝업 재호출 해야할 경우 
+</script>
+
+</body>
+</html>

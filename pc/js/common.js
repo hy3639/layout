@@ -45,6 +45,16 @@ $(document).ready(function(){
 		$(this).addClass('on').siblings().removeClass('on');
 	});
 
+	/* 사용/사용안함 스위치버튼 */	
+	$(document).on('click', '.button-switch', function(){
+		var target = $(this).closest('.btn-switch-area');
+		if(target.hasClass('on')){
+			target.removeClass('on').find('.txt').text('사용 안함');
+		}else{
+			target.addClass('on').find('.txt').text('사용');
+		}
+	});
+
 
 	/* 탭영역 */	
 	$(document).on('click', '.tab-item', function(){
