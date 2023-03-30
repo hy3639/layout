@@ -439,6 +439,7 @@
 .w120 {width:120px !important;}
 .w148 {width:148px !important;}
 .w160 {width:160px !important;}
+.w240 {width:240px !important;}
 .w245 {width:245px !important;}
 .w260 {width:260px !important;}
 .w300 {width:300px !important;}
@@ -451,7 +452,9 @@
 
 /*높이*/
 .h60 {height: 60px !important;}
+.h100 {height: 100px !important;}
 .h260 {height: 260px !important;}
+.h700 {height: 700px !important;}
 
 
 /* 버튼 */
@@ -950,6 +953,9 @@ input[type=checkbox][class^=styled] {
 .form-list li .chkbox {margin-right:8px}
 .form-list.right {justify-content: flex-end;}
 
+.admin-area .form-list li label,
+.admin .form-list li label{font-size: 14px !important;}
+
 /*셀렉트*/
 .select-box {display:inline-block;}
 .select-box select.styled,
@@ -1120,6 +1126,18 @@ table td.no-data {
 .fix-th.type1 + .fix-head table td:first-child {padding-left:10px}
 
 /*th고정테이블 2개 (마케팅 교차판매)*/
+.cont-area.transparent-dimmed .board-list {position:relative}
+.cont-area.transparent-dimmed .board-list:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	z-index: 100;
+}
 .fix-th.type2 {border-bottom: 0; width:calc(100% - 17px);justify-content: space-between;}
 .fix-th.type2 + .fix-head table {width:calc(50% - 20px)}
 .fix-th.type2 + .fix-head table:first-child {padding-right:20px; float:left;}
@@ -1437,7 +1455,7 @@ table td.no-data {
 	padding:12px 0;
 	font-size: 16px;
 	font-weight:500;
-	color:#252832;
+	color:#4a4e5e;
 	text-align:left;	
 }
 .board-write th.align-top {vertical-align: top;}
@@ -2204,7 +2222,7 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup.lg {width:660px;}
 .layer-popup .popup.lg2 {width:600px;}
 .layer-popup .popup.lg3 {width:700px;}
-.layer-popup .popup.xl{width:928px;}
+.layer-popup .popup.xl{width:930px;}
 .layer-popup .popup.w-full{width:1230px;}
 
 .layer-popup .btn-tooltip {margin-top:-9px}
@@ -3466,12 +3484,14 @@ mark.current {
 .chat-list li.select .list-info .tit{color:#a7adbf}
 .chat-list li.select .list-info .date{color:#ffffff4d}
 .chat-list li.select .list-info .txt-count{color:#95abf8}
-.chat-list li:hover {border:2px solid #446cf3;}
+
 .chat-list li.block {
 	box-shadow: none;
 	border: dashed 2px #bac2d1;
 	background-color: #edf0f6;
 }
+.chat-list li:hover,
+ .chat-list li.block:hover{border:2px solid #446cf3;}
 .chat-list li.block .list-info .name {
 	padding-left: 22px;
 	background: url(../images/icon/ico-block-red-20.svg) no-repeat left center;
@@ -3997,16 +4017,21 @@ mark.current {
 
 /*컨텐츠영역*/
 .admin-area .input-text input,
-.admin-area .select-box select.styled {
+.admin-area .select-box select.styled,
+.admin .select-box select.styled {
 	height: 44px; 
 	line-height: 44px; 
 	font-size: 14px;
 }
-.admin-area .select-box select.styled {
+.admin .input-text,
+.admin-area .input-text {padding: 0 16px;}
+.admin-area .select-box select.styled,
+.admin .select-box select.styled {
 	background: #edf0f6 url(../images/icon/btn-arrow-down-36.png) no-repeat right center;
 	background-size:32px 10px;
 }
-.admin-area .select-box select.styled.on {
+.admin-area .select-box select.styled.on,
+.admin .select-box select.styled.on{
 	background: #edf0f6 url(../images/icon/btn-arrow-up-36.png) no-repeat right center;
 	background-size:32px 10px;
 }
@@ -4546,7 +4571,7 @@ mark.current {
 .example-area + .board-write .single-cal-area.input {padding-left: 0; height: 44px;}
 .example-area + .board-write .single-cal-area.input input {padding-left: 16px; height: 40px;}
 .example-area + .board-write td .text-area {min-height: auto;}
-.example-area + .board-write td .gray-box.text-area textarea {height: auto;}
+.example-area + .board-write td .gray-box.text-area textarea {height: auto; font-size: 14px;}
 .example-area + .board-write td .list-style2 {margin-top:16px}
 .example-area + .board-write td .list-style2 li + li {margin-top: 4px;}
 .example-area + .board-write td .btn-mid3 {width: 127px; font-size: 14px; font-weight: 400;padding:0}
@@ -4556,6 +4581,56 @@ mark.current {
 .example-area + .board-write tr:first-child td {padding-top:0 !important}
 .example-area + .board-write tr:last-child th,
 .example-area + .board-write tr:last-child td {padding-bottom: 0;}
+
+
+.form-list.image-view {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-top: -20px;
+	counter-reset:list-number3;
+}
+
+.form-list.image-view li {	
+	position:relative; padding:0; margin-left: 20px; margin-top: 20px;counter-increment:list-number3;}
+.form-list.image-view li:before {
+	content:counter(list-number3);
+	display: block;
+	position:absolute;
+	left:8px;
+	top:8px;
+	width:24px;
+	height:24px;
+	text-align: center;
+	font-size:12px;
+	color:#4a4e5e;
+	background-color:#fff;
+	font-family: roboto;
+	font-weight: 500;
+	line-height: 24px;
+	border-radius: 12px;
+}
+.form-list.image-view li:nth-child(5n + 1) {margin-left: 0;}
+.form-list.image-view li .chkbox {
+	position: absolute;
+	right: 0;
+	bottom: 8px;
+}
+.form-list.image-view li .chkbox.on + label:before {
+	content: '';
+	display: block;
+	width: 154px;
+	position:absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	border:2px solid #446cf3; 
+	border-radius: 16px;}
+
+
+.form-list.image-view li label {font-size: 0;width: 154px;}
+.form-list.image-view li label img {width:100%; border-radius: 16px;}
 
 /* faq 카테고리 관리 */
 .board-list3.category{position: relative}
@@ -4618,6 +4693,65 @@ mark.current {
     color: #252832;
     font-weight: 500;
 }
+
+/* 간편발송 설정 */
+.send-simple th,
+.send-simple td{padding:24px 0}
+.send-simple tr:first-child th,
+.send-simple tr:first-child td {padding-top: 14px;}
+.popup-cont.admin .board-write td .txt {display:flex; align-items:center;min-height: 44px; padding:0 16px;}
+.popup-cont.admin .board-write th .txt {display:flex; align-items:center;min-height: 44px;}
+.popup-cont.admin .board-write tr.link-name th,
+.popup-cont.admin .board-write tr.link-name td {padding-bottom: 0}
+.popup-cont.admin .board-write tr.link th,
+.popup-cont.admin .board-write tr.link td {padding:4px 0}
+.popup-cont.admin .board-write tr.link th {
+	font-size: 14px;
+	color:#727988;
+}
+.popup-cont.admin.scroll-area + .btn-area {margin-top: 32px;}
+.popup-cont.admin.scroll-area .board-write,
+.popup-cont.admin.scroll-area .board-write2 {padding-right: 20px;}
+
+.popup-cont.admin .board-write2 td .txt {display:flex; align-items:center;min-height: 44px; padding:0 16px;}
+.popup-cont.admin .board-write2 th .txt {display:flex; align-items:center;min-height: 44px;}
+.popup-cont.admin .board-write2  .link-name th,
+.popup-cont.admin .board-write2  .link-name td {border-bottom: 0; padding-bottom: 0;  padding-top: 16px;}
+.popup-cont.admin .board-write2 tr.link th {vertical-align: middle;color:#727988; font-weight: 400; font-size: 14px;}
+.popup-cont.admin .board-write2 tr.link + tr.link th,
+.popup-cont.admin .board-write2 tr.link + tr.link td {padding-bottom:16px}
+.popup-cont.admin .board-write2 tr.link th,
+.popup-cont.admin .board-write2 tr.link td {
+	border-bottom: 0;
+	padding:4px 0
+}
+.popup-cont.admin .board-write2 tr.link + tr.link-name {
+	padding-top: 24px;
+	border-top: 1px solid #e7e9ee;
+}
+.popup-cont.admin .board-write2 tr:last-child th,
+.popup-cont.admin .board-write2 tr:last-child td {border-bottom: 1px solid #e7e9ee;}
+
+/* 상담url 문구 */
+.box-gray {
+	padding:36px;
+	background-color: #edf0f6;
+	border-radius: 8px;
+}
+.box-gray p {
+	font-size: 14px;
+	line-height: 22px;
+	color:#252832;
+}
+.url-area {align-items: flex-start;}
+.url-area .box-gray{ width: 540px; min-height: 450px;}
+.url-area .txt-area {padding-left: 40px;}
+.url-area .txt-area .tit {margin:20px 0 26px;font-size: 20px; color:#252832; font-weight:500}
+.url-area .txt-area .txt {font-size: 14px; color:#4a4e5e; display:inline-block}
+.url-area .txt-area .txt + .txt {margin-top: 20px;}
+.url-area .txt-area .list-style2.type2 {margin-top: 30px;}
+.url-area .txt-area .list-style2.type2 li{color:#727988}
+.url-area .txt-area .list-style2.type2 + button {margin-top: 30px;}
 
 @media (max-height: 900px) {
 	.contents{

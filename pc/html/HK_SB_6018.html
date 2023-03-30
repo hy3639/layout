@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+		</div>
+		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w376" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+				<ul class="depth1">
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
+						<ul class="depth2">
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="container">	
+		<div class="contents admin-area">
+			<div class="tit-area">
+				<h2>상담 URL 문구</h2>
+			</div>			
+			<div class="content">					
+				<div class="section">				
+					<div class="box-white">
+						<div class="flex-area url-area">
+							<div class="box-gray">
+								<p>
+									안녕하세요.<br>
+									조금전  상담 드린 하나 은행  김하나입니다.<br>
+									이제 하나은행 직원과 직점 톡으로 상단해보세요.  <br><br>
+									안녕하세요.
+
+									[모바일 명함]<br>
+									조금전  상담 드린 하나 은행  김하나입니다.<br>
+									이제 하나은행 직원과 직점 톡으로 상단해보세요.  <br>
+									[김대동과 상담하러 가기]<br>
+									조금전  상담 드린 하나 은행  김하나입니다.<br>
+									이제 하나은행 직원과 직점 톡으로 상단해보세요.
+								</p>								
+							</div>
+							<div class="txt-area">
+								<p class="tit">상담 URL 문구 안내</p>
+								<span class="txt">UMS팀에서 등록 한 상담  URL 문구 입니다.</span>
+								<span class="txt">
+									수정 필요한 경우 UMS팀에 연락하여 수정 하셔야 하며,<br>
+									수정 후 해당 화면에 자동으로 출력 됩니다.
+								</span>
+								<ul class="list-style2 type2">
+									<li>담당부서 : 담당부서 명</li>
+									<li>담당자 : 담당자명</li>
+									<li>담당자 연락처 : 02-1234-5678</li>
+								</ul>
+								<button type="button" class="btn-round btn-mid3 bg-blue">상담 URL 발송 목록 바로가기</button> 	
+							</div>	
+											
+						</div>					
+					</div>						
+				</div>
+			</div>		
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+// layerGraph('graph3');
+// layerGraph('graph12');
+</script>
+</body>
+</html>

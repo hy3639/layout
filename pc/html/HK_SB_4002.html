@@ -179,7 +179,7 @@
 															<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
 														</div>
 													</li>
-													<li><button type="button" class="btn-round btn-mid3 bg-gray">대표 이미지 보기</button> </li>
+													<li><button type="button" class="btn-round btn-mid3 bg-gray btnPop" data-title="image-view">대표 이미지 보기</button> </li> <!-- 2023-03-29 팝업 클래스 및 data-title추가 -->
 												</ul>
 												<ul class="list-style2">
 													<li>대표 이미지를 선택해 주세요.</li>
@@ -245,6 +245,45 @@
 	</div>	
 </div>
 
+<!-- 대표 이미지 보기 -->
+<div class="layer-popup type3" data-layer-name="image-view"> 
+	<div class="popup xl">
+		<div class="popup-header">			
+			<p class="title">대표 이미지 보기</p>			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>		
+		<div class="layer-cont">						
+			<ul class="form-list image-view">
+				<li><input type="radio" name="image-select" class="styled" id="img01" checked><label for="img01"><img src="../images/img/img-01.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img02"><label for="img02"><img src="../images/img/img-02.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img03"><label for="img03"><img src="../images/img/img-03.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img04"><label for="img04"><img src="../images/img/img-04.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img05"><label for="img05"><img src="../images/img/img-05.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img06"><label for="img06"><img src="../images/img/img-06.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img07"><label for="img07"><img src="../images/img/img-07.png"></label></li>													
+				<li><input type="radio" name="image-select" class="styled" id="img08"><label for="img08"><img src="../images/img/img-08.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img09"><label for="img09"><img src="../images/img/img-09.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img10"><label for="img10"><img src="../images/img/img-10.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img11"><label for="img11"><img src="../images/img/img-11.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img12"><label for="img12"><img src="../images/img/img-12.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img13"><label for="img13"><img src="../images/img/img-13.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img14"><label for="img14"><img src="../images/img/img-14.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img15"><label for="img15"><img src="../images/img/img-15.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img16"><label for="img16"><img src="../images/img/img-16.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img17"><label for="img17"><img src="../images/img/img-17.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img18"><label for="img18"><img src="../images/img/img-18.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img19"><label for="img19"><img src="../images/img/img-19.png"></label></li>
+				<li><input type="radio" name="image-select" class="styled" id="img20"><label for="img20"><img src="../images/img/img-20.png"></label></li>
+			</ul>	
+		</div>
+		<!-- <div class="btn-area align-right">
+			<button type="button" class="btn-round btn-mid bg-lightgray">삭제</button>
+			<button type="button" class="btn-round btn-mid bg-blue">수정</button>
+		</div> -->
+		
+	</div>
+</div>
+<!--// 대표 이미지 보기  -->
 
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>

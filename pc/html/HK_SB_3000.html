@@ -843,6 +843,9 @@
 													<span class="date">5월 9일(월) 오전 10:28</span>
 													<span class="txt-count">2/10</span>
 												</div>
+												<div class="count">
+													<span class="count-noti tooltip-hover" title="주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...1111? 주택 담보 대출 관련 문의가 있어요! 10년 차 직장인이고 사업을 하려고 합니다. 소유한 주택을 담보로 대출 받고 싶은데요...">99+</span>															
+												</div>
 											</div>		
 										</div>
 										<div class="btn-area">
@@ -2233,7 +2236,7 @@
 		</div>
 		
 		<div class="layer-cont">			
-			<div class="cont-area">
+			<div class="cont-area transparent-dimmed"> <!-- 2023-03-29 : 클래스 추가 -->
 				<div class="fix-th type2">
 					<div>
 						<span class="th">구분</span>
@@ -3084,6 +3087,16 @@
 	</div>
 </div> -->
 
+<div class="layer-popup" data-layer-name="alert"> 
+	<div class="popup sm">
+		<div class="popup-cont align-center">
+			<p class="guide-txt">차단된 대화입니다.</p>			
+		</div>
+		<div class="btn-area single">
+			<button type="button" class="btn-round btn-mid bg-blue popClose">닫기</button>			
+		</div>
+	</div>
+</div>
 
 <!--// 레이어팝업 (딤드 + 가운데정렬) 영역 -->
 
@@ -3116,6 +3129,15 @@
 		$(this).closest('.search-box.gray').removeClass('on');
 	});
 
+
+	/* 2023-03-29 : 상담목록 차단 클릭시 (btn-area 영역은 제외되어야 하는데 참고만 해주세요) */
+	//상담목록 차단 클릭시 (토글 노출 안되고 alert 뜨게)
+	$('.chat-list li.block').each(function(e){
+		$(this).find('.count-noti').removeClass('tooltip-hover').attr('title','');
+		$(this).click(function(){			
+			layerBtnEvent('alert');
+		});		
+	});
 
 	/* 2023-03-15 추가 */
 
