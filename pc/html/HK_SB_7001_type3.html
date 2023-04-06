@@ -73,16 +73,16 @@
 	</div>
 	
 	<div class="container">	
-		<div class="contents admin-area">
+		<div class="contents admin admin-area"> <!-- 2023-04-04 : 클래스 추가 -->
 			<div class="tit-area">
-				<h2>통계</h2>
+				<h2>상담 통계</h2>
 			</div>
 			<div class="content">
 				<div class="tab-lst2 noneTab">
-					<a href="#" class="tab-item on"><span class="txt">전점</span></a>
-					<a href="#" class="tab-item"><span class="txt">지점별</span></a>
-					<a href="#" class="tab-item"><span class="txt">업무 유형별</span></a>
-					<a href="#" class="tab-item"><span class="txt">직원별</span></a>										
+					<a href="#" class="tab-item"><span class="txt">손님 분포</span></a>
+					<a href="#" class="tab-item"><span class="txt">손님 접속</span></a>
+					<a href="#" class="tab-item"><span class="txt">상담 직원</span></a>
+					<a href="#" class="tab-item on"><span class="txt">간편 발송</span></a>										
 				</div>
 				<div class="tab-wrap">
 					<div class="box-white-column">					
@@ -94,7 +94,7 @@
 											<p class="tit">기간 선택</p>
 											<div class="btn-date-area radio-select">
 												<button type="button" class="btn-date on">오늘</button> <!-- 선택시 on 클래스 추가 -->
-												<button type="button" class="btn-date">어제</button>
+												<!-- <button type="button" class="btn-date">어제</button> -->
 												<button type="button" class="btn-date">1주일</button>
 												<button type="button" class="btn-date">1개월</button>
 												<button type="button" class="btn-date btn-cal-setting">설정</button> <!-- 2023-02-22 클래스변경-->
@@ -122,17 +122,7 @@
 									</ul>							
 								</div>
 								<div class="cont">
-									<ul class="form-group flex-area">	
-										<li class="flex-area">
-											<p class="tit">지점 선택</p>
-											<div class="cont">
-												<span class="select-box">
-													<select class="styled">
-														<option value="">전체</option>							
-													</select>
-												</span>
-											</div>
-										</li>
+									<ul class="form-group flex-area">										
 										<li class="flex-area">
 											<p class="tit">업무 유형</p>
 											<div class="cont">
@@ -158,14 +148,27 @@
 								<div class="cont">
 									<ul class="form-group flex-area both">								
 										<li class="flex-area">
-											<p class="tit">기간 선택</p>
-											<div class="cont flex-area"> 
+											<p class="tit">지점 선택</p>
+											<div class="cont">
 												<ul class="btn-group-area radio">
-													<li><input type="radio" name="radio1" id="radio1-1"><label class="btn-type1" for="radio1-1">손님별 통계</label></li>
-													<li><input type="radio" name="radio1" id="radio1-2"><label class="btn-type1" for="radio1-2">상담별 통계</label></li>	
-													<li><input type="radio" name="radio1" id="radio1-3"><label class="btn-type1" for="radio1-3">상담 직원 통계</label></li>
-													<li><input type="radio" name="radio1" id="radio1-4" checked><label class="btn-type1" for="radio1-4">간변발송 순위 통계</label></li>											
-												</ul>						
+													<li><input type="radio" name="radio2" id="radio2-1"><label class="btn-type1" for="radio2-1">전체 지점</label></li>
+													<li><input type="radio" name="radio2" id="radio2-2" checked><label class="btn-type1" for="radio2-2">지점 선택</label></li>											
+												</ul>
+											</div>
+											<div class="cont flex-area ">  <!-- input text 입력시 input-on 클래스 추가 -->
+												<div class="input-text gray">
+													<input type="text" placeholder="지점명 또는 지점코드를 입력해 주세요">
+													<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+												</div>
+												<div class="input-layer">
+													<ul>
+														<li><a href="#"><mark>강남</mark> 1지점(0123)</a></li>
+														<li><a href="#"><mark>강남</mark> 2지점(0124)</a></li>
+														<li><a href="#"><mark>강남</mark> 3지점(0123)</a></li>
+														<li><a href="#"><mark>강남</mark> 4지점(0123)</a></li>
+														<li><a href="#"><mark>강남</mark> 5지점(0123)</a></li>
+													</ul>
+												</div>
 											</div>												
 										</li>
 										<li class="flex-area">
@@ -181,124 +184,105 @@
 							</div>			
 						</div>
 						<div class="section">
-							<div class="top-info flex-area both">
+							<div class="top-info flex-area">
 								<ul>
 									<li class="num">2023-02-16</li>
-									<li>지점별</li>
-									<li>업무유형 전체</li>
-									<li>직원 전체</li>
-									<li>간편발송 순위 통계</li>
-								</ul>
-								<span class="unit">종료 기준 (대화없이 종료 제외)</span>
+									<li>전체 지점</li>									
+								</ul>								
 							</div>
 							<div class="board-list3">					
 								<table>
 									<caption>통계 테이블</caption>
-									<colgroup>
-										<col style="width: 180px;">
-										<col style="width: 170px;">		
-										<col style="width: 170px;">
-										<col style="width: 170px;">
-										<col style="width: 170px;">
-										<col style="width: 340px;">										
+									<colgroup>										
+										<col style="width: 100px;">		
+										<col style="width: 200px;">
+										<col style="width: 200px;">
+										<col style="width: 340px;">
+										<col style="width: 160px;">										
 									</colgroup>	
-									<thead>
-										<tr>
-											<th rowspan="2">지점명</th>
-											<th rowspan="2">업무유형</th>															
-											<th colspan="4">간편발송 항목 순위</th>											
-										</tr>
+									<thead>										
 										<tr>
 											<th>순위</th>
-											<th>구분</th>
-											<th>종류</th>
-											<th>제목</th>										
+											<th>메시지 번호</th>
+											<th>메시지 구분</th>
+											<th>제목</th>
+											<th>건수</th>										
 										</tr>									
 									</thead>					
 									<tbody>	
 										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">1</td>										
+											<td class="num">1</td>		
+											<td class="num">5000000027</td>
 											<td>여신</td>
-											<td>텍스트</td>
-											<td>대출관련 서류 제출</td>											
+											<td class="left">세금우대 한도조회</td>
+											<td class="num">150</td>	
 										</tr>
 										<tr>
-											<td class="left">강남강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">2</td>										
+											<td class="num">2</td>		
+											<td class="num">5000000027</td>
 											<td>수신</td>
-											<td>링크</td>
-											<td>대출관련 서류 제출</td>											
+											<td class="left">해지계좌 조회</td>
+											<td class="num">150</td>	
 										</tr>
 										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">3</td>										
+											<td class="num">3</td>		
+											<td class="num">5000000027</td>
+											<td>외환</td>
+											<td class="left">학생증 체크카드 신청</td>
+											<td class="num">150</td>	
+										</tr>
+										<tr>
+											<td class="num">4</td>		
+											<td class="num">5000000027</td>
+											<td>외환</td>
+											<td class="left">영업점 번호표/에약 서비스</td>
+											<td class="num">150</td>	
+										</tr>
+										<tr>
+											<td class="num">5</td>		
+											<td class="num">5000000027</td>
+											<td>전자금융</td>
+											<td class="left">첫거래손님(계좌개설+전자금융)</td>
+											<td class="num">150</td>	
+										</tr>
+										<tr>
+											<td class="num">6</td>		
+											<td class="num">5000000027</td>
+											<td>카드</td>
+											<td class="left">ATM무통장+통장 출금비번 재등록</td>
+											<td class="num">150</td>	
+										</tr>
+										<tr>
+											<td class="num">7</td>		
+											<td class="num">5000000027</td>
 											<td>여신</td>
-											<td>텍스트</td>
-											<td>대출관련 서류 제출</td>											
+											<td class="left">세금우대 한도조회</td>
+											<td class="num">150</td>	
 										</tr>
 										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">4</td>										
-											<td>수신</td>
-											<td>링크</td>
-											<td>대출관련 서류 제출</td>											
-										</tr>										
-										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">5</td>										
-											<td>수신</td>
-											<td>링크</td>
-											<td>대출관련 서류 제출</td>											
-										</tr>
-										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">6</td>										
+											<td class="num">8</td>		
+											<td class="num">5000000027</td>
 											<td>여신</td>
-											<td>텍스트</td>
-											<td>대출관련 서류 제출</td>											
+											<td class="left">세금우대 한도조회</td>
+											<td class="num">150</td>	
 										</tr>
 										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">7</td>										
-											<td>수신</td>
-											<td>링크</td>
-											<td>대출관련 서류 제출</td>											
-										</tr>
-										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">8</td>										
+											<td class="num">9</td>		
+											<td class="num">5000000027</td>
 											<td>여신</td>
-											<td>텍스트</td>
-											<td>대출관련 서류 제출</td>											
+											<td class="left">세금우대 한도조회</td>
+											<td class="num">150</td>	
 										</tr>
 										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">9</td>										
-											<td>수신</td>
-											<td>링크</td>
-											<td>대출관련 서류 제출</td>											
-										</tr>
-										<tr>
-											<td class="left">강남 1지점(0123)</td>
-											<td class="left">전체</td>
-											<td class="num">10</td>										
+											<td class="num">10</td>		
+											<td class="num">5000000027</td>
 											<td>여신</td>
-											<td>텍스트</td>
-											<td>대출관련 서류 제출</td>											
+											<td class="left">세금우대 한도조회</td>
+											<td class="num">150</td>	
 										</tr>
 										<!-- 데이터가 없는경우  -->
 										<tr>
-											<td colspan="6" class="no-data">검색 결과가 없습니다.</td>
+											<td colspan="5" class="no-data">검색 결과가 없습니다.</td>
 										</tr>
 										<!--// 데이터가 없는경우  -->
 									</tbody>

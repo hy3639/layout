@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+		</div>
+		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w376" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+				<ul class="depth1">
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
+						<ul class="depth2">
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="container">	
+		<div class="contents admin admin-area">
+			<div class="tit-area">
+				<h2>상태 메시지 목록</h2>	
+			</div>			
+			<div class="content">
+				<div class="process-area">
+					<div class="flex-area">
+						<div class="img-area">
+							<img src="../images/img/img-state-01.png">
+						</div>
+						<div class="msg-area">
+							<div class="msg-box btnPop" data-title="msg-modify"> <!-- 상태메시지 수정 팝업 -->
+								<div class="scroll-area">
+									<p>
+										혹시 기다리시는 동안 하나은행의 AI챗봇 '하이'를 만나보시겠어요?	
+									</p>
+								</div>
+								
+								<button type="button" class="btn-msg">하이에게 물어보기</button>
+								<span class="num">3020000001</span>
+							</div>
+							<div class="msg-box">
+								<div class="scroll-area">
+									<p>
+										혹시 기다리시는 동안 하나은행의 AI챗봇 '하이'를 만나보시겠어요?	
+									</p>
+								</div>
+								
+								<button type="button" class="btn-msg">하이에게 물어보기</button>
+								<span class="num">3020000001</span>
+							</div>							
+						</div>
+					</div>
+					<div class="flex-area">
+						<div class="img-area">
+							<img src="../images/img/img-state-02.png">
+						</div>
+						<div class="msg-area">							
+							<div class="msg-box">
+								<div class="scroll-area">
+									<p>
+										상담이 종료되었어요. <br>
+										다시 상담이 필요한 경우 원하는 상담을 선택해 주세요.
+									</p>
+								</div>
+								
+								<button type="button" class="btn-msg">상담 주제 선택하기</button>
+								<span class="num">3020000001</span>
+							</div>							
+						</div>
+					</div>
+					<div class="flex-area">
+						<div class="img-area">
+							<img src="../images/img/img-state-03.png">
+						</div>
+						<div class="msg-area">
+							<div class="msg-box">
+								<div class="scroll-area">
+									<p>
+										일정 시간이 경과되어 자동으로 상담이 종료되었어요.  <br>
+										이용해주셔서 감사합니다.	
+									</p>
+								</div>
+								
+								<button type="button" class="btn-msg">상담 주제 선택하기</button>
+								<span class="num">3020000001</span>
+							</div>
+							<div class="msg-box">
+								<div class="scroll-area">
+									<p>
+										일정 시간이 경과되어 자동으로 상담이 종료되었어요.  <br>
+										담당 직원이 영업점에서 손님 응대로 답변을 못 드렸을 수 있어요.  <br>
+										너그러이 양해 부탁드려요.
+									</p>
+								</div>
+								
+								<button type="button" class="btn-msg">상담 주제 선택하기</button>
+								<span class="num">3020000001</span>
+							</div>							
+						</div>
+					</div>
+				</div>			
+			</div>		
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+<!-- 상태 메시지 수정 -->
+<div class="layer-popup type3" data-layer-name="msg-modify"> 
+	<div class="popup lg3">
+		<div class="popup-header">			
+			<p class="title">상태 메시지 수정</p>			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>		
+		<div class="popup-cont admin">						
+			<div class="board-write">
+				<table>
+					<caption>상태 메시지 수정</caption>
+					<colgroup>
+						<col style="width:110px;">
+						<col >
+					</colgroup>
+					<tbody>		
+						<tr>
+							<th scope="row" class="align-top">메시지</th>
+							<td>
+								<div class="gray-box text-area h100">
+									<textarea placeholder="내용을 입력해주세요.">등록 메시지 text 출력</textarea>								
+								</div>
+								<ul class="list-style2">
+									<li>글자 수 제한 없음</li>
+								</ul>
+							</td>
+						</tr>
+						<!-- 링크가 있는 경우 추가 -->
+						<tr class="link-name">
+							<th scope="row"><span class="txt">링크</span></th>
+							<td></td>
+						</tr>
+						<tr class="link">
+							<th scope="row" class="pdt0">버튼명</th>
+							<td class="pdt0">
+								<div class="input-text gray">
+									<input type="text" placeholder="버튼 명을 입력해 주세요." value="버튼명">
+								</div>
+							</td>
+						</tr>
+						<tr class="link">
+							<th scope="row">링크</th>
+							<td>
+								<div class="input-text gray">
+									<input type="text" placeholder="링크 주소를 입력해주세요." value="https://www.kebhana.com/">
+								</div>
+							</td>
+						</tr>	
+						<!--// 링크가 있는 경우 추가 -->				
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="btn-area align-right">
+			<button type="button" class="btn-round btn-mid bg-lightgray popClose">취소</button>
+			<button type="button" class="btn-round btn-mid bg-blue">저장</button>
+		</div>
+	</div>
+</div>
+<!--// 상태 메시지 수정  -->
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+</html>

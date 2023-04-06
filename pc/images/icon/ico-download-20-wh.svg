@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <path style="fill:none" d="M0 0h20v20H0z"/>
+    <path d="M387 65v4h-16v-4" transform="translate(-369 -51)" style="stroke:#4a4e5e;stroke-width:1.5px;fill-rule:evenodd;fill:none"/>
+    <path d="m383 60-4 4-4-4" transform="translate(-369 -51)" style="stroke-linecap:round;stroke:#4a4e5e;stroke-width:1.5px;fill-rule:evenodd;fill:none"/>
+    <path d="M379 64V53" transform="translate(-369 -51)" style="stroke:#4a4e5e;stroke-width:1.5px;fill-rule:evenodd;fill:none"/>
+</svg>

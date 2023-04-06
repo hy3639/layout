@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+		</div>
+		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w376" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+				<ul class="depth1">
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
+						<ul class="depth2">
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="container">	
+		<div class="contents admin admin-area">
+			<div class="tit-area flex-area">
+				<h2>상담 내역 조회</h2>						
+			</div>			
+			<div class="content">
+				<div class="box-white-column">					
+					<div class="section">						
+						<div class="box-white mgt0">
+							<div class="cont">
+								<ul class="form-group flex-area both">	
+									<li class="flex-area">
+										<p class="tit">기간 선택</p>
+										<div class="btn-date-area radio-select">
+											<button type="button" class="btn-date on">오늘</button> <!-- 선택시 on 클래스 추가 -->
+											<!-- <button type="button" class="btn-date">어제</button> -->
+											<button type="button" class="btn-date">1주일</button>
+											<button type="button" class="btn-date">1개월</button>
+											<button type="button" class="btn-date btn-cal-setting">설정</button>
+										</div>
+										<div class="multi-cal-area">
+											<div class="calendar-area">
+												<div class="input-text">
+													<input type="text" class="input-from" name="from" readonly>	
+												</div>
+												<span class="divide">-</span>
+												<div class="input-text">
+													<input type="text" class="input-to" name="to" readonly>	
+												</div>
+												<button type="button" class="btn-cal"><span class="blind">달력</span></button>
+											</div>
+											<div class="multi-cal-layer">
+												<div class="from"></div>
+												<div class="to"></div>
+												<div class="btn-area">
+													<button type="button" class="btn-cal-close"><span>닫기</span></button>
+												</div>
+											</div>
+										</div>
+									</li>	
+									<li class="flex-area">
+										<p class="tit">지점 선택</p>
+										<div class="cont flex-area">
+											<div class="input-text gray w280">
+												<input type="text" placeholder="지점명 또는 지점코드를 입력해 주세요." value="강남 1지점(0232)" disabled>												
+											</div>											
+										</div>		
+									</li>								
+								</ul>							
+							</div>							
+							<div class="cont">
+								<ul class="form-group flex-area">								
+									<li class="flex-area">
+										<p class="tit">직원 선택</p>
+										<div class="cont">
+											<span class="select-box">
+												<select class="styled">
+													<option value="">전체</option>							
+												</select>
+											</span>
+										</div>
+									</li>
+									<li class="flex-area">
+										<p class="tit">고객 선택</p>
+										<div class="cont flex-area">  <!-- input text 입력시 input-on 클래스 추가 -->
+											<div class="input-text gray w280">
+												<input type="text" placeholder="고객명 또는 고객번호를 입력해 주세요.">
+												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											</div>
+											<div class="input-layer">
+												<ul>
+													<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+													<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+													<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+													<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+													<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="cont">
+											<input type="checkbox" class="styled" id="chk1"><label for="chk1">타 지점 포함</label>
+										</div>
+									</li>		
+									<li class="flex-area btn-wrap">
+										<div class="btn-area flex-area">
+											<button type="button" class="btn-reset"><span>초기화</span></button>
+											<button type="button" class="btn-round btn-mid bg-blue">검색</button> 
+										</div>
+									</li>													
+								</ul>
+							
+							</div>		
+											
+						</div>			
+					</div>
+					<div class="section">
+						<div class="top-info flex-area">							
+							<div class="count-area">								
+								<span class="count">총 16건</span>								
+							</div>							
+						</div>						
+						<div class="board-list3">					
+							<table>
+								<caption>상담내역 조회 목록</caption>
+								<colgroup>
+									<col style="width: 8%;">
+									<col style="width: 18%;">									
+									<col style="width: 17%;">
+									<col style="width: 15%;">
+									<col style="width: 15%;">
+									<col style="width: 10%;">
+									<col style="width: 17%;">										
+								</colgroup>	
+								<thead>
+									<tr>										
+										<th>번호</th>
+										<th>지점명(지점코드)</th>
+										<th>업무유형(업무유형코드)</th>
+										<th>직원명(행번)</th>										
+										<th>고객명(고객번호)</th>
+										<th>상태</th>
+										<th>마지막 대화 일시</th>											
+									</tr>																		
+								</thead>					
+								<tbody>	
+									<tr>
+										<td class="num">10</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button" class="btnPop" data-title="chat-history">홍길동(고객번호)</button></td> <!-- 1:1상담내역 팝업 출력 -->
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>
+									<tr>
+										<td class="num">9</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>
+									<tr>
+										<td class="num">8</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>
+									<tr>
+										<td class="num">7</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>
+									<tr>
+										<td class="num">6</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>	
+									<tr>
+										<td class="num">5</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>				
+									<tr>
+										<td class="num">4</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>				
+									<tr>
+										<td class="num">3</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>		
+									<tr>
+										<td class="num">2</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>
+									<tr>
+										<td class="num">1</td>
+										<td>하나은행 광화문지점(지점코드)</td>	
+										<td>목돈굴리기(업무유형코드)</td>
+										<td>김철수(1234567)</td>			
+										<td><button type="button">홍길동(당행 손님 아님)</button></td>
+										<td>정상 종료</td>																				
+										<td>2022-08-25 오전 09:05</td>											
+									</tr>	
+								</tbody>
+							</table>
+						</div>	
+						<div class="pagenation">							
+							<a href="#" class="btn-prev">이전</a>
+							<span class="page">1</span>
+							<span class="ellipsis-divide">ellipsis</span>
+							<span class="page now">14</span>
+							<a href="#" class="page">15</a>
+							<a href="#" class="page">16</a>
+							<a href="#" class="page">17</a>						
+							<span class="ellipsis-divide">ellipsis</span>
+							<span class="page">35</span>
+							<a href="#" class="btn-next">다음</a>						
+						</div>					
+					</div>					
+				</div>						
+			</div>		
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+<!-- 1:1 상담내역 레이어-->
+<div class="layer-popup chat-history dimmed-none draggable" data-layer-name="chat-history">  <!-- dimmed 없어야할경우 dimmed-none 클래스 추가 -->
+	<div class="popup">
+		<div class="popup-header">	
+			<p class="tit">1:1 상담 내역</p>		
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="layer-cont">
+			<div class="flex-area both">
+				<p class="name">홍길동 (123456789)</p>
+				<span class="date">2023년 5월 9일(월) 오전 10:28</span>
+			</div>
+			<div class="flex-area both">				
+				<div class="search-box gray input-on"> <!--검색어 입력, focus 있을경우 input-on 클래스 추가 -->
+					<input type="text" placeholder="대화 검색 (Enter시 검색 가능)">	
+					<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+					<div class="btn-arrow on"> <!-- 검색어 입력시 노출 (on 클래스 추가) -->	
+						<button type="button" class="btn-prev"><span class="blind">이전</span></button>
+						<button type="button" class="btn-next"><span class="blind">다음</span></button>
+					</div>								
+				</div>
+				
+				<div class="single-cal-area">				
+					<div class="calendar-area">
+						<div class="input-text blind">
+							<input type="text" class="date" name="from" readonly>	
+						</div>										
+						<button type="button" class="btn-cal-single"><span class="blind">달력</span></button>		
+					</div>														
+					<div class="single-cal-layer">
+						<div class="single"></div>							
+						<div class="btn-area">
+							<button type="button" class="btn-reset"><span>초기화</span></button>
+							<button type="button" class="btn-single-close"><span>닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="chat-cont scroll-area">
+				<div class="date"><span>2022년 8월 31일 목요일</span></div>
+				<div class="system-msg">
+					<p>
+						<span class="tit">[시스템 메시지]</span>
+						<span class="f-blue">업무유형+상담종류</span> 상담을 요청하고,<br>
+						본인인증 완료한<span class="f-blue">'당행 손님입니다.'</span>or <span class="f-blue">'당행 손님이 아닙니다'</span><br>
+						손님과 상담 시 금융소비자보호 등 관련 법률을 준수하여 상담하시기 바랍니다.<br>
+					</p>
+				</div>
+				<div class="chat-item-list">
+					<div class="chat-item right">
+						<div class="chat-name">
+							<span class="category">지점명(업무유형명)</span>
+							<span class="name">김하나 (9812345)</span>
+						</div>
+						<div class="chat-txt">
+							<p class="txt">안녕하세요, 홍길동님!</p>											
+						</div>
+					</div>
+					<div class="chat-item right">										
+						<div class="chat-txt">
+							<p class="txt">영업1부에서 개인대출을 담당하는 김은영입니다.</p>											
+						</div>
+						<span class="time">오후 12:28</span>
+					</div>
+					<div class="chat-item left">
+						<div class="chat-name">											
+							<span class="name">홍길동 (재외동포 재산반출)</span>
+						</div>
+						<div class="chat-txt">
+							<p class="txt">네 서울 강남구 압구정동 현대<mark class="current">아파트</mark> 105동 1207호 입니다네 서울 강남구 압구정동 현대<mark>아파트</mark> 105동 1207호 입니다네 서울 강남구 압구정동 현대<mark>아파트</mark> 105동 1207호 입니다.</p>											
+						</div>
+					</div>
+					<div class="chat-item left">										
+						<div class="chat-txt">
+							<p class="txt">네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.</p>											
+						</div>
+						<span class="time">오후 12:28</span>
+					</div>
+					<div class="chat-item right">
+						<div class="chat-name">
+							<span class="category">지점명(업무유형명)</span>
+							<span class="name">김하나 (9812345)</span>
+						</div>
+						<div class="chat-txt">
+							<p class="txt">
+								안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+								안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+								안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+							</p>											
+						</div>
+						<span class="time">오후 12:28</span>
+					</div>									
+					<div class="chat-item left">
+						<div class="chat-name">											
+							<span class="name">홍길동 (재외동포 재산반출)</span>
+						</div>
+						<div class="chat-txt">
+							<p class="txt">
+								네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+								네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+								네 서울 강남구 압구정동 현대아파트 105동 1207호 입니다.
+							</p>											
+						</div>
+						<span class="time">오후 12:28</span>
+					</div>
+					<div class="chat-item right">
+						<div class="chat-name">
+							<span class="category">지점명(업무유형명)</span>
+							<span class="name">김하나 (9812345)</span>
+						</div>
+						<div class="chat-txt">
+							<p class="txt">
+								안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+								안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+								안녕하세요, 홍길동님! 영업1부에서 개인대출을 담당하는 김은영입니다. 대출을 받고자 하시는 아파트 주소지를 알 수 있을까요?
+							</p>											
+						</div>
+					</div>					
+					<div class="chat-item right">										
+						<div class="chat-txt">
+							<div class="send-bg">
+								<p>
+									증명서 발급신청 관련 안내해 드려요. <br>
+									국문만 가능하고 출력은 인터넷뱅킹에서<br> 
+									가능한점 참고해주세요. 아래버튼을누르면<br>
+									하나원큐로 이동해요.														
+								</p>												
+								<div class="btn-area">
+									<a href="#" class="btn-round">거래내역서</a>									
+								</div>
+							</div>										
+						</div>
+						<span class="time">오후 12:28</span>
+					</div>
+				</div>									
+			</div>			
+			<p class="no-data">검색 결과가 없습니다.</p>				
+		</div>
+	</div>
+	
+</div>
+<!--//  1:1 상담내역 레이어-->
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+
+
+
+</body>
+</html>

@@ -498,8 +498,13 @@ function sortable(){
 }
 
 //draggable
+
 function draggable(){
-	$('.draggable').draggable();
+	$('.draggable').draggable({
+		containment : '.wrapper'
+	});
+
+	
 }
 
 //토스트 메시지 팝업 
@@ -558,11 +563,17 @@ function layerBtnEvent(obj) {
 		layerName.addClass('on');
 	}	
 
+
 	$('html').addClass('popOpen');	
 	layerName.fadeIn(100, function () { 		
 		var objName = obj;
 		var layerName =  $('.layer-popup[data-layer-name=' + objName + ']');	
-		layerName.addClass('open').prepend('<div class="dimmed">');
+
+		layerName.addClass('open');
+		if(!layerName.hasClass('dimmed-none')){ 
+			layerName.prepend('<div class="dimmed">');
+			
+		}
 
 		var hei = $(window).height();		
 		var popH = layerName.find('.popup').outerHeight();

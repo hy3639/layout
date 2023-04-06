@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>하나톡 포탈</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="left-area">
+			<a href="#" class="logo">
+				<img src="../images/layout/header_logo.png" alt="하나톡 포탈 로고">
+			</a>
+		</div>
+		<div class="right-area">
+			<div class="layer-pop-wrap">
+				<button type="button" class="btnPopBorder" data-title="box-change">화면 배치 변경</button>
+				<div class="layer-popup-border w376" data-layer-name="box-change">
+					<p class="title">상담하기 화면 배치</p>
+					<span class="sub-txt">상담하기 화면을 원하는순서로 선택하여 변경할 수 있습니다.</span>
+					<div class="type-select-area">
+						<label class="type1"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type2"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type3"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="type-select-area">
+						<label class="type4"><input type="radio" name="Rdo" class="styled" checked></label>
+						<label class="type5"><input type="radio" name="Rdo" class="styled"></label>
+						<label class="type6"><input type="radio" name="Rdo" class="styled"></label>
+					</div>
+					<div class="btn-area align-right">
+						<button type="button" class="btn-text popCloseBorder">닫기</button>				
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-toggle-area">
+				<span>상담</span>
+				<button type="button" class="btn-msg">OFF</button>				
+			</div>
+
+			<span class="waiting">대기<em>56</em></span>
+			<span class="waiting">신규메시지<em>71</em></span>
+				
+			<p class="user-txt">김하나(9812345)님 안녕하세요!</p>
+			<button type="button" class="btn-logout btnPop" data-title="Popup01">로그아웃</button> <!--2023-02-06 : 버튼 title속성 data-title로 일괄변경 -->
+			<button type="button" class="btn-gnb"><span class="blind">메뉴</span></button>
+			<div class="gnb-list">
+				<button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+				<ul class="depth1">
+					<li class="on"><a href="#">상담하기</a></li>
+					<li><a href="#">대시보드</a></li>
+					<li><a href="#">상담통계</a></li>
+					<li><a href="#">관리화면</a>
+						<ul class="depth2">
+							<li class="on"><a href="#">자동메시지 설정</a></li>
+							<li><a href="#">간편 발송 설정</a></li>
+							<li><a href="#">자주쓰는 문구설정</a></li>
+							<li><a href="#">하나톡 메인관리</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">지점정보 관리</a></li>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">전담 손님</a></li>
+							<li><a href="#">UMS 발송내역</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="container">	
+		<div class="contents admin admin-area">
+			<div class="tit-area">
+				<h2>지점 정보 수정</h2>	
+			</div>			
+			<div class="content">
+				<div class="cont-wrap">
+					<div class="sub-tit-area">
+						<p class="tit">지점 관리자 정보</p>
+						<span class="sub-txt">지점장은 지점관리자의 권한 있음</span>
+					</div>	
+					<div class="box-white view">
+						<div class="board-write2 col4">
+							<table>
+								<caption></caption>
+								<colgroup>
+									<col style="width:172px;">
+									<col style="width:368px;">
+									<col style="width:212px;">
+									<col style="width:368px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">컨텐츠 관리번호</th>
+										<td>지점명</td>
+										<th scope="row">지점관리자명(행번)</th>
+										<td>
+											<span class="select-box">
+												<select class="styled w240">
+													<option value="">홍길동(0123456)</option>															
+												</select>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">지점 대표 연락처</th>
+										<td class="num">02-1234-5678</td>
+										<th scope="row">지점 주소</th>
+										<td>										
+												서울특별시 중구 을지로 66, <br> 											
+												하나금융그룹 명동사옥																		
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">등록 상태</th>
+										<td>사용중</td>
+										<th scope="row">지점 등록일</th>
+										<td class="num">2023-02-31</td>
+									</tr>		
+									<tr>
+										<th scope="row">마이크로 사이트 검색 허용</th>
+										<td colspan="3">Y</td>									
+									</tr>	
+								</tbody>
+							</table>
+						</div>
+					</div>						
+				</div>
+				<div class="cont-wrap">
+					<div class="sub-tit-area">
+						<p class="tit">지점 담당자 설정 정보</p>						
+					</div>	
+					<div class="board-list3">					
+						<table>
+							<caption>지점 담당자 설정 정보 테이블</caption>
+							<colgroup>
+								<col style="width: 150px;">
+								<col style="width: 166px;">									
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">
+								<col style="width: 68px;">				
+							</colgroup>	
+							<thead>
+								<tr>
+									<th rowspan="2">사용 여부</th>
+									<th rowspan="2">지점 담당자</th>
+									<th colspan="13">업무 유형</th>										
+								</tr>
+								<tr>
+									<th>전(월)세<br>대출</th>
+									<th>부동산<br>담보대출</th>
+									<th>신용<br>대출</th>
+									<th>오토<br>금융</th>
+									<th>개인사업자<br>대출</th>
+									<th>기업<br>대출</th>
+									<th>목돈<br>굴리기</th>
+									<th>목돈<br>모으기</th>									
+									<th>퇴직연금<br>IRP</th>
+									<th>유학 등<br>기타 자금</th>
+									<th>재외동포<br>재산 반출</th>
+									<th>해외부동산<br>투자</th>
+									<th>기업성<br>해외자금</th>															
+								</tr>									
+							</thead>					
+							<tbody>	
+								<tr>									
+									<td>
+										<div class="btn-switch-area on">
+											<span class="txt">사용</span>
+											<button type="button" class="button-switch"><span class="blind">사용</span></button>
+										</div>	
+									</td>
+									<td class="left">이하나(0123456)</td>
+									<td class="check"> <!-- 체크박스 선택시 td에 check클래스 추가 -->
+										<span class="chkbox">
+											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>									
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+								</tr>
+								<tr>									
+									<td>
+										<div class="btn-switch-area on">
+											<span class="txt">사용</span>
+											<button type="button" class="button-switch"><span class="blind">사용</span></button>
+										</div>	
+									</td>
+									<td class="left">이하나하나(0123456)</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td class="check">
+										<span class="chkbox">
+											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td class="check">
+										<span class="chkbox">
+											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>									
+									<td class="check">
+										<span class="chkbox">
+											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+								</tr>
+								<tr>									
+									<td>
+										<div class="btn-switch-area">
+											<span class="txt">사용 안함</span>
+											<button type="button" class="button-switch"><span class="blind">사용</span></button>
+										</div>	
+									</td>
+									<td class="left">이하나하나(0123456)</td>								
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td class="check">
+										<span class="chkbox">
+											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td class="check">
+										<span class="chkbox">
+											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>									
+									<td class="check">
+										<span class="chkbox">
+											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+								</tr>
+								<tr>									
+									<td>
+										<div class="btn-switch-area">
+											<span class="txt">사용 안함</span>
+											<button type="button" class="button-switch"><span class="blind">사용</span></button>
+										</div>	
+									</td>
+									<td class="left">
+										<span class="select-box wide">
+											<select class="styled">
+												<option value="">직원명(행번)</option>											
+											</select>
+										</span>
+									</td>								
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>									
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<div class="btn-area align-right">
+						<button type="button" class="btn-round btn-mid3 bg-white">수정</button>	
+					</div>	
+				</div>	
+					
+			</div>		
+			<div class="footer">
+				<p>Copyright ⓒ HANABANK Co., ltd. All right reserved</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+	$('.btn-modi').click(function(){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on').next().css('display','none');
+		}else{
+			$(this).addClass('on').next().css('display','flex');
+		}
+	});
+
+	$('.btn-save').click(function(){
+		$(this).closest('.edit-area').css('display','none');
+		$(this).closest('.cont-header').find('.btn-modi').removeClass('on');
+	});
+
+	$('.chkbox .styled3').change(function(){
+		if($(this).prop('checked') == true){			
+			$(this).closest('td').addClass('check');
+		}else{		
+			$(this).closest('td').removeClass('check');
+		}
+	});
+</script>
+
+</body>
+</html>

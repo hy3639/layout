@@ -71,7 +71,7 @@ a:active{background-color:transparent;}
 address,caption,cite,code,dfn,em,var{font-style:normal;}
 strong {font-weight:700;}
 table {table-layout:fixed;border-collapse:collapse;width:100%;border-spacing:0;border:0;}
-
+xmp {display: inline-block;margin:0;font-family:'noto'}
 div,
 dl,
 dt,

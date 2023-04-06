@@ -73,16 +73,16 @@
 	</div>
 	
 	<div class="container">	
-		<div class="contents admin-area">
+		<div class="contents admin admin-area"> <!-- 2023-04-04 : 클래스 추가 -->
 			<div class="tit-area">
-				<h2>통계</h2>
+				<h2>상담 통계</h2>
 			</div>
 			<div class="content">
 				<div class="tab-lst2 noneTab">
-					<a href="#" class="tab-item on"><span class="txt">전점</span></a>
-					<a href="#" class="tab-item"><span class="txt">지점별</span></a>
-					<a href="#" class="tab-item"><span class="txt">업무 유형별</span></a>
-					<a href="#" class="tab-item"><span class="txt">직원별</span></a>										
+					<a href="#" class="tab-item"><span class="txt">손님 분포</span></a>
+					<a href="#" class="tab-item on"><span class="txt">손님 접속</span></a>
+					<a href="#" class="tab-item"><span class="txt">상담 직원</span></a>
+					<a href="#" class="tab-item"><span class="txt">간편 발송</span></a>										
 				</div>
 				<div class="tab-wrap">
 					<div class="box-white-column">					
@@ -94,7 +94,7 @@
 											<p class="tit">기간 선택</p>
 											<div class="btn-date-area radio-select">
 												<button type="button" class="btn-date on">오늘</button> <!-- 선택시 on 클래스 추가 -->
-												<button type="button" class="btn-date">어제</button>
+												<!-- <button type="button" class="btn-date">어제</button> -->
 												<button type="button" class="btn-date">1주일</button>
 												<button type="button" class="btn-date">1개월</button>
 												<button type="button" class="btn-date btn-cal-setting">설정</button> <!-- 2023-02-22 클래스변경-->
@@ -122,17 +122,7 @@
 									</ul>							
 								</div>
 								<div class="cont">
-									<ul class="form-group flex-area">	
-										<li class="flex-area">
-											<p class="tit">지점 선택</p>
-											<div class="cont">
-												<span class="select-box">
-													<select class="styled">
-														<option value="">전체</option>							
-													</select>
-												</span>
-											</div>
-										</li>
+									<ul class="form-group flex-area">										
 										<li class="flex-area">
 											<p class="tit">업무 유형</p>
 											<div class="cont">
@@ -158,14 +148,27 @@
 								<div class="cont">
 									<ul class="form-group flex-area both">								
 										<li class="flex-area">
-											<p class="tit">기간 선택</p>
-											<div class="cont flex-area"> 
+											<p class="tit">지점 선택</p>
+											<div class="cont">
 												<ul class="btn-group-area radio">
-													<li><input type="radio" name="radio1" id="radio1-1"><label class="btn-type1" for="radio1-1">손님별 통계</label></li>
-													<li><input type="radio" name="radio1" id="radio1-2" checked><label class="btn-type1" for="radio1-2">상담별 통계</label></li>	
-													<li><input type="radio" name="radio1" id="radio1-3"><label class="btn-type1" for="radio1-3">상담 직원 통계</label></li>
-													<li><input type="radio" name="radio1" id="radio1-4"><label class="btn-type1" for="radio1-4">간변발송 순위 통계</label></li>											
-												</ul>						
+													<li><input type="radio" name="radio2" id="radio2-1"><label class="btn-type1" for="radio2-1">전체 지점</label></li>
+													<li><input type="radio" name="radio2" id="radio2-2" checked><label class="btn-type1" for="radio2-2">지점 선택</label></li>											
+												</ul>
+											</div>
+											<div class="cont flex-area ">  <!-- input text 입력시 input-on 클래스 추가 -->
+												<div class="input-text gray">
+													<input type="text" placeholder="지점명 또는 지점코드를 입력해 주세요">
+													<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+												</div>
+												<div class="input-layer">
+													<ul>
+														<li><a href="#"><mark>강남</mark> 1지점(0123)</a></li>
+														<li><a href="#"><mark>강남</mark> 2지점(0124)</a></li>
+														<li><a href="#"><mark>강남</mark> 3지점(0123)</a></li>
+														<li><a href="#"><mark>강남</mark> 4지점(0123)</a></li>
+														<li><a href="#"><mark>강남</mark> 5지점(0123)</a></li>
+													</ul>
+												</div>
 											</div>												
 										</li>
 										<li class="flex-area">
@@ -184,97 +187,85 @@
 							<div class="top-info flex-area both">
 								<ul>
 									<li class="num">2023-02-16</li>
-									<li>지점별</li>
-									<li>업무유형 전체</li>
-									<li>직원 전체</li>
-									<li>손님별 통계</li>
+									<li>전체 지점</li>								
 								</ul>
-								<span class="unit">종료 기준 (대화없이 종료 제외)</span>
+								<span class="unit">시간 대별 상담 요청 기준</span>
 							</div>
-							<div class="board-list3">					
+							<div class="board-list3 stat">					
 								<table>
 									<caption>통계 테이블</caption>
 									<colgroup>
-										<col style="width: 102px;">
-										<col style="width: 140px;">									
-										<col style="width: 78px;">
-										<col style="width: 78px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 42px;">
-										<col style="width: 78px;">
-										<col style="width: 94px;">
+										<col style="width: 140px;">	
+										<col style="width: 76px;">										
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">
+										<col style="width: 41px;">										
 									</colgroup>	
 									<thead>
-										<tr>
-											<th rowspan="2">지점명</th>
+										<tr>										
 											<th rowspan="2">업무유형</th>
-											<th rowspan="2">총손님<br>수</th>
-											<th rowspan="2">상담 건수<br>(대화창)</th>											
-											<th colspan="15">상담 요청 시간 분포</th>
-											<th rowspan="2">평균<br>상담 시간</th>
-											<th rowspan="2">손님 질문<br>시점~<br>답변 시점<br>평균 시간</th>									
+											<th rowspan="2">총 상담 요청 건수</th>																			
+											<th colspan="24">상담 요청 시간 분포</th>																	
 										</tr>
 										<tr>
-											<th>00시<br>~06시</th>
-											<th>~<br>07시</th>
-											<th>~<br>08시</th>
-											<th>~<br>09시</th>
-											<th>~<br>10시</th>
-											<th>~<br>11시</th>
-											<th>~<br>12시</th>
-											<th>~<br>13시</th>
-											<th>~<br>14시</th>
-											<th>~<br>15시</th>
-											<th>~<br>16시</th>
-											<th>~<br>17시</th>
-											<th>~<br>18시</th>
-											<th>~<br>19시</th>
-											<th>00시<br>~06시</th>				
+											<th>00시</th>
+											<th>01시</th>	
+											<th>02시</th>	
+											<th>03시</th>			
+											<th>04시</th>	
+											<th>05시</th>	
+											<th>06시</th>	
+											<th>07시</th>	
+											<th>08시</th>	
+											<th>09시</th>	
+											<th>10시</th>	
+											<th>11시</th>	
+											<th>12시</th>	
+											<th>13시</th>	
+											<th>14시</th>	
+											<th>15시</th>	
+											<th>16시</th>	
+											<th>17시</th>	
+											<th>18시</th>	
+											<th>19시</th>	
+											<th>20시</th>	
+											<th>21시</th>	
+											<th>22시</th>
+											<th>23시</th>	
 										</tr>									
 									</thead>					
 									<tbody>	
 										<tr class="highlight">
-											<td>전점</td>
-											<td class="left">전체</td>
+											<td>합계</td>
 											<td class="num">100</td>
-											<td class="num">99</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>15분</td>
-										</tr>
-										<tr>
-											<td rowspan="12">전점</td>
-											<td class="left">목돈 굴리기</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
 											<td class="num">-</td>
 											<td class="num">2</td>
 											<td class="num">2</td>
@@ -289,14 +280,20 @@
 											<td class="num">2</td>
 											<td class="num">2</td>
 											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
+											<td class="num">2</td>
+											<td class="num">2</td>
+											<td class="num">2</td>										
 										</tr>
-										<tr>											
-											<td class="left">목돈 모으기</td>
+										<tr>										
+											<td class="left">개인사업자 대출</td>
 											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
+											<td class="num">-</td>
 											<td class="num">-</td>
 											<td class="num">2</td>
 											<td class="num">2</td>
@@ -307,253 +304,88 @@
 											<td class="num">2</td>
 											<td class="num">2</td>
 											<td class="num">2</td>
+											<td class="num">20</td>
 											<td class="num">2</td>
 											<td class="num">2</td>
 											<td class="num">2</td>
 											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
+											<td class="num">2</td>
+											<td class="num">2</td>				
 										</tr>
-										<tr>											
-											<td class="left">퇴직연금 IRP</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">전(월)세 대출</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">부동산담보 대출</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">신용 대출</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">오토 금융</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">개인 사업자 대출</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">기업 대출</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">재외동포 재산반출</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">해외부동산</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>
-										<tr>											
-											<td class="left">기업성 해외자금</td>
-											<td class="num">10</td>
-											<td class="num">9</td>
-											<td class="num">5</td>
-											<td class="num">-</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td class="num">2</td>
-											<td>15분</td>
-											<td>5분</td>
-										</tr>			
+										
 										<!-- 데이터가 없는경우  -->
 										<tr>
-											<td colspan="21" class="no-data">검색 결과가 없습니다.</td>
+											<td colspan="26" class="no-data">검색 결과가 없습니다.</td>
 										</tr>
 										<!--// 데이터가 없는경우  -->
 									</tbody>
 								</table>
 							</div>
-							<div class="pagenation">							
-								<a href="#" class="btn-prev">이전</a>
-								<span class="page">1</span>
-								<span class="ellipsis-divide">ellipsis</span>
-								<span class="page now">14</span>
-								<a href="#" class="page">15</a>
-								<a href="#" class="page">16</a>
-								<a href="#" class="page">17</a>						
-								<span class="ellipsis-divide">ellipsis</span>
-								<span class="page">35</span>
-								<a href="#" class="btn-next">다음</a>						
+						</div>
+						<div class="section">
+							<div class="top-info flex-area both">
+								<ul>
+									<li class="num">2023-02-16</li>
+									<li>전체 지점</li>								
+								</ul>
+								<span class="unit">상담 종료 기준</span>
 							</div>
+							<div class="board-list3 stat">					
+								<table>
+									<caption>통계 테이블</caption>
+									<colgroup>
+										<col style="width: 140px;">	
+										<col style="width: 151px;">	
+										<col style="width: 170px;">	
+										<col style="width: 187px;">	
+										<col style="width: 138px;">	
+										<col style="width: 138px;">	
+										<col style="width: 138px;">	
+										<col style="width: 138px;">	
+									</colgroup>	
+									<thead>
+										<tr>										
+											<th>업무유형</th>
+											<th>상담 건수<br>(정상 종료)</th>																			
+											<th>상담 건수<br>(정상 종료 + 시스템종료)</th>		
+											<th>총 상담시간</th>
+											<th>평균 상담시간</th>		
+											<th>총 대화량</th>		
+											<th>평균 대화량</th>		
+											<th>평균 응답시간</th>																	
+										</tr>																
+									</thead>					
+									<tbody>	
+										<tr class="highlight">
+											<td>합계</td>
+											<td class="num">100</td>
+											<td class="num">120</td>
+											<td>158시간 33분 22초</td>
+											<td>1분 12초</td>				
+											<td>3M byte</td>
+											<td>0.5M byte</td>
+											<td>1분 12초</td>															
+										</tr>
+										<tr>										
+											<td class="left">개인사업자 대출</td>
+											<td class="num">10</td>
+											<td class="num">15</td>
+											<td>158시간 33분 22초</td>
+											<td>1분 12초</td>				
+											<td>3M byte</td>
+											<td>0.5M byte</td>
+											<td>1분 12초</td>	
+										</tr>
+										
+										<!-- 데이터가 없는경우  -->
+										<tr>
+											<td colspan="8" class="no-data">검색 결과가 없습니다.</td>
+										</tr>
+										<!--// 데이터가 없는경우  -->
+									</tbody>
+								</table>
+							</div>
+							
 						</div>
 					</div>
 				</div>
