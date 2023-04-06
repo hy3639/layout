@@ -5,10 +5,10 @@
 	레이아웃
 ============== */
 .body-bg {background-color:#f2f2f2}
-.body-bg .wrapper {overflow: hidden;}/*상담메인화면*/
+.body-bg .wrapper {overflow: hidden; max-height:1080px}/*상담메인화면*/
 .wrapper {
 	position: relative;
-	max-height:1080px;
+	/* max-height:1080px; */
 	width:1280px;	
 	margin:0 auto;
 	/* overflow: hidden; */
@@ -3739,8 +3739,19 @@ mark.current {
 	background: url(../images/icon/btn-arrow-down-24.png) no-repeat center 56% !important;
 	background-size: 10px 6px !important;
   } */
-  .chat-history .popup {width: 392px; padding:0}
- .chat-history .popup-header {
+.layer-popup.chat-history {
+	position:fixed;
+	top:100px;
+	right:100px;
+	bottom: initial;
+	left:initial;
+	padding-top: 0 !important;
+	height: 750px;
+	width:400px;
+
+}
+.chat-history .popup {width: 392px; padding:0}
+.chat-history .popup-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -4896,7 +4907,7 @@ mark.current {
 	font-size: 14px;
 	color:#4a4e5e;
 }
-.admin-area .cont-wrap .board-list3 td.check{position: relative; background-color:#446cf3} 
+.admin-area .cont-wrap .board-list3 td.check{background-color:#446cf3} 
  /* .admin-area .cont-wrap .board-list3 td .chkbox {
 	position: absolute;
 	left: 0;

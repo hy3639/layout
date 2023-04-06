@@ -573,6 +573,8 @@ function layerBtnEvent(obj) {
 		if(!layerName.hasClass('dimmed-none')){ 
 			layerName.prepend('<div class="dimmed">');
 			
+		}else{
+			$('html').removeClass('popOpen');
 		}
 
 		var hei = $(window).height();		
