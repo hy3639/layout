@@ -1633,16 +1633,30 @@
 								</li>
 							</ul>
 						</div>
+						<!-- 2023-04-04 : 2023-04-04 : 위치변경 및 버튼 추가 -->
 						<div class="list-area">
-							<!-- 2023-02-06 -->
-							<div class="flex-area both">
-								<div class="tit-wrap">
-									<p class="tit">최근 활동 정보</p>
-									<span class="count">총2건</span>
+							<div class="flex-area">
+								<div class="tit-wrap both">
+									<div>
+										<p class="tit">마케팅 교차판매</p>
+										<span class="count">5/14</span>
+									</div>									
+									<button type="button" class="bg-gray btn-sm btnPop" data-title="Popup03">상세보기</button> 
 								</div>								
-								<button type="button" class="bg-gray btn-sm btnPop" data-title="Popup02">상세보기</button> <!-- 2023-03-14 : 태그변경 disabled 스타일 추가 -->
-							</div>
-							<!--// 2023-02-06 -->
+								
+							</div>				
+						</div>						
+						<div class="list-area">						
+							<div class="flex-area both">
+								<div class="tit-wrap both">
+									<div class="flex-area">
+										<p class="tit">최근 활동 정보</p>
+										<span class="count">총2건</span>	
+									</div>									
+									<button type="button" class="bg-gray btn-sm btnPop" data-title="Popup02">상세보기</button> 								
+								</div>								
+								<button type="button" class="btn-accordion on">닫힘</button>		
+							</div>							
 							<ul class="tit-list2">
 								<li>
 									<span class="tit">활동유형</span>
@@ -1673,19 +1687,11 @@
 									<span class="cont">분당중앙</span>
 								</li>								
 							</ul>
-						</div>
+						</div>					
 						<div class="list-area">
-							<div class="flex-area both">
-								<div class="tit-wrap">
-									<p class="tit">마케팅 교차판매</p>
-									<span class="count">5/14</span>
-								</div>								
-								<button type="button" class="bg-gray btn-sm btnPop" data-title="Popup03">상세보기</button> <!-- 2023-03-14 : 태그변경 disabled 스타일 추가 -->
-							</div>				
-						</div>
-						<div class="list-area">
-							<div class="flex-area both">
-								<p class="tit">실적 집계</p>							
+							<div class="flex-area both">								
+								<p class="tit">실적 집계</p>
+								<button type="button" class="btn-accordion on">닫힘</button>									
 							</div>	
 							<ul class="tit-list2 right">
 								<li>
@@ -1722,6 +1728,7 @@
 								</li>								
 							</ul>
 						</div>
+						<!--// 2023-04-04 : 위치변경 및 버튼 추가 -->
 					</div>
 				</div>
 			</div>
@@ -3124,8 +3131,8 @@
 		</div>		
 		<div class="cont-area admin-area scroll-area" style="height:700px">
 			<div class="section">				
-				<div class="tab-wrap">
-					<div class="tab-lst3 w300">
+				<div class="tab-wrap help-wrap">
+					<div class="tab-lst3">
 						<button type="button" class="tab-item on">
 							<span class="txt">1:1 상담</span>
 						</button>
@@ -3146,9 +3153,76 @@
 								<div class="text-area">
 									<ul class="number-list">
 										<li>
-											<span class="num">상담 목록</span>
+											<span class="number">1:1 상담</span>
 											<ul class="list-style2">
-												<li>로그인한 지점 담당자가 속한 대화 상담 목록 출력</li>
+												<li>손님과 1:1 대화상담 영역  </li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">대화 검색</span>
+											<ul class="list-style2">
+												<li>검색어 입력 후 Enter키 선택 시 대화 내용 중 검색 가능</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">대화 창</span>
+											<ul class="list-style2">
+												<li>손님과 상담 입력 내용 출력 영역</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">상담 종료 버튼</span>
+											<ul class="list-style2">
+												<li>
+													손님과의 상담이 종료된 경우 : 상담 종료 버튼을 선택하여 상담종료
+													상태로 변경 가능
+												</li>
+												<li>‘당행 손님’과 상담 종료 시 ‘활동 등록’ 바로 가능</li>
+												<li>차단 된 상담 : 종료 불가 (차단 해제 후 종료 가능)</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">대화 입력 영역</span>
+											<ul class="list-style2">
+												<li>대기중/상담중/부재중 상담 목록 선택 후 입력 가능</li>
+												<li>메시지 전송 시 금칙어 체크되고, 글자수 1,000자 제한</li>
+												<li>메시지 입력 후 Enter키 선택 시 메시지 전송</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">빠른 메뉴</span>
+											<ul class="list-style2">
+												<li>모바일 명함 : 알림 메시지 확인 후 대화 창에 바로 전송</li>
+												<li>간편발송 : 간편발송 슬라이드 목록 출력되어 선택 후 발송 가능</li>
+												<li>상담이관 : 상담이관 팝업 열리고 이관 진행 가능 </li>
+												<li>SMS 발송 : 당행 손님인 경우 선택하여 SMS 발송 가능</li>
+												<li>상담 이력 : 상담 이력 팝업 열리고 이력 확인 가능</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">간편발송</span>
+											<ul class="list-style2">
+												<li class="bg-none">빠른 메뉴 중 간편발송 버튼 선택하여 간편 목록에서 선택 후 발송 가능</li>
+												<li class="bg-none bold">ⓐ 슬라이드 목록에서 선택 기능 </li>
+												<li>키워드 검색 기능 : 키워드 입력 후 Enter 키 선택 시 결과 있는 경우 목록에 출력 </li>
+												<li>↑↓설정 기능 : 선택하여 카테고리 노출 및 순서 설정 가능</li>
+												<li>즐겨 찾기 기능 : 카테고리별 목록에서 ★ 선택 시 즐겨 찾기 목록에 출력</li>
+												<li>목록 순서 설정 가능</li>
+												<li class="bg-none bold">ⓑ 단축 키 입력 기능</li>
+												<li>입력 영역에  ‘@간편발송 문구’ 입력 시 출력 된 ‘간편발송 목록’ 에서 선택하여 전송 가능</li>
+												<li>입력한 키워드 있는 경우  목록 출력되고, 없는 경우 미 출력</li>
+												<li>문구 선택 : ‘간편발송 상세 레이어’ 열리고, [전송하기] 버튼 선택 시 대화창에 내용 출력</li>												
+											</ul>
+										</li>
+										<li>
+											<span class="number">자주 쓰는 문구</span>
+											<ul class="list-style2">											
+												<li class="bg-none bold">ⓐ 입력 영역 내 # 선택 기능 </li>
+												<li>메시지 미 입력 상태일 때 : ‘#’ 선택하여 ‘자주 쓰는 문구’ 목록에서 선택하여 전송 가능 </li>
+												<li># 선택 :  자주 쓰는 문구 목록 레이어가 상단에 출력 </li>										
+												<li class="bg-none bold">ⓑ 단축 키 입력 기능</li>
+												<li>입력 영역에  ‘# 자주 쓰는 문구’ 입력하여 검색 출력 된 ‘자주 쓰는 문구’ 목록에서  선택하여 전송 가능 (입력한 키워드 있는 경우 목록 출력) </li>
+												<li>문구 선택 : 목록 레이어 닫히고, 입력 영역에 선택한 ‘자주 쓰는 문구’ 출력되고 활성화 된 [전송]버튼 선택 시 대화창에 문구 출력</li>																					
 											</ul>
 										</li>
 									</ul>
@@ -3156,10 +3230,218 @@
 							</div>						
 						</div>						
 						<div class="tab-cont">
-							tab2
+							<div class="help-area">
+								<div class="img-area">
+									<img src="../images/img/img-help-tab2.png">
+								</div>
+								<div class="text-area">
+									<ul class="number-list">
+										<li>
+											<span class="number">상담 목록</span>
+											<ul class="list-style2">
+												<li>로그인한 지점 담당자가 속한 대화 상담 목록 출력</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">상담 중 목록</span>
+											<ul class="list-style2">
+												<li>로그인 사용자가 속한 상담중 인 목록 (대기중/상담중/부재중)</li>
+												<li>‘당행 손님’과 상담 종료 시 ‘활동 등록’ 바로 가능</li>
+												<li>필터 기능 : 초기 전체 출력, 설정 가능</li>
+												<li>상담중 목록 선택 한 후 키보드 화살표 키를 이용하여 목록 순서↑↓ 이동 가능</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">즐겨찾기 목록</span>
+											<ul class="list-style2">
+												<li>상담중 목록에서 즐겨찾기 선택한 목록 (대기중/상담중/부재중/상담 종료) 출력</li>
+												<li>즐겨찾기 해제 전 까지 출력 (상담 종료 건도 출력)</li>
+												<li>필터 기능 : 초기 전체 출력, 설정 가능 </li>
+												<li>즐겨찾기 목록 선택 한 후 드래그앤드롭으로 목록 순서↑↓ 이동 가능 </li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">상담 종료 목록</span>
+											<ul class="list-style2">
+												<li>당일 상담 종료 목록 출력 (모든 상담 종료 목록 확인 가능)</li>
+												<li>상세 검색 기능 : 지점 담당자 본인이 ‘상담 종료’ 한 범위 내 검색 가능(이전 상담 업무 유형 검색 가능)</li>												
+											</ul>
+										</li>
+										<li>
+											<span class="number">상담 목록 구성 항목</span>
+											<ul class="list-style2">
+												<li>업무 유형명</li>
+												<li>
+													당행 고객 : 고객명(고객 번호), 당행 고객 아닌 경우 :<br>
+													고객명(당행 손님 아님)
+												</li>
+												<li>마지막 대화 메시지 날짜와 시간</li>
+												<li>대화 상태 : 대기중/상담중/부재중/상담 종료</li>
+												<li class="bg-none">
+													<div class="board-list4">					
+														<table>
+															<caption>대화상태 케이스</caption>
+															<colgroup>
+																<col style="width: 20%;">
+																<col style="width: 50%;">									
+																<col style="width: 30%;">																								
+															</colgroup>	
+															<thead>
+																<tr>
+																	<th>대화상태</th>
+																	<th>(1-1) 상태 메시지 케이스</th>
+																	<th>비고</th>																										
+																</tr>																		
+															</thead>					
+															<tbody>	
+																<tr>																	
+																	<td>
+																		<span class="flag type1">대기중</span>
+																	</td>
+																	<td class="align-left">(1/10)</td>										
+																	<td class="align-left">
+																		대기 순번 수/<br>
+																		총 대기 수
+																	</td>											
+																</tr>
+																<tr>																	
+																	<td>
+																		<span class="flag type2">상담중</span>
+																	</td>
+																	<td class="align-left">
+																		(2/10), 상담 OFF시 진입,<br>
+																		업무 외 시간 진입
+																	</td>										
+																	<td class="align-left">
+																		답변 중,<br>
+																		다른 상담방 답변 시
+																	</td>											
+																</tr>
+																<tr>																	
+																	<td>
+																		<span class="flag type4">부재중</span>
+																	</td>
+																	<td class="align-left">
+																		상담 OFF시 진입,<br>
+																		업무 외 시간 진입
+																	</td>										
+																	<td class="align-left">부재중 진입 시</td>											
+																</tr>
+																<tr>																	
+																	<td>
+																		<span class="flag type3">NOW</span>
+																	</td>
+																	<td class="align-left">
+																		(1/10), 상담 OFF시 진입,<br>
+																		업무 외 시간 진입
+																	</td>										
+																	<td class="align-left">
+																		현재 대화<br>
+																		(메시지 전송) 중
+																	</td>											
+																</tr>
+																<tr>																	
+																	<td rowspan="3">
+																		<span class="flag type5">상담<br>종료</span>
+																	</td>
+																	<td class="align-left">활동등록하기 &gt;, 활동 등록 완료</td>										
+																	<td class="align-left">정상 종료 시</td>											
+																</tr>
+																<tr>
+																	<td class="align-left">시스템 자동종료, 대화 없이 종료</td>										
+																	<td class="align-left">자동 종료 처리 시</td>											
+																</tr>	
+																<tr>
+																	<td class="align-left">이관 종료, 차단 이관 종료</td>										
+																	<td class="align-left">
+																		이관 또는<br>
+																		차단 이관 종료 시
+																	</td>											
+																</tr>			
+															</tbody>
+														</table>
+													</div>
+												</li>
+												<li>즐겨찾기 기능 : 선택 시, 즐겨 찾기 목록에 저장되어 출력</li>
+												<li>고정 기능 : 목록 상단에 최대 3개 고정 설정 (상담중 목록만)</li>
+												<li>링크 레이어 아이콘 : 레이어 출력되고 선택하여 링크 기능 진행 가능</li>
+												<li>
+													신규 메시지 배지 : 신규 메시지 있는 경우 출력, 마우스 오버 시
+													마지막 메시지 확인 가능 (상담 종료 미 출력)
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">링크 레이어</span>
+											<ul class="list-style2">
+												<li>상담이관 : 상담이관 팝업 열리고 이관 진행 가능</li>
+												<li>상담이력 : 상담이력 팝업 열리고 이력 확인 가능</li>
+												<li>차단하기 : 상담 차단 팝업 열리고 차단 가능</li>
+												<li>
+													활동등록<br>
+													: 당행 손님 + 정상 종료 시, 당행 손님 + 정상 이관 종료 시에만 출력<br>
+													: 활동 등록하기 팝업 열리고 등록 가능 (활동 등록 완료 시 : 미 출력)
+												</li>												
+											</ul>
+										</li>
+										<li>
+											<span class="number">링크 레이어: 차단해제 </span>
+											<ul class="list-style2">										
+												<li>링크 레이어: 차단해제 </li>										
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>						
 						</div>
 						<div class="tab-cont">
-							tab3
+							<div class="help-area">
+								<div class="img-area">
+									<img src="../images/img/img-help-tab3.png">
+								</div>
+								<div class="text-area">
+									<ul class="number-list">
+										<li>
+											<span class="number">손님정보</span>
+											<ul class="list-style2">
+												<li>로그인한 지점 담당자가 속한 대화 상담 목록 출력</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">기본정보 영역</span>
+											<ul class="list-style2">
+												<li>선택한 상담 목록의 고객 정보 출력</li>
+												<li>
+													당행 고객 여부(Y/N) : 고객번호 유무<br>
+													: 기존 당행 고객 - 고객번호(9자리 번호),<br> 
+													: 당행 고객이 아닌 경우 - 고객번호(‘당행 손님 아님’)
+												</li>
+
+											</ul>
+										</li>
+										<li>
+											<span class="number">마케팅 교차판매 영역</span>
+											<ul class="list-style2">
+												<li>교차판매 상세 건수 출력</li>
+												<li>데이터 있는 경우에만, [상세보기] 선택하여 상세정보 팝업에서 확인 가능</li>
+											</ul>
+										</li>
+										<li>
+											<span class="number">최근 활동 정보 영역</span>
+											<ul class="list-style2">
+												<li>선택한 상담 목록의 고객 정보의 최근 접촉 이력 1건 출력/총 건수 출력</li>
+												<li>데이터 있는 경우에만, [상세보기] 선택하여 상세 팝업에서 확인 가능</li>												
+											</ul>
+										</li>
+										<li>
+											<span class="number">실적 집계 영역</span>
+											<ul class="list-style2">
+												<li>실적 집계 정보 출력 </li>											
+											</ul>
+										</li>										
+									</ul>
+								</div>
+							</div>						
 						</div>
 					</div>
 				</div>
@@ -3207,6 +3489,17 @@
 		$(this).click(function(){			
 			layerBtnEvent('alert');
 		});		
+	});
+
+
+	$('.btn-accordion').click(function(){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on').text('열림');
+			$(this).closest('.list-area').find('.tit-list2').hide();
+		}else{
+			$(this).addClass('on').text('닫힘');;
+			$(this).closest('.list-area').find('.tit-list2').show();
+		}
 	});
 
 	/* 2023-03-15 추가 */

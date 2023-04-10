@@ -85,15 +85,19 @@
 					<div class="section">
 						<div class="box-white type2">
 							<div class="cont-header flex-area">
-								<p class="tit">전체 등록 인원 : 현재 등록 2400명/제한</p>
-								<button type="button" class="btn-round bg-gray btn-mid2 btn-modi">수정</button>
+								<p class="tit">전체 등록 인원 : 현재 등록 2400명/제한</p>	
+								<!-- 2023-04-10 :수정  -->
 								<div class="edit-area">
 									<div class="input-text gray">
-										<input type="number" placeholder="전체 등록 인원을 입력해 주세요." value="2400">
+										<input type="number" placeholder="전체 등록 인원을 입력해 주세요." value="2400" disabled>
 										<span>명</span>								
 									</div>								
-									<button type="button" class="btn-round bg-gray btn-mid2 btn-save">저장</button>
+									<button type="button" class="btn-round bg-gray btn-mid2">수정</button>
+									<!-- 수정 시 버튼 교체 -->
+									<!-- <button type="button" class="btn-round bg-gray btn-mid2">저장</button> -->
+									<!--// 수정 시 버튼 교체 -->
 								</div>
+								<!--// 2023-04-10 :수정  -->
 							</div>											
 							<div class="cont">
 								<ul class="form-group flex-area">	
@@ -306,6 +310,7 @@
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/common.js"></script>
 <script>
+	/* 2023-04-10 삭제
 	$('.btn-modi').click(function(){
 		if($(this).hasClass('on')){
 			$(this).removeClass('on').next().css('display','none');
@@ -318,6 +323,8 @@
 		$(this).closest('.edit-area').css('display','none');
 		$(this).closest('.cont-header').find('.btn-modi').removeClass('on');
 	});
+
+	*/
 </script>
 
 </body>
