@@ -695,7 +695,7 @@
 						<div class="flex-area">
 							<h3 class="tit">상담 목록</h3>							
 						</div>						
-						<button type="button" class="btn-qustion">도움말</button> <!-- 2023-02-06 -->
+						<button type="button" class="btn-qustion btnPop" data-title="help">도움말</button> <!-- 2023-02-06 -->
 					</div>
 					<div class="tab-wrap">
 						<div class="tab-lst">
@@ -3115,6 +3115,59 @@
 	</div>
 </div>
 
+<!-- 2023-04-04 : 도움말 -->
+<div class="layer-popup type3" data-layer-name="help"> 
+	<div class="popup xl2">
+		<div class="popup-header">			
+			<p class="title">도움말</p>		
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>		
+		<div class="cont-area admin-area scroll-area" style="height:700px">
+			<div class="section">				
+				<div class="tab-wrap">
+					<div class="tab-lst3 w300">
+						<button type="button" class="tab-item on">
+							<span class="txt">1:1 상담</span>
+						</button>
+						<button type="button" class="tab-item">
+							<span class="txt">상담 목록</span>
+						</button>
+						<button type="button" class="tab-item">
+							<span class="txt">손님 정보</span>
+						</button>
+					</div>
+
+					<div class="tab-conts">						
+						<div class="tab-cont on">
+							<div class="help-area">
+								<div class="img-area">
+									<img src="../images/img/img-help-tab1.png">
+								</div>
+								<div class="text-area">
+									<ul class="number-list">
+										<li>
+											<span class="num">상담 목록</span>
+											<ul class="list-style2">
+												<li>로그인한 지점 담당자가 속한 대화 상담 목록 출력</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>						
+						</div>						
+						<div class="tab-cont">
+							tab2
+						</div>
+						<div class="tab-cont">
+							tab3
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>		
+	</div>
+</div>
+<!--// 2023-04-04 : 도움말 -->
 <!--// 레이어팝업 (딤드 + 가운데정렬) 영역 -->
 
 <script src="../js/jquery-3.4.1.min.js"></script>
