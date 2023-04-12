@@ -1264,8 +1264,8 @@ table td.no-data {
 .fix-th.type4 .th:nth-child(5) {width: 11%;}
 .fix-th.type4 .th:nth-child(6) {width: 10%;}
 .fix-th.type4 .th:nth-child(7) {width: 8%;}
-.fix-th.type4 .th:nth-child(8) {width: 9%; justify-content: end; padding-right: 12px;}
-.fix-th.type4 .th:nth-child(9) {width: 9%;  justify-content: end; padding-right: 12px;}
+.fix-th.type4 .th:nth-child(8) {width: 9%;}
+.fix-th.type4 .th:nth-child(9) {width: 9%;}
 .fix-th.type4 .th:nth-child(10) {width: 7%;}
 .fix-th.type4 .th:nth-child(11) {width: 8%;}
 .fix-th.type4 .th:nth-child(12) {width: 9%;}
@@ -1274,8 +1274,9 @@ table td.no-data {
 .fix-th.type4 + .board-list td.align-right {text-align:right;padding-right: 12px;} 
 .fix-th.type4 + .board-list td {height:52px}
 .fix-th.type4 + .board-list td.ellipsis {line-height: 52px;}
+.fix-th .th.align-right{justify-content: end !important; padding-right: 12px !important;}
 
-/*my타겟 손님 목록, 일일거래 손님 목록 테이블*/
+/*일일거래 손님 목록 테이블*/
 .fix-th.type5 .th {
 	display: flex;
 	align-items: center;
@@ -1289,19 +1290,47 @@ table td.no-data {
 .fix-th.type5 .th:nth-child(1) {width: 4%;}
 .fix-th.type5 .th:nth-child(2) {width: 8%; }
 .fix-th.type5 .th:nth-child(3) {width: 9%;}
-.fix-th.type5 .th:nth-child(4) {width: 11%;}
+.fix-th.type5 .th:nth-child(4) {width: 15%;}
 .fix-th.type5 .th:nth-child(5) {width: 8%;}
-.fix-th.type5 .th:nth-child(6) {width: 11%;}
-.fix-th.type5 .th:nth-child(7) {width: 8%;}
+.fix-th.type5 .th:nth-child(6) {width: 8%;}
+.fix-th.type5 .th:nth-child(7) {width: 14%;}
 .fix-th.type5 .th:nth-child(8) {width: 9%; }
-.fix-th.type5 .th:nth-child(9) {width: 15%; justify-content: end; padding-right: 12px;}
-.fix-th.type5 .th:nth-child(10) {width: 8%; justify-content: end; padding-right: 12px;}
-.fix-th.type5 .th:nth-child(11) {width: 9%;}
+.fix-th.type5 .th:nth-child(9) {width: 15%;}
+.fix-th.type5 .th:nth-child(10) {width: 10%;}
+
 .fix-th.type5 + .board-list th,
 .fix-th.type5 + .board-list td {text-align: center; padding:0 8px }
 .fix-th.type5 + .board-list td.align-right {text-align:right;padding-right: 12px;} 
 .fix-th.type5 + .board-list td {height:52px}
 .fix-th.type5 + .board-list td.ellipsis {line-height: 52px;}
+
+/*my타겟 손님 목록*/ 
+.fix-th.type6 .th {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding:0; 
+	line-height: 50px; 
+	text-align: center;
+}
+.fix-th.type6 .th.line2 {line-height: 16px;}
+.fix-th.type6 .th:nth-child(1) {width: 4%;}
+.fix-th.type6 .th:nth-child(2) {width: 8%; }
+.fix-th.type6 .th:nth-child(3) {width: 9%;}
+.fix-th.type6 .th:nth-child(4) {width: 13%;}
+.fix-th.type6 .th:nth-child(5) {width: 8%;}
+.fix-th.type6 .th:nth-child(6) {width: 11%;}
+.fix-th.type6 .th:nth-child(7) {width: 11%;}
+.fix-th.type6 .th:nth-child(8) {width: 9%; }
+.fix-th.type6 .th:nth-child(9) {width: 10%;}
+.fix-th.type6 .th:nth-child(10) {width: 8%;}
+.fix-th.type6 .th:nth-child(11) {width: 9%;}
+
+.fix-th.type6 + .board-list th,
+.fix-th.type6 + .board-list td {text-align: center; padding:0 8px }
+.fix-th.type6 + .board-list td.align-right {text-align:right;padding-right: 12px;} 
+.fix-th.type6 + .board-list td {height:52px}
+.fix-th.type6 + .board-list td.ellipsis {line-height: 52px;}
 
 .board-list {	
 	padding: 0 28px;

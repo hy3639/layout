@@ -550,27 +550,34 @@
 				<button type="button" class="btn-add">대분류 추가</button>
 			</div>	
 			<div class="section mgt12">
+				<!-- 2023-04-10 : 선택, 대분류 코드 컬럼 추가-->
 				<div class="board-list3">				
 					<table>
 						<caption>업무 유형 수정/추가 리스트</caption>
 						<colgroup>
+							<col style="width: 10%;">
+							<col style="width: 25%;">	
 							<col style="width: 30%;">
-							<col style="width: 70%;">						
+							<col style="width: 35%;">						
 						</colgroup>	
 						<thead>
 							<tr>
-								<th>사용 여부</th>										
+								<th>선택</th>		
+								<th>사용 여부</th>
+								<th>대분류 코드</th>										
 								<th>대분류 명</th>																							
 							</tr>																		
 						</thead>					
 						<tbody>										
 							<tr>
+								<td><input type="checkbox" class="styled" disabled></td>	
 								<td>
 									<div class="btn-switch-area on">
 										<span class="txt">사용</span>
 										<button type="button" class="button-switch"><span class="blind">사용</span></button>
 									</div>	
 								</td>
+								<td clas="num">01</td>
 								<td>
 									<div class="input-text gray">
 										<input type="text" value="예적금">
@@ -579,12 +586,14 @@
 								</td>																				
 							</tr>
 							<tr>
+								<td><input type="checkbox" class="styled" disabled></td>	
 								<td>
 									<div class="btn-switch-area on">
-										<span class="txt">사용</span>
+										<span class="txt">사용</span>										
 										<button type="button" class="button-switch"><span class="blind">사용</span></button>
 									</div>	
 								</td>
+								<td clas="num">02</td>
 								<td>
 									<div class="input-text gray">
 										<input type="text" value="대출">
@@ -593,11 +602,18 @@
 								</td>																				
 							</tr>
 							<tr>
-								<td>
+								<td><input type="checkbox" class="styled"></td>	
+								<td>									
 									<div class="btn-switch-area">
 										<span class="txt">사용 안함</span>
 										<button type="button" class="button-switch"><span class="blind">사용 안함</span></button>
 									</div>	
+								</td>
+								<td>
+									<div class="input-text gray">
+										<input type="number" placeholder="코드 입력">
+										<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+									</div>
 								</td>
 								<td>
 									<div class="input-text gray">
@@ -608,18 +624,22 @@
 							</tr>
 						</tbody>
 					</table>							
-				</div>
+				</div>			
+				<!-- 2023-04-10 : 선택, 대분류 코드 컬럼 추가-->
 			</div>	
 			<div class="section">
+				<!-- 2023-04-10 : 문구수정  -->
 				<ul class="list-style2 type3">
-					<li>업무 유형 대분류 삭제 불가</li>
+					<li>업무 유형 대분류 삭제 가능 : 소분류 사용하지 않고, 사용여부 '사용 안함'인 경우</li>
 					<li>대분류 추가 : [대분류 추가]버튼 클릭하여 하단에 추가된 영역에 입력 후 [저장]시 반영</li>
-					<li>업무 유형 대분류 수정 : 사영 여부 '사용'인 경우 수정 불가, '사용 안함'으로 선택 [저장] 후, 입력 영역 내 수정 가능</li>					
-					<li>글자수 제한: <span class="f-blue">대 분류 10자</span></li>					
+					<li>업무 유형 대분류 수정 : 사용 여부 '사용'인 경우 수정 불가, '사용 안함'으로 선택 [저장] 후, 입력 영역 내 수정 가능</li>					
+					<li>글자수 제한: <span class="f-blue">대 분류 코드(숫자 두 자리수), 대 분류 명(한글 10자)</span></li>					
 				</ul>
+				<!--// 2023-04-10 : 문구수정  -->
 			</div>
 		</div>
 		<div class="btn-area align-right">
+			<button type="button" class="btn-round btn-mid bg-white">삭제</button>	<!-- 2023-04-10 : 삭제 버튼 추가 -->
 			<button type="button" class="btn-round btn-mid bg-white popClose">취소</button>
 			<button type="button" class="btn-round btn-mid bg-blue">저장</button>
 		</div>
