@@ -3760,9 +3760,9 @@ mark.current {
 .layer-popup.chat-history {
 	position:fixed;
 	top:100px;
-	right:100px;
-	bottom: initial;
-	left:initial;
+	right:30%;
+	bottom: auto;
+	left:auto;
 	padding-top: 0 !important;
 	height: 750px;
 	width:400px;
@@ -4947,19 +4947,21 @@ mark.current {
 
 /*지점 정보 상세 */
 .admin-area .cont-wrap  {margin-top: 44px;}
-.admin-area .cont-wrap + .cont-wrap .sub-tit-area {margin-bottom:15px}
+.admin-area .cont-wrap .top-info {height:44px; margin-bottom:8px}
+.admin-area .cont-wrap .board-list3.scroll {overflow-x:auto}
+/* .admin-area .cont-wrap + .cont-wrap .sub-tit-area {margin-bottom:15px} */
 .admin-area .box-white.view {padding:20px 40px; margin-top: 15px;}
 .admin-area .sub-tit-area {display: flex; align-items: center; justify-content: space-between;}
 .admin-area .sub-tit-area .tit {
 	font-size:20px;
 	color:#252832;
 	font-weight: 500;
-
 }
 .admin-area .sub-tit-area .sub-txt {
 	font-size: 14px;
 	color:#4a4e5e;
 }
+.admin-area .sub-tit-area .sub-txt.type2 {margin-left: 16px;}
 .admin-area .cont-wrap .board-list3 td.check{background-color:#446cf3} 
  /* .admin-area .cont-wrap .board-list3 td .chkbox {
 	position: absolute;

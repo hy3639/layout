@@ -131,10 +131,17 @@
 					</div>						
 				</div>
 				<div class="cont-wrap">
-					<div class="sub-tit-area">
-						<p class="tit">지점 담당자 설정 정보</p>						
-					</div>	
-					<div class="board-list3">					
+					<!-- 2023-04-12 : 수정 -->
+					<div class="top-info flex-area both">
+						<div class="sub-tit-area">
+							<p class="tit">지점 담당자 설정 정보</p>
+							<span class="sub-txt type2">사용여부 : 인사이동/퇴사 시 사용 안함 설정 필요</span>													
+						</div>														
+						<button type="button" class="btn-add">담당자 추가</button>
+					</div>
+					<!--// 2023-04-12 : 수정 -->
+					<!-- 2023-04-12 : 테이블 수정 -->
+					<div class="board-list3 scroll"> <!-- 컬럼이 13개 이상이 될 경우 스크롤 생김 -->					
 						<table>
 							<caption>지점 담당자 설정 정보 테이블</caption>
 							<colgroup>
@@ -152,13 +159,15 @@
 								<col style="width: 68px;">
 								<col style="width: 68px;">
 								<col style="width: 68px;">
-								<col style="width: 68px;">				
+								<col style="width: 68px;">	
+								<col style="width: 68px;">
+								<col style="width: 68px;">						
 							</colgroup>	
 							<thead>
 								<tr>
 									<th rowspan="2">사용 여부</th>
 									<th rowspan="2">지점 담당자</th>
-									<th colspan="13">업무 유형</th>										
+									<th colspan="15">업무 유형</th> <!-- 업무유형 개수만큼 수정되야 함 -->								
 								</tr>
 								<tr>
 									<th>전(월)세<br>대출</th>
@@ -172,6 +181,8 @@
 									<th>퇴직연금<br>IRP</th>
 									<th>유학 등<br>기타 자금</th>
 									<th>재외동포<br>재산 반출</th>
+									<th>해외부동산<br>투자</th>
+									<th>기업성<br>해외자금</th>	
 									<th>해외부동산<br>투자</th>
 									<th>기업성<br>해외자금</th>															
 								</tr>									
@@ -221,6 +232,18 @@
 											<span class="chk"></span>
 										</span>	
 									</td>									
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
 									<td>
 										<span class="chkbox">
 											<input type="checkbox" class="styled3">
@@ -350,6 +373,18 @@
 											<span class="chk"></span>
 										</span>	
 									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>									
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
 								</tr>
 								<tr>									
 									<td>
@@ -434,6 +469,18 @@
 									<td class="check">
 										<span class="chkbox">
 											<input type="checkbox" class="styled3" checked>
+											<span class="chk"></span>
+										</span>	
+									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>									
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
 											<span class="chk"></span>
 										</span>	
 									</td>
@@ -530,13 +577,26 @@
 											<span class="chk"></span>
 										</span>	
 									</td>
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>									
+									<td>
+										<span class="chkbox">
+											<input type="checkbox" class="styled3">
+											<span class="chk"></span>
+										</span>	
+									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					
 					<div class="btn-area align-right">
-						<button type="button" class="btn-round btn-mid3 bg-white">수정</button>	
+						<button type="button" class="btn-round btn-mid3 bg-white">취소</button>	
+						<button type="button" class="btn-round btn-mid3 bg-blue">저장</button>	
 					</div>	
 				</div>	
 					
