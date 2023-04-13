@@ -97,10 +97,23 @@
 									<tr>
 										<th scope="row">지점명</th>
 										<td>
-											<div class="input-text gray w260">
-												<input type="text" placeholder="지점명 또는 지점코드를 입력해 주세요.">
-												<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+											<!-- 2023-04-13 : div 추가 (input-wrap) -->
+											<div class="input-wrap input-on"> <!-- 텍스트 입력시  input-on 추가 -->
+												<div class="input-text gray w260">
+													<input type="text" placeholder="지점명 또는 지점코드를 입력해 주세요.">
+													<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button>
+												</div>
+												<div class="input-layer">
+													<ul>
+														<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+														<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+														<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+														<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+														<li><a href="#"><mark>홍길동</mark>(01244543)</a></li>
+													</ul>
+												</div>	
 											</div>
+											<!--// 2023-04-13 : div 추가 -->
 										</td>
 										<th scope="row">지점관리자명(행번)</th>
 										<td>

@@ -1624,6 +1624,8 @@ table td.no-data {
 .board-write2.col4 tr:last-child td {
 	border-bottom:0
 }
+.board-write2.col4 .input-wrap {width: 260px;}
+
 
 /*∆‰¿Ã¬°*/
 .pagenation {
@@ -4581,7 +4583,7 @@ mark.current {
 .admin-area .tit-area + .content {margin-top: 32px;}
 .admin-area.admin .box-white-column .btn-date-area {width: 280px;margin-right: 16px;}
 .admin-area.admin .box-white-column  .multi-cal-area {width: 240px;}
-.admin-area.admin  .box-white-column  .multi-cal-area .input-text {width: 77px; text-align: center; font-size: 15px; padding:0 4px}
+.admin-area.admin  .box-white-column  .multi-cal-area .input-text {width: 80px; text-align: center; font-size: 15px; padding:0 4px}
 .admin-area.admin .box-white-column .btn-date-area .btn-date,
 .admin-area.admin .box-white-column  .multi-cal-area {height: 44px; font-size:14px}
 .admin-area .tab-wrap .box-white-column .box-white{position:relative; margin-top: 24px;}
