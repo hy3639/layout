@@ -1759,14 +1759,14 @@ table td.no-data {
 	position:relative;
 }
 .tab-lst2 .tab-item {	
-	/* min-width:90px; */
-	
+	/* min-width:90px; */	
 	height:48px;
 	line-height:46px;
 	box-sizing:border-box;	
 	text-align:center;
 	outline:0;
 }
+ 
 .tab-lst2 .tab-item + .tab-item {margin-left:8px;}
 .tab-lst2 .tab-item > .txt {
 	display:block;
@@ -1778,7 +1778,6 @@ table td.no-data {
 	line-height:46px;
 	font-size:18px;
 	color:#727988;
-
 	font-weight:500;
 	/* font-weight:300; */
 	border-radius: 24px;
@@ -1790,6 +1789,7 @@ table td.no-data {
 	/* border-color:#fff; */
 	
 } 
+.tab-lst2 .tab-item.disabled .txt {background-color:#a7adbf;color:#fff;}
 .tab-lst2 .tab-item .btn > .txt {line-height: 38px;}
 
 /*type3*/
