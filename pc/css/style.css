@@ -4269,6 +4269,7 @@ mark.current {
 	margin-top: 28px;
 }
 .admin-area .admin-tit + .cont .tit-list2 li {padding:0; align-items: center; height:44px}
+.admin-area .section.toest-wrap {position:relative}
 .admin-area .section .admin-tit + .count {padding-bottom:10px}
 .admin-area .section +  .section {margin-top:25px}
 .admin-area .section +  .section.border {
