@@ -3185,6 +3185,8 @@ mark.current {
 	/* 4 */
 }
 .chat-cont .chat-item.system .chat-txt .txt {background-color:#727988}
+.chat-cont .chat-item.system .send-bg {background-color:#727988}
+.chat-cont .chat-item.system .btn-round {background-color:#5f6375}
 .chat-cont .chat-item-list + .system-msg {margin-top:15px}
 .chat-cont .chat-item-list + .system-msg.close {
 	border-top:1px solid #e7e9ee;
