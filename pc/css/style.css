@@ -4665,8 +4665,7 @@ mark.current {
 .board-list3 td .input-text.gray input {
 	height: 36px;	
 	line-height: 36px; 
-	font-size: 13px;
-	
+	font-size: 13px;	
 }
 .btn-switch-area {	
 	display: flex;
