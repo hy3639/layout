@@ -3840,6 +3840,12 @@ mark.current {
 
 
 /* 간편발송 */
+.toest-popup .tab-lst .more-tab {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% - 44px);
+}
+
 .send-list {
 	height:calc(100vh - 630px);
 	background-color:#fff;
@@ -3894,6 +3900,10 @@ mark.current {
 	padding-left:40px;
 	background: url(../images/icon/ico-arrowupdown.svg) no-repeat 5px center;
     background-size: 22px 22px;
+}
+.send-list-edit {
+	max-height:254px;
+	overflow-y: auto;
 }
 .send-list-edit li{
 	display: flex;
@@ -4862,6 +4872,7 @@ mark.current {
 	font-size: 14px;
 	color:#252832;
 	line-height: 22px;
+	word-break: break-all;
 }
 .process-area .msg-area .msg-box .btn-msg {
 	width: 100%;

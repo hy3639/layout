@@ -404,32 +404,45 @@
 								<button type="button" class="btn-text-delete"><span class="blind">텍스트 삭제</span></button> <!-- 2023-02-22 -->							
 							</div>
 							<div class="tab-wrap">
+								<!-- 2023-04-18 : tab레이아웃 수정 (more-tab 추가, 목록편집은 more-tab 바깥에) -->
 								<div class="tab-lst">
-									<button type="button" class="tab-item on">
-										<span class="txt">즐겨찾기</span>
-									</button>							
-									<button type="button" class="tab-item">
-										<span class="txt">여신</span>
-									</button>
-									<button type="button" class="tab-item">
-										<span class="txt">수신</span>
-									</button>
-									<button type="button" class="tab-item">
-										<span class="txt">외환</span>
-									</button>
-									<button type="button" class="tab-item">
-										<span class="txt">전자금융</span>
-									</button>
-									<button type="button" class="tab-item">
-										<span class="txt">카드</span>
-									</button>		
-									<button type="button" class="tab-item">
-										<span class="txt">기타</span>
-									</button>
+									<div class="more-tab">
+										<button type="button" class="tab-item on">
+											<span class="txt">즐겨찾기</span>
+										</button>							
+										<button type="button" class="tab-item">
+											<span class="txt">여신</span>
+										</button>
+										<button type="button" class="tab-item">
+											<span class="txt">수신</span>
+										</button>
+										<button type="button" class="tab-item">
+											<span class="txt">외환</span>
+										</button>
+										<button type="button" class="tab-item">
+											<span class="txt">전자금융</span>
+										</button>
+										<button type="button" class="tab-item">
+											<span class="txt">카드</span>
+										</button>		
+										<button type="button" class="tab-item">
+											<span class="txt">기타</span>
+										</button>
+										<button type="button" class="tab-item">
+											<span class="txt">전자금융</span>
+										</button>
+										<button type="button" class="tab-item">
+											<span class="txt">카드</span>
+										</button>		
+										<button type="button" class="tab-item">
+											<span class="txt">기타</span>
+										</button>
+									</div>
 									<button type="button" class="btn-list-edit btnPopBorder" data-title="send-list-edit"> <!-- 2023-02-06 -->
 										<span class="blind">목록편집</span>
 									</button>												
-								</div>									
+								</div>	
+								<!--// 2023-04-18 : tab레이아웃 수정 -->								
 								<div class="tab-conts">						
 									<div class="tab-cont on">										
 										<ul class="send-list scroll-area sortable">	
@@ -588,6 +601,50 @@
 											</li>																						
 										</ul>
 									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">전자금융</span>
+												<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">전자금융</span>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											</li>																						
+										</ul>
+									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">카드</span>
+												<a href="#" class="cont ellipsis">상품 링크 발송기타</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">카드</span>
+												<a href="#" class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</a>
+											</li>																						
+										</ul>
+									</div>
+									<div class="tab-cont">
+										<ul class="send-list scroll-area sortable">	
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>
+											<li>
+												<button type="button" class="btn-like btn-toggle on"><span class="blind">즐겨찾기</span></button>
+												<span class="category">기타</span>
+												<span class="cont ellipsis">손님이 EMP 펀드에 관심있어 관련 상품 링크 발송 손님이 EMP 펀드에 관심있어 관련 상품 링크 발송기타</span>
+												<a href="#" class="btn-text sm">미리보기</a>
+											</li>																						
+										</ul>
+									</div>
 									<!-- 2023-02-22 : 토스트 메시지 팝업 (위치 확인 위해 style="display:block" 넣어둠 사용할때는 삭제) -->
 									<p class="toest-txt" style="display:block">저장 되었습니다.</p> 
 									<!--// 2023-02-22 -->
@@ -613,6 +670,18 @@
 									<li>
 										<span class="tit">외환</span>
 										<button type="button" class="btn-switch">꺼짐</button>
+									</li>
+									<li class="on">
+										<span class="tit">전자금융</span>
+										<button type="button" class="btn-switch">켜짐</button>
+									</li>
+									<li class="on">
+										<span class="tit">카드</span>
+										<button type="button" class="btn-switch">켜짐</button>
+									</li>
+									<li class="on">
+										<span class="tit">기타</span>
+										<button type="button" class="btn-switch">켜짐</button>
 									</li>
 									<li class="on">
 										<span class="tit">전자금융</span>

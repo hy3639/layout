@@ -58,16 +58,28 @@ $(document).ready(function(){
 
 	/* 탭영역 */	
 	$(document).on('click', '.tab-item', function(){
-		if(!$(this).parent('div').hasClass('noneTab')){
-			var tabName = $(this).parent('div').attr('class');
-			var tabItem = $(this);
-			var idx = $(this).index();					
-			var tabConts = $(this).closest('.'+tabName).next('.tab-conts');
-			if(!tabItem.hasClass('on')){
-				tabItem.addClass('on').siblings('.tab-item').removeClass('on');
-				tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).show().addClass('on');
+		if($(this).parent('div').hasClass('more-tab')){		//간편발송 토스트 팝업
+			var tabName = $(this).parent('div').parent('div').attr('class');
+				var tabItem = $(this);
+				var idx = $(this).index();					
+				var tabConts = $(this).closest('.'+tabName).next('.tab-conts');
+				if(!tabItem.hasClass('on')){
+					tabItem.addClass('on').siblings('.tab-item').removeClass('on');
+					tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).show().addClass('on');
+				}
+		}else{
+			if(!$(this).parent('div').hasClass('noneTab')){
+				var tabName = $(this).parent('div').attr('class');
+				var tabItem = $(this);
+				var idx = $(this).index();					
+				var tabConts = $(this).closest('.'+tabName).next('.tab-conts');
+				if(!tabItem.hasClass('on')){
+					tabItem.addClass('on').siblings('.tab-item').removeClass('on');
+					tabConts.children('.tab-cont').hide().removeClass('on').eq(idx).show().addClass('on');
+				}
 			}
 		}
+		
 	
 	});
 
