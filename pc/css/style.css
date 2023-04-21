@@ -2349,7 +2349,12 @@ html.popOpen {overflow:hidden;}
 	background-size: 22px 22px;
 }
 .layer-popup-fixed .layer-cont {padding: 0 24px;}
-.layer-popup-fixed .layer-cont .name {color:#4a4e5e}
+.layer-popup-fixed .layer-cont .name {
+	font-size:18px;
+	color:#4a4e5e;
+	font-weight: 500;
+}
+.layer-popup-fixed .layer-cont .name em{color:#3e61e4}
 
 /*팝업 보더스타일*/
 .layer-popup-border {
@@ -4118,6 +4123,7 @@ mark.current {
 	overflow-y:auto; 
 	margin-top: 0;
 }
+.admin-area .box-white .box .cont .gray-box p {word-break: break-all;}
 .admin-area .box-white .box .cont p.no-data {
 	margin-top: 145px;
     padding-top: 73px;
