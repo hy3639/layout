@@ -2116,6 +2116,7 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup.lg3 {width:700px;}
 .layer-popup .popup.xl{width:930px;}
 .layer-popup .popup.xl2{width:964px;}
+.layer-popup .popup.xl3{width:860px;}
 .layer-popup .popup.w-full{width:1230px;}
 
 .layer-popup .btn-tooltip {margin-top:-9px}
@@ -4660,7 +4661,7 @@ mark.current {
 .form-list.image-view li .chkbox.on + label:before {
 	content: '';
 	display: block;
-	width: 154px;
+	width: 140px;
 	position:absolute;
 	left: 0;
 	top: 0;
@@ -4670,7 +4671,7 @@ mark.current {
 	border-radius: 16px;}
 
 
-.form-list.image-view li label {font-size: 0;width: 154px;}
+.form-list.image-view li label {font-size: 0;width: 140px;}
 .form-list.image-view li label img {width:100%; border-radius: 16px;}
 
 /* faq 카테고리 관리 */
