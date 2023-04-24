@@ -226,7 +226,8 @@
     background-color: #383c4a;
 	z-index:30;
 }
-.gnb-list li a {
+.gnb-list li a,
+.gnb-list li span {
 	display: block;
 	height: 44px;
 	line-height: 44px;
@@ -234,11 +235,13 @@
 	border-radius: 8px;
 }
 .gnb-list .depth1 li,
-.gnb-list .depth1 li a {
+.gnb-list .depth1 li a,
+.gnb-list .depth1 li span {
 	font-size:20px;
 	color:#fff;
 }
-.gnb-list .depth1 li a { 
+.gnb-list .depth1 li a,
+.gnb-list .depth1 li span { 
 	height:44px;
 	color:#ccd1d6;
 	font-size: 16px;
@@ -249,6 +252,7 @@
 	color:#fff;
 	background-color:#446cf3;
 }
+.gnb-list .depth2 {margin-left: 15px;}
 .gnb-list .depth2 li a {
 	position:relative;
 	padding-left:12px;

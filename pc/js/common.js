@@ -311,7 +311,7 @@ $(window).on('load', function(){
 		layerBtnEvent(lyBtnObj);
 	});	
 	/* ÆË¾÷´Ý±â */
-    $(document).on('click', '.open .popClose,.dimmed', function(){	
+    $(document).on('click', '.open .popClose', function(){	
 		var lyBtnObj = $(this).closest('.layer-popup').attr('data-layer-name');
 		layerBtnEventClose(lyBtnObj);		
     });
