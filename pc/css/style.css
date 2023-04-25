@@ -2292,24 +2292,31 @@ html.popOpen {overflow:hidden;}
 .layer-popup.type3 .btn-area button.bg-white {font-weight: 300;}
 
 /*popup 체크리스트*/
-.layer-popup.check-list .popup.lg {
-	padding:48px 40px;
-	margin:50px auto;
+.layer-popup.check-list .popup.xl3 {
+	padding:30px 20px;
+	margin:30px auto;
 }
-.layer-popup.check-list .popup.lg .layer-cont .tit-area p{
+.layer-popup.check-list .popup.xl3 .layer-cont .tit-area p{
 	font-size: 24px;
 	font-weight: 500;
 	color:#222;
 }
-.layer-popup.check-list .popup.lg .layer-cont .tit-area p + span {
+.layer-popup.check-list .popup.xl3 .layer-cont .tit-area p + span {
 	display: block;
-	margin-top:8px;
+	margin-top:3px;
 	font-size:14px;
 }
 
-.layer-popup.check-list .popup.lg .layer-cont .cont-area {margin-top: 32px;}
+.layer-popup.check-list .popup.xl3 .layer-cont .cont-area {margin-top: 25px;}
+.layer-popup.check-list .check-wrap ul li label {padding: 15px 16px 15px 56px;}
 
 
+.layer-popup.check-list .check-btm {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 25px;
+}
 /* 팝업오픈 */
 .layer-popup .popup {opacity:0;}
 .layer-popup.open .popup {
@@ -2724,35 +2731,35 @@ html.popOpen {overflow:hidden;}
 	font-weight:300;
 }
 .list-style.num li label .chkbox {top:0} 
-.check-wrap + .user-info {
+.layer-popup.check-list .check-btm .user-info {
 	display: flex;
 	justify-content: flex-end;
 	flex-wrap: wrap;
-	margin-top:32px;
 	text-align: right;
 	font-size:14px;
 }
-.check-wrap + .user-info li:not(.date){
+.layer-popup.check-list .check-btm .user-info li:not(.date){
 	color:#222;
 	font-weight:300;
 }
 
-.check-wrap + .user-info .date {
+.layer-popup.check-list .check-btm .user-info .date {
 	width: 100%;
 	margin-bottom:5px;
 	color:#444;
 	font-weight: 300;
 }
-.check-wrap + .user-info .tit {
+.layer-popup.check-list .check-btm .user-info .tit {
 	padding-right:8px;
 	font-size: 14px;
 	font-weight: 500;
 }
-.check-wrap + .user-info li:last-child {margin-left:16px;}
-
+.layer-popup.check-list .check-btm .user-info li:last-child {margin-left:16px;}
+.layer-popup.check-list .check-btm .btn-area {padding-left: 20px;}
 .content.flex .box.ui-sortable-helper {
 	border:1px solid #d2d6db;
 }
+
 
 /* 상담관리 > 개인상담 */
 .contents.main-chat {

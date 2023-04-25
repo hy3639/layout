@@ -11,7 +11,9 @@
 
 <div class="dimmed gray"></div> <!-- 2023-02-06 -->
 <div class="layer-popup check-list" style="display:block;"> <!--팝업 노출할경우 스타일 추가 : display:block; -->
-	<div class="popup lg" style="opacity: 1;">  <!--팝업 노출할경우 스타일 추가 :opacity: 1 -->		
+	<!-- 2023-04-25 : 클래스 변경 xl3 -->
+	<div class="popup xl3" style="opacity: 1;">  <!--팝업 노출할경우 스타일 추가 :opacity: 1 -->	
+	<!--// 2023-04-25 : 클래스 변경 xl3 -->	
 		<div class="layer-cont">
 			<div class="tit-area align-center">
 				<p>금융소비자보호 일일 자가진단 및 확인사항</p> <!-- 2023-03-14 : 타이틀 수정 -->
@@ -83,12 +85,12 @@
 								</span>
 							</label>
 						</li>
-						<!-- 2023-03-14 : 추가 -->
+						<!-- 2023-04-25 : br위치 수정 -->
 						<li>
 							<label>
 								<span class="txt">
-									<em class="tit">사용자 확인사항</em>모든 대화 내용은 자동으로 저장되며, 분쟁 발생 시 손님의 근거자료로 사용될 수<br>
-									있음을 인지하고 관련 법률(금융소비자보호법 등) 및 규정(하나톡 운영세칙 등)을<br>
+									<em class="tit">사용자 확인사항</em>모든 대화 내용은 자동으로 저장되며, 분쟁 발생 시 손님의 근거자료로 사용될 수
+									있음을 인지하고 관련 법률(금융소비자보호법 등) 및<br>규정(하나톡 운영세칙 등)을
 									준수하여 사용하겠음
 								</span>
 								<span class="chkbox">
@@ -97,19 +99,24 @@
 								</span>
 							</label>
 						</li>
-						<!--// 2023-03-14 : 추가 -->	
+						<!--// 2023-04-25 : br위치 수정 -->	
 					</ul>
-				</div>		
-				<ul class="user-info">
-					<li class="date">2023년 01월 28일</li>
-					<li><span class="tit">행번</span>2311049</li>
-					<li><span class="tit">성명</span>홍길동</li>
-				</ul>
+				</div>
+				<!-- 2023-04-25 : div 추가 및 레이아웃 변경 -->
+				<div class="check-btm">
+					<ul class="user-info">
+						<li class="date">2023년 01월 28일</li>
+						<li><span class="tit">행번</span>2311049</li>
+						<li><span class="tit">성명</span>홍길동</li>
+					</ul>
+					<div class="btn-area">
+						<button type="button" class="btn-round btn-lg bg-blue" disabled>확인했어요</button>	<!--2023-02-06 : 전체 체크시 disabled 삭제 -->			
+					</div>
+				</div>	
+				<!--// 2023-04-25 : div 추가 및 레이아웃 변경 -->
 			</div>			
 		</div>
-		<div class="btn-area single"> <!-- 버튼이 하나일경우 single 클래스 추가 -->
-			<button type="button" class="btn-round btn-lg bg-blue" disabled>확인했어요</button>	<!--2023-02-06 : 전체 체크시 disabled 삭제 -->			
-		</div>
+		
 	</div>
 
 </div>
